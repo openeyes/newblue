@@ -33,7 +33,7 @@
 		"jpeg-js": "^0.4.3",
 		"lazypipe": "1.0.2",
 		"node-sass": "5.0.0",
-		"postcss": "8.2.5",
+		"postcss": "8.2.10",
 		"through2": "4.0.2",
 		"vinyl-buffer": "1.0.1",
 		"yargs-parser": "20.2.4"
