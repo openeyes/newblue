@@ -1,6 +1,10 @@
 # OS X #
 .DS_Store
 
+# iDEs #
+.idea
+.nova
+
 # Sass cache #
 .sass-cache/
 *.css.map
