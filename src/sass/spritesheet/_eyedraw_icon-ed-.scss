@@ -1,0 +1,14 @@
+[class*="icon-ed-"] {
+	display: inline-block;
+	vertical-align: middle;
+	width: 32px;
+	height: 32px;
+
+	// SpriteSmith generates png
+	background-image: url('../img/eyedraw-doodle-icons-32x32.png');
+
+	&.small {
+		width: 16px;
+		height: 16px;
+	}
+}
