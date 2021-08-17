@@ -13,7 +13,7 @@
 // this is used with flex-layout
 .cols-left, .cols-right {
 	// note: no padding required with this approach. could change it to calc(50% - 15px) but for now leaving it
-	width:49%; 	
+	width: 49%;
 }
 
 // not covered by 12 col grid
@@ -23,90 +23,92 @@
 
 // center a single column contents
 .cols-center {
-	margin:0 auto; 
+	margin: 0 auto;
 }
 
 // where a table column just has an icon, 
 // use this (only used in <colgroup>)
 .cols-icon {
-	width:40px;			
+	width: 40px;
 	white-space: nowrap;
 }
 
 
 .cols-1 {
-width: 8.33333%;
+	width: 8.33333%;
 }
 
 .cols-2 {
-width: 16.66667%;
+	width: 16.66667%;
 }
 
 .cols-3, .cols-quarter {
-width: 25%;
+	width: 25%;
 }
 
 .cols-4 {
-width: 33.33333%;
+	width: 33.33333%;
 }
 
 .cols-5 {
-width: 41.66667%;
+	width: 41.66667%;
 }
 
 .cols-6, .cols-half {
-width: 50%;
+	width: 50%;
 }
 
 .cols-7 {
-width: 58.33333%;
+	width: 58.33333%;
 }
 
 .cols-8 {
-width: 66.66667%;
+	width: 66.66667%;
 }
 
 .cols-9 {
-width: 75%;
+	width: 75%;
 }
 
 .cols-10 {
-width: 83.33333%;
+	width: 83.33333%;
 }
 
 .cols-11 {
-width: 91.66667%;
+	width: 91.66667%;
 }
 
 .cols-12, .cols-full {
-width: 100%;
+	width: 100%;
 }
 
 // 'col-gap' - for cols- and <td>
 // provides a consistent column gap (gutter) for layouts using
 // either flex or tables:
 .col-gap {
-	> div[class^="cols-"], 
-	tbody > tr > td,  	// when added to <table> stop it applying to nested tables 
-	> td {				// added to <tr>
-		padding-right:	25px !important; // need to overide <td> css in elements, keeping this here for clarity
-		padding-left:	5px;
-		
+	> div[class^="cols-"],
+	tbody > tr > td, // when added to <table> stop it applying to nested tables
+	> td { // added to <tr>
+		padding-right: 25px !important; // need to override <td> css in elements, keeping this here for clarity
+		padding-left: 5px;
+
 		&:first-child {
-			padding-left:0 !important;
+			padding-left: 0 !important;
 		}
+
 		&:last-child {
-			padding-right:0 !important;
+			padding-right: 0 !important;
 		}
 	}
 }
+
 // same but smaller
 .col-gap-small {
-	> div[class^="cols-"], 
+	> div[class^="cols-"],
 	> td {
-		padding-right:3px !important; // 3px matches element gap
+		padding-right: 3px !important; // 3px matches element gap
 		&:last-child {
-			padding-right:0 !important;
+			padding-right: 0 !important;
 		}
 	}
 }

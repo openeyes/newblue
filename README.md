@@ -9,17 +9,6 @@ The "newblue" CSS repository allows for the development of OpenEyes UI(X) indepe
 * Present data in a consistent and efficient way to better assist clinical tasks.
 * Reduce vertical scrolling as much as possible (clinical requirement)
 
-## Please do not use inline styles for styling
-
-Why not? Well, here are a few reasons why not:
-
-1. Themes (any inline DOM styling could prove problematic)
-2. Responsive layout (newblue UI responsiveness is highly bespoke)
-3. UI consistency (consistent data presentation has many, many benefits)
-4. Unnecessary (somewhere in the OE UI is possibly a UI solution already created)
-5. Flagging up issues with the CSS helps to improve the overall UI across the board
-
-(To be clear, we are not talking about JS positional stuff, but this does include z stacking which does need considering globally)
 
 ## Browser support
 
@@ -52,8 +41,20 @@ Basically, follow best practices...
 * Eyedraw icon (doodles) must be 32px x 32px, and named correctly.
 * SVGs are used in a few different flavours, see source for examples.
 
-## Finally...
+## Please do not use inline styles for adjusting styling
 
-This is mostly a bespoke UI designed for very specific use. The smallest supported browser width is 1200px and the UI has been tailored to run on handheld tablets, as well as on super-wide displays. 
+**Why not?** For the following reasons:
+
+1. Themes (any inline DOM styling could prove problematic)
+2. Responsive layout (newblue UI responsiveness is highly bespoke)
+3. UI consistency (consistent data presentation has many, many benefits)
+4. Unnecessary (somewhere in the OE UI is possibly a UI solution already created)
+5. Flagging up issues with the CSS helps to improve the overall UI across the board
+
+(To be clear, we are not talking about JS positional stuff, but this does include z stacking which does need considering globally)
+
+### Finally...
+
+The smallest supported  width is 1200px, with the UIX being tailored to run on handheld tablets, as well as on super-wide displays. 
 
 
