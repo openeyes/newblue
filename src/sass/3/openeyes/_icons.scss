@@ -315,7 +315,7 @@
 
 				// if icon is used in these "frame" areas fix to "dark" icon version
 				@if list.index($used-in-frame, $name) {
-					.oe-popup-content &,
+					.oe-popup &,
 					.oe-patient-popup &,
 					.oe-hotlist-panel & {
 						background-image: url(svg-dark-fixed("i/" + $svg));

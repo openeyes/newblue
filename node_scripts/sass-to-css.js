@@ -1,14 +1,13 @@
 'use strict';
 
 /**
------------------------------
-Build CSS
-dist/css/style_oe3.0.css					// Pro/Dark (expanded)
-dist/css/style_oe3.0.min.css				// Pro/Dark (minified) 
-dist/css/style_oe3.0_classic.min.css		// Classic/Light (minified)
-dist/css/style_oe3.0_print.css				// Print (minified)
------------------------------
-*/
+ * -----------------------------
+ * Build CSS
+ * dist/css/style_oe_dark.3.css // Dark theme (compressed)
+ * dist/css/style_oe_light.3.css // Light theme (compressed)
+ * dist/css/style_oe_print.3.css // Print only, PDFs (compressed)
+ */
+
 const chalk = require('chalk');
 const cyan = chalk.bold.cyan;
 const red = chalk.bold.red;
