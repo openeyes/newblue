@@ -11,7 +11,7 @@
 	border-radius:3px;
 	
 	// PIN icon
-	background: $oe-step-orange url( svg-path('icons/padlock')) left 6px center no-repeat;
+	background: $oe-step-orange url( svg-dark-fixed('i/padlock')) left 6px center no-repeat;
 	background-size: 16px;
 	
 	&.accepted-pin { 
@@ -24,11 +24,11 @@
 	
 	// Make PIN Eye specific...
 	&.pin-right {
-		background-image: url( svg-path('icons/lat-R') );
+		background-image: url( svg-dark-fixed('i/lat-R') );
 	}
 	
 	&.pin-left {
-		background-image: url( svg-path('icons/lat-L') );
+		background-image: url( svg-dark-fixed('i/lat-L') );
 	}
 
 	// to allow the PIN entry to fit on a <tr>

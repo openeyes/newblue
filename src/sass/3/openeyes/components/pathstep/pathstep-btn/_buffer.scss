@@ -30,7 +30,7 @@
 	
 	&.comments-added {
 		.step.i-comments {
-			background-image: url( svg-icon-path-theme('comments-added'));
+			background-image: url( svg-themed('i/comments-added'));
 			opacity: 0.7;
 		}
 	}

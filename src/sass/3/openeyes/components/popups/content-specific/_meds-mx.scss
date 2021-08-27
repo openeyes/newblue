@@ -30,7 +30,7 @@
 				width:15px;
 				
 				// put the expand collapse icon into the background
-				background: url( svg-path('icons/stop') ) left center no-repeat;
+				background: url( svg-dark-fixed('i/stop') ) left center no-repeat;
 				background-size: 13px;
 				opacity:$oe-icon-opacity; //  now i can use opacity
 			}

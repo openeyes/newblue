@@ -18,8 +18,8 @@
 		// the vertical-align middle isn't quite middle. 
 		position:relative;
 		top:2px;
-		&.R { 	background-image: url( svg-path('icons/lat-R-green') ); }
-		&.L { 	background-image: url( svg-path('icons/lat-L-red') ); }
-		&.NA {	background-image: url( svg-path('icons/lat-NA') ); }
+		&.R { 	background-image: url( svg-dark-fixed('i/lat-R-green') ); }
+		&.L { 	background-image: url( svg-dark-fixed('i/lat-L-red') ); }
+		&.NA {	background-image: url( svg-dark-fixed('i/lat-NA') ); }
 	}
 }

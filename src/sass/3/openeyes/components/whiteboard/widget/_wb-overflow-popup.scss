@@ -11,7 +11,7 @@
 	
 	font-size: $wb3-font-medium; // reactive font size
 	color:$oe-wb-data-text;
-	background: $oe-wb-widget-bg url( svg-icon-path-theme('remove')) top 8px right 10px no-repeat; // theme changable
+	background: $oe-wb-widget-bg url( svg-themed('i/remove')) top 8px right 10px no-repeat; // theme changable
 	background-size: 24px;
 	
 	border: 4px solid $oe-text;

@@ -7,59 +7,60 @@
 // by adding "training-mode" to <body> we can target
 // elements and make them more obvious!
 .training-mode {
-	
+
 	// Make OE logo yellow:
 	.openeyes-brand .oe-logo {
 		.oe-openeyes {
-			fill:#ff0;
-			opacity:1;
+			fill: #ff0;
+			opacity: 1;
 		}
-		&.open, 
+
+		&.open,
 		&.active {
 			.oe-openeyes {
-				fill:#ff0;
-				opacity:1;
+				fill: #ff0;
+				opacity: 1;
 			}
 		}
 	}
-	
+
 	// make login 
 	.oe-login .login h1 {
 		@include font-size(50);
-		color:#ff0;
-		padding:15px 30px;
-		background: rgba(0,0,0,0.5);
-		border-radius:9px
+		color: #ff0;
+		padding: 15px 30px;
+		background: rgba(0, 0, 0, 0.5);
+		border-radius: 9px
 	}
-		
+
 	// increase banner visibility
 	#oe-admin-notifcation {
-		bottom:15px;
-		height:35px;	
-		background:rgb(255,255,0);
-		color:rgb(0,0,0);
+		bottom: 15px;
+		height: 35px;
+		background: rgb(255, 255, 0);
+		color: rgb(0, 0, 0);
 		@include font-size(15);
-		font-weight:500;
-		
+		font-weight: 500;
+
 		@include boxshadow();
-		
-		a { 
-			color:rgb(0,0,200); 
+
+		a {
+			color: rgb(0, 0, 200);
 		}
-		
+
 		#notification-short {
-			opacity:1;
+			opacity: 1;
 		}
-		
+
 		// make icon black rather than white
-		.oe-i.info.pro-theme { 
-			background-image: url( svg-path( "icons/_classic/info" ) );
+		.oe-i.info.pro-theme {
+			background-image: url("../svg/in-css/light/i/asterisk.svg");
 		}
 	}
-	
+
 	// patient name
 	.oe-patient .patient-name {
-		color:#ff0;
+		color: #ff0;
 	}
 
 }

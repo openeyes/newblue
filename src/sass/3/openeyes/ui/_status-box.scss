@@ -28,10 +28,10 @@
 	background-position: 5px 6px;
 	background-repeat: no-repeat;
 	background-size: 13px;
-	background-image: url( svg-path('ui/triangle-blue') );
+	background-image: url( svg-all('ui/triangle-blue') );
 	
 	&.green {
-		background-image: url( svg-path('ui/triangle-green') );
+		background-image: url( svg-all('ui/triangle-green') );
 		border-color: $oe-status-green;
 		.status-text {
 			color: shade( $oe-status-green,10 );
@@ -39,7 +39,7 @@
 	}
 	
 	&.red {
-		background-image: url( svg-path('ui/triangle-red') );
+		background-image: url( svg-all('ui/triangle-red') );
 		border-color: $oe-status-red;
 		.status-text {
 			color: shade( $oe-status-red,10 );
@@ -47,7 +47,7 @@
 	}
 	
 	&.amber {
-		background-image: url( svg-path('ui/triangle-amber') );
+		background-image: url( svg-all('ui/triangle-amber') );
 		border-color: $oe-status-amber;
 		.status-text {
 			color: shade( $oe-status-amber,10 );

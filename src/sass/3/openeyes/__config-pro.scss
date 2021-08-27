@@ -194,15 +194,9 @@ $oe-wb-headers:			$oe-element-headers;
 
 $oe-pagination-blue: 	$oe-text-highlight;
 
-// ... different SVGs for 'pro' & 'classic' theme
-@function svg-icon-path-theme($svg){
-	@return "../svg/in-css/icons/" + $svg + ".svg";
-}
 
-// ... add theme suffix
-@function svg-path-theme($svg){
-	@return "../svg/in-css/" + $svg + ".pro.svg";
+@function svg-themed($svg){
+	@return build-svg-path("dark", $svg);
 }
-
 
 

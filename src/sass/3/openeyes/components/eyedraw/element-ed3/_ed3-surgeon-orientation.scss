@@ -24,7 +24,7 @@
 	background-position:center bottom 5px; // allow for the title
 	background-repeat: no-repeat;
 	background-size:60px;
-	background-image:url( svg-path('eyedraw/op-patient') );
+	background-image:url( svg-all('eyedraw/op-patient') );
 	
 	.title {
 		position:absolute;
@@ -51,7 +51,7 @@
 		background-position:top left;
 		background-repeat: no-repeat;
 		background-size:$ed-surgeon-size;
-		background-image:url( svg-path('eyedraw/op-surgeon') );
+		background-image:url( svg-all('eyedraw/op-surgeon') );
 	}
 
 	// position name relates to the patients eyes. 

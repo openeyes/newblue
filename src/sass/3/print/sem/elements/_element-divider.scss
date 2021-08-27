@@ -6,7 +6,7 @@
 .element {
 	// line to divide R & L
 	&.eye-divider {
-		background-image: url( svg-path-theme('ui/element-divider') );
+		background-image: url( svg-themed('ui/element-divider') );
 		background-position: 50% 0;
 		background-repeat: repeat-y;
 		background-size:19px;

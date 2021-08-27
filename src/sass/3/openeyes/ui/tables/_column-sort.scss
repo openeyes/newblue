@@ -30,20 +30,20 @@ table {
 				
 				// A - Z  sorting
 				&.ascend {
-					background-image: url( svg-icon-path-theme('direction-up') );
+					background-image: url( svg-themed('i/direction-up') );
 				}
 				
 				// Z - A  sorting
 				&.descend {
-					background-image: url( svg-icon-path-theme('direction-down') );
+					background-image: url( svg-themed('i/direction-down') );
 				}
 
 				&.active {
 					color: $oe-text;
 					opacity:1;
 					// did have this with text and icon blue on active but it was a bit much... 
-					//&.ascend {	background-image: url( svg-icon-path-theme('direction-up-blue') ); }
-					//&.descend { background-image: url( svg-icon-path-theme('direction-down-blue') ); }
+					//&.ascend {	background-image: url( svg-themed('i/direction-up-blue') ); }
+					//&.descend { background-image: url( svg-themed('i/direction-down-blue') ); }
 				}
 
 			}

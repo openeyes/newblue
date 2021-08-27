@@ -42,7 +42,7 @@
 			bottom:100%; 
 			right:10vw;
 			
-			background:$oe-btn-blue url( svg-path('icons/direction-up-circle') ) center center no-repeat;
+			background:$oe-btn-blue url( svg-dark-fixed('i/direction-up-circle') ) center center no-repeat;
 			background-size:35px;
 			
 			width:60px;
@@ -51,7 +51,7 @@
 			cursor: pointer;
 			
 			&.close {
-				background-image: url( svg-path('icons/remove-circle') );
+				background-image: url( svg-dark-fixed('i/remove-circle') );
 			}
 			
 			@include handheld(){

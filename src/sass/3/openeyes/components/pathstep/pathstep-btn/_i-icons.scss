@@ -15,35 +15,35 @@
 	// step
 	.step {
 		&.i-break { 
-			background-image: url( svg-icon-path-theme('path-break')); 
+			background-image: url( svg-themed('i/path-break'));
 		}
 		&.i-fork {
-			background-image: url( svg-icon-path-theme('fork'));
+			background-image: url( svg-themed('i/fork'));
 		}
 		&.i-redflag {
-			background-image: url( svg-path('ui/flag-red'));
+			background-image: url( svg-all('i/flag-red'));
 		}
 		&.i-arr {
-			background-image: url( svg-icon-path-theme('direction-right'));
+			background-image: url( svg-themed('i/direction-right'));
 		}
 		&.i-wait {
-			background-image: url( svg-icon-path-theme('waiting'));
+			background-image: url( svg-themed('i/waiting'));
 		}
 		&.i-drug-admin{
-			background-image: url( svg-icon-path-theme('drop'));
+			background-image: url( svg-themed('i/drop'));
 		}
 		&.i-comments {
-			background-image: url( svg-icon-path-theme('comments'));
+			background-image: url( svg-themed('i/comments'));
 			opacity: 0.5;
 		}
 		&.i-fin {
-			background-image: url( svg-icon-path-theme('tick'));
+			background-image: url( svg-themed('i/tick'));
 		}
 		&.i-discharge {
-			background-image: url( svg-icon-path-theme('stop'));
+			background-image: url( svg-themed('i/stop'));
 		}
 		&.i-delayed {
-			background-image: url( svg-path('icons/waiting')); // on solid colour background, use white icon
+			background-image: url( svg-dark-fixed('i/waiting')); // on solid colour background, use white icon
 		}	
 	}
 	
@@ -51,13 +51,13 @@
 	&.active {
 		.step {
 			&.i-arr {
-				background-image: url( svg-path('icons/direction-right'));
+				background-image: url( svg-dark-fixed('i/direction-right'));
 			}
 			&.i-discharge {
-				background-image: url( svg-path('icons/stop'));
+				background-image: url( svg-dark-fixed('i/stop'));
 			} 
 			&.i-drug-admin {
-				background-image: url( svg-path('icons/drop'));
+				background-image: url( svg-dark-fixed('i/drop'));
 			}	
 		}
 	}
@@ -65,13 +65,13 @@
 	&.done { 
 		.step {
 			&.i-arr {
-				background-image: url( svg-path('icons/direction-right'));
+				background-image: url( svg-dark-fixed('i/direction-right'));
 			}
 			&.i-discharge {
-				background-image: url( svg-path('icons/stop'));
+				background-image: url( svg-dark-fixed('i/stop'));
 			} 
 			&.i-drug-admin {
-				background-image: url( svg-path('icons/drop-done'));
+				background-image: url( svg-dark-fixed('i/drop-done'));
 			}	
 		}		
 	}

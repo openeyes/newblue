@@ -61,6 +61,14 @@
 						background: rgba($oe-text,0.6);
 						color: $oe-text-inverted;
 					}
+
+					&:hover,
+					&:focus {
+						color:$oe-text-highlight;
+						.unread {
+							background-color: $oe-text
+						}
+					}
 				}
 			}
 		}

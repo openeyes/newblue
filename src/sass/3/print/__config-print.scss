@@ -35,12 +35,16 @@ $table-line-color: #bbb;
 // icon opacity (default)
 $oe-icon-opacity: 	1;
 
-// SVG paths - general UI
-@function svg-path($svg){
-	@return "../svg/in-css/" + $svg + ".svg";
+@function build-svg-path($theme, $svg){
+	@return "../svg/in-css/" + $theme + "/" + $svg + ".svg";
 }
-@function svg-icon-path-theme($svg){
-	@return "../svg/in-css/icons/_classic/" + $svg + ".svg";
+
+@function svg-all($svg){
+	@return build-svg-path("all", $svg);
+}
+
+@function svg-themed($svg){
+	@return build-svg-path("light", $svg);
 }
 
 // ------------------------------ Patterns

@@ -15,54 +15,54 @@
 		
 		// make like a button even if it's a <div>
 		cursor:pointer;
+
+		// currently always a button
+		&.trash {
+			background-image: url(svg-themed( 'ui/tab-trash' ));
+			&:hover,
+			&:focus,
+			&:active {
+				background-image: url(svg-dark-fixed('i/trash'));
+				background-color: $oe-btn-red;
+			}
+		}
 	
 		&.print {
-			background-image: url(svg-path-theme( 'ui/print' )); 	// default state is themed icon
+			background-image: url(svg-themed( 'ui/tab-print' )); 	// default state is themed icon
 			&.active,
 			&:hover, 
 			&:focus, 
 			&:active {
-				background-image: url(svg-path('icons/print'));		// always use the PRO icon (white)
+				background-image: url(svg-dark-fixed('i/print'));		// always use the PRO icon (white)
 				background-color: $oe-btn-blue;
 			}
 		}
 		
 		&.whiteboard {
 			background-size: 17px; // match large icon size
-			background-image: url(svg-path-theme( 'ui/whiteboard' )); 	// default state is themed icon
+			background-image: url(svg-themed( 'ui/tab-whiteboard' )); 	// default state is themed icon
 			&.active,
 			&:hover, 
 			&:focus, 
 			&:active {
-				background-image: url(svg-path('icons/whiteboard'));		// always use the PRO icon (white)
+				background-image: url(svg-dark-fixed('i/whiteboard'));		// always use the PRO icon (white)
 				background-color: $oe-btn-blue;
 			}
 		}
 		
 		// overflow for "more" buttons
 		&.more {
-			background-image: url(svg-path-theme( 'ui/more-h' )); 	// default state is themed icon
+			background-image: url(svg-themed( 'ui/tab-more-h' )); 	// default state is themed icon
 			&.active,
 			&:hover, 
 			&:focus, 
 			&:active {
-				background-image: url(svg-path('icons/more-h'));		// always use the PRO icon (white)
+				background-image: url(svg-dark-fixed('i/more-h'));		// always use the PRO icon (white)
 				background-color: $oe-btn-blue;
 			}
 		}
-		
-		
-		
-		// currently always a button
-		&.trash {
-			background-image: url(svg-path-theme( 'ui/trash' ));
-			&:hover, 
-			&:focus, 
-			&:active {
-				background-image: url(svg-path('icons/trash'));
-				background-color: $oe-btn-red;
-			}
-		}
+
+
 
 	}
 	

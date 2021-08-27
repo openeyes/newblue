@@ -21,7 +21,7 @@
 				}
 			}
 			&.selected {
-				background:transparent url( svg-icon-path-theme('direction-right') )left center no-repeat;
+				background:transparent url( svg-themed('i/direction-right') )left center no-repeat;
 				background-size:13px; // small icon size
 			}
 			

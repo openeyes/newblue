@@ -52,7 +52,7 @@
 					left:0;
 					width:100%;
 					height:35px;
-					background: $oe-btn-blue-hint url( svg-path( 'icons/plus-bold' ) ) center center no-repeat;
+					background: $oe-btn-blue-hint url( svg-dark-fixed( 'i/plus-bold' ) ) center center no-repeat;
 					background-size: 13px;
 				}
 			}
@@ -76,7 +76,7 @@
 				padding:0 5px;
 				
 				
-				background: url( svg-path('ui/patient-grey')) right 5px bottom 9px no-repeat;
+				background: url( svg-all('ui/patient-grey')) right 5px bottom 9px no-repeat;
 				background-size: 15px;
 				
 	
@@ -104,7 +104,7 @@
 						left:0;
 						width:100%;
 						height:40px;
-						background: $oe-btn-blue-hint url( svg-path( 'icons/plus-bold' ) ) center center no-repeat;
+						background: $oe-btn-blue-hint url( svg-dark-fixed( 'i/plus-bold' ) ) center center no-repeat;
 						background-size: 13px;
 						
 					}

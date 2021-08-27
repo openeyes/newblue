@@ -20,7 +20,7 @@
 		margin:4px 0;
 		padding:0 0 0 28px; // space for background icon
 
-		background: $oe-dark-user-inputs url( svg-path('ui/sidebar') ) left 5px center no-repeat;
+		background: $oe-dark-user-inputs url( svg-all('ui/sidebar') ) left 5px center no-repeat;
 		background-size:15px;
 		
 		// 'button' look

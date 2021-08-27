@@ -70,3 +70,20 @@ $oe-z-ed-v2: 			20; // ED v2 DOM. ED v2 still in first V3 implementation
 	@return "../svg/in-css/" + $svg + ".svg";
 }
 
+@function build-svg-path($theme, $svg){
+	@return "../svg/in-css/" + $theme + "/" + $svg + ".svg";
+}
+
+@function svg-all($svg){
+	@return build-svg-path("all", $svg);
+}
+
+// within "light" it needs "dark" (white) icons for buttons, etc
+@function svg-dark-fixed($svg){
+	@return build-svg-path("dark", $svg);
+}
+
+
+
+
+

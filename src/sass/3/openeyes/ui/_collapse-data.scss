@@ -47,7 +47,7 @@
 			width:15px;
 			
 			// put the expand collapse icon into the background
-			background: url( svg-icon-path-theme('expand') ) right center no-repeat;
+			background: url( svg-themed('i/expand') ) right center no-repeat;
 			background-size: 13px;
 			
 			opacity:$oe-icon-opacity; //  now i can use opacity
@@ -57,7 +57,7 @@
 		// no need to explictly state the 'expand class', JS will add this.
 		&.collapse {
 			&:after {
-				background-image: url( svg-icon-path-theme('collapse') );	
+				background-image: url( svg-themed('i/collapse') );
 			}
 		}
 		
@@ -105,14 +105,14 @@
 			
 			
 			&:after {
-				background-image: url( svg-path('icons/expand') );
+				background-image: url( svg-dark-fixed('i/expand') );
 				background-size:12px;
 			}
 			
 			
 			&.collapse {
 				&:after {
-					background-image: url( svg-path('icons/collapse') );	
+					background-image: url( svg-dark-fixed('i/collapse') );
 				}
 			}
 			

@@ -24,8 +24,8 @@
 			&.active {
 				background:$oe-btn-blue;
 				.oe-i.laterality {
-					&.R { 	background-image: url( svg-path('ui/lat-R.pro') ); }
-					&.L { 	background-image: url( svg-path('ui/lat-L.pro') ); }
+					&.R { 	background-image: url( svg-dark-fixed('i/lat-R') ); }
+					&.L { 	background-image: url( svg-dark-fixed('i/lat-L') ); }
 				}
 			}
 			

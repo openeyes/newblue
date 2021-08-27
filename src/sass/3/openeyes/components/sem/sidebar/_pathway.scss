@@ -2,45 +2,44 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 
-.sidebar {
-	// button to popup pathway.
-	// shows state of pathway
-	// <div>
-	.clinic-pathway-btn {
-		@include flex( center, center );
-		width:100%;
-		height:$oe-event-header-height;
-		
-		// align with Event title better
-		margin:1px 0 0 0;
-		
-		@include font-size(13); // a little bigger than button text
-		font-weight: $oe-font-medium;
-		color: $oe-dark-text-light;
-		
-		// use button backgrounc colours but add a watermark
-		background:$oe-dark-user-inputs url( svg-path('backgrounds/clinic-watermark')) left 1px center no-repeat;
-		background-size:32px;	
-		
-		cursor: pointer;
-		
-		&:hover, 
-		&:focus {
-			color: #fff;
-			background-color:$oe-btn-blue;	
-		}
-		
-		&.active {
-			color: $oe-dark-text-highlight;
-			background-color:$oe-dark-user-inputs;
-		}
-		
-		// Show wait duration
-		.wait-duration {
-			padding:0 0 0 10px;
-			pointer-events: none; // JS!
-		}
-		
-	}	
+// button to popup pathway.
+// shows state of pathway
+// <div>
+.clinic-pathway-btn {
+	@include flex(center, center);
+	width: 100%;
+	height: $oe-event-header-height;
+
+	// align with Event title better
+	margin: 1px 0 0 0;
+
+	@include font-size(13); // a little bigger than button text
+	font-weight: $oe-font-medium;
+	color: $oe-dark-text-light;
+
+	// use button background colours but add a watermark
+	background: $oe-dark-user-inputs url( svg-all("ui/watermark-clinic")) left 1px center no-repeat;
+	background-size: 32px;
+
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		color: #fff;
+		background-color: $oe-btn-blue;
+	}
+
+	&.active {
+		color: $oe-dark-text-highlight;
+		background-color: $oe-dark-user-inputs;
+	}
+
+	// Show wait duration
+	.wait-duration {
+		padding: 0 0 0 10px;
+		pointer-events: none; // JS!
+	}
+
 }
+
 

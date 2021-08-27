@@ -36,20 +36,20 @@
 				
 				&.trash {
 					&:after {
-						background-image: url( svg-path('icons/trash'));
+						background-image: url( svg-dark-fixed('i/trash'));
 						background-size: 19px;
 					}
 				}
 				
 				&.right {
 					&:after {
-						background-image: url( svg-path('icons/direction-right-circle'));
+						background-image: url( svg-dark-fixed('i/direction-right-circle'));
 					}
 				}
 				
 				&.left {
 					&:after {
-						background-image: url( svg-path('icons/direction-left-circle'));
+						background-image: url( svg-dark-fixed('i/direction-left-circle'));
 					}
 				}
 			}

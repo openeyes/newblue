@@ -106,7 +106,7 @@
 		
 		&.category-filter{
 			li {
-				background-image:url( svg-path( 'ui/arrow-right-blue' ) );
+				background-image:url( svg-all( 'ui/arrow-right-blue' ) );
 				background-position:right 2px center;
 				background-repeat: no-repeat;
 				background-size:8px;
@@ -116,7 +116,7 @@
 		
 		&.input-templates {
 			li {
-				background-image:url( svg-path( 'ui/filter' ) );
+				background-image:url( svg-all( 'ui/filter' ) );
 				background-position:right 2px center;
 				background-repeat: no-repeat;
 				background-size:13px;

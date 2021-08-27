@@ -13,7 +13,7 @@
 	height:$oe-header-height;
 	width:545px;
 	
-	background:transparent url( svg-path('backgrounds/clinic-watermark')) center right no-repeat;
+	background:transparent url( svg-all('ui/watermark-clinic')) center right no-repeat;
 	background-size:52px;	
 	
 	@include flex( center, flex-start );
@@ -36,7 +36,7 @@
 			height:16px;
 			width:16px;
 			margin:0 auto;
-			background: url( svg-path('icons/starline')) center center no-repeat;
+			background: url( svg-dark-fixed('i/starline')) center center no-repeat;
 			background-size: contain;
 			opacity:0.5;
 		}	

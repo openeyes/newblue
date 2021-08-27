@@ -26,11 +26,11 @@
 			@include font-size(11);
 			font-weight:400;
 			padding:6px 30px 6px 18px;
-			background: url( svg-path('ui/shortcut-arrow') ) right 8px top 6px no-repeat;
+			background: url( svg-all('ui/shortcut-arrow') ) right 8px top 6px no-repeat;
 			background-size: 10px;
 			
 			&.popup {
-				background-image: url( svg-path('icons/duplicate'));
+				background-image: url( svg-dark-fixed('i/duplicate'));
 				background-size: 12px;
 			}
 			

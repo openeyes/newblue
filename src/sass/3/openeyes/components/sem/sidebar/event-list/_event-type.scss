@@ -5,84 +5,84 @@
 // OE Sidebar Event Nav 
 // (View)
 
-.sidebar { 
-	// <li> 
-	.event {			
-		.event-type {
-			display: inline-block;
-			height:$oe-sidebar-event-height;
-			width:48px;
-			
-			.oe-i-e {
-				// fix y-offset position issue
-				pointer-events: none; // JS needs this for the lightning previews
-				vertical-align: top;
-			}
-				
-			// background SVG icons		
-			background-position: right 10px center;
-			background-repeat: no-repeat;
-			background-size: $oe-sidebar-event-height - 6px;
-			
-			// eye for quicklook
-			background-image:url( svg-path('sidebar/eye') );
-			
-			// warning star
-			&.alert {
-				background-image:url( svg-path('sidebar/warning') );
-			}
-			
-			&.done, 
-			&.ready {
-				background-image:url( svg-path('sidebar/tick') );
-			}
-			
-			&.confirmed {
-				background-image:url( svg-path('sidebar/tick-double') );
-			}
-			
-			&.cancelled {
-				background-image:url( svg-path('sidebar/cross') );
-			}
-			
-			&.pause {
-				background-image:url( svg-path('sidebar/pause') );
-			}
-			 
-			&.flag {
-				background-image:url( svg-path('sidebar/flag') );
-			}
-			
-			&.draft {
-				background-image:url( svg-path('sidebar/draft') ); // orange pencil
-			}
-			
-			&.draft-warning {
-				background-image:url( svg-path('sidebar/draft-warning') );
-			}
-			
-			&.edit {
-				background-image:url( svg-path('sidebar/edit') ); // grey pencil
-			}
-			
-			&.edit-done {
-				background-image:url( svg-path('sidebar/edit-done') ); // green pencil
-			}
-			
-			&.clock,
-			&.scheduled {
-				background-image:url( svg-path('sidebar/time') );
-			}
-		
-			&.virtual-clinic {
-				background-image:url( svg-path('sidebar/vc') );
-			}
-			
-			&.urgent {
-				background-image:url( svg-path('sidebar/urgent') );
-			}
+
+// <li>
+.event {
+	.event-type {
+		display: inline-block;
+		height:$oe-sidebar-event-height;
+		width:48px;
+
+		.oe-i-e {
+			// fix y-offset position issue
+			pointer-events: none; // JS needs this for the lightning previews
+			vertical-align: top;
+		}
+
+		// background SVG icons
+		background-position: right 10px center;
+		background-repeat: no-repeat;
+		background-size: $oe-sidebar-event-height - 6px;
+
+		// eye for quicklook
+		background-image:url( svg-all('sidebar/eye') );
+
+		// warning star
+		&.alert {
+			background-image:url( svg-all('sidebar/warning') );
+		}
+
+		&.done,
+		&.ready {
+			background-image:url( svg-all('sidebar/tick') );
+		}
+
+		&.confirmed {
+			background-image:url( svg-all('sidebar/tick-double') );
+		}
+
+		&.cancelled {
+			background-image:url( svg-all('sidebar/cross') );
+		}
+
+		&.pause {
+			background-image:url( svg-all('sidebar/pause') );
+		}
+
+		&.flag {
+			background-image:url( svg-all('sidebar/flag') );
+		}
+
+		&.draft {
+			background-image:url( svg-all('sidebar/draft') ); // orange pencil
+		}
+
+		&.draft-warning {
+			background-image:url( svg-all('sidebar/draft-warning') );
+		}
+
+		&.edit {
+			background-image:url( svg-all('sidebar/edit') ); // grey pencil
+		}
+
+		&.edit-done {
+			background-image:url( svg-all('sidebar/edit-done') ); // green pencil
+		}
+
+		&.clock,
+		&.scheduled {
+			background-image:url( svg-all('sidebar/time') );
+		}
+
+		&.virtual-clinic {
+			background-image:url( svg-all('sidebar/vc') );
+		}
+
+		&.urgent {
+			background-image:url( svg-all('sidebar/urgent') );
 		}
 	}
 }
+
 
 

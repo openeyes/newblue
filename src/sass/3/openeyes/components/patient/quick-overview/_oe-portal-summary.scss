@@ -28,7 +28,7 @@
 				font-weight: 500;
 				margin:0 0 5px 0;
 				padding: 0 0 0 15px; // icon
-				background: transparent url( svg-icon-path-theme('tick-chunky')) top 4px left no-repeat;
+				background: transparent url( svg-themed('i/tick-chunky')) top 4px left no-repeat;
 				background-size: 8px;
 				
 				&:last-child{

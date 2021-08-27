@@ -62,7 +62,7 @@
 			margin: auto;
 			position:relative; 
 			top: 0.5px; // because the height is 24px, should be 25px to get the icon in the middle! darn it.
-			background: transparent url( svg-path('icons/plus')) center no-repeat;
+			background: transparent url( svg-dark-fixed('i/plus')) center no-repeat;
 			background-size: 19px;
 			opacity: $oe-icon-opacity; // 0.6 is standard
 		}
@@ -91,7 +91,7 @@
 			margin: auto; // use flex
 			height:17px;
 			width:17px;
-			background: center / contain transparent url( svg-path('icons/plus-bold')) no-repeat;
+			background: center / contain transparent url( svg-dark-fixed('i/plus-bold')) no-repeat;
 		}
 	}
 	
@@ -135,13 +135,14 @@
 			border:none !important;
 		}
 		
-		// icon-bg buttons may help with reducing widths by replacing
-		// text: "Display" or "Go to" with an icon background
+		// icon-bg buttons may help with reducing widths by replacing some text
+		// e.g. "Display" or "Go to" replace with an icon background to represent the action
+		// this adds a small up arrow to the corner
 		&.icon-bg {
 			background-repeat: no-repeat;
 			&.goto {
 				background-size: 12px; // in SVG rotate is linked to this!!!
-				background-image: url( svg-path-theme( 'ui/btn-goto' ) );
+				background-image: url( svg-themed( 'ui/btn-goto' ) );
 				background-position: top 1px right -1px;
 			}	
 			

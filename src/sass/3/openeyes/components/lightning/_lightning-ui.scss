@@ -31,12 +31,12 @@
 			
 			&.left {
 				left:0;
-				background-image: url( svg-path('icons/arrow-left-bold') );
+				background-image: url( svg-dark-fixed('i/arrow-left-bold') );
 			}
 			
 			&.right {
 				right:0;
-				background-image: url( svg-path('icons/arrow-right-bold') );
+				background-image: url( svg-dark-fixed('i/arrow-right-bold') );
 				
 			}
 		}	

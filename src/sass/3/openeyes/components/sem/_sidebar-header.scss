@@ -72,16 +72,16 @@
 		
 		&.element-structure,
 		&.switch-elements {
-			background-image:url( svg-path( 'ui/sidebar-switcher-elements' ) );
+			background-image:url( svg-all( 'ui/sidebar-switcher-elements' ) );
 		}
 		
 		&.switch-events {
-			background-image:url( svg-path( 'ui/sidebar-switcher-events' ) );
+			background-image:url( svg-all( 'ui/sidebar-switcher-events' ) );
 		}
 		
 		&.events-user-trail {
 			background-size:13px;
-			background-image:url( svg-path( 'ui/sidebar-audit-trail' ) );
+			background-image:url( svg-all( 'ui/sidebar-audit-trail' ) );
 		}
 		
 		

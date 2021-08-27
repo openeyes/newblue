@@ -16,7 +16,7 @@
 	transform: rotate(90deg) translateY(10px) translateX(10px);
 	transform-origin: right;
 	
-	background:$oe-alert-red url( svg-path('icons/direction-up') ) top 50% right 5px no-repeat;
+	background:$oe-alert-red url( svg-dark-fixed('i/direction-up') ) top 50% right 5px no-repeat;
 	background-size:15px;
 	padding:8px 30px 5px 10px; // allow for icon
 	

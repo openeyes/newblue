@@ -5,86 +5,88 @@
 // decoupled for the worklist panel
 // could be used in a new home hub
 .favourites {
-			
+
 	// Lists title
 	h3 {
 		@include font-size(11);
 		color: $oe-text-light;
 		font-weight: $oe-font-medium;
-		padding:10px; 
+		padding: 10px;
 	}
-	
+
 	.fav {
-		
-		@include flex( stretch, space-between );
-		margin:2px 0;
-		
-		
+
+		@include flex(stretch, space-between);
+		margin: 2px 0;
+
+
 		.details {
 			flex: 1;
 			background: $oe-btn-default;
-			padding:5px 10px 10px 30px;
-			
+			padding: 5px 10px 10px 30px;
+
 			@include font-size(11);
 			font-weight: $oe-font-medium;
 			color: $oe-text;
 			cursor: pointer;
-			
-			&:hover, 
+
+			&:hover,
 			&:focus {
-				color:#fff;
-				background: $oe-btn-blue url(  svg-path('ui/shortcut-arrow') ) bottom 10px left 8px no-repeat;
-				background-size:15px;
+				color: #fff;
+				background: $oe-btn-blue url(svg-all("ui/shortcut-arrow")) bottom 10px left 8px no-repeat;
+				background-size: 15px;
 			}
-			
+
 			// Favourite name, as selected by User
 			.name {
-				padding:5px 0 0 0;
+				padding: 5px 0 0 0;
 				@include font-size(12);
 				font-weight: $oe-font-medium;
 			}
-			
+
 			// full details on expansion
 			.site {
 				padding: 8px 0 0 0;
 				opacity: 0.5;
 			}
-			
+
 			.context {
-				padding:3px 0;
+				padding: 3px 0;
 				font-weight: $oe-font-light;
 			}
-			
+
 			ul.lists {
-				padding:5px 0;
+				padding: 5px 0;
+
 				li {
-					padding:3px 0;
+					padding: 3px 0;
 					@include font-size(13);
-					border-top:1px dotted $oe-blue-dark2;
-					&:last-child { 
-						border-bottom:1px dotted $oe-blue-dark2;
+					border-top: 1px dotted $oe-blue-dark2;
+
+					&:last-child {
+						border-bottom: 1px dotted $oe-blue-dark2;
 					}
 				}
 			}
-			
+
 			.date-range {
-				padding:2px 0 0 0;
+				padding: 2px 0 0 0;
 			}
-			
+
 		}
-		
+
 		.expand-fav,
 		.remove-fav {
-			width:30px;
+			width: 30px;
 			background: $oe-btn-default;
-			margin:0 0 0 1px;
+			margin: 0 0 0 1px;
 			@include flex(center, center);
-			
+
 			.oe-i {
 				height: 100%;
 			}
 		}
-		
+
 	}
 }	
 

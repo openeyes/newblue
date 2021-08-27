@@ -34,14 +34,14 @@
 				&:after {
 					top:8px;
 					right:5px;
-					background: url( svg-path('icons/plus-bold') ) right top no-repeat;
+					background: url( svg-dark-fixed('i/plus-bold') ) right top no-repeat;
 					background-size: 17px;
 				}
 				
 				&.collapse {
 					&:after {
 						top:3px;
-						background-image: url( svg-path('icons/arrow-up-bold') );	
+						background-image: url( svg-dark-fixed('i/arrow-up-bold') );
 					}
 				}
 			}

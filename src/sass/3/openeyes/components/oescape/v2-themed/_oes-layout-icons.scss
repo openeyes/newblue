@@ -1,32 +1,26 @@
 // ** Copyright (C) 2018, OpenEyes Foundation. This file is part of OpenEyes. 
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-.oe-full-header {
+// layout 'icons' are only (currently) used in OES header.
+.oes-layout-icon {
+	display:inline-block;
+	width: 38px;
+	height: 17px;
+	background: transparent center center no-repeat;
+	background-size:38px 17px;
 
-	.oes-hd-data-layout {
-		
-		// layout 'icons' are only (currently) used in OES header.
-		.oes-layout-icon {
-			display:inline-block;
-			width: 38px; 
-			height: 17px;
-			background: transparent center center no-repeat;
-			background-size:38px 17px;
-			
-			@mixin oes-layout-icon($ratio) {
-				&.i-#{$ratio} {
-					background-image: url( svg-path('oes/layout-#{$ratio}') );
-				}
-			};
-			
-			@include oes-layout-icon('1-1');
-			@include oes-layout-icon('1-2');
-			@include oes-layout-icon('2-1');
-			@include oes-layout-icon('1-0');
-			@include oes-layout-icon('0-1');
-			
+	@mixin oes-layout-icon($ratio) {
+		&.i-#{$ratio} {
+			background-image: url( svg-all('oes/layout-#{$ratio}') );
 		}
-	}
+	};
+
+	@include oes-layout-icon('1-1');
+	@include oes-layout-icon('1-2');
+	@include oes-layout-icon('2-1');
+	@include oes-layout-icon('1-0');
+	@include oes-layout-icon('0-1');
+
 }
 
 

@@ -46,7 +46,7 @@
 				background-position:center center;
 				background-size:15px;
 				background-repeat: no-repeat;
-				background-image: url( svg-icon-path-theme('arrow-down-bold') );
+				background-image: url( svg-themed('i/arrow-down-bold') );
 				
 				&.fade-out {
 					animation: 0.2s ease-in forwards fadeout; // note: JS needs to remove class after 300 microseconds

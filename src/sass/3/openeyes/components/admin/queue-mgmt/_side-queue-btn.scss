@@ -13,7 +13,7 @@
 		font-weight: $oe-font-medium;
 		
 		
-		background: url( svg-icon-path-theme('arrow-right-bold')) right 5px center no-repeat;
+		background: url( svg-themed('i/arrow-right-bold')) right 5px center no-repeat;
 		background-size: 11px;
 		
 		padding:10px 0 10px 5px;
@@ -23,7 +23,7 @@
 		.patients {
 			height:11px;
 			width:0;
-			background: url( svg-icon-path-theme('person')) left center repeat-x;
+			background: url( svg-themed('i/person')) left center repeat-x;
 			background-size: 11px;
 			margin:5px 0 0 0;
 		}
@@ -43,7 +43,7 @@
 		&:focus,	
 		&:hover {
 			background-color: $oe-btn-blue;
-			background-image: url( svg-path('icons/arrow-right-bold'));
+			background-image: url( svg-dark-fixed('i/arrow-right-bold'));
 			color: #fff;
 		}	
 			

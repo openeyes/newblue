@@ -45,8 +45,9 @@ input {
 		padding-left:30px;
 		background-position:left 5px center;
 		background-repeat: no-repeat;
+		background-size:19px;
 		// search icon
-		background-image:url( svg-path('ui/search') );
+		background-image:url( svg-all('ui/search') );
 	}
 	// add FILTER icon to input
 	&.filter {
@@ -54,7 +55,7 @@ input {
 		background-position:left 5px center;
 		background-repeat: no-repeat;
 		// search icon
-		background-image:url( svg-path('ui/filter') );
+		background-image:url( svg-all('ui/filter') );
 	}
 	
 	// date should match oe-date: dd Mth YYYY

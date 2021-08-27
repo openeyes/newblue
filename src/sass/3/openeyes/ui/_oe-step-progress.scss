@@ -74,7 +74,7 @@
 			}
 			
 			&.injection {
-				background: url( svg-icon-path-theme( 'injection' )) left 8px center no-repeat;
+				background: $oe-sem-element-bg url( svg-themed('i/injection' )) left 8px center no-repeat;
 				background-size: 13px;
 				padding-left: 26px;
 				padding-right:12px;
@@ -87,7 +87,7 @@
 			top: 100%;
 			left: 0;
 			right: 0;
-			background: url( svg-icon-path-theme( 'arrow-up-bold' )) top 1px center no-repeat;
+			background: url( svg-themed('i/arrow-up-bold' )) top 1px center no-repeat;
 			background-size:11px;
 			height:20px;
 			pointer-events: none;

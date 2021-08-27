@@ -6,7 +6,7 @@
 
 .oe-new-patient {
 	
-	background:$oe-blue-dark url( svg-path-theme('backgrounds/patient-watermark') ) bottom -20px right 10px no-repeat;
+	background:$oe-blue-dark url( svg-themed('ui/watermark-patient')) bottom -20px right 10px no-repeat;
 	background-size:160px;
 	
 	color:$oe-text;

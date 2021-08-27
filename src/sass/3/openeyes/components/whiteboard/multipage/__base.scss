@@ -51,7 +51,7 @@
 		.page-scroll {
 			.page-scroll-btn {
 				display:inline-block;
-				background:$oe-btn-blue url( svg-path('icons/direction-up-circle') ) center center no-repeat;
+				background:$oe-btn-blue url( svg-dark-fixed('i/direction-up-circle') ) center center no-repeat;
 				background-size:35px;			
 				width:45px;
 				height:45px;
@@ -60,7 +60,7 @@
 				cursor: pointer;
 				
 				&.down {
-					background-image: url( svg-path('icons/direction-down-circle') );
+					background-image: url( svg-dark-fixed('i/direction-down-circle') );
 				}	
 			}
 		}	

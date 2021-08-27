@@ -78,7 +78,7 @@
 				width:19px; 	// allow for bigger icons (if needed)
 	
 				// put the expand collapse icon into the background
-				background: url( svg-path('icons/plus-bold') ) right center no-repeat;
+				background: url( svg-dark-fixed('i/plus-bold') ) right center no-repeat;
 				background-size: 17px;
 				
 				opacity:$oe-icon-opacity; //  now i can use opacity
@@ -101,7 +101,7 @@
 			&.collapse {
 				margin-bottom: 0;
 				&:after {
-					background-image: url( svg-path('icons/arrow-up') );	
+					background-image: url( svg-dark-fixed('i/arrow-up') );
 				}
 				
 				h3 {

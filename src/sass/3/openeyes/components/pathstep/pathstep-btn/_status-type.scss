@@ -22,7 +22,7 @@
 	// Configure is possible first state
 	&.config {
 		border-color: $oe-step-outline;
-		background: $oe-step-grey url( svg-icon-path-theme('cog')) left 4px top 5px no-repeat;
+		background: $oe-step-grey url( svg-themed('i/cog')) left 4px top 5px no-repeat;
 		background-size: 11px;
 		padding-left: 20px;	
 	}
@@ -61,7 +61,7 @@
 		// person icon, needs to be white
 		&.person {
 			.step {
-				background-image: url( svg-path('icons/person'));
+				background-image: url( svg-dark-fixed('i/person'));
 			}
 		}
 	}
@@ -81,7 +81,7 @@
 	&.person {
 		.step {
 			padding-left:13px;
-			background: url( svg-icon-path-theme('person')) center left no-repeat;
+			background: url( svg-themed('i/person')) center left no-repeat;
 			background-size: 11px;
 		}
 	}
@@ -120,7 +120,7 @@
 		border-color: $oe-step-outline;
 		.step {
 			//padding-left:14px;
-			//background: url( svg-icon-path-theme('no-permissions')) center left no-repeat;
+			//background: url( svg-themed('i/no-permissions')) center left no-repeat;
 			//background-size: 11px;
 			opacity:0.5; // use opacity because of the icons
 		}

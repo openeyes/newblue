@@ -27,7 +27,7 @@
 				left:8px; 
 				height:13px;
 				width:13px;
-				background: url( svg-icon-path-theme('downup')) center center no-repeat;
+				background: url( svg-themed('i/downup')) center center no-repeat;
 				background-size: contain;
 				opacity:0.4;
 			}
@@ -35,7 +35,7 @@
 			&:hover,
 			&:focus {
 				&:after {
-					background-image: url( svg-path('icons/downup'));
+					background-image: url( svg-dark-fixed('i/downup'));
 					opacity:1;
 				}
 			}
@@ -53,7 +53,7 @@
 				left:0; 
 				right:0;
 				bottom:0;
-				background: url( svg-icon-path-theme('info')) center center no-repeat;
+				background: url( svg-themed('i/info')) center center no-repeat;
 				background-size: 13px;
 				opacity:0.4;
 			}

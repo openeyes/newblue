@@ -9,7 +9,7 @@
 		padding: 5px 0 5px 10px;
 		
 		&.eye-divider {
-			background: url( svg-path-theme('ui/element-divider' )) 50% 0 repeat-y;
+			background: url( svg-themed('ui/element-divider' )) 50% 0 repeat-y;
 			background-size:19px;
 		}
 		

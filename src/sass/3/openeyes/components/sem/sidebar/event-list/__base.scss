@@ -30,10 +30,15 @@
 			&:active {
 				color:#fff;
 				background:$oe-btn-blue;
+
+				// dull the laterality icons
+				.event-extra {
+					opacity: 0.8;
+				}
 				
 				.oe-i.laterality {
-					&.R { 	background-image: url( svg-path('ui/lat-R.pro') ); }
-					&.L { 	background-image: url( svg-path('ui/lat-L.pro') ); }
+					&.R { 	background-image: url( svg-dark-fixed('i/lat-R') ); }
+					&.L { 	background-image: url( svg-dark-fixed('i/lat-L') ); }
 				}
 				.tag {
 					color:#fff;
@@ -46,10 +51,14 @@
 			a {
 				color: $sidebar-event-selected-text;
 				background: $sidebar-event-selected;
+
+				.event-extra {
+					opacity: 0.5;
+				}
 				
 				.oe-i.laterality {
-					&.R { 	background-image: url( svg-path('ui/lat-R.pro') ); }
-					&.L { 	background-image: url( svg-path('ui/lat-L.pro') ); }
+					&.R { 	background-image: url( svg-dark-fixed("i/lat-R") ); }
+					&.L { 	background-image: url( svg-dark-fixed("i/lat-L") ); }
 				}
 				
 				.tag {

@@ -34,14 +34,14 @@
 		
 		.right {
 			width: 199px;
-			background:transparent url( svg-path-theme( 'ui/lat-R' ) ) top 10px left 5px  no-repeat;
+			background:transparent url( svg-themed( 'ui/lat-R' ) ) top 10px left 5px  no-repeat;
 			background-size: 11px;
 		}
 		
 		.left {
 			width: 201px;
 			border-left:1px dotted rgba($oe-text-light, 0.3);
-			background:transparent url( svg-path-theme( 'ui/lat-L' ) ) top 10px left 5px no-repeat;
+			background:transparent url( svg-themed( 'ui/lat-L' ) ) top 10px left 5px no-repeat;
 			background-size: 11px;
 			
 		}

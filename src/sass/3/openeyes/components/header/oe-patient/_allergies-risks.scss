@@ -29,7 +29,7 @@
 		height:23px;
 		padding:0 23px 0 5px; // padding matches the data padding to align text
 	
-		background:transparent url( svg-path('icons/triangle') ) center right 4px no-repeat;
+		background:transparent url( svg-dark-fixed('i/triangle') ) center right 4px no-repeat;
 		background-size:15px;	
 		
 		&.unknown {
@@ -47,7 +47,7 @@
 		// js controlled interaction... 
 		&.open, &.active {
 			background-color: $oe-dark-text-highlight;
-			background-image: url( svg-path('icons/_classic/triangle') );
+			background-image: url('../svg/in-css/light/i/triangle.svg');
 			color:$oe-dark-bg;
 		}
 		

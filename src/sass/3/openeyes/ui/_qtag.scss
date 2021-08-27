@@ -10,7 +10,7 @@
 	position:absolute; // positioned by JS
 	width:300px;
 	padding: 4px 15px 4px 4px; // allow for the icon
-	background:$oe-tooltip-bg url( svg-icon-path-theme('remove-circle')) top 5px right 5px no-repeat;
+	background:$oe-tooltip-bg url( svg-themed('i/remove-circle')) top 5px right 5px no-repeat;
 	background-size: 13px;
 	border:1px solid $oe-text-highlight;
 	border-radius: 3px;

@@ -9,7 +9,7 @@ table.standard {
 	
 	th, td {
 		&.required {
-			background:transparent url( svg-icon-path-theme( 'asterisk' ) ) center right 8px no-repeat;
+			background:transparent url( svg-themed('i/asterisk' ) ) center right 8px no-repeat;
 			background-size:13px;
 			padding-right:30px;
 		}

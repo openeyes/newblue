@@ -2,8 +2,7 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 
-// OE Header - Patient
-
+// Header - patient info area in SEM
 .oe-patient {
 	position:absolute;
 	top:0; 
@@ -17,7 +16,7 @@
 		width:530px;
 	}
 	
-	background:transparent url( svg-path('backgrounds/patient-watermark.pro') ) top -4px right 18px no-repeat;
+	background:transparent url( svg-dark-fixed('ui/watermark-patient')) top -4px right 18px no-repeat;
 	background-size:90px 90px;	
 	
 }

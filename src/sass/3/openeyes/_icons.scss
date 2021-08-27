@@ -1,426 +1,334 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "sass:list";
 
-// OE UI Icons (SVG)
-// default size is 19px x 19px
-//  
+// oe icons: <i class="oe-i [name] [size] [...options]"></i>
 //	small: 	13px 
 // 	medium:	16px
-//	large: 	19px
-// 
-// DOM: <i class="oe-i [name] [size] [...]"></i> 
+//	large: 	19px (default size)
 
 .oe-i {
-	display:inline-flex;
-	
-	$size-large:		19px;
-	$size-medium:		16px;
-	$size-small:		13px;
-	
-	width:$size-large; 
-	height:$size-large;
+	display: inline-flex;
+
+	$size-large: 19px;
+	$size-medium: 16px;
+	$size-small: 13px;
+
+	width: $size-large;
+	height: $size-large;
 	background-size: $size-large;
 	background-repeat: no-repeat;
 	background-position: center center;
 
-	
 	&.small {
-		width:$size-small; 
-		height:$size-small;
+		width: $size-small;
+		height: $size-small;
 		background-size: $size-small;
 		vertical-align: middle;
 	}
 
 	&.medium {
-		width:$size-medium; 
-		height:$size-medium;
+		width: $size-medium;
+		height: $size-medium;
 		background-size: $size-medium;
 		vertical-align: middle;
 	}
-	
+
 	&.large {
-		// default, class is here in case it is needed...
+		// default, class isn't need.
+		// set as the default because of the trash icon (in hindsight...)
 	}
-	
-	// reduce the ICON size ONLY
-	// not really used but anyway... 
+
+	// large area 19px but small icon within this area
 	&.small-icon {
 		background-size: $size-small;
 		vertical-align: text-top;
 	}
-	// medium icon
+
+	// large area 19px but medium icon within this area
 	&.medium-icon {
 		background-size: $size-medium;
 		vertical-align: text-top;
 	}
-	
-	
+
 	// used 'inline' to 'pad' out the icon
-	&.pad {	
-		margin:0 4px;		
+	&.pad {
+		margin: 0 4px;
 	}
-	
+
 	&.pad-both {
-		margin:0 8px;
+		margin: 0 8px;
 	}
-	
+
 	// icons before text
 	&.pad-right {
-		margin:0 8px 0 0;
+		margin: 0 8px 0 0;
 	}
-	
+
 	// icons after text
 	&.pad-left {
-		margin:0 0 0 8px;
+		margin: 0 0 0 8px;
 	}
-	
+
 	// show interaction
-	cursor:pointer;
+	cursor: pointer;
 	opacity: $oe-icon-opacity;
-	
+
 	// same affect but different classes 
 	// as unable to decide on best naming strategy
-	
-	&:hover, &:focus, &:active, 
-	&.active,
-	&.no-hover,
-	&.circle-green,	// no hover for coloured graphics	
-	&.circle-yellow,
-	&.circle-amber,
-	&.circle-orange,			
-	&.circle-red,
-	&.circle-grey,
-	&.flag-green,	// no hover for coloured graphics	
-	&.flag-amber,
-	&.flag-orange,			
-	&.flag-red,
-	&.flag-grey,
-	&.triangle-green,
-	&.triangle-amber,
-	&.triangle-orange,
-	&.triangle-red,
-	&.triangle-grey,
-	&.triangle-urgent,
-	&.mpr,
-	&.mpr-red,
-	&.mpr-amber,
-	&.mpr-green,
-	&.exclamation-green,
-	&.exclamation-amber,
-	&.exclamation-orange,
-	&.exclamation-red,
-	&.tick-green,
-	&.cross-red,
-	&.warning,
-	&.warning-none,
-	&.doubt,
-	&.person-green,
-	{ 
-		opacity:1; 
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active, // class, not pseudo!
+	&.no-hover {
+		opacity: 1;
 	}
-	
+
 	// selected state changes the cursor
 	&.selected {
-		opacity:1;
-		cursor:default; 
+		opacity: 1;
+		cursor: default;
 	}
-	
+
 	// Generally icons will be used for interaction
 	// sometimes however they are only used for graphical purposes
 	// use 'no-click' to turn off interaction behaviour
 	&.start, // graphic icons only
-	&.stop,  
-	&.d-slash, 
-	&.line-break,	
+	&.stop,
+	&.d-slash,
+	&.line-break,
 	&.no-click {
-		cursor:default;
+		cursor: default;
 		pointer-events: none;
-		&:hover, &:focus, &:active { 
-			opacity:$oe-icon-opacity; 
-		}
-	}	
-	
-	// icons (info) that only provide a toolip
-	// BUT do not go any where:
-	&.no-link {
-		cursor: help;
 	}
-	
-	
+
 	&.disabled {
-		cursor:default;
+		cursor: default;
 		pointer-events: none;
-		opacity:0.25;
-		&:hover, &:focus, &:active { 
-			opacity:inherit; 
-		}
+		opacity: 0.25;
 	}
-	
-	
-	// pro-theme required for all icons if the icons are used 
-	// on areas that can't be theme changed (they will display the
-	// same in both Pro and Classic)
-	@mixin oe3-icons($svg) {
-		background-image: url( svg-icon-path-theme( $svg ) );
-		&.pro-theme {
-			background-image: url( svg-path( "icons/" + $svg ) ); 
-		}
-	}
-	
-	@mixin oe3-icon-dark-area($svg) {
-		background-image: url( svg-path( "icons/" + $svg ) ); 
-	}
-	// 'pro-theme' concept was a bit of a disaster - devs struggled to implement
-	// this correctly. Therefore, taking over control of icons used in the
-	// 'dark' areas:
-	.oe-popup-content &,
-	.oe-patient-popup &, 
-	.oe-hotlist-panel & {
-		&.laterality.R 		{ @include oe3-icon-dark-area('lat-R-green'); }
-		&.laterality.L 		{ @include oe3-icon-dark-area('lat-L-red'); }
-		&.laterality.NA 	{ @include oe3-icon-dark-area('lat-NA'); }
-		&.laterality.Ri 	{ @include oe3-icon-dark-area('lat-R-inactive'); }
-		&.laterality.Li 	{ @include oe3-icon-dark-area('lat-L-inactive'); }
-		&.d-slash 			{ @include oe3-icon-dark-area('double-slash'); }
-		&.line-break		{ background-image: url( svg-path('ui/line-break.pro') ); }
-		&.direction-right 	{ @include oe3-icon-dark-area('direction-right'); }
-		&.direction-right-circle 	{ @include oe3-icon-dark-area('direction-right-circle'); }
-		&.person			{ @include oe3-icon-dark-area('person'); }
-		&.comments 			{ @include oe3-icon-dark-area('comments'); }
-		&.comments-added 	{ @include oe3-icon-dark-area('comments-added'); }
-		&.comments-who 		{ @include oe3-icon-dark-area('comments-who'); }
-		&.info 				{ @include oe3-icon-dark-area('info'); }
-		&.child-arrow  		{ @include oe3-icon-dark-area('child-arrow'); }
-		&.audit-trail 		{ @include oe3-icon-dark-area('audit-trail'); }
-		&.drug-rx			{ @include oe3-icon-dark-area('drug-rx'); }
-		&.remove-circle		{ @include oe3-icon-dark-area('remove-circle'); }
-		&.plus-circle		{ @include oe3-icon-dark-area('plus-circle'); }
-		&.pencil			{ @include oe3-icon-dark-area('pencil'); }
-		&.save				{ @include oe3-icon-dark-area('save'); }
-	} 
 
-	
-	// icons
-	// SVGs containing styling: fill:#fff;
-	&.plus 				{ @include oe3-icons('plus'); }
-	&.plus-bold 		{ @include oe3-icons('plus-bold'); }
-	&.plus-circle 		{ @include oe3-icons('plus-circle'); }
-	&.minus 			{ @include oe3-icons('minus'); }
-	&.minus-bold 		{ @include oe3-icons('minus-bold'); }
-	&.arrow-down 		{ @include oe3-icons('arrow-down'); }
-	&.arrow-up 			{ @include oe3-icons('arrow-up');}
-	&.arrow-down-bold 	{ @include oe3-icons('arrow-down-bold'); }
-	&.arrow-up-bold 	{ @include oe3-icons('arrow-up-bold'); }
-	&.arrow-right-bold 	{ @include oe3-icons('arrow-right-bold'); }
-	&.arrow-left-bold 	{ @include oe3-icons('arrow-left-bold'); }
-	&.direction-right 	{ @include oe3-icons('direction-right'); }
-	&.direction-left 	{ @include oe3-icons('direction-left'); }
-	&.direction-up 		{ @include oe3-icons('direction-up'); }
-	&.direction-down 	{ @include oe3-icons('direction-down'); }
-	&.direction-horizontal 		{ @include oe3-icons('direction-horizontal'); }
-	&.direction-right-circle 	{ @include oe3-icons('direction-right-circle'); }
-	&.direction-left-circle 	{ @include oe3-icons('direction-left-circle'); }
-	&.direction-up-circle 		{ @include oe3-icons('direction-up-circle'); }
-	&.direction-down-circle 	{ @include oe3-icons('direction-down-circle'); }
-	&.move				{ @include oe3-icons('move'); }
-	&.child-arrow 		{ @include oe3-icons('child-arrow'); }
-	&.menu 				{ @include oe3-icons('menu'); }
-	&.trash 			{ @include oe3-icons('trash'); }
-	&.trash-blue 		{ @include oe3-icons('trash-blue'); }
-	&.print 			{ @include oe3-icons('print'); }
-	&.search 			{ @include oe3-icons('search'); }
-	&.zoom-in 			{ @include oe3-icons('zoom-in'); }
-	&.zoom-out 			{ @include oe3-icons('zoom-out'); }
-	&.filter 			{ @include oe3-icons('filter'); }
-	&.remove 			{ @include oe3-icons('remove'); }
-	&.remove-circle 	{ @include oe3-icons('remove-circle'); }
-	&.duplicate 		{ @include oe3-icons('duplicate'); }
-	&.info 				{ @include oe3-icons('info'); }
-	&.info-blue 		{ @include oe3-icons('info-blue'); }
-	&.eye 				{ @include oe3-icons('eye'); }
-	&.eye-circle 		{ @include oe3-icons('eye-circle'); }
-	&.comments 			{ @include oe3-icons('comments'); }
-	&.comments-added 	{ @include oe3-icons('comments-added'); }
-	&.comments-who 		{ @include oe3-icons('comments-who'); }
-	&.start 			{ @include oe3-icons('start'); }
-	&.stop 				{ @include oe3-icons('stop'); }
-	&.change 			{ @include oe3-icons('change'); }
-	&.d-slash 			{ @include oe3-icons('double-slash'); }
-	&.expand 			{ @include oe3-icons('expand'); }
-	&.collapse 			{ @include oe3-icons('collapse'); }
-	&.reduce-height 	{ @include oe3-icons('reduce-height'); }
-	&.increase-height 	{ @include oe3-icons('increase-height'); }
-	&.increase-height-orange 	{ @include oe3-icons('increase-height-orange'); }
-	&.downup 			{ @include oe3-icons('downup'); }
-	&.history,			// uses this icon in different places
-	&.rewind, 			
-	&.rotate-left 		{ @include oe3-icons('rotate-left'); }	
-	&.forward,
-	&.rotate-right 		{ @include oe3-icons('rotate-right'); }
-	&.tick 				{ @include oe3-icons('tick'); }
-	&.triangle			{ @include oe3-icons('triangle'); }
-	&.time 				{ @include oe3-icons('time'); }
-	&.audit-trail 		{ @include oe3-icons('audit-trail'); }
-	&.download 			{ @include oe3-icons('download'); }
-	&.asterisk			{ @include oe3-icons('asterisk'); }
-	&.asterisk-blue		{ @include oe3-icons('asterisk-blue'); }
-	&.pencil			{ @include oe3-icons('pencil'); }
-	&.pencil-blue 		{ @include oe3-icons('pencil-blue'); }
-	&.exclamation		{ @include oe3-icons('exclamation'); }
-	&.male				{ @include oe3-icons('male'); }
-	&.female			{ @include oe3-icons('female'); }
-	&.drug-rx			{ @include oe3-icons('drug-rx'); }
-	&.formulary			{ @include oe3-icons('formulary'); }
-	&.injection			{ @include oe3-icons('injection'); }
-	&.drop				{ @include oe3-icons('drop'); }
-	&.drop-done			{ @include oe3-icons('drop-done'); }
-	&.star				{ @include oe3-icons('star'); }
-	&.starline			{ @include oe3-icons('starline'); }
-	&.flag				{ @include oe3-icons('flag'); }
-	&.flagline			{ @include oe3-icons('flagline'); }
-	&.letter-1			{ @include oe3-icons('letter-1'); }
-	&.letter-2			{ @include oe3-icons('letter-2'); }
-	&.letter-in			{ @include oe3-icons('letter-invitation'); }
-	&.letter-GP			{ @include oe3-icons('letter-GP'); }
-	&.no-permissions	{ @include oe3-icons('no-permissions'); }
-	&.waiting			{ @include oe3-icons('waiting'); }
-	&.more-h			{ @include oe3-icons('more-h'); }
-	&.status-urgent		{ @include oe3-icons('status-urgent'); }
-	&.status-query		{ @include oe3-icons('status-query'); }
-	&.status-query-reply		{ @include oe3-icons('status-query-reply'); }
-	&.whiteboard		{ @include oe3-icons('whiteboard'); }
-	&.doubt				{ @include oe3-icons('doubt'); }
-	&.person			{ @include oe3-icons('person'); }
-	&.person-green		{ @include oe3-icons('person-green'); }
-	&.person-split		{ @include oe3-icons('person-split'); }
-	&.reset 			{ @include oe3-icons('reset'); }
-	&.undo 				{ @include oe3-icons('undo'); }
-	&.sync 				{ @include oe3-icons('sync'); }
-	&.flux	 			{ @include oe3-icons('flux'); }
-	&.cog	 			{ @include oe3-icons('cog'); }
-	&.padlock	 		{ @include oe3-icons('padlock'); }
-	&.fork	 			{ @include oe3-icons('fork'); }
-	&.path-break	 	{ @include oe3-icons('path-break'); }
-	&.happy	 			{ @include oe3-icons('happy'); }
-	&.crying	 		{ @include oe3-icons('crying'); }
-	
-	// monochromatic Eye Lat icons:
-	&.eyelat-L			{ @include oe3-icons('lat-L'); }
-	&.eyelat-R			{ @include oe3-icons('lat-R'); }
-	
-	// nav icons  may be required in the IU
-	&.patient			{ @include oe3-icons('patient'); }
-	&.trials			{ @include oe3-icons('trials'); }
-	
-	// save and cancel icons
-	&.save				{ @include oe3-icons('save'); }
-	&.save-blue			{ @include oe3-icons('save-blue'); }
-	&.save-plus			{ @include oe3-icons('save-plus'); }
-	&.cancel 			{ @include oe3-icons('cancel'); }
-	&.finish 			{ @include oe3-icons('finish'); }
-
-	
-	// Eyedraw icons 
-	// these will not require theming as they are only used 
-	// in the Eyedraw app
-	&.ed-reset			{ background-image: url( svg-path('eyedraw/ed-reset') ); }
-	&.ed-zoom			{ background-image: url( svg-path('eyedraw/ed-zoom') ); }
-	&.ed-lock			{ background-image: url( svg-path('eyedraw/ed-lock') ); }
-	&.ed-trash			{ background-image: url( svg-path('eyedraw/ed-trash') ); }
-	&.ed-move-back  		{ background-image: url( svg-path('eyedraw/ed-backward') ); }
-	&.ed-move-forward 	{ background-image: url( svg-path('eyedraw/ed-forward') ); }
-	&.ed-info 			{ background-image: url( svg-path('eyedraw/ed-info') ); }
-	
-	
-	// circles (traffic lights) green, amber, red
-	// used in more and more places, therefore
-	// making these also available as icons
-	&.circle-green		{ background-image: url( svg-path('ui/circle-green') ); }
-	&.circle-yellow		{ background-image: url( svg-path('ui/circle-yellow') ); } // inbetween green-orange
-	&.circle-amber, 
-	&.circle-orange		{ background-image: url( svg-path('ui/circle-orange') ); }
-	&.circle-red		{ background-image: url( svg-path('ui/circle-red') ); }
-	&.circle-grey		{ background-image: url( svg-path('ui/circle-grey') ); }
-	
-	// flags G / A / R
-	&.flag-green		{ background-image: url( svg-path('ui/flag-green') ); }
-	&.flag-amber, 
-	&.flag-orange		{ background-image: url( svg-path('ui/flag-orange') ); }
-	&.flag-red			{ background-image: url( svg-path('ui/flag-red') ); }
-	&.flag-grey			{ background-image: url( svg-path('ui/flag-grey') ); }
-	
-	// triangles G / A / R
-	// Patient Risk Status
-	&.triangle-green		{ background-image: url( svg-path('ui/triangle-green') ); }
-	&.triangle-amber, 
-	&.triangle-orange	{ background-image: url( svg-path('ui/triangle-amber') ); }
-	&.triangle-red		{ background-image: url( svg-path('ui/triangle-red') ); }
-	&.triangle-grey		{ background-image: url( svg-path('ui/triangle-grey') ); }
-	&.mpr				{ @include oe3-icons('mpr'); }
-	&.mpr-red			{ background-image: url( svg-path('ui/mpr-red') ); }
-	&.mpr-amber			{ background-image: url( svg-path('ui/mpr-amber') ); }
-	&.mpr-green			{ background-image: url( svg-path('ui/mpr-green') ); }
-	// Optom has flag as Urgent.. needs a Risk:
-	&.triangle-urgent	{ background-image: url( svg-path('ui/triangle-orange') ); }
-
-	// exclamation mark (amber, red)
-	// ONLY for NHS Number status
-	&.exclamation-green		{ background-image: url( svg-path('ui/exclamation-green') ); }
-	&.exclamation-amber,
-	&.exclamation-orange	{ background-image: url( svg-path('ui/exclamation-orange') ); }
-	&.exclamation-red		{ background-image: url( svg-path('ui/exclamation-red') ); }
-	
-	// RED warning triangle
-	&.warning 				{ background-image: url( svg-path('ui/warning') ); } 
-	&.warning-none 			{ background-image: url( svg-path('ui/warning-none') ); } 
-	
-	// Tick and Cross
-	&.tick-green 			{ background-image: url( svg-path-theme('ui/tick-green') ); }
-	&.cross-red 			{ background-image: url( svg-path('ui/cross-red') ); } 	
-
-	// R = Green; L = Red; B = Green/Red 
-	// Customised for both themes		
-	&.laterality {
-		// no interaction
-		opacity: 1;
-		cursor:auto; 
-		// Right Eye
-		&.R { @include oe3-icons('lat-R-green'); }
-		// Left Eye
-		&.L { @include oe3-icons('lat-L-red'); }
-		// N/A - grey dot 
-		&.NA { @include oe3-icons('lat-NA'); }
-		// 'inactive' versions ONLY for use 
-		// in oe-eye-lat-icons as has opacity set in SVG
-		// (basically eyelat-* but with opacity and following laterality naming)
-		&.Ri { @include oe3-icons('lat-R-inactive'); }
-		&.Li { @include oe3-icons('lat-L-inactive'); }
-	}
-	
-	// BEO (Both Eyes Open)
-	&.beo { 
-		opacity: 1;
-		cursor:auto;
-		@include oe3-icons('beo'); 
-	}
-	
-	// NA for Systemic (but might useful elsewhere)
-	&.NA {
-		opacity: 1;
-		cursor:auto;
-		@include oe3-icons('lat-NA');
-	}
-	
 	// single line break for collapsed text (double slash icon is used for 2+ breaks)
 	&.line-break {
-		width:5px; 
+		width: 5px;
 		height: $size-small;
-		margin:0 3px;
+		margin: 0 3px;
 		background-size: $size-small;
-		background-image: url( svg-path-theme('ui/line-break') );
+		background-image: url(svg-themed("i/line-break"));
 		vertical-align: middle;
 	}
-	
-}
 
+	// CSS class | SVG file name
+	$themed_icons: (
+		"plus": "plus",
+		"plus-bold": "plus-bold",
+		"plus-circle": "plus-circle",
+		"minus": "minus",
+		"minus-bold": "minus-bold",
+		"arrow-down": "arrow-down",
+		"arrow-up": "arrow-up",
+		"arrow-down-bold": "arrow-down-bold",
+		"arrow-up-bold": "arrow-up-bold",
+		"arrow-right-bold": "arrow-right-bold",
+		"arrow-left-bold": "arrow-left-bold",
+		"direction-right": "direction-right",
+		"direction-left": "direction-left",
+		"direction-up": "direction-up",
+		"direction-down": "direction-down",
+		"direction-horizontal": "direction-horizontal",
+		"direction-right-circle": "direction-right-circle",
+		"direction-left-circle": "direction-left-circle",
+		"direction-up-circle": "direction-up-circle",
+		"direction-down-circle": "direction-down-circle",
+		"move": "move",
+		"child-arrow": "child-arrow",
+		"menu": "menu",
+		"trash": "trash",
+		"trash-blue": "trash-blue",
+		"print": "print",
+		"search": "search",
+		"zoom-in": "zoom-in",
+		"zoom-out": "zoom-out",
+		"filter": "filter",
+		"remove": "remove",
+		"remove-circle": "remove-circle",
+		"duplicate": "duplicate",
+		"info": "info",
+		"info-blue": "info-blue",
+		"eye": "eye",
+		"eye-circle": "eye-circle",
+		"comments": "comments",
+		"comments-added": "comments-added",
+		"comments-who": "comments-who",
+		"start": "start",
+		"stop": "stop",
+		"change": "change",
+		"d-slash": "double-slash",
+		"expand": "expand",
+		"collapse": "collapse",
+		"reduce-height": "reduce-height",
+		"increase-height": "increase-height",
+		"increase-height-orange": "increase-height-orange",
+		"downup": "downup",
+		"history": "rotate-left", // rotate-left
+		"rewind": "rotate-left", // rotate-left
+		"rotate-left": "rotate-left", // rotate-left
+		"forward": "rotate-right", // rotate-right
+		"rotate-right": "rotate-right", // rotate-right
+		"tick": "tick",
+		"triangle": "triangle",
+		"time": "time",
+		"audit-trail": "audit-trail",
+		"download": "download",
+		"asterisk": "asterisk",
+		"asterisk-blue": "asterisk-blue",
+		"pencil": "pencil",
+		"pencil-blue": "pencil-blue",
+		"exclamation": "exclamation",
+		"male": "male",
+		"female": "female",
+		"drug-rx": "drug-rx",
+		"formulary": "formulary",
+		"injection": "injection",
+		"drop": "drop",
+		"drop-done": "drop-done",
+		"star": "star",
+		"starline": "starline",
+		"flag": "flag",
+		"flagline": "flagline",
+		"letter-1": "letter-1",
+		"letter-2": "letter-2",
+		"letter-in": "letter-invitation",
+		"letter-GP": "letter-GP",
+		"no-permissions": "no-permissions",
+		"waiting": "waiting",
+		"more-h": "more-h",
+		"status-urgent": "status-urgent",
+		"status-query": "status-query",
+		"status-query-reply": "status-query-reply",
+		"whiteboard": "whiteboard",
+		"doubt": "doubt",
+		"person": "person",
+		"person-green": "person-green",
+		"person-split": "person-split",
+		"reset": "reset",
+		"undo": "undo",
+		"sync": "sync",
+		"flux": "flux",
+		"cog": "cog",
+		"padlock": "padlock",
+		"fork": "fork",
+		"path-break": "path-break",
+		"happy": "happy",
+		"crying": "crying",
+		"eyelat-L": "lat-L", // monochromatic Eye Lat icons:
+		"eyelat-R": "lat-R", // monochromatic Eye Lat icons:
+		"laterality.R": "lat-R-green", // note: laterality icon set uses TWO classes: e.g class="oe-i laterality R"
+		"laterality.L": "lat-L-red",
+		"laterality.NA": "lat-NA",
+		"laterality.Ri": "lat-R-inactive",
+		"laterality.Li": "lat-L-inactive",
+		"beo": "beo", // Both Eyes Open
+		"NA":"lat-NA", // basic a grey dot, used with Systemic icon
+		"patient": "patient", // nav icons that may be required in the IU
+		"trials": "trials",
+		"save": "save",
+		"save-blue": "save-blue",
+		"save-plus": "save-plus",
+		"cancel": "cancel",
+		"finish": "finish",
+		"mpr": "mpr",
+		"tick-green": "tick-green",
+	);
+
+	$universal_icons: (
+		"circle-green": "circle-green",
+		"circle-yellow": "circle-yellow",
+		"circle-amber": "circle-orange", // amber = orange
+		"circle-orange": "circle-orange",
+		"circle-red": "circle-red",
+		"circle-grey": "circle-grey",
+		"flag-green": "flag-green",
+		"flag-amber": "flag-orange", // amber = orange
+		"flag-orange": "flag-orange",
+		"flag-red": "flag-red",
+		"flag-grey": "flag-grey",
+		"triangle-green": "triangle-green",
+		"triangle-amber": "triangle-orange", // amber = orange
+		"triangle-orange": "triangle-orange",
+		"triangle-red": "triangle-red",
+		"triangle-grey": "triangle-grey",
+		"mpr-red": "mpr-red",
+		"mpr-amber": "mpr-amber",
+		"mpr-green": "mpr-green",
+		"exclamation-green": "exclamation-green",
+		"exclamation-amber": "exclamation-orange", // amber = orange
+		"exclamation-orange": "exclamation-orange",
+		"exclamation-red": "exclamation-red",
+		"warning": "warning", // RED Risk/Alert triangle
+		"warning-none": "warning-none",
+		"cross-red": "cross-red",
+	);
+
+	$eyedraw_icons: (
+		"ed-reset": "ed-reset",
+		"ed-zoom": "ed-zoom",
+		"ed-lock": "ed-lock",
+		"ed-trash": "ed-trash",
+		"ed-move-back": "ed-backward",
+		"ed-move-forward": "ed-forward",
+		"ed-info": "ed-info",
+	);
+
+	// Customise some icons based on usage and positioning within the UI
+
+	// icons used in the "dark" frame area (need to be fixed to use the "dark" icon set)
+	// note: use the class name NOT the SVG name!
+	$used-in-frame: "laterality.R", "laterality.L", "laterality.NA", "laterality.Ri", "laterality.Li", "d-slash", "line-break", "direction-right", "direction-right-circle", "person", "comments", "comments-added", "comments-who", "info", "child-arrow", "audit-trail", "drug-rx", "remove-circle", "plus-circle", "pencil", "save", "more-h", "menu", "change", "injection";
+
+	// these icons need to always be at full opacity by default
+	$no-opacity: "laterality.R", "laterality.L", "laterality.NA", "laterality.Ri", "laterality.Li", "beo", "doubt", "circle-green", "circle-yellow", "circle-amber", "circle-orange", "circle-red", "circle-grey", "flag-green", "flag-amber", "flag-orange", "flag-red", "flag-grey", "triangle-green", "triangle-amber", "triangle-orange", "triangle-red", "triangle-grey", "triangle-urgent", "mpr", "mpr-red", "mpr-amber", "mpr-green", "exclamation-green", "exclamation-amber", "exclamation-orange", "exclamation-red", "tick-green", "cross-red", "warning", "warning-none",
+	"person-green";
+
+	// @mixin - build specific icon classes
+	// $map: see lists above
+	// $set: where are the SVG files?
+	// $dir: sub-directory within main sets
+	@mixin oe-i( $map, $set:"themed", $dir: "i/" ) {
+		@each $name, $svg in $map {
+			// extend .oe-i
+			&.#{$name} {
+
+				// select SVG set to use
+				@if $set == "themed" {
+					background-image: url(svg-themed($dir + $svg)) // svg in : "in-css/{dark|light}/i/{svg}"
+				} @else {
+					background-image: url(svg-all($dir + $svg)); // svg in : "in-css/all/i/{svg}"
+				}
+
+				// set opacity to 1?
+				@if list.index($no-opacity, $name) {
+					opacity: 1;
+				}
+
+				// if icon is used in these "frame" areas fix to "dark" icon version
+				@if list.index($used-in-frame, $name) {
+					.oe-popup-content &,
+					.oe-patient-popup &,
+					.oe-hotlist-panel & {
+						background-image: url(svg-dark-fixed("i/" + $svg));
+					}
+				}
+			}
+		}
+	}
+
+	// Build icon classes using @mixin oe-i
+	// Map | Icon set to use | sub-directory (optional)
+	@include oe-i($themed_icons, "themed");
+	@include oe-i($universal_icons, "all");
+	@include oe-i($eyedraw_icons, "all", "eyedraw/");
+
+}

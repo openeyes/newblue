@@ -17,7 +17,7 @@
 	// add SVG icon to show that it is draggable:
 	border: 3px solid $oe-vc-highlight;	
 	border-radius: 8px;
-	background:$oe-vc-bg url( svg-path('ui/vc-move') ) top 5px right 5px no-repeat;
+	background:$oe-vc-bg url( svg-all('ui/vc-move') ) top 5px right 5px no-repeat;
 	background-size:20px;
 	
 	@include boxshadow();
