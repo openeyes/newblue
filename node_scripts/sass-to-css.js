@@ -65,7 +65,7 @@ const dartSass = (style) => {
 		// Dart-Sass recommends using RenderSync as it is faster, so ok let's use it:
 		const result = sass.renderSync({ 
 			file: `${config.src}${style}.scss`, 
-			outputStyle: 'expanded', // "expanded" or "compressed"
+			outputStyle: 'compressed', // "expanded" or "compressed"
 			charset: true,
 			precision: 5, // numeric precision	
 		});
