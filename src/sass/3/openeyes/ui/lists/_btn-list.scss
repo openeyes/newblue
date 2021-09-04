@@ -41,7 +41,7 @@ ul.btn-list {
 			height:auto;			// reset
 			line-height:normal;		// reset
 			white-space: normal;	// can now wrap
-			word-break: break-word;	
+			word-break: break-all;
 			width: 180px;	 		// setup to handle PSD popup (180px is a best guess)			
 			padding:3px 8px;
 		}

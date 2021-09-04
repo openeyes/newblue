@@ -39,7 +39,7 @@
 			.restrict-width {
 				display:inline-block;
 				width:$oe-ass-restricted-width; 
-				word-break: break-word;
+				word-break: break-all;
 			
 				&.extended {
 					width:$oe-ass-restricted-width-extended;
