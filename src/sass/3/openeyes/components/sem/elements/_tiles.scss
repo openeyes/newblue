@@ -2,91 +2,87 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 
-// OE Element - Tiles
+// <div> wrapper for the tiled elements
+// controls layout of the 3 tiles in a row
+.element-tile-group {
+	@include flex(stretch, flex-start);
 
-.main-event {
-
-	// <div> wrapper for the tiled elements
-	// controls layout of the 3 tiles in a row
-	.element-tile-group {
-		display:flex;
-		justify-content:flex-start; 	// group items to the left
-		align-items:stretch;			// fill vertical space
-		
-		.collapse-tile-group {
-			padding:5px 2px 0 0;
-			width:25px;
-			text-align: center;
-			align-self: flex-start;
+	// reduce expand all tile elements in group
+	// icon at the end of the row.
+	// adjust defaults so that icon hit area matches
+	// element heights
+	.collapse-tile-group {
+		.oe-i {
+			width: 25px;
+			height: 100%;
+			background-position-y: 5px;
 		}
 	}
-	
-	.element {
-		
-		// group of 3 'tile' elements in rank
-		&.tile {
-			width: 33.33333%;
-			margin:0 3px 3px 0;
-			background-color: $oe-sem-tile-element-bg;
-			&:last-child {
-				margin-right:0;
-			}
-			
-			// tile elements have a restriction on the amount
-			// of data they can show to stop huge med lists
-			// breaking the UI...			
-			.tile-data-overflow {
-				position:relative;
-				max-height:160px;
-				overflow-y: auto;
-				padding:0 5px 5px 0;
-			}
-			
-			// make sure hidden data is flagged to users in the UI
-			// based on the new generic Class for data overflow: restrict-data-shown
-			// the new generic UI widget was added later. Did NOT update Tile DOM to 
-			// use it because it would require DOM changes. 
-			.tile-data-overflow-flag {
-				position:absolute; 
-				z-index:1;
-				bottom:0;
-				left:0;
-				right:0;
-				height:30px;
-				
-				background-color:rgba($oe-blue,0.8);
-				background-position:center center;
-				background-size:15px;
-				background-repeat: no-repeat;
-				background-image: url( svg-themed('i/arrow-down-bold') );
-			}
-			
-			
-			
-			// this old <div> class "tile-more-data-flag" also expects
-			// the icon to be added e.g: "oe-i arrow-down-bold medium selected"
-			// by the JS that checks for the overflow.
-			.tile-more-data-flag {
-				position:absolute; 
-				z-index:1;
-				bottom:0;
-				left:0;
-				display:flex;
-				align-items: center;
-				justify-content: center;
-				width:100%;
-				height:30px;
-				background:rgba($oe-blue,0.8);
-			}
-			
-			// adjust padding for 'tile' elements
-			.element-data {
-				&.full-width {
-			 		padding-right:0; 
-			 		padding-left:0;
-				}
-			}
-		}		
+}
+
+// Element as a "tile" in a row of 3
+.element.tile {
+	flex: 1 1 0;
+	background-color: $oe-sem-tile-element-bg;
+
+	// create a visual border around the elements
+	margin: 0 3px 3px 0;
+
+	// maximise horizontal space
+	padding-right: 0; // override base
+	// adjust padding for 'tile' elements
+	.element-data.full-width {
+		  padding: 0;
+	}
+
+	// tile elements have a restriction on the amount
+	// of data they can show to limit huge med lists
+	// this approach was generalised with "restrict-data-shown"
+	// but "tile-data-overflow" is still used on the event tiles though
+	.tile-data-overflow {
+		position: relative;
+		max-height: 160px;
+		overflow-y: auto;
+
+		// provide gutter for scrollbar and a gap at the end of the scrolling data
+		padding: 0 10px 5px 0;
+	}
+
+	// make sure and hidden data is flagged!
+	// reverse engineered to match the new generic data overflow: restrict-data-shown
+	.tile-data-overflow-flag {
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 30px;
+
+		background-color: rgba($oe-blue, 0.8);
+		background-position: center center;
+		background-size: 15px;
+		background-repeat: no-repeat;
+		background-image: url(svg-themed("i/arrow-down-bold"));
+	}
+
+	// OLD! should be replace with above
+	//
+	// this old <div> class "tile-more-data-flag" also expects
+	// the icon to be added e.g: "oe-i arrow-down-bold medium selected"
+	// by the JS that checks for the overflow.
+	.tile-more-data-flag {
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 30px;
+		background: rgba($oe-blue, 0.8);
 	}
 }
+
+
 

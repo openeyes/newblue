@@ -38,7 +38,7 @@
 }
 
 // Squeeze (special elements)
-// Elements hat have to be squeezed to make the UI work below 1265px.
+// Elements that have to be squeezed to make the UI work below 1265px.
 // (1280px is actually 1265px, allowing for old skool scroll bars)
 @mixin squeeze(){
 	@media only screen 

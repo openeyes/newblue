@@ -6,10 +6,12 @@
 // space out a 'rows' of data within 
 // a container
 .row { 
-	margin:15px 0; 
+	margin:15px 0;
+
+	// because :first-child applies to the <DOM> not the use of ".row"
 	&:first-child { margin-top:0; }
 	&:last-child { margin-bottom:0; }
-	
+
 	&.divider {
 		border-bottom:2px solid $oe-line;
 		padding:0 0 15px 0;
@@ -36,5 +38,11 @@ hr.divider {
 	.oe-pathstep-popup &,
 	.oe-tooltip & {
 		margin:5px 0;
+	}
+
+	// when used in elements
+	.element & {
+		margin:12px 0;
+		border-bottom-width:3px;
 	}
 }

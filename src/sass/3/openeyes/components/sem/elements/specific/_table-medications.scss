@@ -5,99 +5,125 @@
 // Medications History / Management
 
 // <table>
-.main-event {
-	.element {
-		// **
-		// Before messing with table column widths check!: 
-		// Meds Mx and Hx in View and Edit modes 
-		// **
-		
-		// EDIT mode need some adjustments
-		.element-fields {
-			table.medications {
-				td {
-					&:nth-child(1){ width:270px; }
-					&:nth-child(4){ width:210px; }
-					&:nth-child(5){ width:122px; }	
-				}
-			}
-		}
-		
-		// Due to complex Meds layout <colgroups> didn't cut it
+.element {
+	// **
+	// Before messing with table column widths check!:
+	// Meds Mx and Hx in View and Edit modes
+	// **
+
+	// EDIT mode need some adjustments
+	.element-fields {
 		table.medications {
-			width:100%;
-			tr {
-				// specific UI for tapering Meds
-				&.meds-taper {
-					border-top: 1px dotted $oe-line;
-					td {
-						padding-top:3px;
-					}
-				}
-			}
-			
 			td {
-				vertical-align: top;
-				height: auto;
-				
-				// fix column widths because UI elements toggle on and off with JS
-				// Drug name:
-				&:nth-child(1){
-					width:290px;
-					padding-right:10px;
-				}
-				&:nth-child(2){ width:130px; }	
-				&:nth-child(3){ width:230px; }
-				&:nth-child(4){ width:280px; }
-				&:last-child{ width: 40px; }
-				
-				// these sub UI groups also required some customising
-				// side (icons) and dates
-				.meds-side-dates {
-					@include flex(center, flex-start);
-					.oe-systemic-icons,
-					.oe-eye-lat-icons {
-						margin-right:3px;
-					}
-				}
-				.meds-stop-reason {
-					@include flex(center, space-between);
-					// allow for stopped icon
-					padding:0 0 0 18px;	
-					// need to use opacity so...
-					position: relative; 
-					&:after {
-						content: "";
-						position: absolute;
-						top:0;
-						bottom:0;
-						left:0; 	// visual alignment tweak
-						width:15px;
-						
-						// put the expand collapse icon into the background
-						background: url( svg-themed('i/stop') ) left center no-repeat;
-						background-size: 13px;
-						opacity:$oe-icon-opacity; //  now i can use opacity
-					}
+				&:nth-child(1) {
+					width: 270px;
 				}
 
-				// this is was used in the OLD Meds v1! 
-				// keeping for support whilst updating UI
-				.flex-meds-inputs {
-					@include flex(center, flex-start);
-					margin-bottom:2px;
-					input,
-					select,
-					> span {
-						margin:0 3px;
-						&:first-child {
-							margin-left:0;
-						}
+				&:nth-child(4) {
+					width: 210px;
+				}
+
+				&:nth-child(5) {
+					width: 122px;
+				}
+			}
+		}
+	}
+
+	// Due to complex Meds layout <colgroups> didn't cut it
+	table.medications {
+		width: 100%;
+
+		tr {
+			// specific UI for tapering Meds
+			&.meds-taper {
+				border-top: 1px dotted $oe-line;
+
+				td {
+					padding-top: 3px;
+				}
+			}
+		}
+
+		td {
+			vertical-align: top;
+			height: auto;
+
+			// fix column widths because UI elements toggle on and off with JS
+			// Drug name:
+			&:nth-child(1) {
+				width: 290px;
+				padding-right: 10px;
+			}
+
+			&:nth-child(2) {
+				width: 130px;
+			}
+
+			&:nth-child(3) {
+				width: 230px;
+			}
+
+			&:nth-child(4) {
+				width: 280px;
+			}
+
+			&:last-child {
+				width: 40px;
+			}
+
+			// these sub UI groups also required some customising
+			// side (icons) and dates
+			.meds-side-dates {
+				@include flex(center, flex-start);
+
+				.oe-systemic-icons,
+				.oe-eye-lat-icons {
+					margin-right: 3px;
+				}
+			}
+
+			.meds-stop-reason {
+				@include flex(center, space-between);
+				// allow for stopped icon
+				padding: 0 0 0 18px;
+				// need to use opacity so...
+				position: relative;
+
+				&:after {
+					content: "";
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0; // visual alignment tweak
+					width: 15px;
+
+					// put the expand collapse icon into the background
+					background: url(svg-themed("i/stop")) left center no-repeat;
+					background-size: 13px;
+					opacity: $oe-icon-opacity; //  now i can use opacity
+				}
+			}
+
+			// this is was used in the OLD Meds v1!
+			// keeping for support whilst updating UI
+			.flex-meds-inputs {
+				@include flex(center, flex-start);
+				margin-bottom: 2px;
+
+				input,
+				select,
+				> span {
+					margin: 0 3px;
+
+					&:first-child {
+						margin-left: 0;
 					}
 				}
-			}	
+			}
 		}
-		
 	}
+
 }
+
 

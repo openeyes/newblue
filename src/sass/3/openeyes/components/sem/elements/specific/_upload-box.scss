@@ -13,22 +13,21 @@
 // <input autocomplete="off" type="file" name="Document[right_document_id]" id="Document_right_document_id" style="display:none;">
 // </div>
 
-.main-event {
-	.element {
-		.upload-box {
-			border:1px dotted $oe-text;
-			text-align: center;
-			
-			
-			label {
-				display:inline-block;
-				padding:10px;
-				width:100%;
-				@include font-size(12);
-				cursor: copy;
-				
-			}
-			
+
+.element {
+	.upload-box {
+		border:1px dotted $oe-text;
+		text-align: center;
+
+
+		label {
+			display:inline-block;
+			padding:10px;
+			width:100%;
+			@include font-size(12);
+			cursor: copy;
+
 		}
 	}
 }
+

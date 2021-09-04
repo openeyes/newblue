@@ -30,7 +30,7 @@ Basically, follow best practices...
 * Never use `!important` (unless you really, really must...)
 * Never use ID's for styling. This avoids specificity issues (although, some top level elements do - for historical reasons)
 * Use lower-case for classnames, with words separated by a hyphen. (e.g. `.btn-dropdown`)
-* Generally, try and use an object orientated approach. Don't name your subclasses with a prefix of the class you're extending. 
+* Generally, try and use a two level object orientated approach. Don't name your subclasses with a prefix of the class you're extending. 
 * Generally use semantic, descriptive classnames that hint at their function.
 * Avoid qualifying class names with type selectors e.g. `div.myclass` (Unless you want the class to be bound to a specific DOM element).
 * Keep your selectors short! And try to keep your selectors shallow. 

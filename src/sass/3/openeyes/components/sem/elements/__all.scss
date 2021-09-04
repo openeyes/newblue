@@ -7,28 +7,27 @@
 @import "_base"; 	
 
 // VIEW / EDIT states:
-@import "view"; 
-@import "edit";			
+@import "element-data-view";
+@import "element-fields-edit";
+@import "active-inactive";
 
-@import "full";
-@import "eyes-right-left";
+@import "full-extended";
+@import "element-eyes";
 @import "tiles";
-@import "both-eyes";
+@import "element-both-eyes";
 
-@import "header";
+@import "eye-divider";
+@import "element-header";
 @import "header-actions";
-@import "actions";
+@import "element-actions";
 @import "tables";
 @import "data-grouping";				// replaces 'data-row', 'field-row' AND adds <hr> divider
 @import "typography";					// None, Note, Large-text, etc
 @import "pro-data-view";				// pro/full view	
 @import "restrict-data-shown";
-@import "reduce-height";
-@import "attachments";
-@import "question-answer";
 
-// Eyedraw (v3)
-@import "eyedraw-v2/_base";						
+// Eyedraw (v2.5)
+@import "eyedraw/_ed25";
 
 // Specific elements
 @import "specific/correspondence/_all";		// letter layout for correspondence
@@ -40,10 +39,13 @@
 @import "specific/message-states"; 		
 @import "specific/injection-mgmt";  // injection management 
 @import "specific/drug-admin";  // injection management 
-@import "specific/botox/_all";  // injection managemen
+@import "specific/botox/_all";  // injection management
+@import "specific/attachments";
+@import "specific/question-answer";
 
-// Lightning element concept
-@import "lightning/_all";
+// IDG concept work
+@import "lightning/_all"; // Lightning element concept
+@import "idg/reduce-height";
 	
 	
 

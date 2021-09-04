@@ -1,0 +1,48 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// All Elements are 'full' EXCEPT for 'tile' elements
+//
+// 'full' elements have an extended layout, when the
+// browser is wide enough the header moves to the left
+// decreasing vertical data height in Events
+// 'Tile' elements obviously don't do this.
+
+@include extended() {
+
+	// above extended browser widths switch to percentages
+	// to allow the Event some stretch
+	.element.full {
+		// percentage to match actions and header
+		padding: 10px 2.5% 10px 11%;
+
+		// Patient Overview
+		.cols-half & {
+			padding-left: 20%
+		}
+
+		.element-actions {
+			width: 2.5%;
+
+			// reverses the order to ensure trash icon is place at the top
+			// (depends on the trash icon being last in the DOM)
+			flex-direction: row;
+			flex-wrap: wrap-reverse;
+			justify-content: flex-end;
+		}
+
+		.element-header {
+			width: 10%; // make sure header isn't covering elements
+
+			// Patient Overview
+			.cols-half & {
+				width: 20%
+			}
+		}
+	}
+}
+
+	
+
+

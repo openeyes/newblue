@@ -2,54 +2,50 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 
-// Reduce Height of Element
+.element {
 
-.main-event {
-	
-	.element {
-		
-		// when first introduced this was called "listview-expand-collapse"
-		// now it's "oe-pro-data-view" (as this is more descriptive)
-		// still supporting the old class. 
-	
-		.pro-data-view,	
-		.listview-expand-collapse {
-			display:flex;
-			align-items:flex-start;
-			justify-content:space-between;
+	// when first introduced this was called "listview-expand-collapse"
+	// now it's "oe-pro-data-view" (as this is more descriptive)
+	// still supporting the old class.
 
-			.pro-view-btn {
-				// JS will consider the icon an event target
-				// need it to work on the wrapper div
-				.oe-i {
-					pointer-events: none;
-				}
-				
-				cursor: pointer;
+	.pro-data-view,
+	.listview-expand-collapse {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+
+		.pro-view-btn {
+			// JS will consider the icon an event target
+			// need it to work on the wrapper div
+			.oe-i {
+				pointer-events: none;
 			}
-			
-			// CSS hooks for the different views
-			// not actually using them, JS is tho.
-			// but CSS may need them
-			// check PRINT CSS, if you make changes here!!
-			
-			// .listview-pro {} 		// old class
-			// .data-pro-view {}		// new class (JS hook)
-			
-			// .listview-full {}		// old
-			// .data-standard-view {}	// new
-			
-			// wrapper for expand/collapse icon btn
-			// .expand-collapse-icon-btn {}
-			
-			// Do not think this is used any more:
-			//	ul.listview {
-			//	 @include font-size(12);
-			//	 li {
-			//		 margin:0 0 3px 0;
-			//	 }
-			// }
+
+			cursor: pointer;
 		}
-		
+
+		// CSS hooks for the different views
+		// not actually using them, JS is tho.
+		// but CSS may need them
+		// check PRINT CSS, if you make changes here!!
+
+		// .listview-pro {} 		// old class
+		// .data-pro-view {}		// new class (JS hook)
+
+		// .listview-full {}		// old
+		// .data-standard-view {}	// new
+
+		// wrapper for expand/collapse icon btn
+		// .expand-collapse-icon-btn {}
+
+		// Do not think this is used any more:
+		//	ul.listview {
+		//	 @include font-size(12);
+		//	 li {
+		//		 margin:0 0 3px 0;
+		//	 }
+		// }
 	}
+
 }
+

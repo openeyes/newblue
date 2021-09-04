@@ -28,7 +28,7 @@
 		
 		// when super wide!... hotlist extends to maximum width
 		@include super-wide(){
-			right: 35vw; // because .oe-full-content is now set at 65vw
+			right: $oe-hotlist-panel-max; // because .oe-full-content is now set at 65vw
 		}
 		
 	}

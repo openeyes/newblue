@@ -9,7 +9,7 @@
 // * theme for users who prefer viewing the data in the 'old' (sort-of) way
 // * however, in Classic some of elements are still hard set in 'PRO'.  
 
-$font-stack: ('Roboto','Helvetica','Arial',sans-serif);
+$font-stack: ("Roboto", "Helvetica", "Arial", sans-serif);
 
 // Minimum supported screen width: 1200px.
 // Why? This allows for all width issues in regular 1280px desktops 
@@ -17,69 +17,64 @@ $font-stack: ('Roboto','Helvetica','Arial',sans-serif);
 // the minimum supported handheld tablets (e.g. 600 x 2)
 $oe-minimum-viewport-width: 1200px;
 
-// are now using it on super-wide screens e.g. 2560x1440
-// and above! However OE starts to look unbalanced above 2300px (hotlist goes too wide)
-$oe-super-wide-display: 	2300px;  // And above!
+// However, there are users on super-wide screens e.g. 2560x1440++
+// At OE starts to look unbalanced above 2100px, so from here up it's percentage widths
+$oe-super-wide-display: 2100px;
 
 // grid px
-$oe-header-height:						60px; 	// top UI bar
-$oe-event-header-height:				38px; 	// SEM header
-$oe-event-sidebar-width:				200px;	// SEM sidebar
-$oe-event-main-default-width:			1080px; // SEM for minimum support monitors (+ sidebar is 1280px)
-$oe-hotlist-panel-width:				450px; 	// hotlist list panel - MIN
-$oe-hotlist-panel-max:					34vw; 	// hotlist list panel - MAX
-$oe-eyedraw-app-width:					1080px;  // eyedraw popup app
-$oe-add-insert-popup-height:			204px; 	// Adder Popup
-$oe-date-width:							90px;	// normal
+$oe-header-height: 60px; // top UI bar
+$oe-event-header-height: 38px; // SEM header
+$oe-event-sidebar-width: 200px; // SEM sidebar
+$oe-event-main-default-width: 1080px; // SEM for minimum support monitors (+ sidebar is 1280px)
+$oe-hotlist-panel-width: 450px; // hotlist list panel - MIN
+$oe-hotlist-panel-max: 31vw; // hotlist list panel - MAX
+$oe-event-main-max: 59vw; // with hotlist fixed - MAX (this percentage is calc with the display at 2100px exactly)
+$oe-eyedraw-app-width: 1080px; // eyedraw popup app
+$oe-add-insert-popup-height: 204px; // Adder Popup
+$oe-date-width: 90px; // normal
 
 
 // Provide Enhancement for Users on largest supported screens (up to 1920px)
 // note: sidebar + main event area + hotlist must NOT exceed 1920px (1910px ideally)
-$oe-event-extension:					160px; // moves headers left (just fits 1440px)
-$oe-event-main-extended-width:			($oe-event-main-default-width + $oe-event-extension); // SEM main area extend width size
+$oe-event-extension: 160px; // extend and align headers left (just fits 1440px)
+$oe-event-main-extended-width: ($oe-event-main-default-width + $oe-event-extension); // SEM main area extend width size
 
 // media query: 
-// when browser exceeds this width enchancements are made.
+// when browser exceeds this width enhancements are made.
 // basically we have enough space to show the extended SEM event view
-// and reduce vertical height, as soon as possibe we do this:
-$oe-extended-browser-size: 				(1280px + $oe-event-extension); // 1440px! 
+// and reduce vertical height, as soon as possible we do this:
+$oe-extended-browser-size: (1280px + $oe-event-extension); // 1440px!
 
 // hotlist fixed.
 // the next enhancement is to fix hotlist when there is enough width. 
-$oe-js-browser-fix-size:				1890px; 
-
+$oe-js-browser-fix-size: 1890px;
 
 // z
-$oe-z-top:				160; // VC ScratchPad
-$oe-z-popup:			150; // was 100, switched to above logo because of attachments
-$oe-z-logo:				100; // was 150
-$oe-z-shortcuts:		99;
-$oe-z-patient-quick:	98; // Patient Quick View (side or float)
-$oe-z-fast-date:		97; // blueJS date picker
-$oe-z-hotlist:			95; // hotlist
-$oe-z-event-quick-view:	92; 
-$oe-z-tooltip:			90; // tooltips are used in quicklook popups
-$oe-z-quicklook:		80; // quicklook, demographics, allergies & risks
-$oe-z-add-insert: 		70; 
-$oe-z-element-search:	65; 
-$oe-z-ed-v2: 			20; // ED v2 DOM. ED v2 still in first V3 implementation			
+$oe-z-top: 160; // VC ScratchPad
+$oe-z-popup: 150; // was 100, switched to above logo because of attachments
+$oe-z-logo: 100; // was 150
+$oe-z-shortcuts: 99;
+$oe-z-patient-quick: 98; // Patient Quick View (side or float)
+$oe-z-fast-date: 97; // blueJS date picker
+$oe-z-hotlist: 95; // hotlist
+$oe-z-event-quick-view: 92;
+$oe-z-tooltip: 90; // tooltips are used in quicklook popups
+$oe-z-quicklook: 80; // quicklook, demographics, allergies & risks
+$oe-z-add-insert: 70;
+$oe-z-element-search: 65;
+$oe-z-ed-v2: 20; // ED v2 DOM. ED v2 still in first V3 implementation
 
 
-// SVG paths - general UI
-@function svg-path($svg){
-	@return "../svg/in-css/" + $svg + ".svg";
-}
-
-@function build-svg-path($theme, $svg){
+@function build-svg-path($theme, $svg) {
 	@return "../svg/in-css/" + $theme + "/" + $svg + ".svg";
 }
 
-@function svg-all($svg){
+@function svg-all($svg) {
 	@return build-svg-path("all", $svg);
 }
 
 // within "light" it needs "dark" (white) icons for buttons, etc
-@function svg-dark-fixed($svg){
+@function svg-dark-fixed($svg) {
 	@return build-svg-path("dark", $svg);
 }
 

@@ -2,63 +2,63 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 
-// Message 
+.element {
 
-.main-event {
-	.element {
-		
-		.inj-mgmt {
-			.overview {
-				margin:5px 0 0 0;
-			}
-			
-			.prev-interval {
-				position: relative;
-				@include font-size(11);
-				font-weight:400;
-				color: $oe-text-light;
-				padding:0 20px 0 0;
-				
-				&::after {
-					content: '';
-					position: absolute;
-					right:0;
-					top:0;
-					bottom:0;
-					width:20px;
-					background:transparent url( svg-themed('i/direction-horizontal' ) ) center right	 no-repeat;
-					background-size:13px;
-					opacity: 0.5;
-				}
+	.inj-mgmt {
+		.overview {
+			margin: 5px 0 0 0;
+		}
+
+		.prev-interval {
+			position: relative;
+			@include font-size(11);
+			font-weight: 400;
+			color: $oe-text-light;
+			padding: 0 20px 0 0;
+
+			&::after {
+				content: "";
+				position: absolute;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				width: 20px;
+				background: transparent url(svg-themed("i/direction-horizontal")) center right no-repeat;
+				background-size: 13px;
+				opacity: 0.5;
 			}
 		}
-		
-		// handle the layout for Injection - interval - Injection
-		.inj-mgmt-inj {
-			@include flex( stretch, space-between );
-			margin:15px 0; // match .row
-			
-			.details {
-				flex:1;
-			}
-			
-			.buttons {
-				flex:1;
-			}
-			
-			.actions {
-				flex:1;
-				@include flex(center, center);
-				> button {
-					margin:0 2px;
-					&:first-child {
-						margin-left: 0;
-					}
-					&:last-child {
-						margin-right: 0;
-					}
+	}
+
+	// handle the layout for Injection - interval - Injection
+	.inj-mgmt-inj {
+		@include flex(stretch, space-between);
+		margin: 15px 0; // match .row
+
+		.details {
+			flex: 1;
+		}
+
+		.buttons {
+			flex: 1;
+		}
+
+		.actions {
+			flex: 1;
+			@include flex(center, center);
+
+			> button {
+				margin: 0 2px;
+
+				&:first-child {
+					margin-left: 0;
+				}
+
+				&:last-child {
+					margin-right: 0;
 				}
 			}
 		}
 	}
 }
+

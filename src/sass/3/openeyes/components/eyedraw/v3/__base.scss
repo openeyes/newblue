@@ -1,13 +1,14 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+// parent wrapper for ed3 elements
+.ed3 {
+	// need to hook off this:
+	// search doodles & doodle context options
+	position: relative;
 
-@import "_base";
-@import "ed3-draw";
-@import "doodle-option";
-@import "doodle-group";
-@import "doodle-toolbar";
-
+	background:$oe-ed3-blue; // eyedraw blue
+}
 
 
 

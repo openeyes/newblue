@@ -1,56 +1,35 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+.element {
 
-// OE Element 
-// 
-// Data Grouping
+	// These are now depreciated, but are still in use in the DOM
+	// look to use "row" or "hr.divider"
 
-.main-event {
-	.element {
-		
-		// visual data divider
-		// based on the table 'divider' this uses
-		// a <hr> to visually seperate content 
-		// this is thicker, and the height spacing 
-		// is reduced in relation to the UI standard one
-		hr.divider {
-			display:block;
-			border : 0;
-			margin:12px 0 12px 0;  // reduced was 20px 0 15px 0;
-			border-bottom:3px solid $oe-line;
+	// note: CSS :first-child applies to the <DOM> not the use of 'class'
+	// i.e <div> ... <div class="data-group"> (second <div> does is NOT 'first-child')
+	.data-group {
+		padding-top: 12px;
+
+		&:first-child {
+			padding-top: 0;
 		}
-		
-		// data-row and field-row are left over from v2.
-		// in v3 CSS they have no meaning and are replaced with
-		// data-group (for view or edit). 
-		// data-group provides a wrapper for data-groups within 
-		// an element to visually space them out. if something
-		// visually stronger is required use hr.divider
-		
-		// note: CSS :first-child applies to the <DOM> not the use of 'class'
-		// i.e <div> ... <div class="data-group"> (second <div> does is NOT 'first-child')
-		.data-group {
-			padding-top: 12px;
-			&:first-child {
-				padding-top: 0;
-			}
-		}
-		
-		// Comments require the same spacing as data-group
-		// but because of the DOM structure, can not use this class
-		// (:first-child) so... 
-		.comment-row,
-		.comment-group {
-			padding-top: 12px;
-		}
-		
-		// comments looked weird as right-aligned in tables
-		// added a wrapper to sort this
-		.comments-block {
-			text-align: left;
-			word-break: break-word;
-		}
-		
 	}
+
+	// Comments require the same spacing as data-group
+	// but because of the DOM structure, can not use this class
+	// (:first-child) so...
+	.comment-row,
+	.comment-group {
+		padding-top: 12px;
+	}
+
+	// comments looked weird as right-aligned in tables
+	// added a wrapper to sort this
+	.comments-block {
+		text-align: left;
+		word-break: break-word;
+	}
+
 }
+

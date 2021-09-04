@@ -4,15 +4,16 @@
 
 // Message 
 
-.main-event {
-	.element {
-		p {
-			&.message-start {
-				font-style: italic;
-			}
-			
-			// message reply is wrapped in <em>
-			&.message-reply {}
+
+.element {
+	p {
+		&.message-start {
+			font-style: italic;
+		}
+
+		// message reply is wrapped in <em>
+		&.message-reply {
 		}
 	}
 }
+

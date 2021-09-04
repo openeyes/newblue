@@ -25,7 +25,7 @@
 		width: $oe-event-main-extended-width;
 	}
 	@include super-wide(){
-		width: 53vw;
+		width: $oe-event-main-max;
 	}
 	
 	.close-icon-btn {

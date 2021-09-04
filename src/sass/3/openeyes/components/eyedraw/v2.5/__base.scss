@@ -1,19 +1,13 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+.ed2-widget {
 
-// OE ED3 Footer 
-// for Extras / Report / Comments
-
-@import "_base";
-@import "ed3-report";
-@import "ed3-comments";
-
-
-
-
- 
-
-
-
+	&.edit {
+		// with the increased general width for
+		// elements the remove cross is now overlaying
+		// the "..." icon so, make a bit of space...
+		padding-right: 5px;
+	}
+}
 

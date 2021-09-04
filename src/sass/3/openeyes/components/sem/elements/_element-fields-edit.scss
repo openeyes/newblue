@@ -1,0 +1,49 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.element {
+
+	// EDIT !
+	// .element-fields is only used in EDIT mode
+	// (view uses 'element-data')
+	.element-fields {
+
+		// full-width (not split into R / L sides)
+		// or element-eyes (split) data must aligned to the right
+		&.full-width,
+		&.element-eyes {
+			padding: 0 10px 0 5px; // allow for "remove" side icon
+		}
+
+		&.element-ed3 {
+			margin-top: 15px;
+		}
+
+		.data-label {
+			color: $oe-text-light;
+		}
+
+		// provides a hook
+		// extends the flex-item-bottom class
+		// creates a margin space for the + and commment buttons
+		// a squashed without it.
+		// 3px gives the remove-side cross space!
+		.add-data-actions {
+			margin: 0 3px 0 0;
+			text-align: right; // think it's OK to do this?
+
+			@include stretching() {
+				margin-right: 5px;
+			}
+		}
+
+		// if an adder button is flex-right under it's edit content
+		// add a top margin to provide breathing space:
+		.flex-r > .add-data-actions,
+		.flex-right > .add-data-actions {
+			margin-top: 8px;
+		}
+
+	}
+}
+

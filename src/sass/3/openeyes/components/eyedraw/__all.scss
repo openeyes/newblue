@@ -4,25 +4,8 @@
 
 // OE Eyedraw 3 
 
-// ED3 Element
-// moved from "sem" to here, seems tidier.
-@import "element-ed3/_all"; 	// updated ED element (VIEW + EDIT) v3
-
-
-// ED3 APP
-// -----------------------------------
-// Eyedraw popup APP
-// note: expects to be loaded into oe-popup-wrap 
-
-@import "_base";
-@import "inputs";					// override the defaults for inputs
-@import "ed3-header";				// Side / Title / Actions
-@import "ed3-icon-btns";			// Save & close
-@import "ed3-grid";					// CSS Grid layout
-@import "ed3-canvas";				// Canvas
-@import "ed3-doodle-context/_all";	// Doodle Context Stack
-@import "ed3-doodle-selector/_all"; // Doodle Selector
-@import "ed3-report-comments/_all";	// Reports and Comments
+// ed3 - complete rebuild of the DOM (striped back)
+@import "v3/_all";
 
 // v2.5 ED DOM update: 
 @import "v2.5/_all";

@@ -2,36 +2,33 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 
-// Message 
+.element {
+	.da-order-options {
+		@include flex(flex-end, space-between);
+		margin: 15px 0;
+		padding: 5px 0;
 
-.main-event {
-	.element {
-		.da-order-options {
-			@include flex( flex-end, space-between);
-			margin:15px 0; 
-			padding:5px 0; 
-			
-			border-top:2px dotted $oe-line; 
-			border-bottom:3px solid $oe-line; 
-			
-			.help {
-				opacity:0.5;
-			}
-			
-			.assign-for {
-				@include flex( center, space-between );
-				
-				fieldset {
-					margin-left:10px;
-				}
-			}
-			
-			.actions {
-				button {
-					margin:0 0 0 5px;
-				}
-			}
-			
+		border-top: 2px dotted $oe-line;
+		border-bottom: 3px solid $oe-line;
+
+		.help {
+			opacity: 0.5;
 		}
-	}		
+
+		.assign-for {
+			@include flex(center, space-between);
+
+			fieldset {
+				margin-left: 10px;
+			}
+		}
+
+		.actions {
+			button {
+				margin: 0 0 0 5px;
+			}
+		}
+
+	}
 }
+

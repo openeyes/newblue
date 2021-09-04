@@ -1,0 +1,22 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.element {
+
+	.element-actions {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+
+		// set up as Flex, need this to be
+		// able to reverse the flow when extended
+		display: flex;
+
+		// space out icons <i>
+		// 'trash' & 'local history' (currently only these 2)
+		// for either horizontal or vertical layout
+		.oe-i {
+			margin: 0 0 5px 10px;
+		}
+	}
+}

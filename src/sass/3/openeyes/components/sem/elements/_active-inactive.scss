@@ -1,0 +1,55 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.element-fields {
+
+	// left / right side
+	// in edit mode a 'side' has an 'active' & 'inactive' form
+	// i.e. DOM has both states and js switches between them
+	.active-form {
+		position: relative;
+		// small cross icon to remove eye side
+		// DOM: <i class="oe-i remove-circle small"></i>
+		.remove-side {
+			// overlay any content and provide visual space around the icon...
+			background-color: $oe-sem-element-bg;
+			border-radius: 50%;
+
+			.oe-i {
+				// increase the hit area for the remove icon
+				width: 21px;
+				height: 21px;
+			}
+
+			position: absolute;
+			top: -5px;
+			right: -11px; // move outside into padding space
+			z-index: 5; // make sure this above most things in the element
+		}
+	}
+
+	// when in-active give option to add-side again
+	.inactive-form {
+		display: flex;
+		align-content: center;
+
+		.add-side {
+			margin: 10px auto;
+			align-self: center;
+
+			// 'Add Left side'
+			// link style a bit differently to avoid
+			// it looking like data
+			a {
+				color: $oe-element-headers;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: $oe-text-highlight;
+				}
+			}
+		}
+	}
+}
+

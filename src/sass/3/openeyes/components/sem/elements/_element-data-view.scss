@@ -1,0 +1,51 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+.element {
+
+	// VIEW !
+	// .element-data is only used in VIEW mode
+	// (view uses 'element-data')
+	.element-data {
+
+		// full-width (not split into R / L sides)
+		// or element-eyes (split) data must aligned to the right
+		&.full-width,
+		&.element-eyes {
+			padding: 0 5px; // small UI breathing space to allow for action icons
+		}
+
+		table {
+			width: 100%; // this
+
+			// in VIEW mode change the layout
+			// of <td> to v-align top. This
+			// is the preferred layout for data
+			tbody {
+				th,
+				td {
+					height: 26px; // reduce slightly
+					vertical-align: top; // top!
+					padding-top: 4px; // adjust the padding
+					padding-bottom: 4px;
+				}
+			}
+		}
+
+
+		// keeping data-value as a useful hook
+		// but this could be easily de-coupled.
+		.data-value {
+			&.not-recorded {
+				margin: 0 0 0 0;
+				text-align: center;
+				@include font-size(13);
+				font-weight: $oe-font-light;
+				opacity: 0.6;
+
+			}
+		}
+	}
+}
+

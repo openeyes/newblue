@@ -1,0 +1,23 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Element
+// Within a split element provide a spanning area for data
+// that pertains to both sides, the ""
+
+.element {
+	// Element that requires data to SPAN BOTH Eyes, then split back to R / L
+	// requires a slightly different DOM because of the Flex layout used in 'element-eyes'
+	.element-both-eyes {
+		background-color: $oe-sem-element-bg;  	// hides the background divider line
+		margin:0 0 10px 0;
+
+		// collapse left/right padding to that icons line up!
+        padding:10px 0;
+		// softly divide the both eyes from the split data
+		border-bottom: 2px dotted $oe-line;
+	}
+}
+
+

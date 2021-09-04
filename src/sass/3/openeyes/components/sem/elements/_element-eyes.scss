@@ -1,0 +1,69 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// wrapper for right / eyes
+// used instead of "full-width"
+.element-eyes {
+
+	// handle the split layout with flex
+	@include flex(flex-start, space-between);
+
+	// these are were tricky to get right
+	// had to tweak the 'left' side to get the + icon
+	// to line up with the full width + icon
+	.right-eye {
+		width: 50%;
+		// create a gutter between R / L
+		// this allows for the remove icon
+		padding-right: 15px;
+	}
+
+	.left-eye {
+		width: 50%;
+		// this makes sure the Left width is the same
+		// and moves the data off the eye-divider line
+		padding-left: 15px;
+	}
+
+	// need to be able to deactivate a side
+	// the system will do this if a user shouldn't
+	// be using this eye side data
+	.right-eye,
+	.left-eye {
+		&.deactivate {
+			position: relative;
+			user-select: none;
+
+			// show a deactive overlay pattern
+			&::after {
+				content: "";
+				z-index: 1;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				// add striped grey overlay pattern:
+				background-position: top left;
+				background-repeat: repeat;
+				background-size: 20px;
+				background-image: url(svg-all("patterns/pattern1"));
+				// IE: stop under text selection fix
+				overflow: auto;
+			}
+		}
+	}
+
+	// wrapper for Eye Lat icons header.
+	// used occasionally to show a large Eye Lat icon on each Eye-sides
+	.eye-icon-header {
+		text-align: center;
+		margin: 0 0 8px 0;
+	}
+
+}
+
+
+
+

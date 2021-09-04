@@ -1,0 +1,52 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+.element {
+
+	// Attached PNG or PDFs in an element
+	// Based on OCT DICOM work, rather than
+	// create a specialist class for this, trying
+	// a general approach first!
+
+	// attachment overview, as in
+	// has a thumbnail, header and associated data
+	// vs a basic attachment element
+
+	.attachment-group {
+		@include flex(flex-start, space-between);
+
+		// small PNG of fullsize PNG (or PDF page 1)
+		.attachment-thumbnail {
+			width: 25%; // cols-3
+		}
+
+		.attachment-eyelat {
+			width: 8.33333%; // cols-1
+			padding: 0 15px; // this matches col-gap total (but a different approach)
+		}
+
+		.attachment-data {
+			width: 66.66667%; // cols-8
+
+			// tables are used for each group of data
+			// they contain the header, visually divide
+
+			table {
+				border-bottom: 2px solid $oe-line;
+				margin: 0 0 10px 0;
+
+				&:last-child {
+					border-bottom: none;
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	.restrict-attachment {
+		max-height: 50vh;
+	}
+}
+
+

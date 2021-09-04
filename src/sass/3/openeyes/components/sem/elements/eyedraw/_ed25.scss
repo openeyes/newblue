@@ -1,24 +1,9 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
-// ED v3 Element styling MOVED! 
-// ----------------------------
-// For the update of the Eyedraw to v3 I've moved
-// the styleing for the ELEMENT state into "eyedraw" folder
-// this is left here to support the transition over.
-
-
-// ---------------------------  OLD!!
-
-// OE Element - Eyedraw (v2 in v3) - VIEW & EDIT
 // ---------------------------
-// Eyedraw VIEW mode Element
-// View mode and Edit mode are the same
-// Edit just has a '+' button that launches the Eyedraw App (popup)
-// for Eyedraw EDIT APP sass see: components > eyedraw
-
-// de-coupled from .main-event to allow it's use in the "Previous" popup.
+// Eyedraw element (v2.5) - VIEW (only i think)
+// ---------------------------
 
 .element {
 	// eyedraw either in 'element-eyes' (for popup 'previous' too)
@@ -29,10 +14,6 @@
 	.element-data {
 		&.full-width {
 			.eyedraw {
-				.eyedraw-canvas {
-					width:300px; // ONLY 1 canvas in this mode
-					margin:0 0 0 50px;
-				}
 				.eyedraw-data {
 					width:450px; // fixed, but wider than default.
 				}
@@ -47,12 +28,6 @@
 		background:$oe-ed3-blue; // eyedraw blue
 		padding:0 5px; 
 		border-radius:5px;
-		
-		.eyedraw-canvas {
-			// make sure 2nd canvas doesn't drop down
-			// flex will then handle the width of eyedraw-data 
-			white-space: nowrap; 
-		}
 		
 		.eyedraw-data {
 			// eyedraw has a width of 490px. 

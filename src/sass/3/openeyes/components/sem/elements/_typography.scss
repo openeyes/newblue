@@ -5,51 +5,46 @@
 
 // Typography in Elements (VIEW & EDIT)
 
-.main-event {
-	
-	.element {
-		
-		// large text if needed, matches Element header size
-		.large-text {
-			@include font-size(14);
-			font-weight:inherit;	
-		}
-		
-		// priority text (next level up from large)
-		.priority-text {
-			@include font-size(16);
-			font-weight:$oe-font-medium;	
-		}
-		
-		
-		// h3 is available as an option for a sub-header
-		// e.g. see http://idg.knowego.com/v3.0-SEM/_view-elements
-		h3 {
-			@include font-size(14); // match title
-			color:$oe-element-headers;
-			font-weight:$oe-font-light;
-		}
-		
-		// 'none' and 'none'.
-		// there are two types of 'none'.
-		// 'None' as in no data provided & 'None' as in complications: None
-		// this provides some visual differentation. 
-		.none {
-			opacity:0.6;
-			font-style: italic;
-			font-weight: $oe-font-light;
-		}
-		
-		// Within Elements there may be text that isn't
-		// data, an example of this is in VA: "Not recorded"
-		// note styles this text slightly different
-		.note {
-			color:$oe-text-light;
-			font-weight:$oe-font-light;
-			margin:0 5px;
-		}
-		
-		
-		
+
+.element {
+
+	// large text if needed, matches Element header size
+	.large-text {
+		@include font-size(14);
+		font-weight:inherit;
+	}
+
+	// priority text (next level up from large)
+	.priority-text {
+		@include font-size(16);
+		font-weight:$oe-font-medium;
+	}
+
+	// h3 is available as an option for a sub-header
+	// e.g. see http://idg.knowego.com/v3.0-SEM/_view-elements
+	h3 {
+		@include font-size(14); // match title
+		color:$oe-element-headers;
+		font-weight:$oe-font-light;
+	}
+
+	// 'none' and 'none'.
+	// there are two types of 'none'.
+	// 'None' as in no data provided & 'None' as in complications: None
+	// this provides some visual differentation.
+	.none {
+		opacity:0.6;
+		font-style: italic;
+		font-weight: $oe-font-light;
+	}
+
+	// Within Elements there may be text that isn't
+	// data, an example of this is in VA: "Not recorded"
+	// note styles this text slightly different
+	.note {
+		color:$oe-text-light;
+		font-weight:$oe-font-light;
+		margin:0 5px;
 	}
 }
+
