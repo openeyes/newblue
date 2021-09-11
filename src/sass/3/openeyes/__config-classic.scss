@@ -146,12 +146,12 @@ $oe-spinner:			rgb(0,180,255);
 // 2.5
 $oe-ed2-panel: 			tint(rgb(218,230,241),30);
 // 3
-$oe-ed3-blue:			rgb(218,230,241); 
-$oe-ed3-app-blue:		$oe-ed3-blue;
-$oe-ed3-text:			rgb(50,50,60); 	
-$oe-ed3-panels: 		shade( $oe-ed3-app-blue, 10 );
-$oe-ed3-inputs:			shade( $oe-ed3-app-blue, 40 );
-$oe-ed3-input-text:		rgb(240,240,240);
+$oe-ed3-blue:			rgb(218,230,241);
+$oe-ed3-panels: 		shade( $oe-ed3-blue, 10 );
+$oe-ed3-text:			rgb(50,50,60);
+$oe-ed3-btn:            #118afb;
+$oe-ed3-icon-area: #BDCDDE;
+
 
 
 // SPECIFIC colours for areas

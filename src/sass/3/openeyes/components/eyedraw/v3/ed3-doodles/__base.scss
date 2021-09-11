@@ -1,0 +1,44 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.ed3-doodles {
+	position: relative;
+	@include flex(stretch, space-between);
+
+	// reverse if on Left eye side
+	.left & {
+		flex-direction: row-reverse;
+		.quick {
+			text-align: right;
+		}
+	}
+
+	// icon only with popup labels, common doodles...
+	.quick {
+		flex: 1 1 0;
+		background: $oe-ed3-blue;
+	}
+
+	// show all available icons with text, with groups
+	// and can text searched, no-doodle elements too - see: "more-doodles"
+	.more {
+		display: flex; // remove any white space
+		background: $oe-ed3-blue;
+		padding:0 0 1px 0;
+
+		// modifiy the default icon
+		.oe-i.more-h {
+			width: 38px;
+			height: 100%;
+
+			background-image: url(svg-light-fixed("i/more-h"));
+
+			&:hover,
+			&:focus {
+				background-color: $oe-ed3-icon-area;
+			}
+		}
+	}
+
+
+}

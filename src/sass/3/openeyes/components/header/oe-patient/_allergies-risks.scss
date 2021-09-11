@@ -47,7 +47,7 @@
 		// js controlled interaction... 
 		&.open, &.active {
 			background-color: $oe-dark-text-highlight;
-			background-image: url('../svg/in-css/light/i/triangle.svg');
+			background-image: url(svg-light-fixed('i/triangle'));
 			color:$oe-dark-bg;
 		}
 		

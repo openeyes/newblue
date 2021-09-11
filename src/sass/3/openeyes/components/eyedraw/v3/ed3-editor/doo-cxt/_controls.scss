@@ -1,19 +1,22 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-// ED v3.
-// this is a complete rebuild of the DOM!
-// up until now it's just been hacking the v1
 
-@import "_base";
-@import "_inputs";
+.doo-cxt {
 
-@import "ed3-doodles/_all";
-@import "ed3-editor/_all";
+	.controls {
+		display: none;
+		padding: 5px;
+		border-left: 2px solid #eee;
+	}
 
+	&.active {
+		.controls {
+			display: block;
+		}
+	}
 
-
- 
+}
 
 
 

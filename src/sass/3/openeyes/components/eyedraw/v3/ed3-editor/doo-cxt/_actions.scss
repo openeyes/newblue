@@ -1,0 +1,35 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+.doo-cxt {
+
+	.actions {
+		@include flex(stretch, space-between);
+
+		.btn {
+			flex: 1 1 0;
+			text-align: center;
+			@include font-size(10);
+			font-weight: 500;
+			background: center/15px no-repeat;
+			height: 24px;
+
+			&.move-forward {
+				background-image: url(svg-all("eyedraw/ed-forward"));
+			}
+
+			&.move-backward {
+				background-image: url(svg-all("eyedraw/ed-backward"));
+			}
+
+			&.trash {
+				background-image: url(svg-all("eyedraw/ed-trash"));
+			}
+		}
+	}
+}
+
+
+
+

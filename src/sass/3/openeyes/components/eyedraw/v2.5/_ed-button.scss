@@ -37,14 +37,16 @@
 	.label {
 		display:none;
 		position: absolute;
-		top: 32px;
+		top: 100%;
 		left: 0;
 		z-index: $oe-z-ed-v2 + 3;
 		white-space: nowrap;
-		box-shadow: 1px 3px 8px 1px rgba(0, 0, 0, 0.3);
+
+		// match tooltip...
 		color:$oe-text;
 		background: $oe-tooltip-bg;
 		padding: 4px 6px;
+		@include boxshadow();
 	}
 
 	&:hover {

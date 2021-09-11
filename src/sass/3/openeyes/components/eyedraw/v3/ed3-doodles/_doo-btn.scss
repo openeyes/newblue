@@ -1,0 +1,44 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// doodle btns in "quick" area
+.doo-btn {
+	position: relative;
+	display: inline-block;
+	width: 32px;
+	background: #ccc;
+	margin: 0 1px 1px 0;
+	cursor: pointer;
+
+	&:hover,
+	&.focus {
+		background: $oe-ed3-btn;
+
+		.label {
+			display: block;
+		}
+	}
+
+	.label {
+		display: none;
+		position: absolute;
+		pointer-events: none;
+		bottom: 32px;;
+		left: 0;
+		z-index: $oe-z-ed-v2 + 3;
+		white-space: nowrap;
+
+		// match tooltip...
+		color: $oe-text;
+		background: $oe-tooltip-bg;
+		padding: 4px 6px;
+		@include boxshadow();
+	}
+
+	&.disabled {
+		pointer-events: none;
+		opacity: 0.3;
+		filter: grayscale(80%);
+	}
+}
+

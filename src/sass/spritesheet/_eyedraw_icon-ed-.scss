@@ -1,5 +1,9 @@
-// note: used with <i> and <span>
-[class*="icon-ed-"] {
+// old approach was to class attribute
+// however, this is slow and no all ed
+// icons have a specific general class
+
+// [class*="icon-ed-"] -- old (slow) method
+.ed-i {
 	display: inline-block;
 	vertical-align: middle;
 	width: 32px;

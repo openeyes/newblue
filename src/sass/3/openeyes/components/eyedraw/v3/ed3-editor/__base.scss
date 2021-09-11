@@ -1,0 +1,57 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.ed3-editor {
+	@include flex(stretch, space-between);
+
+	// left eye
+	.left & {
+		flex-direction: row-reverse;
+	}
+
+	.main {
+		flex: 1 1 0;
+		@include flex(stretch, space-between);
+		background: $oe-ed3-blue;
+	}
+
+	.tools {
+		position: relative; // hook for reset
+		display: flex;
+		flex-direction: column;;
+		background: $oe-ed3-blue;
+
+		.oe-i {
+			width: 38px;
+
+			&:hover,
+			&:focus {
+				background-color: $oe-ed3-icon-area;
+			}
+
+			&.reset {
+				background-image: url(svg-light-fixed("i/reset"));
+				height: 38px;
+			}
+
+			&.menu {
+				background-image: url(svg-light-fixed("i/menu"));
+				height: calc(100% - 38px);
+			}
+
+			&.remove-circle {
+				background-image: url(svg-light-fixed("i/remove-circle"));
+				height: 100%;
+			}
+
+			&.info {
+				background-image: url(svg-light-fixed("i/info"));
+				background-color: transparent;
+				opacity: 0.3;
+				width: 17px;
+				height: 17px;
+			}
+		}
+	}
+
+}

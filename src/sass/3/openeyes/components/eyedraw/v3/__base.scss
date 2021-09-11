@@ -3,11 +3,18 @@
 
 // parent wrapper for ed3 elements
 .ed3 {
+
 	// need to hook off this:
 	// search doodles & doodle context options
 	position: relative;
 
-	background:$oe-ed3-blue; // eyedraw blue
+	// make space for the "remove" side cross icons
+	// overwise it overlays "more-h" icon for doodles
+	padding-top:8px;
+
+	// restrict it's width, if there is space show
+	// doodle context stack it can remain open.
+	max-width:505px;
 }
 
 

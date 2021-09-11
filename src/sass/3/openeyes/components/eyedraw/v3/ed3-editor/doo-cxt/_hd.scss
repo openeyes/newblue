@@ -1,0 +1,58 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+.doo-cxt {
+
+	&.active {
+		border-bottom: 2px solid #eee;
+		.hd {
+			.name {
+				background: 3px 4px / 7px #eee url(svg-all("eyedraw/yellow-dot")) no-repeat;
+				padding-left: 15px;
+				border-top-left-radius: 6px;
+				color:#000;
+				font-weight: 500;
+				@include font-size(12);
+
+			}
+		}
+	}
+
+	.hd {
+		@include flex(stretch, space-between);
+		cursor: pointer;
+
+		.name {
+			flex: 1 1 0;
+			padding: 5px;
+			background: #ddd;
+
+			&:hover,
+			&:focus {
+				background-color: $oe-ed3-btn;
+				color: #fff;
+			}
+		}
+
+		.oe-i {
+			width: 28px;
+			height: 100%;
+			background-color: #ddd;
+			background-size: 13px;
+			opacity: 1;
+
+			&:hover,
+			&:focus {
+				background-color: $oe-ed3-icon-area;
+			}
+		}
+
+
+	}
+
+}
+
+
+
+

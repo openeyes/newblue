@@ -1,20 +1,12 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
-// OE Eyedraw 3 
-
-// ed3 - complete rebuild of the DOM (striped back)
-@import "v3/_all";
-
-// v2.5 ED DOM update: 
-@import "v2.5/_all";
-
-
-
-
- 
-
-
-
-
+.ed3-editor {
+	// more reset to the bottom of the tools
+	.reset {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}

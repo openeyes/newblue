@@ -1,19 +1,13 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
-// OE Eyedraw 3 
-
-// ed3 - complete rebuild of the DOM (striped back)
-@import "v3/_all";
-
-// v2.5 ED DOM update: 
-@import "v2.5/_all";
-
-
-
-
- 
+// wrapped in the ".stack"
+.doo-cxt {
+	margin: 2px 2px 2px 0;
+	@include font-size(11);
+	font-weight: 500;
+	color: $oe-ed3-text;
+}
 
 
 

@@ -1,0 +1,51 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// editor flyout to manage add doodles
+// and non-doodles...
+
+.doodle-stack {
+	position: absolute;
+	top: 8px; // match the ed3 padding-top
+	bottom:0;
+	width: 250px;
+	min-height: 260px;
+	max-height: 380px;
+	background: $oe-ed3-blue;
+	padding:1px;
+	z-index: 8;
+
+	.left & {
+		display: none;
+	}
+
+	.right & {
+		left: calc( 100% - 38px);
+	}
+
+	//display: none;
+
+	&.fadein {
+		display: block;
+		animation: 0.2s ease-out forwards fadein;
+	}
+
+	.close-stack {
+		position: absolute;
+		top: 0;
+		left: 100%;
+		bottom: 0;
+		background-color: $oe-ed3-icon-area;
+		border-right:2px solid $oe-ed3-blue;
+
+		.oe-i.remove-circle {
+			background-image: url(svg-light-fixed("i/remove-circle"));
+			height: 100%;
+			width: 38px;
+		}
+	}
+
+}
+
+

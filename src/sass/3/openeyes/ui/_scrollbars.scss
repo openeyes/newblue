@@ -2,7 +2,7 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 
-// OE Scrollbars 
+// OE Scrollbars
 // Chrome & Safari... (make it Appy!)
 
 ::-webkit-scrollbar {
@@ -17,25 +17,4 @@
 }
 ::-webkit-scrollbar-thumb { 
 	background-color: $oe-dark-text-light;
-}
-
-/*
-// sometime in the future this will work:
-body {
-	scrollbar-width: thin;
-	scrollbar-color: $oe-dark-text-light tint( $html-bg,10 );	
-}
-*/
-
-.oe-eyedraw-app {
-	// colours for scrollbars (chrome) in EyeDraw App
-	&::-webkit-scrollbar-track {  
-		background: tint( $oe-ed3-app-blue,10 );
-	}
-	&::-webkit-scrollbar-track-piece { 
-		background: tint( $oe-ed3-app-blue,30 );
-	}
-	&::-webkit-scrollbar-thumb { 
-		background-color: shade( $oe-ed3-app-blue,50 );
-	}
 }

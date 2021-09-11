@@ -1,0 +1,32 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// parent wrapper for ed3 elements
+.ed3 {
+
+	input,
+	textarea,
+	select {
+		background-color: #fff;
+		color:#000;
+		@include font-size(11);
+	}
+
+	label.highlight {
+		color:#000;
+
+		&:hover,
+		&:focus {
+			background:$oe-ed3-icon-area;
+		}
+	}
+
+}
+
+
+
+ 
+
+
+
+

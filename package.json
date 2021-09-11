@@ -23,8 +23,8 @@
 		"css": "node node_scripts/sass-to-css.js",
 		"css:eyedraw": "node node_scripts/sass-to-css.js eyedraw",
 		"svg": "node node_scripts/svg-optimise.js",
-        "svg:all": "node node_scripts/svg-optimise.js rebuild-all"
-    },
+		"svg:all": "node node_scripts/svg-optimise.js rebuild-all"
+	},
 	"devDependencies": {
 		"chalk": "4.1.1",
 		"chokidar": "3.5.2",

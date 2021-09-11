@@ -1,0 +1,34 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.tools {
+
+	// modify icon defaults for use in ED3
+	.oe-i {
+		width: 38px;
+
+		&:hover,
+		&:focus {
+			background-color: $oe-ed3-icon-area;
+		}
+
+		&.reset {
+			background-image: url(svg-light-fixed("i/reset"));
+			height: 38px;
+		}
+
+		&.menu {
+			background-image: url(svg-light-fixed("i/menu"));
+			height: calc(100% - 38px);
+		}
+
+		&.info {
+			background-image: url(svg-light-fixed("i/info"));
+			background-color: transparent;
+			opacity: 0.3;
+			width: 17px;
+			height: 17px;
+		}
+	}
+}
+

@@ -2,7 +2,6 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 
-
 // Typography in Elements (VIEW & EDIT)
 
 
@@ -11,21 +10,21 @@
 	// large text if needed, matches Element header size
 	.large-text {
 		@include font-size(14);
-		font-weight:inherit;
+		font-weight: inherit;
 	}
 
 	// priority text (next level up from large)
 	.priority-text {
 		@include font-size(16);
-		font-weight:$oe-font-medium;
+		font-weight: $oe-font-medium;
 	}
 
 	// h3 is available as an option for a sub-header
 	// e.g. see http://idg.knowego.com/v3.0-SEM/_view-elements
 	h3 {
 		@include font-size(14); // match title
-		color:$oe-element-headers;
-		font-weight:$oe-font-light;
+		color: $oe-element-headers;
+		font-weight: $oe-font-light;
 	}
 
 	// 'none' and 'none'.
@@ -33,7 +32,7 @@
 	// 'None' as in no data provided & 'None' as in complications: None
 	// this provides some visual differentation.
 	.none {
-		opacity:0.6;
+		opacity: 0.6;
 		font-style: italic;
 		font-weight: $oe-font-light;
 	}
@@ -42,9 +41,9 @@
 	// data, an example of this is in VA: "Not recorded"
 	// note styles this text slightly different
 	.note {
-		color:$oe-text-light;
-		font-weight:$oe-font-light;
-		margin:0 5px;
+		color: $oe-text-light;
+		font-weight: $oe-font-light;
+		margin: 0 5px;
 	}
 }
 

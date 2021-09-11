@@ -6,10 +6,10 @@
 // up until now it's just been hacking the v1
 
 @import "_base";
-@import "_inputs";
-
-@import "ed3-doodles/_all";
-@import "ed3-editor/_all";
+@import "doodle-stack";
+@import "doo-cxt/_all";
+@import "tools";
+@import "reset";
 
 
 
