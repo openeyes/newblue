@@ -14,11 +14,11 @@
 	border-top: none;
 
 	// adjustments for Right or Left eye side:
-	.left & {
+	.eye-l & {
 		right: 0;
 
 	}
-	.right & {
+	.eye-r & {
 		left: 0;
 		.filter {
 			flex-direction: row-reverse;

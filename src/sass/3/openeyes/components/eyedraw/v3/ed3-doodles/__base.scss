@@ -6,7 +6,7 @@
 	@include flex(stretch, space-between);
 
 	// reverse if on Left eye side
-	.left & {
+	.eye-l & {
 		flex-direction: row-reverse;
 		.quick {
 			text-align: right;

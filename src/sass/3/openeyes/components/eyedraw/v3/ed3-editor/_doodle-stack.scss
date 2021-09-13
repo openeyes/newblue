@@ -7,42 +7,66 @@
 
 .doodle-stack {
 	position: absolute;
-	top: 8px; // match the ed3 padding-top
-	bottom:0;
-	width: 250px;
-	min-height: 260px;
-	max-height: 380px;
-	background: $oe-ed3-blue;
-	padding:1px;
+	top: -5px; // overlay the remove side cross icon
+	width: 300px;
 	z-index: 8;
 
-	.left & {
-		display: none;
+
+
+	min-height: 105%;
+
+
+	background: $oe-ed3-blue;
+	border: 2px solid $oe-ed3-icon-area;
+
+	padding: 1px;
+
+	display: none;
+
+	// adjust the layout
+
+	.eye-l & {
+
+		right: calc(100% - 38px);
+		border-right: none;
+		.close-stack {
+			right: 100%;
+		}
 	}
 
-	.right & {
-		left: calc( 100% - 38px);
+	.eye-r & {
+		flex-direction: row-reverse;
+		left: calc(100% - 38px);
+		border-left: none;
+
+		.close-stack {
+			left: 100%;
+		}
 	}
 
-	//display: none;
 
 	&.fadein {
-		display: block;
+		@include flex(stretch, space-between);
 		animation: 0.2s ease-out forwards fadein;
 	}
 
+	// wrap doodle stack to handle overflow
+	.stack {
+		flex: 1 1 0;
+		max-height: 380px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding: 0 2px;
+	}
+
+
 	.close-stack {
-		position: absolute;
-		top: 0;
-		left: 100%;
-		bottom: 0;
 		background-color: $oe-ed3-icon-area;
-		border-right:2px solid $oe-ed3-blue;
 
 		.oe-i.remove-circle {
 			background-image: url(svg-light-fixed("i/remove-circle"));
 			height: 100%;
-			width: 38px;
+			width: 32px;
 		}
 	}
 

@@ -8,13 +8,16 @@
 	// search doodles & doodle context options
 	position: relative;
 
-	// make space for the "remove" side cross icons
-	// overwise it overlays "more-h" icon for doodles
-	padding-top:8px;
-
 	// restrict it's width, if there is space show
 	// doodle context stack it can remain open.
-	max-width:505px;
+	// also helps with remove side icon overlapping
+	max-width:550px;
+
+	// center in the space.
+	// gives more space for the doodle-stack
+	margin: 0 auto;
+	background: $oe-ed3-blue;
+
 }
 
 

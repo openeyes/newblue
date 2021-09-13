@@ -1,22 +1,23 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+.ed3-report {
+	@include flex(flex-start, space-between );
+	padding: 5px 40px 0 0; // so it's not obscured by fly-out
 
-.doo-cxt {
-
-	.controls {
-		display: none;
-		padding: 5px;
-		border-left: 2px solid #eee;
+	.report {
+		flex:2 1 0;
+		padding: 0 10px;
 	}
 
-	&.active {
-		.controls {
-			display: block;
-		}
+	.comments {
+		flex:1 1 0;
 	}
-
 }
+
+
+
+ 
 
 
 

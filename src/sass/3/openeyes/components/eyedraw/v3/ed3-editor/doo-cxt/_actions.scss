@@ -2,29 +2,32 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 
-.doo-cxt {
+.doo-control {
 
-	.actions {
+	.control-btns {
 		@include flex(stretch, space-between);
+		background-color: #f3f3f9;
+
+		margin: 4px 0 0 0;
 
 		.btn {
 			flex: 1 1 0;
+			@include flex(center, center);
+
 			text-align: center;
 			@include font-size(10);
 			font-weight: 500;
 			background: center/15px no-repeat;
 			height: 24px;
 
-			&.move-forward {
-				background-image: url(svg-all("eyedraw/ed-forward"));
-			}
+			.oe-i {
+				width: 24px;
+				height: 32px;
+				background-size: 15px;
 
-			&.move-backward {
-				background-image: url(svg-all("eyedraw/ed-backward"));
-			}
-
-			&.trash {
-				background-image: url(svg-all("eyedraw/ed-trash"));
+				&.ed-trash {
+					background-size: 17px;
+				}
 			}
 		}
 	}
