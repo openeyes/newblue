@@ -88,12 +88,26 @@
 	
 	// // hold patient for specific mins
 	&.hold {
-		border-radius:25%;
+		border-radius:50%;
 		width:34px; // see base
+		background: none;
+		border:2px solid $oe-step-blue;
+
+		&.active {
+			border-width:0.5px;
+		}
+
+		&.done {
+			border-color:$oe-step-outline;
+			.step {
+				color:$oe-text;
+			}
+		}
 		
 		.step {
-			@include font-size(11);
-			font-weight: 500;
+			@include font-size(12);
+			font-weight: 700;
+			color:$oe-step-blue;
 		}
 		
 		// viewBox="0 0 34 34";
@@ -106,8 +120,8 @@
 			transform-origin: 50% 50%;
 			
 			circle {
-				stroke: rgba(240,255,240,0.4);
-				stroke-width: 4; 
+				stroke: $oe-step-blue;
+				stroke-width: 4;
 				// dont' use transition it messes it up!
 			}
 		}
