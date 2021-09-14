@@ -28,9 +28,8 @@
 
 		// modifiy the default icon
 		.oe-i.more-h {
-			width: 38px;
+			width: 40px; // this needs to be wide, makes space for the remove cross icon
 			height: 100%;
-
 			background-image: url(svg-light-fixed("i/more-h"));
 
 			&:hover,

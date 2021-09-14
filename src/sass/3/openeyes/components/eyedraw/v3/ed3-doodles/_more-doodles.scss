@@ -38,6 +38,8 @@
 		.oe-i.remove-circle {
 			width: 38px;
 			height: 32px; // match input height
+			background-image: url(svg-light-fixed("i/remove-circle"));
+			background-size: 15px;
 		}
 	}
 
@@ -54,8 +56,8 @@
 			color: $oe-ed3-text;
 			background: #ccc;
 			padding:0 5px;
-			margin:0 0 1px 0;
-			min-height: 32px; // match ed-i height
+			border-bottom: 1px #eee dotted;
+			min-height: $ed3-i-width; // match ed-i height
 			cursor: pointer;
 
 			&:hover,

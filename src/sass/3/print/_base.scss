@@ -28,6 +28,11 @@ body {
 		height:100vh; 
 		display:flex;
 	}
+
+	&.void {
+		background: center / 50% url(build-svg-path('print','void')) repeat-y;
+	}
+
 }
 
 // empty <div>

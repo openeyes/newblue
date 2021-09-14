@@ -3,11 +3,13 @@
 
 .ed3-report {
 	@include flex(flex-start, space-between );
-	padding: 5px 40px 0 0; // so it's not obscured by fly-out
+	padding: 5px #{$ed3-i-width + 2px} 0 0; // so it's not obscured by fly-out
 
 	.report {
 		flex:2 1 0;
 		padding: 0 10px;
+		color: $oe-ed3-text;
+		font-weight: 500;
 	}
 
 	.comments {
