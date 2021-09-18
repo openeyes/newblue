@@ -5,30 +5,37 @@
 	position: relative;
 	@include flex(stretch, space-between);
 
+	padding:0 0 2px 0;
+	border-bottom:1px dotted $oe-ed3-icon-area;
+
 	// reverse if on Left eye side
 	.eye-l & {
 		flex-direction: row-reverse;
 		.quick {
-			text-align: right;
+			padding-left:38px;
+		}
+	}
+
+	.eye-r & {
+		.quick {
+			padding-right:38px;
 		}
 	}
 
 	// icon only with popup labels, common doodles...
 	.quick {
 		flex: 1 1 0;
-		background: $oe-ed3-blue;
 	}
 
 	// show all available icons with text, with groups
 	// and can text searched, no-doodle elements too - see: "more-doodles"
 	.more {
 		display: flex; // remove any white space
-		background: $oe-ed3-blue;
-		padding:0 0 1px 0;
+		padding:0 1px 1px 0; // match the doo-btn
 
 		// modifiy the default icon
 		.oe-i.more-h {
-			width: 40px; // this needs to be wide, makes space for the remove cross icon
+			width: 40px; // this needs to be wide to make space for the remove cross icon
 			height: 100%;
 			background-image: url(svg-light-fixed("i/more-h"));
 

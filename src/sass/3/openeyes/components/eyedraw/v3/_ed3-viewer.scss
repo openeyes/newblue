@@ -1,12 +1,11 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-.ed3-editor {
-	// more reset to the bottom of the tools
-	.reset {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
+.ed3-viewer {
+	@include flex(stretch, space-between);
+
+	.main {
+		flex: 1 1 0;
+		@include flex(stretch, space-between);
 	}
 }

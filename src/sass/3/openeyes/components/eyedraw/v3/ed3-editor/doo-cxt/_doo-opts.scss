@@ -1,13 +1,20 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+.doo-opts {
+	display: none;
+	padding: 5px;
+	border: 2px solid #f8f8f8;
+	border-top: none;
 
-.doo-control {
+	// edit (user selected) doodle
+	.doo-cxt.edit & {
+		display: block;
+	}
 
-	.control-btns {
+	.opt-btns {
 		@include flex(stretch, space-between);
-		background-color: #f3f3f9;
-
+		background-color: #e4eef7;
 		margin: 4px 0 0 0;
 
 		.btn {
@@ -21,12 +28,19 @@
 			height: 24px;
 
 			.oe-i {
-				width: 24px;
-				height: 32px;
+				width: 27px;
+				height: 100%;
 				background-size: 15px;
 
 				&.ed-trash {
-					background-size: 17px;
+					border-radius:3px;
+					background-size: 19px;
+
+					&:hover,
+					&:focus {
+						background-color: red;
+						background-image: url(svg-dark-fixed("i/trash"));
+					}
 				}
 			}
 		}

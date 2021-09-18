@@ -1,0 +1,55 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.ed3-notes {
+	@include flex(flex-start, space-between);
+	// padded right so it's not obscured by doodle-stack
+	padding: 8px 38px;
+
+	@include font-size(11);
+	color: #000;
+
+	// report gets a bit more width than the comments
+	.report {
+		flex: 3 1 0;
+		padding: 5px 5px 10px 5px;
+		font-weight: 500;
+	}
+
+	// list
+	.part {
+		margin: 0 0 4px 0;
+	}
+
+	.comments {
+		flex: 2 1 0;
+		padding: 0 5px;
+	}
+
+	// if notes are moved up next to the Front
+	.ed3-editor & {
+		display: block;
+		padding: 10px;
+	}
+
+	// in View mode
+	.ed3-viewer & {
+		flex: 1 1 0;
+		display: block;
+		min-width: 165px; // otherwise will collapse to text
+		padding: 0 5px 0 0;
+
+		.comments {
+			font-style: italic;
+		}
+
+	}
+}
+
+
+
+ 
+
+
+
+

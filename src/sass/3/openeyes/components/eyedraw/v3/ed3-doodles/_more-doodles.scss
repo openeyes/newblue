@@ -13,6 +13,8 @@
 	border: 2px solid $oe-ed3-icon-area;
 	border-top: none;
 
+	@include boxshadow();
+
 	// adjustments for Right or Left eye side:
 	.eye-l & {
 		right: 0;
@@ -54,9 +56,9 @@
 			@include font-size(11);
 			font-weight:500;
 			color: $oe-ed3-text;
-			background: #ccc;
+			background: $oe-ed3-doo-bg;
 			padding:0 5px;
-			border-bottom: 1px #eee dotted;
+			border-top: 1px #eee dotted;
 			min-height: $ed3-i-width; // match ed-i height
 			cursor: pointer;
 

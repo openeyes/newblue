@@ -5,30 +5,34 @@
 // editor flyout to manage add doodles
 // and non-doodles...
 
-.doodle-stack {
+.doodle-nav {
 	position: absolute;
-	top: -5px; // overlay the remove side cross icon
+	top: -5px; // shift up to overlay the remove side cross icon
 	width: 300px;
 	z-index: 8;
-
-
-
+	// make the flyout taller that ed3 wrapper
+	// this visually helps links the flyout with
+	// the canvas area
 	min-height: 105%;
-
 
 	background: $oe-ed3-blue;
 	border: 2px solid $oe-ed3-icon-area;
-
 	padding: 1px;
 
+	// default state
 	display: none;
 
-	// adjust the layout
+	// fade in shows and fades in the flyout
+	&.fadein {
+		@include flex(stretch, space-between);
+		animation: 0.2s ease-out forwards fadein;
+	}
 
+	// adjust the flyout depending on eye side
 	.eye-l & {
-
 		right: calc(100% - 38px);
 		border-right: none;
+
 		.close-stack {
 			right: 100%;
 		}
@@ -44,21 +48,14 @@
 		}
 	}
 
-
-	&.fadein {
-		@include flex(stretch, space-between);
-		animation: 0.2s ease-out forwards fadein;
-	}
-
 	// wrap doodle stack to handle overflow
-	.stack {
+	.doodle-stack {
 		flex: 1 1 0;
 		max-height: 380px;
 		overflow-y: auto;
 		overflow-x: hidden;
-		padding: 0 2px;
+		padding: 0 2px 10px 2px; // pad out the bottom to help with scrolling
 	}
-
 
 	.close-stack {
 		background-color: $oe-ed3-icon-area;
@@ -69,7 +66,6 @@
 			width: 32px;
 		}
 	}
-
 }
 
 

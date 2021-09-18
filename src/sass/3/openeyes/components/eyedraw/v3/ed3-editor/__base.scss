@@ -12,46 +12,10 @@
 	.main {
 		flex: 1 1 0;
 		@include flex(stretch, space-between);
-		background: $oe-ed3-blue;
 	}
 
-	.tools {
-		position: relative; // hook for reset
-		display: flex;
-		flex-direction: column;;
-		background: $oe-ed3-blue;
-
-		.oe-i {
-			width: 38px;
-
-			&:hover,
-			&:focus {
-				background-color: $oe-ed3-icon-area;
-			}
-
-			&.reset {
-				background-image: url(svg-light-fixed("i/reset"));
-				height: 38px;
-			}
-
-			&.menu {
-				background-image: url(svg-light-fixed("i/menu"));
-				height: calc(100% - 38px);
-			}
-
-			&.remove-circle {
-				background-image: url(svg-light-fixed("i/remove-circle"));
-				height: 100%;
-			}
-
-			&.info {
-				background-image: url(svg-light-fixed("i/info"));
-				background-color: transparent;
-				opacity: 0.3;
-				width: 17px;
-				height: 17px;
-			}
-		}
+	.ed3-front,
+	.ed3-side {
+		cursor: pointer;
 	}
-
 }

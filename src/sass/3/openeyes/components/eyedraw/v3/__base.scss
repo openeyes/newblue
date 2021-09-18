@@ -20,6 +20,12 @@ $ed3-i-width: 32px;
 	margin: 0 auto;
 	background: $oe-ed3-blue;
 
+	// view mode
+	&.view {
+		border-radius: 5px;
+		padding:5px 0; // otherwise border-radius won't work
+	}
+
 }
 
 

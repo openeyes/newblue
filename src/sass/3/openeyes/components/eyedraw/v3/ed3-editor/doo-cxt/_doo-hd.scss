@@ -6,7 +6,7 @@
 	@include flex(stretch, space-between);
 	cursor: pointer;
 
-	.name {
+	.doo-name {
 		flex: 1 1 0;
 		padding: 5px;
 		background: #ddd;
@@ -33,10 +33,8 @@
 
 	// edit state (user selected)
 	.doo-cxt.edit & {
-		border-bottom: 2px solid #f3f3f9;
-
-		.name {
-			background: 4px 10px / 7px #f3f3f9 url(svg-all("eyedraw/yellow-dot")) no-repeat;
+		.doo-name {
+			background: 4px 10px / 7px #f8f8f8 url(svg-all("eyedraw/active-dot")) no-repeat;
 			padding-left: 15px;
 			color: #000;
 			@include font-size(12);
