@@ -1,16 +1,7 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-.doo-opts {
-	display: none;
-	padding: 5px;
-	border: 2px solid #f8f8f8;
-	border-top: none;
-
-	// edit (user selected) doodle
-	.doo-cxt.edit & {
-		display: block;
-	}
+.doo-cxt {
 
 	.opt-btns {
 		@include flex(stretch, space-between);
@@ -33,7 +24,7 @@
 				background-size: 15px;
 
 				&.ed-trash {
-					border-radius:3px;
+					border-radius: 3px;
 					background-size: 19px;
 
 					&:hover,
@@ -45,6 +36,7 @@
 			}
 		}
 	}
+
 }
 
 

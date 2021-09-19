@@ -3,6 +3,9 @@
 
 .ed3-editor {
 	@include flex(stretch, space-between);
+	@include font-size(11);
+	font-weight: 500;
+	color: $oe-ed3-text;
 
 	// left eye
 	.eye-l & {

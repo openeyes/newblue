@@ -11,12 +11,14 @@
 	// reverse if on Left eye side
 	.eye-l & {
 		flex-direction: row-reverse;
+		background: top 7px left 9px/19px url(svg-dark-fixed("i/lat-L")) no-repeat;
 		.quick {
 			padding-left:38px;
 		}
 	}
 
 	.eye-r & {
+		background: top 7px right 9px/19px url(svg-dark-fixed("i/lat-R")) no-repeat;
 		.quick {
 			padding-right:38px;
 		}

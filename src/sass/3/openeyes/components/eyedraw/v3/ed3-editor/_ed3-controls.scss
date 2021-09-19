@@ -1,12 +1,11 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-// wrapped in the ".stack"
-.doo-cxt {
-	margin: 5px 2px 5px 0;
-	color: $oe-ed3-text;
+.ed3-controls {
+	flex:1 1 0;
+	margin:0 2px;
+	padding: 5px;
+	border: 2px solid #f8f8f8;
+
 }
-
-
-
 
