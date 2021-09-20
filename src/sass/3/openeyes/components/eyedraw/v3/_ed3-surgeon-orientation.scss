@@ -3,120 +3,97 @@
 
 
 // OE Element - Eyedraw - Surgeon Orientation 
-// Show the angle of Surgeon Orientaion to patient
+// Show the angle of Surgeon Orientation to patient
 // DE-coupled for use in VIEW & EDIT elements AND ED3 App
 
 .ed3-surgeon-orientation {
-	$ed-surgeon-orientation-w:180px;
-	$ed-surgeon-size:50px;
-	$ed-surgeon-half:25px;
-	
-	position:relative;
-	width:$ed-surgeon-orientation-w; 
-	height:100px;
-	margin:0 30px;
-	
-	border-bottom: 1px solid $oe-ed3-panels;
-	
+	$ed-surgeon-size: 50px;
+	$ed-surgeon-half: 25px;
+
+	position: relative;
+	width: 165px; // match sidePNG width
+	height: 100px;
+
+	border-bottom: 1px solid $oe-ed3-icon-area;
 	align-self: center;
-	
+	margin: 0 auto; // if the area is bigger than mini: center
+
 	// patient on op bed svg
-	background-position:center bottom 5px; // allow for the title
-	background-repeat: no-repeat;
-	background-size:60px;
-	background-image:url( svg-all('eyedraw/op-patient') );
-	
-	.title {
-		position:absolute;
-		bottom:-20px;
-		left:0;
-		right:0;
-		@include font-size(10);
-		color:$oe-ed3-text;
-		opacity:0.5;
-		text-align: center;
-	}
-	
-	
+	background: center bottom 5px / 60px url(svg-all("eyedraw/op-patient")) no-repeat;
+
 	// surgeon icon
-	&:after  {
-		position:absolute;
-		top:0;
-		left:0;
-		width:$ed-surgeon-size; 
-		height:$ed-surgeon-size;
-		content:"";
-		
-		// svg surgeon icon
-		background-position:top left;
-		background-repeat: no-repeat;
-		background-size:$ed-surgeon-size;
-		background-image:url( svg-all('eyedraw/op-surgeon') );
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: $ed-surgeon-size;
+		height: $ed-surgeon-size;
+		background: top left / contain url(svg-all("eyedraw/op-surgeon")) no-repeat;
 	}
 
 	// position name relates to the patients eyes. 
 	// e.g. right eye is on the left (face up)
-	
+
 	&.pos-top {
 		&:after {
-			top:0;
+			top: 0;
 			left: calc(50% - #{$ed-surgeon-half});
 		}
 	}
-	
-	
+
+
 	&.pos-top-right {
 		&:after {
-			top:10px;
+			top: 10px;
 			left: calc(30% - #{$ed-surgeon-half});
 			transform: rotate(-45deg);
 		}
 	}
 
-	
+
 	&.pos-top-left {
 		&:after {
-			top:10px;
+			top: 10px;
 			left: calc(70% - #{$ed-surgeon-half});
 			transform: rotate(45deg);
-		}		
+		}
 	}
-	
-	
+
+
 	&.pos-right {
 		&:after {
-			top:40px;
+			top: 40px;
 			left: calc(20% - #{$ed-surgeon-half});
 			transform: rotate(-90deg);
 		}
 	}
-	
+
 	&.pos-left {
 		&:after {
-			top:40px;
+			top: 40px;
 			left: calc(80% - #{$ed-surgeon-half});
 			transform: rotate(90deg);
 		}
 	}
-	
+
 	&.pos-bottom-right {
 		&:after {
-			top:63px;
+			top: 63px;
 			left: calc(28% - #{$ed-surgeon-half});
 			transform: rotate(-130deg);
 		}
 	}
 
-	
+
 	&.pos-bottom-left {
 		&:after {
-			top:63px;
+			top: 63px;
 			left: calc(72% - #{$ed-surgeon-half});
 			transform: rotate(130deg);
-		}		
+		}
 	}
 
-	
-	
+
 }		
 
