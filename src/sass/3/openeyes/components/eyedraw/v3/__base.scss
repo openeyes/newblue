@@ -13,7 +13,10 @@ $ed3-i-width: 32px;
 	// restrict ed3 width, if there is space show
 	// doodle context stack it can remain open.
 	// also helps with remove side icon overlapping
-	max-width:550px;
+	// max-width is set to fit row of doo-btns
+	// (33px * n) +  more (41px) + eye icon bg (38px)
+	//
+	max-width:541px;
 
 	// center within the element.
 	// gives more space for the doodle-stack

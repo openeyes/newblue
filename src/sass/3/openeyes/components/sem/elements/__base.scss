@@ -10,7 +10,10 @@
 // View & Edit generally share styling with some specifics.
 // Also, elements maybe used in "Previous history" popups
 
-.element {
+// note! sidebar nav overlay also uses "element", these need
+// changing but for now use "main-event" to correctly specify
+
+.main-event .element {
 	position: relative;
 	min-height: 55px; // ensure element actions and header can always be seen
 	background-color: $oe-sem-element-bg;

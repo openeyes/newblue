@@ -20,6 +20,16 @@
 	> select {
 		flex: 2;
 	}
+
+	.ed3-controls & {
+		> select {
+			// flex is bit too clever, it allows for the options within the <select>
+			// if there is a long option it will push the layout out of alignment
+			// check in minimum width device size with UI inputs options
+			width:50%;
+		}
+	}
+
 }
 
 
