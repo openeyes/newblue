@@ -86,7 +86,7 @@
 // provides a consistent column gap (gutter) for layouts using
 // either flex or tables:
 .col-gap {
-	> div[class^="cols-"],
+	> div,
 	tbody > tr > td, // when added to <table> stop it applying to nested tables
 	> td { // added to <tr>
 		padding-right: 25px !important; // need to override <td> css in elements, keeping this here for clarity
