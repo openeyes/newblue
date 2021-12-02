@@ -2,66 +2,65 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 
-// VC Patient Selector page (IDG: Virtual Clinic page)
-.oe-virtual-clinic {
-	
-	// extend 'standard' default table
-	table.virtual-clinic {
-			
-		tbody {
+// extend 'standard' default table
+table.virtual-clinic {
+
+	tbody {
+		td {
 			@include font-size(13);
-			
-			td {
-				vertical-align: top;
-				&:last-child {
-					text-align: right;
+			vertical-align: top;
+
+			// to help with readability:
+			// use long annotation to keep "standard" padding
+			padding-top: 10px;
+			padding-bottom: 10px;
+
+			&:last-child{
+				padding-right: 0;
+			}
+
+			// could be multi 'button' or <buttons> in the last column
+			.actions {
+				@include flex(flex-start, flex-end);
+				padding:10px 0 5px 0;
+				button, a {
+					margin:0 2px;
 				}
-				
-				// to help with readability:
-				padding-top:10px;
-				padding-bottom:10px;
-				
-				// could be multi 'button' or <buttons> in the last column
-				&.actions {
-					// <button> or <a> .button
-					// are in list
-					li {
-						margin:0 0 4px 0;
+			}
+		}
+
+		// replace "clamp" css in v2
+		// line-clamp is not supported in Edge
+		// used for Referral notes and clinic info
+		.scroll-content {
+			@include font-size(11);
+			line-height: 1.3;
+			max-height: 100px;
+			overflow-y: auto;
+			word-wrap: break-word; // break up long words.
+		}
+
+		// clinic info is complicated <td>
+		// and the data isn't well wrapped
+		.clinic-info {
+			// table in specfic <td>
+
+			table {
+				margin: 10px 0 0 0;
+				width: 100%;
+
+				tr {
+					td, th {
+						padding: 5px 0;
+						@include font-size(11);
+						line-height: 1;
+						text-align: left;
 					}
 				}
 			}
-			
-			// replace "clamp" css in v2
-			// line-clamp is not supported in Edge
-			// used for Referral notes and clinic info
-			.scroll-content {
-				@include font-size(11);
-				line-height:1.3;
-				max-height:100px;
-				overflow-y: auto;
-				word-wrap: break-word; // break up long words.			
-			}
-			
-			// clinic info is complicated <td>
-			// and the data isn't well wrapped
-			.clinic-info {
-				// table in specfic <td>
-				
-				table {
-					margin:10px 0 0 0;
-					width:100%;
-					tr {
-						td, th {
-							padding:5px 0;
-							@include font-size(11);
-							line-height:1;
-							text-align: left;
-						}
-					}
-				}
-			}					
-		} 
-	} 	
+		}
+	}
 }
+
 
 
