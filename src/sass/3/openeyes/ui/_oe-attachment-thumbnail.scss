@@ -10,10 +10,12 @@
 	position: relative;
 	cursor: zoom-in;
 
-	img {
+	// <img>
+	.thumbnail {
 		pointer-events: none; // allow parent to capture these (blueJay)
 		width:100%;
 		height:auto;
+		min-height: 50px; // what if <img> doesn't load?
 	}
 	
 	// provide padding options

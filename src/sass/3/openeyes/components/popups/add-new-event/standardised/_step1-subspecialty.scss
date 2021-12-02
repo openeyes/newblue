@@ -1,0 +1,113 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Add New Event Popup)
+// 
+// this is modified OEv2.0 CSS
+// 
+// Step 1 column - Subspecialty and Service selection
+// 1) Available options
+// 2) Create new Subspecialty group
+
+// 1) Available options
+.add-new-event {
+	
+	// this extends the basic <li> styling
+	// coupling is required to create a greater
+	// specificity or CSS won't style
+	li.oe-specialty-service {
+		position: relative;
+		min-height:55px;
+		line-height:15px; // this just looks right
+		padding:8px; // provides text positioning
+		@include font-size(13);
+		
+		.tag {
+			position:absolute;
+			top:0;
+			right:0;
+		}
+		
+		// <span> wrap 'service' 
+		.service {
+			display:block; // to push to new line
+			@include font-size(11);
+		}	
+		
+		// drop down options for LOTs of services
+		select {
+			margin:3px 0;
+		}
+		
+	}
+	// subspeciality tag 
+	// based on sidebar view scss, but bigger slightly.
+	.tag {	
+		display:inline-flex;
+		justify-content:center;
+		align-items: center;
+		
+		// tag is a bit bigger
+		width:21px; 
+		height:21px;
+		@include font-size(11);
+		font-weight:400;
+		
+		color: $oe-dark-text-light;
+		background:$oe-dark-blue-dark;
+	}
+}
+ 
+
+
+// 2) Create new Subspecialty group 
+.add-new-event {
+	
+	// created by JS if the users
+	// needs to add a new sub-specialty
+	// and service to the 1st step
+	.new-added-subspecialty-service {
+		
+		// create a green version of the default one above
+		@extend li, .oe-specialty-service; 
+		
+		margin:10px 0 0 0; 
+		color:$oe-btn-green;
+		background:$oe-dark-grey;
+		
+		.tag {
+			background-color:$oe-btn-green-hint;
+		}
+	
+		// remove button (JS will remove this element and show options again)
+		.change-new-specialty {
+			position:absolute;
+			bottom:4px;
+			right:4px;
+		}
+		
+		// green when selected to show 'new'
+		&.selected {
+			color:#fff;
+			background:$oe-btn-green;
+		}
+		
+		&:hover, &:focus {
+			background-color:$oe-btn-blue;
+			color:#fff;
+			cursor:pointer;
+			
+			.tag { 
+				background:shade($oe-btn-blue, 20%);
+				color:$oe-dark-text-highlight; 
+			}
+		}
+		
+			
+	}	
+}
+
+
+
+

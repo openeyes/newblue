@@ -18,7 +18,11 @@
 					
 					// follows element table styling approach
 					&.divider {
-						border-top-width: 2px;
+						border-top:2px solid rgba( $oe-line, 0.5 );
+
+						th, td {
+							padding-top:6px;
+						}
 					}	
 				}
 			}

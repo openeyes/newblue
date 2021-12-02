@@ -27,5 +27,8 @@
 @import "content-specific/signature-pad";
 @import "content-specific/tabular-data";
 
+// standardised (v5) version of Add new event
+@import "add-new-event/standardised/_all";
+
 // attachments
 @import "attachments/popup-attachment"; 

@@ -42,7 +42,7 @@
 	}
 
 	// lists
-	ul {
+	ul:not(.oe-multi-select) {
 		margin:10px 0;
 		li {
 			@include font-size(13);

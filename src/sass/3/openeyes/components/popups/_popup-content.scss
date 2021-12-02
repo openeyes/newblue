@@ -13,7 +13,7 @@
 		// however need a minimum otherwise it is 
 		// then allow content to expand if needed
 		min-height: 100px; // also the spinner needs space.
-		max-height: calc(100vh - 200px);  // was 300px
+		max-height: calc(100vh - 200px);  // make use of available height, but allow for title and fix actions
 		overflow-y: auto;	// scroll overflow
 		overflow-x: hidden; // otherwise breaks out of popup.
 		
@@ -32,7 +32,7 @@
 			height: calc(100vh - 200px); // force to max height;	
 		}
 		
-		// added this to allow for new contacts to show matches
+		// added this to track when scolling (small data column)
 		.sticky {
 			position: sticky; 
 			top:0; 
