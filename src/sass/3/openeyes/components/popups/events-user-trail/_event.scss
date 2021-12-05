@@ -1,0 +1,29 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+.event-user-grid {
+
+	td.event {
+		background-color: $oe-dark-line;
+
+		.event-details {
+			@include flex(center, space-between);
+			padding: 0 5px 0 0;
+
+			.other-user {
+				color: $oe-dark-text;
+			}
+		}
+
+	}
+}
+
+
+
+
+
+
+
+
+

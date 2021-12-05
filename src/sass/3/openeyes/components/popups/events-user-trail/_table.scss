@@ -1,0 +1,77 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// need greater specificity!
+.oe-popup .event-user-grid {
+
+	table {
+		width: 100%;
+		color: $oe-dark-text-light;
+		margin: 10px 0 0 0; // overwrite oe-popup default
+
+		th, td {
+			vertical-align: top;
+			text-align: left;
+			padding: 2px 0 2px 2px;
+			border: 1px solid $oe-dark-line;
+			border-left-width: 2px;
+			@include font-size(12);
+
+			.oe-i-e {
+				margin-right: 6px;
+				vertical-align: text-top;
+			}
+		}
+
+		thead {
+			th {
+				font-weight: 400;
+				color: $oe-dark-text;
+				@include font-size(15);
+				border-top: none;
+				padding: 0 0 8px 6px;
+
+				&:first-child {
+					// blank
+					border-left: none;
+					width: auto;
+				}
+
+				// stick table headers on scroll
+				position: sticky;
+				top: 0;
+				z-index: 10;
+				background: $oe-dark-popup-bg;
+			}
+
+		}
+
+		tbody {
+
+			th {
+				text-align: right;
+				padding: 5px 8px 0 0;
+				width: 90px;
+				@include font-size(12);
+				font-weight: 700;
+				border-left: none;
+			}
+
+			td {
+				// need to set a width
+				// to stop the columns distorting
+				// when the audit trail is shown
+				width: 360px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+

@@ -30,5 +30,8 @@
 // standardised (v5) version of Add new event
 @import "add-new-event/standardised/_all";
 
+// when updated to v5 version __base can be removed
+@import "events-user-trail/_all";
+
 // attachments
 @import "attachments/popup-attachment"; 

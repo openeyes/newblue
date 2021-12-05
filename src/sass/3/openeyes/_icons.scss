@@ -57,16 +57,19 @@
 		margin: 0 4px;
 	}
 
+	&.pad-more,
 	&.pad-both {
 		margin: 0 8px;
 	}
 
 	// icons before text
+	&.pad-r,
 	&.pad-right {
 		margin: 0 8px 0 0;
 	}
 
 	// icons after text
+	&.pad-l,
 	&.pad-left {
 		margin: 0 0 0 8px;
 	}
