@@ -1,16 +1,15 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
-// <table> used in Events! 
-.oec-patients {	
+// Used in Events as well.
+.oec-patients {
 	// enhanced OE checkboxes
 	label.patient-checkbox {
-		@include flex( center, center );
-		height:40px;
+		@include flex(center, center);
+		height: 40px;
 		width: 40px;
-		background: rgba(0,0,0,0); // without this the label hitarea for checkbox isn't used
-		
+		background: rgba(0, 0, 0, 0); // without this the label hitarea for checkbox isn't used
+
 		> input[type="checkbox"] {
 			display: none;
 			// CSS magic '+' next sibling! 
@@ -19,16 +18,29 @@
 				opacity: 1;
 			}
 		}
-		
+
 		.checkbox-btn {
 			height: 22px;
 			width: 22px;
 			cursor: pointer;
-			background:$oe-line url( svg-dark-fixed('i/plus-bold')) center center no-repeat;
-			background-size:16px;
+			background: $oe-line url(svg-dark-fixed("i/plus-bold")) center center no-repeat;
+			background-size: 16px;
 			border-radius: 50%;
-			opacity:0.5;
+			opacity: 0.5;
 		}
+
+		// same DOM is used in Events instead of a button,
+		// but needs to look like a button!
+		&.in-element {
+			height: 24px;
+			width: 30px;
+
+			.checkbox-btn {
+				background-color: $oe-btn-blue;
+				opacity: 1;
+			}
+		}
+
 	}
 }
 

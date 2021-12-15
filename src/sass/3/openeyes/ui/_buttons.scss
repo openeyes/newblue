@@ -77,7 +77,10 @@
 		}
 	}
 	
-	// clinc pathway adder
+	// clinc pathway adder,
+	// this provides a button that looks like the plus +
+	// from the clinic manager. The DOM has since been updated
+	// to use a checkbox as per clinic manager.
 	&.add-pathstep {
 		height: 25px; 
 		width: 25px;

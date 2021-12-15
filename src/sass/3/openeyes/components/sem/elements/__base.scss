@@ -13,6 +13,9 @@
 // note! sidebar nav overlay also uses "element", these need
 // changing but for now use "main-event" to correctly specify
 
+// v4: in-audit is for User history activity popup
+
+.in-audit .element,
 .main-event .element {
 	position: relative;
 	min-height: 55px; // ensure element actions and header can always be seen
@@ -21,7 +24,9 @@
 	margin: 0 0 3px 0;
 	color: $oe-text;
 	font-weight: $oe-font-medium;
+}
 
+.main-event .element {
 	// provide desktop user with element highlight effect
 	// border required in default state to stop the re-sizing effect
 	border: 1px solid rgba(#fff, 0);
@@ -39,5 +44,7 @@
 		}
 	}
 }
+
+
 
 

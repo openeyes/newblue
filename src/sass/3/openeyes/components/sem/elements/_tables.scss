@@ -6,244 +6,243 @@
 // Tables are used to layout most element data
 // to help better line up data down the element stack
 
-.main-event {
 
-	.element {
+.element {
 
-		// <table>
-		// raw DOM styling
-		// because tables are used so much in SEM
-		// thought it might be more helpful this way ...
+	// <table>
+	// raw DOM styling
+	// because tables are used so much in SEM
+	// thought it might be more helpful this way ...
 
-		table {
+	table {
 
-			// width:100%;  
-			// I really want to do this for VIEW and EDIT as default
-			// but it's now a hassle, because so many elements have 
-			// tables using "cols-10", this would override them
+		// width:100%;
+		// I really want to do this for VIEW and EDIT as default
+		// but it's now a hassle, because so many elements have
+		// tables using "cols-10", this would override them
 
-			// left in BUT should use 'data-group' instead!
-			&.pad-top {
-				margin-top: 20px;
-			}
+		// left in BUT should use 'data-group' instead!
+		&.pad-top {
+			margin-top: 20px;
+		}
 
-			&.pad-bottom {
-				margin-bottom: 20px;
-			}
+		&.pad-bottom {
+			margin-bottom: 20px;
+		}
 
-			// tables generally all require that the last cell 
-			// is aligned right because it's an icon
+		// tables generally all require that the last cell
+		// is aligned right because it's an icon
+		td:last-child,
+		th:last-child {
+			text-align: right;
+		}
+
+		// however, if there is only ONE td
+		// generally it should be aligned left...
+		td:first-child,
+		th:first-child {
+			text-align: left;
+		}
+
+		// make last left with class
+		&.last-left {
 			td:last-child,
 			th:last-child {
-				text-align: right;
-			}
-
-			// however, if there is only ONE td
-			// generally it should be aligned left...
-			td:first-child,
-			th:first-child {
 				text-align: left;
 			}
+		}
 
-			// make last left with class
-			&.last-left {
-				td:last-child,
-				th:last-child {
-					text-align: left;
-				}
+		// in View mode for simple label > value lists
+		// **** note: the label-value approach was pre v3
+		// in V3 simply use a <th> for first column!
+		&.label-value {
+			.data-label {
+				opacity: 0.7; // this works for both themes
+				@include font-size(11);
+				font-weight: $oe-font-medium;
+				vertical-align: middle;
 			}
 
-			// in View mode for simple label > value lists
-			// **** note: the label-value approach was pre v3
-			// in V3 simply use a <th> for first column! 
-			&.label-value {
-				.data-label {
-					opacity: 0.7; // this works for both themes
-					@include font-size(11);
-					font-weight: $oe-font-medium;
-					vertical-align: middle;
-				}
-
-				.data-value {
-					@include font-size(13);
-					font-weight: $oe-font-medium;
-					vertical-align: middle;
-				}
-
-				&.no-lines {
-					tr {
-						border-bottom: none;
-					}
-				}
+			.data-value {
+				@include font-size(13);
+				font-weight: $oe-font-medium;
+				vertical-align: middle;
 			}
 
-			// clickable rows ... but only <tbody>
-			&.clickable-rows {
-				tbody {
-					tr {
-						&:hover, &:active, &:focus {
-							cursor: pointer;
-							background: $oe-btn-blue; // row is a big button
-							td {
-								color: rgb(255, 255, 255);
-							}
-						}
+			&.no-lines {
+				tr {
+					border-bottom: none;
+				}
+			}
+		}
 
+		// clickable rows ... but only <tbody>
+		&.clickable-rows {
+			tbody {
+				tr {
+					&:hover, &:active, &:focus {
+						cursor: pointer;
+						background: $oe-btn-blue; // row is a big button
 						td {
-							// increase the hit area slightly (thinking touch!)
-							padding-top: 5px;
-							padding-bottom: 5px;
+							color: rgb(255, 255, 255);
 						}
-
 					}
-				}
 
-			}
-
-			// initially, when doing all the data layouts
-			// it seemed vertical-align middle was the best approach
-			// however, in hindsight this maybe wasn't such a good move. 
-			// but to change it all now is a bit too risky
-			// therefore provide a class that does it...
-			&.atop {
-				tbody {
-					th,
 					td {
-						vertical-align: top; // top!
-						padding-top: 4px; // adjust specific padding
-						padding-bottom: 4px;
+						// increase the hit area slightly (thinking touch!)
+						padding-top: 5px;
+						padding-bottom: 5px;
 					}
+
 				}
 			}
 
-			// underline to help with reading data
-			tr {
-				border-top: 1px solid $oe-line;
+		}
 
-				// no-line for when you need to group 2 rows visually together
-				&.no-line,
-				&:first-child {
-					border-top: none;
-				}
-
-				&.valign-top {
-					td {
-						vertical-align: top;
-					}
-				}
-
-				// divider is for subtle data divides withIN a table
-				// if you want a big divide use <hr class="divide"> and have 2 tables
-				&.divider {
-					border-top-width: 2px;
-
-					td {
-						padding-top: 3px;
-						padding-bottom: 3px;
-					}
-				}
-
-				&.selected-row {
-					background: $oe-btn-blue; // row is a big button
-					td {
-						color: rgb(255, 255, 255);
-					}
-				}
-			}
-
-			// decided to add a more descriptive class "large-text"
-			&.large,
-			&.large-text {
+		// initially, when doing all the data layouts
+		// it seemed vertical-align middle was the best approach
+		// however, in hindsight this maybe wasn't such a good move.
+		// but to change it all now is a bit too risky
+		// therefore provide a class that does it...
+		&.atop {
+			tbody {
+				th,
 				td {
-					@include font-size(14);
+					vertical-align: top; // top!
+					padding-top: 4px; // adjust specific padding
+					padding-bottom: 4px;
 				}
 			}
+		}
 
-			&.priority,
-			&.priority-text {
+		// underline to help with reading data
+		tr {
+			border-top: 1px solid $oe-line;
 
+			// no-line for when you need to group 2 rows visually together
+			&.no-line,
+			&:first-child {
+				border-top: none;
+			}
+
+			&.valign-top {
 				td {
-					@include font-size(16);
-					font-weight: $oe-font-medium;
-				}
-			}
-
-
-			th, td, {
-
-				@include font-size(12);
-
-				// the 4px indent for data provides 
-				// a valuable breathing space for the
-				// left side eye element data
-				padding: 1px 0 1px 4px;
-
-				&:first-child {
-					// this was 0px, but made it 1px 
-					// because of clickable-rows, when highlight
-					// the date appears cropped.
-					padding-left: 1px;
-				}
-
-				&.nowrap {
-					min-width: 40px; // this was width:1%; // width required to make this work
-					white-space: nowrap;
-					padding-right: 10px; // because it's nowrap content must give the <td> padding
-
-					&:last-child {
-						padding-right: 0;
-					}
-				}
-
-				&.center {
-					text-align: center;
-					padding: 0 4px; // was 10px, but can't remember why?
-				}
-
-				&.align-left {
-					text-align: left;
-				}
-
-				&.align-right {
-					text-align: right;
-				}
-
-				&.valign-top {
 					vertical-align: top;
 				}
 			}
 
-			// <th>
-			th {
-				text-align: left; // overide default 'middle'
-				font-weight: $oe-font-light;
-				color: $oe-text-light;
-			}
+			// divider is for subtle data divides withIN a table
+			// if you want a big divide use <hr class="divide"> and have 2 tables
+			&.divider {
+				border-top-width: 2px;
 
-			// can be used in <tbody> as a ROW header:
-			tbody {
-				th {
-					font-weight: $oe-font-medium;
+				td {
+					padding-top: 3px;
+					padding-bottom: 3px;
 				}
 			}
 
-			// <td>
+			&.selected-row {
+				background: $oe-btn-blue; // row is a big button
+				td {
+					color: rgb(255, 255, 255);
+				}
+			}
+		}
+
+		// decided to add a more descriptive class "large-text"
+		&.large,
+		&.large-text {
 			td {
-				vertical-align: middle;
-				height: 28px;
+				@include font-size(14);
+			}
+		}
 
-				textarea {
-					vertical-align: middle; // ensure correct vertical alignment in <td>
+		&.priority,
+		&.priority-text {
+
+			td {
+				@include font-size(16);
+				font-weight: $oe-font-medium;
+			}
+		}
+
+
+		th, td, {
+
+			@include font-size(12);
+
+			// the 4px indent for data provides
+			// a valuable breathing space for the
+			// left side eye element data
+			padding: 1px 0 1px 4px;
+
+			&:first-child {
+				// this was 0px, but made it 1px
+				// because of clickable-rows, when highlight
+				// the date appears cropped.
+				padding-left: 1px;
+			}
+
+			&.nowrap {
+				min-width: 40px; // this was width:1%; // width required to make this work
+				white-space: nowrap;
+				padding-right: 10px; // because it's nowrap content must give the <td> padding
+
+				&:last-child {
+					padding-right: 0;
 				}
 			}
 
-			// tfoot, rarely used.
-			// but if it is needs visual division from tbody
-			tfoot {
-				tr {
-					border-top: 3px solid $oe-line;
-				}
+			&.center {
+				text-align: center;
+				padding: 0 4px; // was 10px, but can't remember why?
+			}
+
+			&.align-left {
+				text-align: left;
+			}
+
+			&.align-right {
+				text-align: right;
+			}
+
+			&.valign-top {
+				vertical-align: top;
+			}
+		}
+
+		// <th>
+		th {
+			text-align: left; // overide default 'middle'
+			font-weight: $oe-font-light;
+			color: $oe-text-light;
+		}
+
+		// can be used in <tbody> as a ROW header:
+		tbody {
+			th {
+				font-weight: $oe-font-medium;
+			}
+		}
+
+		// <td>
+		td {
+			vertical-align: middle;
+			height: 28px;
+
+			textarea {
+				vertical-align: middle; // ensure correct vertical alignment in <td>
+			}
+		}
+
+		// tfoot, rarely used.
+		// but if it is needs visual division from tbody
+		tfoot {
+			tr {
+				border-top: 3px solid $oe-line;
 			}
 		}
 	}
 }
+
