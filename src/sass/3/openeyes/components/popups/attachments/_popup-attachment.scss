@@ -20,12 +20,15 @@
 		font-weight:400;
 		color:$oe-dark-text;
 	}
-	
-	// wraps the remove icon
-	.close-icon-btn {
-		position:absolute;
-		top:15px;
-		right:20px;
+
+	.close-popup-btn {
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 50px;
+		width: 50px;
+		background: center / 21px $oe-btn-blue url(svg-dark-fixed("i/remove-circle")) no-repeat;
+		z-index: 2;
 	}
 	
 	// attachment imagestack

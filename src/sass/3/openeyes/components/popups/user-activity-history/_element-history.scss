@@ -1,0 +1,77 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// OE Popup for User Activity History (uah)
+.oe-popup-uah {
+	position: relative;
+	background: $oe-sem-main-event-bg;
+
+	width: 100vw;
+	height: 100vh;
+	overflow-y: scroll;
+
+	.element-name {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 50px;
+		background: rgba($html-bg, 0.5);
+
+		@include flex(center, flex-start);
+		padding: 0 0 0 20px;
+		z-index: 1;
+
+		@include font-size(18);
+		font-weight: $oe-font-light;
+		color: #fff; // always on a dark background
+	}
+
+	.close-popup-btn {
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 50px;
+		width: 50px;
+		background: center / 21px $oe-btn-blue url(svg-dark-fixed("i/remove-circle")) no-repeat;
+		z-index: 2;
+	}
+
+
+	.user-activity {
+		padding: 70px 0 20px 0;
+
+
+		.snapshot {
+			@include flex(flex-start, space-between);
+			width: 1200px;
+			margin:0 auto 20px auto; // center this
+			padding:0 0 20px 0;
+			border-bottom: 1px dotted $oe-text-active;
+
+			.meta {
+				flex: 200px;
+				padding:0 10px 0 0;
+				@include font-size(11);
+				color: $oe-text;
+
+				.date {
+					@include font-size(17);
+					font-weight: $oe-font-medium;
+					margin:0 0 5px 0;
+				}
+
+				.event-name {
+					margin:0 0 5px 0;
+					color: $oe-text-light;
+				}
+
+			}
+
+			.view-element {
+				width: 1000px;
+			}
+		}
+	}
+
+}
