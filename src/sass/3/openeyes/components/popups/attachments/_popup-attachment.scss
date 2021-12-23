@@ -27,8 +27,9 @@
 		right: 0;
 		height: 50px;
 		width: 50px;
-		background: center / 21px $oe-btn-blue url(svg-dark-fixed("i/remove-circle")) no-repeat;
+		background: center / 22px $oe-btn-blue url(svg-dark-fixed("i/remove-circle")) no-repeat;
 		z-index: 2;
+		cursor: pointer;
 	}
 	
 	// attachment imagestack

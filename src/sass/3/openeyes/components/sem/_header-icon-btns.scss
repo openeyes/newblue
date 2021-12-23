@@ -1,0 +1,44 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.sidebar-header {
+	// <div>
+	.icon-button {
+		width: 48px;
+		height: $oe-event-header-height;
+		padding: 0;
+		cursor: pointer;
+
+		// fix in dark theme
+		color: $oe-dark-text;
+		background: center / 21px $oe-dark-user-inputs no-repeat;
+
+		&.element-structure,
+		&.switch-elements {
+			background-image: url(svg-all("ui/sidebar-switcher-elements"));
+		}
+
+		&.switch-events {
+			background-image: url(svg-all("ui/sidebar-switcher-events"));
+		}
+
+		&.uah {
+			background-size: 13px;
+			background-image: url(svg-all("ui/sidebar-audit-trail"));
+		}
+
+		// make like a button
+		&.active,
+		&.selected {
+			color: rgb(255, 255, 255);
+			background-color: $oe-dark-btn-blue;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: rgb(255, 255, 255);
+			background-color: $oe-btn-blue;
+		}
+	}
+}

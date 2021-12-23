@@ -18,7 +18,7 @@
 .in-audit .element,
 .main-event .element {
 	position: relative;
-	min-height: 55px; // ensure element actions and header can always be seen
+	min-height: 60px; // ensure element actions and header can always be seen
 	background-color: $oe-sem-element-bg;
 	padding: 32px 5px 10px 10px; // provide top space for header/actions
 	margin: 0 0 3px 0;

@@ -19,18 +19,19 @@ const chokidar = require('chokidar');
 
 // By default this will build the Dark and Light CSS.
 // However, if the eyedraw icons are updated their CSS needs building
-const mode  = process.argv[2] == "eyedraw" ? "eyedraw" : "styles";
+const mode = process.argv[2] == "eyedraw" ? "eyedraw" : "styles";
 
-log( cyan(`>>> newblue sychronous build: CSS ${mode}`));
-log( sass.info );
+log(cyan(`>>> newblue sychronous build: CSS ${mode}`));
+log(sass.info);
 
 const config = {
 	src: './src/sass/3/',
-	dist: './dist/css/'
+	dist: './dist/css/',
+	idg: '/Users/toby/sites/work/oe/idg/src/build/newblue/dist/css/'
 };
 
 // build a dateStamp for the CSS, useful for debugging deployments
-const dateStamp = '/* ' + new Date( Date.now() ) + ' */ \n';
+const dateStamp = '/* ' + new Date(Date.now()) + ' */ \n';
 
 // Legals required on the CSS files.
 const headerLegals = [
@@ -49,64 +50,73 @@ const headerLegals = [
 	'* @license http://www.gnu.org/licenses/agpl-3.0.html The GNU Affero General Public License V3.0',
 	'*',
 	'*/',
-	'',''].join('\n');
-	
+	'', '' ].join('\n');
+
 /**
-* Process the scss files with Dart Sass
-* "Dart Sass is the primary implementation of Sass"
-* https://sass-lang.com/dart-sass
-*/
-const dartSass = (style) => {
-	log( cyan(`build: ${style}`));
-	const cssOutput =`${config.dist}${style}.css`;
-		
+ * Process the scss files with Dart Sass
+ * "Dart Sass is the primary implementation of Sass"
+ * https://sass-lang.com/dart-sass
+ */
+const dartSass = ( style ) => {
+	log(cyan(`build: ${style}`));
+	const cssOutput = `${config.dist}${style}.css`;
+	const cssIDG = `${config.idg}${style}.css`;
+
 	try {
 		// Dart-Sass recommends using RenderSync as it is faster, so ok let's use it:
-		const result = sass.renderSync({ 
-			file: `${config.src}${style}.scss`, 
+		const result = sass.renderSync({
+			file: `${config.src}${style}.scss`,
 			outputStyle: 'compressed', // "expanded" or "compressed"
 			charset: true,
 			precision: 5, // numeric precision	
 		});
-		
-		log(cyan(`write CSS: `) + `${cssOutput}`);
-		const myStream = fs.createWriteStream( `${cssOutput}`);
-		myStream.write( headerLegals );
-		myStream.write( dateStamp );
-		myStream.end( result.css );
-		
-	} catch ( e ) {
-		log( red('sass error: ') +  e.name + ': ' + e.message );
-		log( red('location: ') + e.file + ': '+ e.line ); // custom SASS errors
-	}
-}; 
 
-/** 
-* Default action is to build the dark and light CSS files
-*/
+		log(cyan(`write CSS: `) + `${cssOutput}`);
+		const distStream = fs.createWriteStream(`${cssOutput}`);
+		distStream.write(headerLegals);
+		distStream.write(dateStamp);
+		distStream.end(result.css);
+
+		// iDG local is a seperate repo, write CSS updates there too
+		log(cyan(`write CSS: `) + `${cssIDG}`);
+		const idgStream = fs.createWriteStream(`${cssIDG}`);
+		idgStream.write(headerLegals);
+		idgStream.write(dateStamp);
+		idgStream.end(result.css);
+
+	} catch (e) {
+		log(red('sass error: ') + e.name + ': ' + e.message);
+		log(red('location: ') + e.file + ': ' + e.line); // custom SASS errors
+	}
+};
+
+/**
+ * Default action is to build the dark and light CSS files
+ */
 const buildCSS = () => {
 	dartSass('style_oe_dark.3');
 	dartSass('style_oe_light.3');
 	dartSass('style_oe_print.3');
+	// then initialize FS watcher.
+	log(cyan(`... watching Sass files for updates ... `));
 }
 
 /**
-* Check build mode
-*/
-if( mode == "eyedraw" ){
+ * Check build mode
+ */
+if ( mode == "eyedraw" ){
 	// only need to run this once
 	dartSass('style_eyedraw_doodles');
 } else {
 	// run default build CSS 
 	buildCSS();
-	
-	// then initialize FS watcher.
-	log( cyan(`... watching Sass files for updates ... `));
-	
-	chokidar.watch(`${config.src}**/*.scss`,{
+
+
+
+	chokidar.watch(`${config.src}**/*.scss`, {
 		ignored: /(^|[\/\\])\../, // ignore dotfiles
 		persistent: true
-	}).on( 'change' , path => {
+	}).on('change', path => {
 		log(`updated: ${path}`);
 		buildCSS();
 	});

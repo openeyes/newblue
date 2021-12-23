@@ -27,6 +27,9 @@
 @import "content-specific/signature-pad";
 @import "content-specific/tabular-data";
 
+// event audit trail popup v3
+@import "oe-audit-trail-popup";	// User audit trail popup
+
 // standardised (v5) version of Add new event
 @import "add-new-event/standardised/_all";
 
@@ -37,4 +40,4 @@
 @import "attachments/popup-attachment";
 
 // user activity history
-@import "user-activity-history/element-history";
+@import "user-activity-history/_all";

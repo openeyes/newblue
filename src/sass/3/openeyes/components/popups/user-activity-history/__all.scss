@@ -1,16 +1,7 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
 @import "_base";
+@import "element-snapshot";
 
-@import "data-list";
-@import "data-single-double";
-@import "data-image";
-
-@import "edit-widget";
-
-@import "overflow-icon-btn";
-@import "wb-overflow-popup";
-
-@import "data-issue";
+@import "uah-event-overview";

@@ -3,8 +3,6 @@
 
 
 // OE Sidebar Header
-//
-
 .sidebar-header {
 	
 	display:flex;
@@ -43,61 +41,12 @@
 		padding:0 8px;
 	}
 	
-	.icon-button {
-		display:inline-block;
-		width:48px;  
-		height:$oe-event-header-height;
-		cursor: pointer;
-		
-		// lock in pro-theme
-		// (rather than adding "pro-theme" class)
-		color: $oe-dark-text;
-		background-color: $oe-dark-user-inputs;
-		
-		&.active,
-		&.selected {
-			color: rgb(255,255,255);
-			background-color: $oe-dark-btn-blue;
-		}
-		
-		&:hover, &:focus, &:active {
-			color: rgb(255,255,255);
-			background-color: $oe-btn-blue;
-		}
-		
-		// setup icon buttons
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size:20px 25px;
-		
-		&.element-structure,
-		&.switch-elements {
-			background-image:url( svg-all( 'ui/sidebar-switcher-elements' ) );
-		}
-		
-		&.switch-events {
-			background-image:url( svg-all( 'ui/sidebar-switcher-events' ) );
-		}
-		
-		&.events-user-trail {
-			background-size:13px;
-			background-image:url( svg-all( 'ui/sidebar-audit-trail' ) );
-		}
-		
-		
-		
-	}
-	
 	// anything in here should be Pro themed 
 	input, textarea, select {
 		color: $oe-dark-user-input-text;
 		background-color: $oe-dark-user-inputs;
 		border-radius:0;
 	}
-	
-	
-	
-	
 }
 
 

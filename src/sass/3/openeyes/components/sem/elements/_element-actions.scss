@@ -5,7 +5,7 @@
 
 	.element-actions {
 		position: absolute;
-		top: 5px;
+		top: 4px;
 		right: 5px;
 
 		// set up as Flex, need this to be
@@ -13,10 +13,24 @@
 		display: flex;
 
 		// space out icons <i>
-		// 'trash' & 'local history' (currently only these 2)
-		// for either horizontal or vertical layout
+		// Trash, audit, duplicate, copy-forward
+		span {
+			@include flex(center, center);
+		}
+
 		.oe-i {
-			margin: 0 0 5px 10px;
+			width: 25px;
+			height: 25px;
+			margin: 0 2px 2px 2px;
+
+			&.copy-forward {
+				background-size: 17px;
+			}
+
+			&.audit-trail {
+				background-size: 13px;
+			}
+
 		}
 	}
 }

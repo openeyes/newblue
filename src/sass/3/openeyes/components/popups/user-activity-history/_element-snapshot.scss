@@ -1,0 +1,74 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.uah {
+	padding: 70px 0 20px 0;
+
+	// h3
+	.uah-view {
+		width: 1160px;
+		margin: 0 auto 20px auto; // center this
+		@include font-size(17);
+		font-weight: $oe-font-light;
+		color: $oe-text;
+	}
+
+	.snapshot {
+		@include flex(flex-start, space-between);
+		width: 1160px;
+		margin: 0 auto 20px auto; // center this
+		padding: 0 0 20px 0;
+		border-bottom: 1px dotted $oe-text-active;
+
+		.change-info {
+			flex: 200px;
+			padding: 0 10px 0 0;
+			@include font-size(11);
+			color: $oe-text;
+
+			.date {
+				@include font-size(14);
+				font-weight: $oe-font-medium;
+				margin: 0 0 5px 0;
+			}
+
+			.time {
+				margin: 0 0 5px 0;
+				color: $oe-text-light;
+			}
+
+			.who {
+				@include font-size(14);
+				font-weight: $oe-font-medium;
+			}
+
+			// <button>
+			.copy-forward-btn {
+				width: 90%;
+				height: 28px;
+				background: center / 16px $oe-btn-blue-hint url(svg-dark-fixed("i/copy-forward")) no-repeat;
+				margin:10px 0;
+			}
+
+
+		}
+
+		.view-element {
+			width: 1000px;
+		}
+	}
+
+	@include extended() {
+		.uah-view {
+			width: 1300px;
+		}
+		.snapshot {
+			width: 1300px;
+			.view-element {
+				width: 1100px;
+			}
+		}
+	}
+
+}
+
