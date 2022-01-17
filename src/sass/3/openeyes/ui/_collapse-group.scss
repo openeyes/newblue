@@ -17,10 +17,10 @@
 	// icon is then controlled through CSS classes
 	.header-icon {
 		position:relative;
-		@include font-size(15);
+		@include font-size(14);
 		font-weight:$oe-font-medium;
 		line-height: normal;
-		color: $oe-text-light;
+		color:$oe-text-highlight;
 		padding:0 30px 0 0;    // allow for icon background
 		margin:5px 0;
 		cursor:pointer;  
@@ -53,7 +53,6 @@
 		
 		// show user interaction
 		&:hover, &:active {
-			color:$oe-text-highlight;
 			&:after {
 				opacity: 1;
 			}	
