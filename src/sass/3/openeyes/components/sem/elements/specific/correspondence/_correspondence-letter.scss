@@ -14,40 +14,14 @@
 		.mce-tinymce button:hover {
 			background: rgb(200,230,255);
 		}
-		
-		// correspondence letter only controls 
-		// the HTML layouts. if available JS 
-		// adds an overlay of the PNGs. 
-		.correspondence-letter {
-			background:rgb(255,255,255);
-			color:rgb(0,0,0);
-			padding:10px 20px 40px 20px;
 
-			.letter-logo {
-				text-align: right;
-				padding:0 0 10px 0;
-			}
-			
-			.from-address {
-				float: right;
-			}
-			
-			.letter-date {
-				font-weight: 700;
-				margin:15px 0 0 0;
-			}
-			
-		}
-		
-		// make text area look like a letter (even in Pro mode)
+		// make it easier to read the text
+		// (this is for the secretaries, who need glasses)
 		.correspondence-letter-text {
-			//font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-			line-height:1.6;
-			@include font-size(17);
-			font-weight:400;
-			padding:15px 10px;
+			line-height:1.5;
+			@include font-size(16);
+			font-weight:500;
+			padding:10px;
 		}	
 	}
-	
-	
 }
