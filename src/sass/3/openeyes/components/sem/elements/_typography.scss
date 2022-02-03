@@ -25,6 +25,8 @@
 		@include font-size(14); // match title
 		color: $oe-element-headers;
 		font-weight: $oe-font-light;
+		// added to improve layout for Correspondence
+		// and seems an improvement across the UI
 		margin:0 0 3px 0;
 	}
 

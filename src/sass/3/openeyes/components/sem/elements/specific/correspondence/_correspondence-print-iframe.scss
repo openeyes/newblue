@@ -7,14 +7,15 @@
 .main-event {
 	.element {
 	
-		// iFrame - load in the Print DOM
+		// iFrame / embed - load in the Print DOM
 		.correspondence-print-iframe {
 			// fill available height, 100px is a bit of guess. 
 			// It allows for the Event Title and 50px gap at the bottom
-			height: calc(100vh - #{$oe-header-height + $oe-event-header-height} - 100px); 
+			height: calc(100vh - #{$oe-header-height + $oe-event-header-height} - 100px);
+			max-height: 1400px; // so it doesn't get crazy on the super monitors
 			border: none;
-			background:rgb(255,255,255);
-			padding:20px;
+			background: $oe-line;
+			padding:10px;
 			
 		}
 	}	
