@@ -1,41 +1,41 @@
 {
-	"name": "newblue",
-	"version": "3.0.0",
-	"description": "newblue for OpenEyes",
-	"private": true,
-	"author": {
-		"name": "Toby Fisher",
-		"url": "https://knowego.com"
-	},
-	"license": "AGPL-3.0-only",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/openeyes/newblue"
-	},
-	"browserslist": [
-		"Chrome > 60",
-		"Edge > 15",
-		"Safari > 11"
-	],
-	"scripts": {
-		"build:event-icons": "node ./node_scripts/build-iconset.js events",
-		"build:eyedraw-icons": "node ./node_scripts/build-iconset.js eyedraw",
-		"css": "node node_scripts/sass-to-css.js",
-		"css:eyedraw": "node node_scripts/sass-to-css.js eyedraw",
-		"svg": "node node_scripts/svg-optimise.js",
-		"svg:all": "node node_scripts/svg-optimise.js rebuild-all"
-	},
-	"devDependencies": {
-		"chalk": "4.1.1",
-		"chokidar": "3.5.2",
-		"fast-glob": "3.2.6",
-		"jimp": "0.16.1",
-		"sass": "1.35.1",
-		"spritesmith": "3.4.0",
-		"svgo": "2.3.1"
-	},
-	"engines": {
-		"node": ">= 14.17.2",
-		"npm": ">= 7.19.1"
-	}
+  "name": "newblue",
+  "version": "3.0.0",
+  "description": "newblue for OpenEyes",
+  "private": true,
+  "author": {
+    "name": "Toby Fisher",
+    "url": "https://knowego.com"
+  },
+  "license": "AGPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openeyes/newblue"
+  },
+  "browserslist": [
+    "Chrome > 60",
+    "Edge > 15",
+    "Safari > 11"
+  ],
+  "scripts": {
+    "build:event-icons": "node ./node_scripts/build-iconset.js events",
+    "build:eyedraw-icons": "node ./node_scripts/build-iconset.js eyedraw",
+    "css": "node node_scripts/sass-to-css.js",
+    "css:eyedraw": "node node_scripts/sass-to-css.js eyedraw",
+    "svg": "node node_scripts/svg-optimise.js",
+    "svg:all": "node node_scripts/svg-optimise.js rebuild-all"
+  },
+  "devDependencies": {
+    "chalk": "4.1.1",
+    "chokidar": "3.5.2",
+    "fast-glob": "3.2.6",
+    "jimp": "0.16.1",
+    "sass": "1.35.1",
+    "spritesmith": "3.4.0",
+    "svgo": "2.3.1"
+  },
+  "engines": {
+    "node": ">= 14.17.2",
+    "npm": ">= 7.19.1"
+  }
 }

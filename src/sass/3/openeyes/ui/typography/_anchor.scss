@@ -9,6 +9,10 @@ a {
 	
 	&.hint {
 		text-decoration: underline;
+		// this is because I foolishly used hint in ".button" as well :(
+		&.button {
+			text-decoration: none;
+		}
 	}
 
 	&:hover, &:focus, &:active {

@@ -21,7 +21,7 @@ const chokidar = require('chokidar');
 // However, if the eyedraw icons are updated their CSS needs building
 const mode = process.argv[2] == "eyedraw" ? "eyedraw" : "styles";
 
-log(cyan(`>>> newblue sychronous build: CSS ${mode}`));
+log(cyan(`>>> newblue synchronous build: CSS ${mode}`));
 log(sass.info);
 
 const config = {
@@ -41,13 +41,13 @@ const headerLegals = [
 	'*',
 	'* OpenEyes is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.',
 	'* OpenEyes is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.',
-	'* You should have received a copy of the GNU Affero General Public License along with OpenEyes in a file titled COPYING. If not, see <http://www.gnu.org/licenses/>.',
+	'* You should have received a copy of the GNU Affero General Public License along with OpenEyes in a file titled COPYING. If not, see www.gnu.org/licenses.',
 	'*',
-	'* @link http://www.openeyes.org.uk',
+	'* @link www.openeyes.org.uk',
 	'*',
-	'* @author OpenEyes <info@openeyes.org.uk>',
+	'* @author OpenEyes info@openeyes.org.uk',
 	'* @copyright Copyright (C) 2018, OpenEyes Foundation',
-	'* @license http://www.gnu.org/licenses/agpl-3.0.html The GNU Affero General Public License V3.0',
+	'* @license www.gnu.org/licenses/agpl-3.0.html The GNU Affero General Public License V3.0',
 	'*',
 	'*/',
 	'', '' ].join('\n');
@@ -77,7 +77,7 @@ const dartSass = ( style ) => {
 		distStream.write(dateStamp);
 		distStream.end(result.css);
 
-		// iDG local is a seperate repo, write CSS updates there too
+		// iDG local is a separate repo, write CSS updates there too
 		log(cyan(`write CSS: `) + `${cssIDG}`);
 		const idgStream = fs.createWriteStream(`${cssIDG}`);
 		idgStream.write(headerLegals);
@@ -110,17 +110,16 @@ if ( mode == "eyedraw" ){
 } else {
 	// run default build CSS 
 	buildCSS();
-
-
-
-	chokidar.watch(`${config.src}**/*.scss`, {
-		ignored: /(^|[\/\\])\../, // ignore dotfiles
-		persistent: true
-	}).on('change', path => {
-		log(`updated: ${path}`);
-		buildCSS();
-	});
 }
+
+chokidar.watch(`${config.src}**/*.scss`, {
+	ignored: /(^|[\/\\])\../, // ignore dotfiles
+	persistent: true
+}).on('change', path => {
+	log(`updated: ${path}`);
+	buildCSS();
+});
+
 
 
 
