@@ -1,0 +1,72 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// provides a single DOM element approach to show
+// RL, R•, •L, ••, Systemic (all and sides)
+// generally used on <span>, but could be <div>
+
+.oe-lat {
+	display: inline-block;
+	height: 13px;
+	width:30px; // allows a 4px center gap
+	margin: 0 2px; // space around
+
+	@mixin bg( $left, $right ){
+		background-image: url(svg-themed("i/" + $left)), url(svg-themed("i/" + $right));
+	}
+
+	// default set up for all icons (small)
+	background-size:13px;
+	background-position: center left, center right;
+	background-repeat: no-repeat;
+
+	&.mini {
+		background-size:11px;
+		width:25px; // 2px gap
+	}
+
+	// this is "n-n"
+	@include bg("lat-NA","lat-NA");
+
+	&.R-L {
+		@include bg("lat-R-green","lat-L-red");
+	}
+	&.R-n {
+		@include bg("lat-R-green","lat-NA");
+	}
+	&.n-L {
+		@include bg("lat-NA","lat-L-red");
+	}
+	&.Ri-Li {
+		@include bg("lat-R-inactive","lat-L-inactive");
+	}
+	&.Ri-n {
+		@include bg("lat-R-inactive","lat-NA");
+	}
+	&.n-Li {
+		@include bg("lat-NA","lat-L-inactive");
+	}
+	&.R-Li {
+		@include bg("lat-R-green","lat-L-inactive");
+	}
+	&.Ri-L {
+		@include bg("lat-R-inactive","lat-L-red");
+	}
+
+	&.beo {
+		background-position:center center;
+		background-image: url(svg-themed("i/beo"));
+	}
+
+	&.sys {
+		background-position:center center;
+		background-image: url(svg-themed("i/person-green"));
+	}
+	&.sys-i {
+		background-position:center center;
+		background-image: url(svg-themed("i/person-inactive"));
+	}
+
+
+
+}
