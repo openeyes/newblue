@@ -1,11 +1,12 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
 // OE EYE icon
 // these should ALWAYs be on the same line 
 // have therefore wrapped like with OE date approach
-.oe-systemic-icons,
+
+// this approach is now depreciated but is still supported for now
+
 .oe-eye-lat-icons {
 	display:inline-flex;
 	align-items:center;				// vertical alignment (no stretch)

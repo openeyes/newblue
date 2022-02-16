@@ -54,12 +54,7 @@
 							margin:5px 0 0 0;
 						}
 					}
-					
-					.operation {
-						@include font-size(14);
-						margin:0 0 5px 0;
-					}
-					
+
 					&.edit-order-icon {
 						vertical-align: middle;
 					}
@@ -67,6 +62,11 @@
 					// div wrapper for meta and extra patient icons under Patient name
 					.theatre-patient-icons {
 						margin: 10px 0 0 0;
+					}
+
+					.operation {
+						@include font-size(14);
+						margin:0 0 5px 0;
 					}
 					
 					// biometry icon is pulled out of <a>

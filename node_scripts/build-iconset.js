@@ -153,6 +153,7 @@ const buildSCSS = ( coordinates, properties ) => {
 	  }
 	  log( cyan('>>> scss created: ') + config.scss);
 	  log( cyan('>>> Notes'));
+		log('Updated PNG spritesheet will need copying over into iDG');
 	  
 	  if( iconset == "events" ){
 		  log('Newblue CSS will now need rebuilding ... (then a quick check on iDG that they look OK!)');

@@ -59,7 +59,7 @@
 
 /* UI classes */
 @import "ui/oe-date";						// OE date
-@import	"ui/oe-eye-lat-icons";				// OE Eye Lat (r/l) icons
+@import	"ui/oe-lat-icons/_all";				// OE lat icons for Eye / Systemic
 @import "ui/oe-search-patient";				// Search Patient
 @import "ui/oe-multi-select";				// multi-select list
 @import "ui/oe-filter-options";				// filter-options
@@ -102,7 +102,8 @@
 @import "components/admin/_all";				// Admin
 @import "components/reports/_all";				// Reports (based on Admin, maybe could be combined)
 @import "components/audit";						// Audit
-@import "components/partial-waiting";			// Partial Booking Waiting List
+@import "components/partial-booking/v1/partial-waiting"; // Partial Booking Waiting List (v1)
+@import "components/partial-booking/_all";      // Partial Booking Waiting List (v3+)
 @import "components/nod-export";				// NOD export
 @import "components/new-patient";				// Add New Patient
 @import "components/whiteboard/_all";			// Whiteboard

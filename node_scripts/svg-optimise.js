@@ -34,7 +34,7 @@ if (mode == "specific") {
 // don't use './src'
 const paths = {
     src: 'src/svg/**/*.svg',
-    dist: 'dist/svg/'
+    dist: 'dist/svg/',
 };
 
 /**
@@ -116,8 +116,20 @@ const processSVG = (svgPath) => {
         fs.writeFile(output, result.data, err => {
             if (err) log(red('file write error: ') + err);
             log(cyan(`SVG: `) + output); // success!
+
+			/**
+			 * iDG
+			 * now copy over to iDG for SSG build
+			 */
+			const thisDist = '/Users/toby/sites/work/oe/newblue';
+			const idgBuild = '/Users/toby/sites/work/oe/idg/src/build/newblue';
+			fs.copyFile(`${thisDist}/${output}`, `${idgBuild}/${output}`, (err) => {
+				if (err) throw err;
+				log(cyan(`iDG copy: `) + `${svgFile}`);
+			});
         });
     });
+
 };
 
 /**

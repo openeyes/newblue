@@ -5,8 +5,9 @@
 // CSS3 OE Grid
 
 // CSS grid for OE. Default set up is for SEM layout
-// V3 design work started with SEM. It is the most used
-// part of OE and need to work well.
+// V3 design work started with SEM, so this is the default
+// But, this is all now a bit of a mess. Why? Because OE UIX has been evolving
+// in a disjointed and patchy way for over 5 years!
 
 .oe-grid {
 	// for Edge < 16
@@ -40,8 +41,8 @@
 	// the .oe-full-content was set up to span 2 grid items: 'sidebar' and 'main'
 	// However, later, I then added the "subgrid" to the full-content.
 	// Here is the problem. A second grid over 2 grid items! 
-	// TinyMCE popups where somehow width adjusting to the underlaying "sidebar" item 
-	// orginially was "simple" but "basic" is more descriptive
+	// TinyMCE popups where somehow width adjusting to the underlying "sidebar" item
+	// originally was "simple" but "basic" is more descriptive
 	&.basic, 
 	&.simple {
 		grid: 	"header" #{$oe-header-height} 
@@ -125,11 +126,15 @@
 	.oe-full-header, 
 	.oe-full-content,
 	.oe-allow-for-fixing-hotlist  {
-		// "oe-full" layouts were originally width restricted because 
-		// they were always used with the hotlist fixed open, however! 
-		// when (this useful) approach was applied to Anaylitcs a 'full'
-		// width version was needed (i.e. hotlist NOT fixed open)
-		// so how best to do this? ... decided to a negating class:
+		// "oe-allow-fixing-hotlist" - is probably now redundant
+		// however, it might be used somewhere in production! (this needs reviewing)
+		// -
+		// "oe-full" layouts by default will allow for the hotlist panel to fix
+		// in place (when there is enough width), however many layouts now need to use the full width
+		// and hotlist can not fix open. Adding "use-full-screen" will override the default
+		// behaviour and allow the content to use full width. JS will look for this
+		// class to see if can fix open the hotlist panel or not
+
 		&:not(.use-full-screen){
 			
 			@include fix-hotlist(){
@@ -138,7 +143,7 @@
 
 			// stretch to fill on super wide displays
 			// works for most standard page layouts
-			@include super-wide(){	  	 		// 2048px+
+			@include super-wide(){ // 2048px+
 				width: 69vw;
 			}
 		}

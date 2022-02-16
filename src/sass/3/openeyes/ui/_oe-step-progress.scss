@@ -6,6 +6,11 @@
 	display:inline-flex;
 	flex-wrap: wrap;
 
+	// add for letters in Partial booking lists
+	&.nowrap {
+		flex-wrap: nowrap;
+	}
+
 	&.pad {
 		margin:0 15px;
 	}

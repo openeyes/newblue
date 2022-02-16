@@ -12,10 +12,10 @@
 // Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS
 
 html {
-  line-height: 1.15; 
-  -ms-text-size-adjust: 100%; 
-  -webkit-text-size-adjust: 100%;
-  font-kerning: normal; // use font kerning
+	line-height: 1.15;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-kerning: normal; // use font kerning
 }
 
 // Universal Box Sizing with Inheritance - CSS Tricks Box-sizing.
@@ -23,56 +23,57 @@ html {
 html {
 	box-sizing: border-box;
 }
+
 *, *:before, *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 // correct strong styling
 
 b,
 strong {
-  font-weight: bolder;
+	font-weight: bolder;
 }
 
 // use small
 
 small {
-  font-size: 80%;
+	font-size: 80%;
 }
 
 // Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 
 sub,
 sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
 }
 
 sub {
-  bottom: -0.25em;
+	bottom: -0.25em;
 }
 
 sup {
-  top: -0.5em;
+	top: -0.5em;
 }
 
 // Hide the overflow in IE
 svg:not(:root) {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 // Show the overflow in IE and Show the overflow in Edge.
 button,
-input { 
-  overflow: visible;
+input {
+	overflow: visible;
 }
 
 // Remove the inheritance of text transform in Edge, Firefox, and IE.
 button,
-select {  
-  text-transform: none;
+select {
+	text-transform: none;
 }
 
 // layout resets
@@ -99,15 +100,15 @@ p,
 blockquote,
 th,
 td {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 // table defaults
 
 table {
-  border-collapse:collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 
