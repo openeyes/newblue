@@ -188,11 +188,19 @@
 		color: rgb(255,255,255);
 		background: $oe-btn-blue;
 		
-		// if there is icon this make sure it shows the button hover effect
+		// icons within buttons
 		.oe-i {
+			// if there is icon this make sure it shows the button hover effect
 			opacity:1;
+			// if in light mode the icon will need inverting
+			filter: $oe-btn-icon-hover;
 		}
-	}	
+	}
+
+	// a button with an icon in it (and maybe text!)
+	&.icon {
+
+	}
 	
 	// give a hint of the button colour to the user
 	&.hint {

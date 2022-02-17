@@ -6,10 +6,14 @@
 // generally used on <span>, but could be <div>
 
 .oe-lat {
-	display: inline-block;
+	display: block;
 	height: 13px;
 	width:30px; // allows a 4px center gap
-	margin: 0 2px; // space around
+	margin: 0 2px; // space
+
+	&.inline {
+		display: inline-block;
+	}
 
 	@mixin bg( $left, $right ){
 		background-image: url(svg-themed("i/" + $left)), url(svg-themed("i/" + $right));

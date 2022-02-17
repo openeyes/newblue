@@ -98,13 +98,13 @@
 			}
 		}
 
-	// with elements with long tables this may be useful!
+		// with elements with long tables this may be useful!
 		&.highlight-rows {
 			tbody {
 				tr {
 					&:hover,
 					&:focus {
-						background:$oe-bg-highlight;
+						background: $oe-bg-highlight;
 					}
 				}
 			}
@@ -221,6 +221,7 @@
 			&.valign-top {
 				vertical-align: top;
 			}
+
 		}
 
 		// <th>
@@ -241,6 +242,16 @@
 		td {
 			vertical-align: middle;
 			height: 28px;
+
+			&.line-r {
+				border-right:2px solid $oe-line;
+				padding-right:8px;
+			}
+
+			&.line-l {
+				border-left:2px solid $oe-line;
+				padding-left:8px;
+			}
 
 			textarea {
 				vertical-align: middle; // ensure correct vertical alignment in <td>

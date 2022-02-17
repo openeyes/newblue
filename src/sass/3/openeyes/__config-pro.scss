@@ -74,6 +74,8 @@ $oe-btn-red-hint:		$oe-dark-btn-red-hint;
 // button shades
 $oe-btn-blue-dark: 		shade( $oe-btn-blue, 25% );
 
+// icons within button are fine in dark
+$oe-btn-icon-hover: none;
 
 $oe-dark-popup-bg:		rgb(55,71,85);
 $oe-popup-bg:			$oe-dark-popup-bg; // tool-tip, add-select-search, element-search-popup	 
