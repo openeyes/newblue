@@ -31,6 +31,32 @@ label,
 				margin-right:0;
 			}
 		}
+
+		&.hide-input {
+			input {
+				display:none;
+			}
+		}
+
+		// if using "as-button" it requires the text has a DOM wrap
+		// <label> 	|- <input>
+		//			|- <div class="btn" ...
+		&.as-button {
+			padding:0; // turn off label padding
+			height:24px; // match buttons
+			input {
+				display: none;
+				&:checked + .btn {
+					color:#fff;
+					background-color: $oe-btn-blue;
+				}
+			}
+			.btn {
+				@include flex(center, center);
+				height: 100%;
+				padding:0 5px; // this was 3px 6px
+			}
+		}
 		
 		span.text {
 			.oe-i {
@@ -45,13 +71,6 @@ label,
 			opacity:0.8; // tone down the inputs slightly unless checked
 			&:checked {
 				opacity:1;
-			}
-			
-			// if DOM text in <label> is wrapped with <span class="text" ...
-			// <label> 	|- <input>
-			//			|- <span class="text" ...
-			&:checked + span.text {
-				color: $oe-text-active;
 			}
 		}
 		

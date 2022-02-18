@@ -214,6 +214,7 @@
 		"status-query-reply": "status-query-reply",
 		"whiteboard": "whiteboard",
 		"doubt": "doubt",
+		"doubt-active": "doubt-active",
 		"person": "person",
 		"person-green": "person-green",
 		"person-split": "person-split",
@@ -293,7 +294,7 @@
 	$used-in-frame: "laterality.R", "laterality.L", "laterality.NA", "laterality.Ri", "laterality.Li", "d-slash", "line-break", "direction-right", "direction-right-circle", "person", "comments", "comments-added", "comments-who", "info", "child-arrow", "audit-trail", "drug-rx", "remove-circle", "plus-circle", "pencil", "save", "more-h", "menu", "change", "injection";
 
 	// these icons need to always be at full opacity by default
-	$no-opacity: "laterality.R", "laterality.L", "laterality.NA", "laterality.Ri", "laterality.Li", "beo", "doubt", "circle-green", "circle-yellow", "circle-amber", "circle-orange", "circle-red", "circle-grey", "flag-green", "flag-amber", "flag-orange", "flag-red", "flag-grey", "triangle-green", "triangle-amber", "triangle-orange", "triangle-red", "triangle-grey", "triangle-urgent", "mpr", "mpr-red", "mpr-amber", "mpr-green", "exclamation-green", "exclamation-amber", "exclamation-orange", "exclamation-red", "tick-green", "cross-red", "warning", "warning-none",
+	$no-opacity: "laterality.R", "laterality.L", "laterality.NA", "laterality.Ri", "laterality.Li", "beo", "doubt-active", "circle-green", "circle-yellow", "circle-amber", "circle-orange", "circle-red", "circle-grey", "flag-green", "flag-amber", "flag-orange", "flag-red", "flag-grey", "triangle-green", "triangle-amber", "triangle-orange", "triangle-red", "triangle-grey", "triangle-urgent", "mpr", "mpr-red", "mpr-amber", "mpr-green", "exclamation-green", "exclamation-amber", "exclamation-orange", "exclamation-red", "tick-green", "cross-red", "warning", "warning-none",
 	"person-green";
 
 	// @mixin - build specific icon classes

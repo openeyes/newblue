@@ -1,0 +1,62 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+.element {
+	// diagnosis element specific layout
+	// could be for ophthalmic or systemic
+
+	// trash, remove, view changes (at the end)
+	.diag-actions {
+		@include flex(center, flex-end);
+		flex-wrap: nowrap;
+		gap: 3px;
+	}
+
+	// wrapper for all the various diagnosis states
+	.diagnosis-mgmt {
+
+		.diag-state {
+			flex: 1;
+			@include flex(center, space-between);
+		}
+
+		.diag-date {
+			@include flex(center, center);
+			width: 100px;
+		}
+
+		&.sides {
+			@include flex(center, space-between);
+			gap: 4px;
+
+			.right,
+			.left {
+				flex: 1 1 0;
+				@include flex(flex-start, space-between);
+
+			}
+
+			.right {
+				// match the line-l on the table
+				border-right: 2px solid $oe-line;
+			}
+		}
+
+		// use this for no-side specific
+		&.systemic {
+			@include flex(center, space-between);
+			gap: 4px;
+
+			.sys-check,
+			.no-side {
+				flex: 1 1 0;
+				@include flex(flex-start, space-between);
+			}
+
+			.switch-to-sides {
+				padding: 0 8px 0 0;
+			}
+		}
+	}
+}
