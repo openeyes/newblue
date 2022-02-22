@@ -19,7 +19,7 @@ label,
 		align-items:center;				// vertical
 		justify-content: flex-start; 	// horizontal
 		line-height: 1.5;
-		height:26px; // add line height to match input and select heights
+		height:24px; // add line height to match input and select heights
 		padding:0 5px; // this was 3px 6px
 		margin:1px 0; 
 		
@@ -43,7 +43,6 @@ label,
 		//			|- <div class="btn" ...
 		&.as-button {
 			padding:0; // turn off label padding
-			height:24px; // match buttons
 			input {
 				display: none;
 				&:checked + .btn {
@@ -52,6 +51,7 @@ label,
 				}
 			}
 			.btn {
+				pointer-events: none; // otherwise JS picks up a click!
 				@include flex(center, center);
 				height: 100%;
 				padding:0 5px; // this was 3px 6px

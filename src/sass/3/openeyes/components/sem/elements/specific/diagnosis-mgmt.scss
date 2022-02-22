@@ -6,37 +6,44 @@
 	// diagnosis element specific layout
 	// could be for ophthalmic or systemic
 
+	// table.diagnoses table hook if it should be needed
+
+	// <td> 1st column - diag (name and lat)
+	// <td> 2nd column - diagnosis-mgmt (wrapper)
+	// <td> 3rd column - actions
+
+	.diag,
+	.diag-lat {
+		@include flex(center, space-between);
+		gap: 5px;
+	}
+
+	.diag-user {
+		padding: 0 0 0 25px;
+	}
+
 	// trash, remove, view changes (at the end)
 	.diag-actions {
 		@include flex(center, flex-end);
-		flex-wrap: nowrap;
 		gap: 3px;
+		flex-wrap: nowrap; // push <td>
 	}
 
 	// wrapper for all the various diagnosis states
 	.diagnosis-mgmt {
-
-		.diag-state {
-			flex: 1;
-			@include flex(center, space-between);
-		}
-
-		.diag-date {
-			@include flex(center, center);
-			width: 100px;
-		}
-
-		&.sides {
+		&.sides,
+		&.systemic {
 			@include flex(center, space-between);
 			gap: 4px;
+		}
 
+
+		&.sides {
 			.right,
 			.left {
 				flex: 1 1 0;
-				@include flex(flex-start, space-between);
-
+				@include flex(center, space-between);
 			}
-
 			.right {
 				// match the line-l on the table
 				border-right: 2px solid $oe-line;
@@ -45,18 +52,39 @@
 
 		// use this for no-side specific
 		&.systemic {
-			@include flex(center, space-between);
-			gap: 4px;
-
 			.sys-check,
 			.no-side {
 				flex: 1 1 0;
-				@include flex(flex-start, space-between);
+				@include flex(center, space-between);
 			}
 
 			.switch-to-sides {
 				padding: 0 8px 0 0;
 			}
+		}
+
+		.diag-state,
+		.state-change,
+		.state-review {
+			@include flex(center, space-between);
+		}
+
+
+		.diag-state {
+			flex: 1;
+		}
+
+		.state-change {
+			gap: 5px;
+		}
+
+		.state-review {
+			gap: 10px;
+		}
+
+		.diag-date {
+			@include flex(center, center);
+			width: 100px;
 		}
 	}
 }
