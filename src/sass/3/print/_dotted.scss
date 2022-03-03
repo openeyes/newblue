@@ -17,13 +17,11 @@
 	}
 }
 
-// assumes it will have a lable
+// assumes it will have a label
 .dotted-area {
 	position:relative;
 	display:block;
-	height:50px; // needs to match esign img heights
-	
-	overflow: hidden;
+	min-height:50px; // needs to match esign img heights
 	
 	img.signature {
 		height: 45px;
@@ -35,7 +33,7 @@
 	flex: 1 1 0;
 	
 	font-weight:500;
-	padding:0 0 5px 1rem;
+	padding:24px 0 5px 1rem;
 	margin: 0.2rem 0.5rem;
 	
 	border-bottom:1px dashed rgb(120,120,120);

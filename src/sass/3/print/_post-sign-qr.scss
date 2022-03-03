@@ -1,0 +1,12 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// this was [ x ] but made it into a proper box
+.post-sign-qr {
+	width:100%;
+	height:300px;
+	border:4px solid black;
+	padding:10px;
+	text-align: right; // to align the QR img in the box
+}
