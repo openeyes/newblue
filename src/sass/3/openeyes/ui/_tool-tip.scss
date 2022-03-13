@@ -34,14 +34,14 @@
 		
 		.right {
 			width: 199px;
-			background:transparent url( svg-themed( 'ui/lat-R' ) ) top 10px left 5px  no-repeat;
+			background:transparent url( svg-themed( 'i/lat-R' ) ) top 10px left 5px  no-repeat;
 			background-size: 11px;
 		}
 		
 		.left {
 			width: 201px;
 			border-left:1px dotted rgba($oe-text-light, 0.3);
-			background:transparent url( svg-themed( 'ui/lat-L' ) ) top 10px left 5px no-repeat;
+			background:transparent url( svg-themed( 'i/lat-L' ) ) top 10px left 5px no-repeat;
 			background-size: 11px;
 			
 		}
@@ -54,7 +54,6 @@
 				background: none;
 			}
 		}
-		
 	}
 	
 	// arrow 
@@ -102,14 +101,21 @@
 			display:none;
 		}
 	}
-	
-	// copy to clipboard!
-	&.copied {
-		background-color: $oe-btn-green;
-		color:#fff;
-		text-align: center;
+
+	// Popup tooltip "preview" (enhancement)
+	&.more {
+		padding-bottom: 25px;
+		&:before {
+			content: "";
+			position:absolute;
+			bottom:0;
+			left:0;
+			right:0;
+			height:21px;
+			background: center/17px $oe-btn-blue url(svg-dark-fixed("i/more-h")) no-repeat;
+		}
 	}
-	
+
 	// esign
 	&.esign {
 		width:210px; // 3:1 ratio area
@@ -117,26 +123,18 @@
 		// JS will add the background image:
 		background: center / contain no-repeat white;
 	}
-	
+
+	// copy to clipboard!
+	&.copied {
+		background-color: $oe-btn-green;
+		color:#fff;
+		text-align: center;
+	}
+
 	// used for "Copied to clipboard"
+	// JS will have to remove the DOM
 	&.fade-out {
 	  display:block;
 	  animation: 2s ease-in forwards fadeout;
 	}
-	
-	// "click for details" will launch a popup on click
-	// <span>
-	.click-more {
-		@include font-size(10);
-		font-style: italic;
-		font-weight: 500;
-		color: $oe-text-highlight;
-		opacity:0.8;
-		&:before {
-			content: '\2026 '; // "... "
-		}
-	}
-	
-	
-	
 }

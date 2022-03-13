@@ -1,36 +1,26 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+// the background for the signature to show
+// signature image ration: 3:1
+.esign-check {
+	display: inline-block;
+	height: 24px; // match button height
+	width: 72px; // 3:1
+	background: center / contain no-repeat white;
+	border: 2px solid white;
+	border-radius: 3px;
 
-// Patient Overview page, is in SEM, and has Element content
-// it also have some different styling options for 'overview' content
-// this is content pulled from the pop
+	// JS will show a full size view
+	cursor: pointer;
 
-.main-event {
-	// div
-	// the background for the signature to show
-	// needs adding via PHP
-	// signature image ration: 3:1 
-	.esign-check {
-		display: inline-block;
-		height: 24px; // match button height
-		width: 72px; // 3:1 
-		background: center / contain no-repeat white;
-		border:2px solid white;
-		border-radius: 3px;
-		
-		// JS will show a full size view 
-		cursor: pointer; 
-		
-		&:focus, 
-		&:hover {
-			border-color: rgba(10,100,10,0.7);
-		}
+	&:focus,
+	&:hover {
+		border-color: rgba(10, 100, 10, 0.7);
 	}
-	
-	// tick icon and time of capture
-	.esigned-at {
-		padding:0 0 0 20px;
-	}
-	
+}
+
+// tick icon and time of capture
+.esigned-at {
+	padding: 0 0 0 20px;
 }
