@@ -1,0 +1,28 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// i.e. <button>, .button, input[type="submit"]
+@include buttons {
+	//
+	// **** Depreciated, however...
+	//
+	// pro-theme may still be in use in old OE versions
+	// and as this CSS is still required to support back to v3.6
+	// it's here still.
+	&.pro-theme {
+		color: $oe-dark-text;
+		background: $oe-dark-user-inputs;
+
+		&.active,
+		&.selected {
+			background: $oe-dark-btn-blue;
+		}
+
+		&.disabled,
+		&.inactive {
+			color: rgba($oe-dark-text-light,0.6) !important;
+			background: rgba($oe-dark-grey,0.8) !important;
+			border:1px solid rgba($oe-dark-text-light,0.1);
+		}
+	}
+}

@@ -1,0 +1,26 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// i.e. <button>, .button, input[type="submit"]
+@include buttons {
+	// clinic pathway adder,
+	// this provides a button that looks like the plus +
+	// from the clinic manager. The DOM has since been updated
+	// to use a checkbox as per clinic manager.
+	&.add-pathstep {
+		height: 25px;
+		width: 25px;
+		border-radius: 50%  !important; // because of bug!
+		background: $oe-btn-blue-hint;
+		position: relative;
+		padding:0;
+		&:after {
+			content: '';
+			pointer-events: none;
+			margin: auto; // use flex
+			height:17px;
+			width:17px;
+			background: center / contain transparent url( svg-dark-fixed('i/plus-bold')) no-repeat;
+		}
+	}
+}

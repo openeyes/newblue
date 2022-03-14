@@ -1,0 +1,38 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// i.e. <button>, .button, input[type="submit"]
+@include buttons {
+	// Header Tab Buttons, make buttons work like tabs
+	// (e.g. Event Header, Theatre Diaries, etc
+	&.header-tab {
+		background: none; 		// to match the Header background
+		&:hover, &:focus, &:active {
+			color: rgb(255,255,255);
+			background: $oe-btn-blue;
+		}
+		&.selected {
+			cursor:default;
+			color:$oe-text-highlight;
+			background-color: $oe-sem-main-event-bg; 	// match the Event background
+		}
+
+		&.disabled,
+		&.inactive {
+			background-color: transparent;
+			border:none !important;
+		}
+
+		// icon-bg buttons may help with reducing widths by replacing some text
+		// e.g. "Display" or "Go to" replace with an icon background to represent the action
+		// this adds a small up arrow to the corner
+		&.icon-bg {
+			background-repeat: no-repeat;
+			&.goto {
+				background-size: 12px; // in SVG rotate is linked to this!!!
+				background-image: url( svg-themed( 'ui/btn-goto' ) );
+				background-position: top 1px right -1px;
+			}
+		}
+	}
+}

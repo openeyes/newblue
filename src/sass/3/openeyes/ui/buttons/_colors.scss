@@ -1,0 +1,44 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// i.e. <button>, .button, input[type="submit"]
+@include buttons {
+	// give a hint of the button colour to the user
+	&.hint {
+		color: $oe-btn-text-on-hint;
+		&:hover,
+		&:focus,
+		&:active {
+			color: #fff;
+		}
+
+		&.green {
+			background: $oe-btn-green-hint;
+		}
+		&.red {
+			background: $oe-btn-red-hint;
+		}
+		&.blue {
+			background: $oe-btn-blue-hint;
+		}
+	}
+
+	// same as default, need this for hint to work!
+	&.blue {
+		&:hover, &:focus, &:active {
+			background: $oe-btn-blue;
+		}
+	}
+
+	&.green {
+		&:hover, &:focus, &:active {
+			background: $oe-btn-green;
+		}
+	}
+
+	&.red {
+		&:hover, &:focus, &:active {
+			background: $oe-btn-red;
+		}
+	}
+}

@@ -1,0 +1,38 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// i.e. <button>, .button, input[type="submit"]
+@include buttons {
+	// initially the "adder" button was a regular button with <i> for +
+	// this class replaces the required <i> DOM
+	&.adder {
+		&.square {
+			width: 25px;
+		}
+		width: 35px;
+		padding: 0;
+		background: $oe-btn-green-hint;
+
+		&:after {
+			content: '';
+			pointer-events: none;
+			height:19px;
+			width:19px;
+			margin: auto;
+			position:relative;
+			top: 0.5px; // because the height is 24px, should be 25px to get the icon in the middle! darn it.
+			background: transparent url( svg-dark-fixed('i/plus')) center no-repeat;
+			background-size: 19px;
+			opacity: $oe-icon-opacity; // 0.6 is standard
+		}
+
+		&:hover,
+		&:focus {
+			color: #fff;
+			background: $oe-btn-green;
+			&:after {
+				opacity:1;
+			}
+		}
+	}
+}

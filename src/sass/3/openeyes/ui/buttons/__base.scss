@@ -1,0 +1,77 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// i.e. <button>, .button, input[type="submit"]
+@include buttons {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	// key-hint needed this
+	position:relative;
+
+	// when used inline with other elements this is required
+	// to stop it jumping up (baseline is default)
+	vertical-align: top;
+
+	// Don't let button text wrap
+	white-space: nowrap;
+
+	// resets
+	border: 0;
+	outline: 0; // remove glow effect
+	border-radius: 0 !important; // weird border-radius bug fix
+
+	@include font-size(12);
+	font-weight: $oe-font-medium;
+	color: $oe-text;
+	background: $oe-btn-default;
+	cursor: pointer;
+
+	// sizes - standard:
+	margin: 1px 0;
+	padding: 0 8px; // increase hit area
+	height: 24px; // matches inputs heights
+
+	// For: Analytics filters
+	// & 9 positions in Strab
+	&.thin {
+		padding: 0 3px;
+	}
+
+	// general states
+	&:disabled,
+	&.disabled,
+	&.inactive {
+		cursor:default;
+		color: rgba($oe-text-light,0.6) !important;
+		background: rgba($oe-grey,0.8) !important;
+		border:1px solid rgba($oe-text-light,0.1);
+		pointer-events: none; // disable pseudos
+	}
+
+	// handle icons in buttons
+	.oe-i {
+		pointer-events: none;
+	}
+
+	// .active class allows JS control
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	&.selected {
+		color:#fff;
+		background: $oe-btn-blue;
+
+		// icons within buttons
+		.oe-i {
+			// if there is icon this make sure it shows the button hover effect
+			opacity:1;
+			// if in light mode the icon will need inverting
+			filter: $oe-btn-icon-hover;
+		}
+	}
+}
+
+

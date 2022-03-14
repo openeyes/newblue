@@ -1,0 +1,26 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// i.e. <button>, .button, input[type="submit"]
+@include buttons {
+	&.has-keyhint {
+		padding-right:30px;
+	}
+	// some buttons may use keypress events
+	// provide a hint as to what they might be!
+	.keyhint {
+		display:block;
+		position: absolute;
+		top: 3px;
+		right: 5px;
+		@include font-size(11);
+		font-weight: $oe-font-medium;
+		opacity: 0.4;
+		&:before {
+			content:"' ";
+		}
+		&:after {
+			content:" '";
+		}
+	}
+}

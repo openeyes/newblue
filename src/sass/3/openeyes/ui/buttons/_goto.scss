@@ -1,0 +1,33 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// i.e. <button>, .button, input[type="submit"]
+@include buttons {
+	// "goto" the "direction-right-circle" is used as way to "goto" a URL
+	// this adds that icon to a button to enable extra text (e.g. Injection Management)
+	&.goto {
+		position: relative;
+		padding-right:25px;
+
+		color:#fff;
+		background: $oe-btn-blue-hint;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background: $oe-btn-blue;
+		}
+
+		&:after {
+			content: '';
+			pointer-events: none;
+			position: absolute;
+			top:0;
+			right:0;
+			bottom:0;
+			width: 23px;
+			background: center / 13px transparent url( svg-dark-fixed('i/direction-right-circle')) no-repeat;
+		}
+
+	}
+}
