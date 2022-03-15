@@ -5,7 +5,7 @@
 @include buttons {
 	// "goto" the "direction-right-circle" is used as way to "goto" a URL
 	// this adds that icon to a button to enable extra text (e.g. Injection Management)
-	&.goto {
+	&.i-link {
 		position: relative;
 		padding-right:25px;
 

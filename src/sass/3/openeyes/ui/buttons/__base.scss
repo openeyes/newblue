@@ -7,6 +7,9 @@
 	justify-content: center;
 	align-items: center;
 
+	// required for when <a> uses "button" class
+	line-height: normal;
+
 	// key-hint needed this
 	position:relative;
 

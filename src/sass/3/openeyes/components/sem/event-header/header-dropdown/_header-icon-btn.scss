@@ -16,6 +16,9 @@
 		// make like a button even if it's a <div>
 		cursor:pointer;
 
+		// overwrite the button base
+		margin: 0;
+
 		// currently always a button
 		&.trash {
 			background-image: url(svg-themed( 'ui/tab-trash' ));
