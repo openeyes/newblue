@@ -8,7 +8,9 @@
 	&.header-tab {
 		margin:0;
 		background: none; 		// to match the Header background
-		&:hover, &:focus, &:active {
+		&:hover,
+		&:focus,
+		&:active {
 			color: rgb(255,255,255);
 			background: $oe-btn-blue;
 		}
