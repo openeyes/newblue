@@ -19,9 +19,8 @@ ul {
 			margin:0 0 5px 0;
 			padding:0 8px 0 12px;
 			line-height: 1;
-			
-			background: transparent url( svg-all( 'ui/list-dot' )) left 45% no-repeat;
-			background-size:6px;
+
+			background: 0 42% / 6px url( svg-all( 'ui/list-dot' ))  no-repeat;
 			
 			.lightning-event & {
 				background-size:4px;
