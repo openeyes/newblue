@@ -16,6 +16,7 @@ ul {
 		
 		li {
 			@include inline-flex( flex-start, flex-start );
+			// if dot list wraps then it needs leading
 			margin:0 0 5px 0;
 			padding:0 8px 0 12px;
 			line-height: 1;
@@ -31,6 +32,14 @@ ul {
 				margin-left:0;
 				padding-left:0;
 				background-image: none;
+			}
+		}
+
+		// if the dot is used inline and isn't going wrap
+		&.inline {
+			margin:0;
+			li {
+				margin: 0;
 			}
 		}
 	}

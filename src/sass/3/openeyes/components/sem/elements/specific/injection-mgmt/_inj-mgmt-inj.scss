@@ -1,0 +1,22 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// handle the layout for Injection - interval - Injection
+.inj-mgmt-inj {
+	@include flex(center, space-between);
+	margin: 10px 0;
+	padding: 5px;
+	border-radius: 5px;
+	background-color: rgba($oe-user-inputs, 0.4);
+
+	.details {
+		flex: 1 1 0;
+		padding: 0 5px;
+	}
+
+	// now only a link to the injection management
+	.actions {
+		padding: 0 5px;
+		text-align: right;
+	}
+}

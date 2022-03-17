@@ -53,10 +53,11 @@
 		&.interval {
 			@include font-size(10);
 			font-weight:500;
-			padding:0 8px;
+			padding:0 6px;
 			
 			&.series-gap,
 			&.actual {
+				padding:0 3px;
 				background:$oe-text-light;
 				color: rgba( $oe-text-inverted, 0.8 );
 			}
@@ -77,9 +78,29 @@
 			  background-color: $oe-text-highlight;
 			  pointer-events: none;
 			}
+
+			// indicate direction
+			&::after {
+				top: 50%;
+				left: 0;
+				margin-top: -$progress-step-arrow;
+				content: " ";
+				position: absolute;
+				pointer-events: none;
+
+				height: 0;
+				width: 0;
+				border: solid transparent;
+				border-top-width: $progress-step-arrow;
+				border-bottom-width: $progress-step-arrow;
+				border-left: $progress-step-arrow solid $oe-text-light;
+
+				transform: scale(0.5, 1);
+				transform-origin: left;
+			}
 			
 			&.injection {
-				background: $oe-sem-element-bg url( svg-themed('i/injection' )) left 8px center no-repeat;
+				background: transparent url( svg-themed("i/injection")) left 8px center no-repeat;
 				background-size: 13px;
 				padding-left: 26px;
 				padding-right:12px;
@@ -92,7 +113,7 @@
 			top: 100%;
 			left: 0;
 			right: 0;
-			background: url( svg-themed('i/arrow-up-bold' )) top 1px center no-repeat;
+			background: url( svg-themed("i/arrow-up-bold")) top 1px center no-repeat;
 			background-size:11px;
 			height:20px;
 			pointer-events: none;
@@ -111,55 +132,6 @@
 			
 			padding-left: 3px;
 			padding-right: 3px;
-			
-			// no arrow on the last one!
-			&:last-child {
-				&:after {
-					display:none;
-				}
-			}
-		
-			// progress arrow 
-			&::after {
-				top: 50%;
-				left: 100%;
-				margin-top: -$progress-step-arrow;
-				content: " ";
-				position: absolute;
-				pointer-events: none;
-				
-				height: 0;
-				width: 0;
-				border: solid transparent;
-				border-top-width: $progress-step-arrow;
-				border-bottom-width: $progress-step-arrow;
-				border-left: $progress-step-arrow solid $oe-text-light;
-				
-				transform: scale(0.5, 1);
-				transform-origin: left;
-			}
-			
-			&:not( :first-child ){
-				&::before {
-					top: 50%;
-					left: -15px;
-					margin-top: -$progress-step-arrow;
-					content: " ";
-					position: absolute;
-					pointer-events: none;
-					
-					height: 0;
-					width: 0;
-					border: solid transparent;
-					border-top-width: $progress-step-arrow;
-					border-bottom-width: $progress-step-arrow;
-					border-right: $progress-step-arrow solid $oe-text-light;
-					
-					transform: scale(0.5, 1);
-					transform-origin: right;
-				}
-			}
-				
 		}
 		
 		&.cancelled {
@@ -182,6 +154,29 @@
 				$oe-alert-orange 60%, 
 				rgba(0,0,0,0) 90%
 			)
+		}
+
+		// context adjustments, fix all the colours
+		.oe-patient-popup & {
+			// outline the <li>
+			&.todo {
+				color:$oe-dark-text-light;
+			}
+
+			&.interval.planned {
+				color:$oe-dark-text-light;
+			}
+
+			&.next {
+				color:$oe-dark-text-highlight;
+				&::before {
+					background-color: $oe-dark-text-highlight;
+				}
+
+				&.injection {
+					background-image: url( svg-dark-fixed("i/injection"));
+				}
+			}
 		}
 		
 	}

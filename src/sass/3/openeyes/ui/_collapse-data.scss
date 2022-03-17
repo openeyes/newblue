@@ -11,66 +11,69 @@
 
 .collapse-data {
 	// pad it slightly...
-	margin:5px 0 10px 0;
-	
+	margin: 5px 0 10px 0;
+
 	.collapse-data-content {
 		// assume default state is hidden!
-		display:none; 
+		display: none;
 	}
-	
-	.collapse-data-header-icon {
-		position:relative;
-		cursor:pointer;
-		padding:5px 0;
-		color:$oe-element-headers;
 
-		// JS 
+	.collapse-data-header-icon {
+		position: relative;
+		cursor: pointer;
+		padding: 5px 0;
+		color: $oe-element-headers;
+
+		// JS
 		* {
 			pointer-events: none;
 		}
-		
+
 		// override these colors
 		h3,
 		small {
 			color: inherit;
 		}
-		
+
 		// no background-opacity in CSS (... why not huh?!)
 		// need to match icon opacity (when not
 		// being hovered over...) which can be done like this:
 		&:after {
 			content: "";
 			position: absolute;
-			top:0;
-			bottom:0;
-			right:2px; 	// visual alignment tweak
-			width:15px;
-			
+			top: 0;
+			bottom: 0;
+			right: 2px; // visual alignment tweak
+			width: 15px;
+
 			// put the expand collapse icon into the background
-			background: url( svg-themed('i/expand') ) right center no-repeat;
+			background: url(svg-themed("i/expand")) right center no-repeat;
 			background-size: 13px;
-			
-			opacity:$oe-icon-opacity; //  now i can use opacity
+
+			opacity: $oe-icon-opacity; //  now i can use opacity
 		}
-	
+
 		// '.expand' is the default icon state, as content should be hidden
 		// no need to explictly state the 'expand class', JS will add this.
 		&.collapse {
 			&:after {
-				background-image: url( svg-themed('i/collapse') );
+				background-image: url(svg-themed("i/collapse"));
 			}
 		}
-		
+
 		// show user interaction
 		&:hover, &:active {
-			color:$oe-text-highlight;
+			color: $oe-text-highlight;
+
 			&:after {
 				opacity: 1;
 			}
-			
+
 			h3,
-			small { color: inherit; }	
-			
+			small {
+				color: inherit;
+			}
+
 			// make like a blue button
 			// see WHO checklist in the OpNote
 			.highlighter {
@@ -78,49 +81,33 @@
 				background: $oe-btn-blue;
 			}
 		}
-	}	
-}
-
-// Collapse DATA (Variations)
-// Overwrite defaults in the following places
-
-.main-event.element  {
-	.collapse-data {
-		margin:5px 0;
-		.collapse-data-header-icon {
-			color:$oe-element-headers;
-		}
 	}
-}
 
-.oe-patient-popup {
-	.collapse-data {
-		margin:5px 0 20px 0;
-		
-		// pro-theme 
-		//
+	// context adjustments for patient popup
+	.oe-patient-popup & {
+		margin-bottom: 15px;
+
 		.collapse-data-header-icon {
-			color:$oe-dark-text-light;
+			color: $oe-dark-text-light;
 			@include font-size(12);
-			
-			
+
 			&:after {
-				background-image: url( svg-dark-fixed('i/expand') );
-				background-size:12px;
+				background-image: url(svg-dark-fixed("i/expand"));
 			}
-			
-			
+
 			&.collapse {
 				&:after {
-					background-image: url( svg-dark-fixed('i/collapse') );
+					background-image: url(svg-dark-fixed("i/collapse"));
 				}
 			}
-			
-			&:hover, &:active {
-				color:$oe-dark-text-highlight;	
+
+			&:hover,
+			&:active {
+				color: $oe-dark-text-highlight;
 			}
 		}
 	}
+
 }
 
 

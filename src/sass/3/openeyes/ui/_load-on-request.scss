@@ -9,7 +9,7 @@
 	padding: 5px;
 	color: $oe-element-headers;
 
-	border:2px solid $oe-line;
+	border:1px solid $oe-line;
 	border-radius: 10px;
 
 	position: relative;
@@ -46,7 +46,7 @@
 	}
 
 	&.loading {
-		border-color: $oe-element-headers;
+		border-color: $oe-btn-blue-hint;
 	}
 
 	i.spinner {
@@ -55,50 +55,25 @@
 		right:22px;
 	}
 
+	// context adjustments for patient popup
+	.oe-patient-popup & {
+		margin-bottom: 15px;
+		line-height: 1.5;
+		color: $oe-dark-text-light;
+		border-color: $oe-dark-line;
+		@include font-size(12);
+
+		&:after {
+			background-image: url(svg-dark-fixed("i/download"));
+		}
+
+		&:hover,
+		&:active {
+			color: $oe-dark-text-highlight;
+		}
+
+	}
 }
-
-// Collapse DATA (Variations)
-// Overwrite defaults in the following places
-
-//.main-event.element  {
-//	.collapse-data {
-//		margin:5px 0;
-//		.collapse-data-header-icon {
-//			color:$oe-element-headers;
-//		}
-//	}
-//}
-//
-//.oe-patient-popup {
-//	.collapse-data {
-//		margin:5px 0 20px 0;
-//
-//		// pro-theme
-//		//
-//		.collapse-data-header-icon {
-//			color:$oe-dark-text-light;
-//			@include font-size(12);
-//
-//
-//			&:after {
-//				background-image: url( svg-dark-fixed('i/expand') );
-//				background-size:12px;
-//			}
-//
-//
-//			&.collapse {
-//				&:after {
-//					background-image: url( svg-dark-fixed('i/collapse') );
-//				}
-//			}
-//
-//			&:hover, &:active {
-//				color:$oe-dark-text-highlight;
-//			}
-//		}
-//	}
-//}
-
 
 
 

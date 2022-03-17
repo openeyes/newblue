@@ -1,0 +1,35 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.inj-mgmt {
+	.overview {
+		@include flex(center, flex-start);
+		margin: 5px 0 0 0;
+
+		// control the text size in summary and in patient popup
+		ul.dot-list {
+			@include font-size(14);
+		}
+	}
+
+	// indent to match the lat icon spacing
+	.overview-notes {
+		margin: 3px 0 0 23px;
+		padding:3px 0;
+	}
+
+	// context adjustments for patient popup
+	.oe-patient-popup & {
+		color: #fff;
+		@include font-size(12);
+		margin-bottom:5px;
+		.overview {
+			ul.dot-list {
+				@include font-size(12);
+			}
+		}
+		.overview-notes {
+			@include font-size(11);
+		}
+	}
+}
