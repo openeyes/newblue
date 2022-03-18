@@ -25,13 +25,15 @@
 	.patient-details {
 		line-height:1;
 	}
-	
+
+	// removed .warning it was causing a conflict
+	// with the highlighter class, if you need it back
+	// change to .patient-warning!!
 	.hospital-number, 
 	.nhs-number, 
 	.patient-gender, 
 	.patient-age, 
-	.patient-died,
-	.warning {
+	.patient-died {
 		
 		display:inline-block;
 		@include font-size(11);
