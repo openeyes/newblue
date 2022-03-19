@@ -28,6 +28,12 @@
 	// create a visual border around the elements
 	margin: 0 3px 3px 0;
 
+	// JS, user can click on the title to expand group
+	.element-title small {
+		cursor: pointer;
+		pointer-events: none;
+	}
+
 	// maximise horizontal space
 	padding-right: 0; // override base
 	// adjust padding for 'tile' elements
@@ -46,41 +52,6 @@
 
 		// provide gutter for scrollbar and a gap at the end of the scrolling data
 		padding: 0 10px 5px 0;
-	}
-
-	// make sure and hidden data is flagged!
-	// reverse engineered to match the new generic data overflow: restrict-data-shown
-	.tile-data-overflow-flag {
-		position: absolute;
-		z-index: 1;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		height: 30px;
-
-		background-color: rgba($oe-blue, 0.8);
-		background-position: center center;
-		background-size: 15px;
-		background-repeat: no-repeat;
-		background-image: url(svg-themed("i/arrow-down-bold"));
-	}
-
-	// OLD! should be replace with above
-	//
-	// this old <div> class "tile-more-data-flag" also expects
-	// the icon to be added e.g: "oe-i arrow-down-bold medium selected"
-	// by the JS that checks for the overflow.
-	.tile-more-data-flag {
-		position: absolute;
-		z-index: 1;
-		bottom: 0;
-		left: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 30px;
-		background: rgba($oe-blue, 0.8);
 	}
 }
 

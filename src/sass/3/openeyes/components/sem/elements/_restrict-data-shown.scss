@@ -2,7 +2,6 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 .element {
-
 	// Generic approach to handling
 	// overflowing lists, based on the "tiles"
 	// tiles: "tile-data-overflow"
@@ -19,38 +18,13 @@
 			// num of rows based on standard
 			// table row height (approx)
 			&.rows-5 {
-				height: 160px; // matches tiles
+				height: 160px; // matches .tile-data-overflow (this came first!)
 			}
 
 			&.rows-10 {
 				height: 270px; // fixes the height
 			}
 		}
-
-		// IF data is hidden by the scroll
-		// this needs flagging
-		.restrict-data-shown-flag {
-			position: absolute;
-			z-index: 1;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			height: 30px;
-
-			background-color: rgba($oe-blue, 0.8);
-			background-position: center center;
-			background-size: 15px;
-			background-repeat: no-repeat;
-			background-image: url(svg-themed("i/arrow-down-bold"));
-
-			&.fade-out {
-				animation: 0.2s ease-in forwards fadeout; // note: JS needs to remove class after 300 microseconds
-			}
-
-
-		}
-
 	}
-
 }
 
