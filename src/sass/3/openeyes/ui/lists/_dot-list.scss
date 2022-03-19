@@ -21,7 +21,7 @@ ul {
 			padding:0 8px 0 12px;
 			line-height: 1;
 
-			background: 0 42% / 6px url( svg-all( 'ui/list-dot' ))  no-repeat;
+			background: 0 55% / 6px url( svg-all( 'ui/list-dot' ))  no-repeat;
 			
 			.lightning-event & {
 				background-size:4px;
@@ -37,6 +37,7 @@ ul {
 
 		// if the dot is used inline and isn't going wrap
 		&.inline {
+			background-position: 0 42%;
 			margin:0;
 			li {
 				margin: 0;
