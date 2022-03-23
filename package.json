@@ -15,7 +15,7 @@
   "browserslist": [
     "Chrome > 60",
     "Edge > 15",
-    "Safari > 11"
+    "Safari > 13"
   ],
   "scripts": {
     "build:event-icons": "node ./node_scripts/build-iconset.js events",
