@@ -11,6 +11,7 @@
 	// button
 	.manage-elements, 
 	.add-event {
+		margin:0;
 		height:$oe-event-header-height;
 		flex-grow: 3; // allow buttons to fill remain space
 		color: $oe-dark-user-input-text; 		// Pro-theme

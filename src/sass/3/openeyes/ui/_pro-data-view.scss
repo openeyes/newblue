@@ -17,6 +17,8 @@
 	// this allows the interaction on the icon to still work
 	.pro-standard-btn {
 		// make the icon expand to fill the area
+		align-self: stretch;
+
 		.oe-i {
 			width: 25px;
 			height: 100%;
