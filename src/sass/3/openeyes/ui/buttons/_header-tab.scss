@@ -6,7 +6,7 @@
 	// Header Tab Buttons, make buttons work like tabs
 	// (e.g. Event Header, Theatre Diaries, etc
 	&.header-tab {
-		margin:0;
+		margin:0; // overrides an cascade issue
 		background: none; // to match the Header background
 		&:hover,
 		&:focus,

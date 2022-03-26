@@ -32,9 +32,17 @@
 	cursor: pointer;
 
 	// sizes - standard:
-	margin: 1px 0;
-	padding: 0 8px; // increase hit area
 	height: 24px; // matches inputs heights
+	// increase hit area
+	padding: 0 8px;
+
+	// this is a mistake, unsure of why it's here
+	// leaving for now
+	margin: 1px 0;
+
+	.oe-full-header & {
+		margin:0; // override this for buttons in the header banner
+	}
 
 	// For: Analytics filters
 	// & 9 positions in Strab
