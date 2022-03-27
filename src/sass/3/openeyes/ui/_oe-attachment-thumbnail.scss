@@ -32,7 +32,7 @@
 		padding:0 5px;
 		
 		height:25px;
-		line-height:25px;
+		@include flex(center, flex-start);
 		
 		background-color:#00d;
 		color:#fff;

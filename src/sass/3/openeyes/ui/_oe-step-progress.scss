@@ -21,8 +21,6 @@
 		cursor: pointer;
 		user-select: none;
 		
-		line-height:normal; // watch out for this, it can mess up vertical layouts
-		
 		height:22px;
 		// set the arrow triangle to 50% of the height
 		$progress-step-arrow: 11px;

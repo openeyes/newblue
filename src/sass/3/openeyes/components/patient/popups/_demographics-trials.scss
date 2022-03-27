@@ -46,7 +46,6 @@ table.patient-demographics {
 		padding:6px 0;
 		@include font-size(12);
 		color:$oe-dark-text; 	// theme pro locked
-		line-height:1.5;
 		
 		// Wasn't thinking, I should have made this 
 		// handled by <th> but anyway... 

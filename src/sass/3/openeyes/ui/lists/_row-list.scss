@@ -19,7 +19,7 @@ ul {
 			.element-fields & {
 				@include flex( center, flex-start );
 				min-height: 28px; // <td> has a min-height in Elements (can't remember why tho...)
-				padding: 1px 0 1px 1px; 	
+				padding: 2px 0 2px 1px;
 			}
 			
 			border-top:1px solid $oe-line;

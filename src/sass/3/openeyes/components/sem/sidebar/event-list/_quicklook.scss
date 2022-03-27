@@ -42,14 +42,12 @@
 	  
 	  .event-info {
 		  @include font-size(10);
-		  line-height:1.3;
 		  padding:0 5px 2px 8px;
 	  }
 	  
 	  // same SVGs as alert and ready (above)
 	  .event-issue {
 	  	@include font-size(10);
-	  	line-height:1.3;
 		color: #fff;
 		margin:2px 0 0 0;
 		padding: 5px 5px 5px 9px;

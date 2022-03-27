@@ -7,22 +7,24 @@
 	// which are dark-themed... adapting them for clinic use
 	.btn-list {
 		li {
-			color: $oe-text; 
-			background:$oe-user-inputs-hint; 
-			padding:2px 2px;
-			height:auto;
-			line-height: auto;	
-			&:hover, &:focus {
-				background:$oe-btn-blue;
-				color:#fff;
+			color: $oe-text;
+			background: $oe-user-inputs-hint;
+
+			// modify the btn-list default
+			padding: 0 2px; // reduced default padding
+			height: 23px; // increase height (for better touch support)
+
+			&:hover,
+			&:focus {
+				background: $oe-btn-blue;
+				color: #fff;
 			}
-			
+
 			&.red {
 				color: #fff;
 				background: $oe-btn-red;
 			}
-			
-			
+
 			// JS is hooked on the <li>
 			* {
 				pointer-events: none;

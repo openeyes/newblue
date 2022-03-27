@@ -7,7 +7,7 @@
 	input {
 		width:160px;
 		height: $oe-event-header-height;
-		line-height: $oe-event-header-height;
+		@include flex( center, center );
 		margin:0 3px; // overide the default for this.
 		
 		@include font-size(13);

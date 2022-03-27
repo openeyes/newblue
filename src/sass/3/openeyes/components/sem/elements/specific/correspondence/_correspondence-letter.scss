@@ -18,7 +18,6 @@
 		// make it easier to read the text
 		// (this is for the secretaries, who need glasses)
 		.correspondence-letter-text {
-			line-height:1.5;
 			@include font-size(16);
 			font-weight:500;
 			padding:10px;

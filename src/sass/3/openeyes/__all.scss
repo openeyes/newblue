@@ -19,7 +19,7 @@
 @import "structure/layouts/oe-full/_all";		// Layouts. 		Full-width with ooption to sub-divide (Clinic, Theatre Diaries, Worklist )
 
 /* Restrict Printing */
-@import "print";								// Restrict Print (from Browser Ctrl-P not allowed)
+@import "print-block-browser";								// Restrict Print (from Browser Ctrl-P not allowed)
 
 /* Minimum Width Warning */
 @import "minimum-width-warning";				// Warning appears below 1280px;

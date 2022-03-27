@@ -23,7 +23,6 @@
 			@include extended(){
 				@include font-size(13); 					// reduce font size slightly, need to fit in 3 line header
 				font-weight:$oe-font-medium;
-				line-height:1.1;
 
 				// do not allow overflow into the element data
 				// force word breaks:

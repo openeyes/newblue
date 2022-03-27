@@ -11,13 +11,32 @@ select {
 	// <input> and <selects> looking the same 
 	height:24px;
 	margin:1px 0;
-	
+	padding:0 15px 0 4px; // allow for the backgroud
+	font-weight: 400;
+
+	// turn off browser UI defaults
+	// (basically because of Safari!)
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	// this fixes the issues where the browser
+	// will use the system-ui fonts:
+	font-family: inherit;
+
+	cursor: pointer;
+	width: 100%;
+
+	// UI to indicate it's a dropdown vanishes, looks like an input, add a custom arrow
+	background: right 2px center / 13px url( svg-themed('i/arrow-down-bold')) $oe-user-inputs no-repeat ;
+
+	// popups are fixed in a dark theme
+	.oe-popup & {
+		background-image: url( svg-dark-fixed('i/arrow-down-bold'));
+	}
+
 	&.inline {
 		width: auto;
-	}
-	
-	&.fixed-width {
-		width: 110px; // old css v2.0 (not used?)
 	}
 	
 	&:disabled {
@@ -29,9 +48,4 @@ select {
 		// See: https://code.google.com/p/chromium/issues/detail?id=282918
 		background: #fff !important;
 	}
-	
-	
-	// this fixes the issues where the browser
-	// will use the system-ui fonts:
-	font-family: inherit;
 }

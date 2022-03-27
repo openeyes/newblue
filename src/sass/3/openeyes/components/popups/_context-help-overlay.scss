@@ -15,7 +15,6 @@
 		border-radius:5px;
 		@include font-size(12);
 		@include boxshadow();
-		line-height: 1.4;
 		
 		// arrow 
 		&:after {

@@ -10,14 +10,12 @@
 	padding:4px 6px;
 	font-weight:500;
 	border-radius:2px;
-	line-height: 1.2;
 	
 	// when used inline with other text
 	// this will pick up on the display: inline-block
 	&.inline {
 		margin:0 2px;
 		padding:2px 4px;
-		line-height: 1;
 	}
 	
 	&.large-text {

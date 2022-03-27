@@ -15,10 +15,7 @@ label,
 	// highlight is there standard usage
 	// wrap and visually group label with it's input
 	&.highlight {
-		display: flex;
-		align-items:center;				// vertical
-		justify-content: flex-start; 	// horizontal
-		line-height: 1.5;
+		@include flex(center, flex-start);
 		height:24px; // add line height to match input and select heights
 		padding:0 5px; // this was 3px 6px
 		margin:1px 0; 

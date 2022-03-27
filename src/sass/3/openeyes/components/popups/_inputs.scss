@@ -3,14 +3,6 @@
 
 
 .oe-popup {
-		
-	input, 
-	textarea, 
-	select {
-		color: $oe-dark-user-input-text;
-		background-color: $oe-dark-user-inputs;
-		margin:0 0; // override defaults
-	}
 	
 	// fix this as dark(pro) themed
 	label.highlight {

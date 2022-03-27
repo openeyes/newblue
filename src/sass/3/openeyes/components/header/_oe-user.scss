@@ -49,8 +49,7 @@
 			
 		li {  
 			position: relative;
-			@include font-size(10); 
-			line-height:1.4;
+			@include font-size(10);
 			opacity:0.8;
 			
 			// this handles: user / site / context 

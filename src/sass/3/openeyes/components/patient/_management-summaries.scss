@@ -35,8 +35,7 @@ table.management-summaries {
 		td {
 			color:$oe-text;
 			@include font-size(11);
-			padding:6px 3px; 
-			line-height:1.4;
+			padding:6px 3px;
 			
 			// summary title (old <h6>)
 			&:first-child {

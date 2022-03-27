@@ -34,7 +34,6 @@ table.virtual-clinic {
 		// used for Referral notes and clinic info
 		.scroll-content {
 			@include font-size(11);
-			line-height: 1.3;
 			max-height: 100px;
 			overflow-y: auto;
 			word-wrap: break-word; // break up long words.

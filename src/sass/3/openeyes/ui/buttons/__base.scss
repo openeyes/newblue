@@ -7,9 +7,6 @@
 	justify-content: center;
 	align-items: center;
 
-	// required for when <a> uses "button" class
-	line-height: normal;
-
 	// key-hint needed this
 	position:relative;
 
@@ -35,10 +32,6 @@
 	height: 24px; // matches inputs heights
 	// increase hit area
 	padding: 0 8px;
-
-	// this is a mistake, unsure of why it's here
-	// leaving for now
-	margin: 1px 0;
 
 	.oe-full-header & {
 		margin:0; // override this for buttons in the header banner

@@ -12,8 +12,6 @@
 		@include font-size(15);
 		font-weight: $oe-font-light;
 		color: $oe-text-light;
-		line-height: 1.5;
-		
 		
 		.help-note {
 			@include flex( center, space-between );

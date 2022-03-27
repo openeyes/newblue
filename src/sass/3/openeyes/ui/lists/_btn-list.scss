@@ -8,14 +8,14 @@
 // nearly always used in popups
 ul.btn-list {			
 	li {
-		cursor: pointer;		// used as a button
-		padding:0 10px;
+		cursor: pointer; // used as a button
+
+		height:19px; // 19px matches Event icon max size
+		@include flex(center, flex-start);
+
+		padding:0 10px; // can't use vertical padding because of a fixed height
 		margin:0 0 2px 0;
-		
-		height:19px;			// 19px matches Event icon type small size
-		line-height:19px; 
-		white-space: nowrap; 	// using line-height to center so no-wrap!
-		
+
 		@include font-size(12);
 		font-weight:400;
 		
@@ -39,8 +39,7 @@ ul.btn-list {
 	&.fixed-width {
 		li {
 			height:auto;			// reset
-			line-height:normal;		// reset
-			white-space: normal;	// can now wrap
+			flex-wrap: wrap;
 			word-break: break-all;
 			width: 180px;	 		// setup to handle PSD popup (180px is a best guess)			
 			padding:3px 8px;

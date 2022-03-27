@@ -14,6 +14,13 @@ html {
 	font-family: $font-stack;
 	font-size:16px;  
 	font-weight:400;
+
+	// line-height
+	// Be v.careful with this. Reset to globally use 1.4
+	// because I was getting into lots of cascade issues
+	// with different line-heights messing up flex layouts
+	line-height: 1.4;
+
 }
 
 // body

@@ -51,14 +51,14 @@
 
 	i.spinner {
 		position: absolute;
-		top:5px;
+		top:50%;
+		transform: translateY(-8px); // spinner icon is 16px
 		right:22px;
 	}
 
 	// context adjustments for patient popup
 	.oe-patient-popup & {
 		margin-bottom: 15px;
-		line-height: 1.5;
 		color: $oe-dark-text-light;
 		border-color: $oe-dark-line;
 		@include font-size(12);

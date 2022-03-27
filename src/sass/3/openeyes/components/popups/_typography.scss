@@ -8,7 +8,6 @@
 	// not sure <p> is really used but may be useful
 	p {
 		@include font-size(14);
-		line-height: 1.4;
 	}
 		
 	h3 {
@@ -20,7 +19,7 @@
 	h4 {
 		@include font-size(13);
 		color:$oe-dark-text-light;
-		font-weight: 700;
+		font-weight: 500;
 	}
 	
 	p, 

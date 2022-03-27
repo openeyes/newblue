@@ -28,7 +28,6 @@
 		// basic data list, uses <br>
 		.data {
 			padding:0 10px 5px 10px;
-			line-height:1.6;
 			
 			.not-recorded {
 				opacity:0.4;
@@ -51,7 +50,6 @@
 			@include font-size(11);
 			font-weight:400;
 			padding:2px 0 2px 5px;
-			line-height:1.4;
 			text-align: left;
 			
 			&:last-child {

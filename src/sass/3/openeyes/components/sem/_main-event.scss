@@ -10,7 +10,6 @@
 	color:$oe-text;
 	padding:0 0 40px 0; // 40px allows for banner if shown
 	@include font-size(12);
-	line-height:1.5;
 	
 	// 2 main classes &.view and &.edit 
 	// are available but currently unused

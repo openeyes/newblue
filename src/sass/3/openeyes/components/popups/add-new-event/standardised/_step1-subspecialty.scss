@@ -19,7 +19,7 @@
 	li.oe-specialty-service {
 		position: relative;
 		min-height:55px;
-		line-height:15px; // this just looks right
+		flex-direction: column;
 		padding:8px; // provides text positioning
 		@include font-size(13);
 		

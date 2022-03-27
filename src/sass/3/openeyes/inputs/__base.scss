@@ -10,6 +10,13 @@ input, textarea, select {
 	@include font-size(12);
 	color: $oe-user-input-text;
 	background-color: $oe-user-inputs;
+
+	// popups are fixed in a dark theme
+	.oe-popup & {
+		color: $oe-dark-user-input-text;
+		background-color: $oe-dark-user-inputs;
+		margin:0;
+	}
 	
 	
 	// if used in a OE UI themed area use this class

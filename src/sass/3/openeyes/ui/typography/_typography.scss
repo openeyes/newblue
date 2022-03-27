@@ -7,14 +7,14 @@
 html {
 	// Experimented with this and decided to leave it set to default values	
 	// but may return to it in the future... so leaving it here
-	-webkit-font-smoothing: subpixel-antialiased; // this is the default setting in Chrome, including it incase it helps Safari (iPads).
-	//-webkit-font-smoothing: antialiased; // this is crisper but looks shit
+	-webkit-font-smoothing: subpixel-antialiased; // this is the default setting in Chrome, maybe it helps Safari (iPads)?
+	// -webkit-font-smoothing: antialiased; // this is crisper but looks crappy
 	// text-rendering: optimizeLegibility; // default 'auto'
 }
 
 // deliberately all setup to be too big. 
 // all typography should be controlled specifically
-h1,h2,h3,h4,h5,h6,p {
+h1,h2,h3,h4,h5,h6 {
 	@include font-size(16); // default 16px / 1rem
 	font-weight:400;
 }
@@ -22,6 +22,7 @@ h1,h2,h3,h4,h5,h6,p {
 // <p> are pretty rare, but styled in
 // (used in Correspondence)
 p {
+	@include font-size(14);
 	margin-bottom:10px;
 	&:last-child {
 		margin-bottom:0;

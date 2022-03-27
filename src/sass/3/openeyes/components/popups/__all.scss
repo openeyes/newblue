@@ -5,7 +5,7 @@
 @import "_base";  
 
 @import "title_close";
-// Content wrap. Handle scrolling for contnet (min res displays)
+// Content wrap. Handle scrolling for content (min res displays)
 @import "popup-content"; 
 @import "popup-actions"; 
 
@@ -30,11 +30,11 @@
 // event audit trail popup v3
 @import "oe-audit-trail-popup";	// User audit trail popup
 
-// standardised (v5) version of Add new event
-@import "add-new-event/standardised/_all";
-
 // when updated to v5 version __base can be removed
 @import "events-user-trail/_all";
+
+// standardised (v5) version of Add new event
+@import "add-new-event/standardised/_all";
 
 // attachments
 @import "attachments/popup-attachment";
