@@ -9,7 +9,7 @@ textarea {
 	margin:1px 0;
 	resize: none; // hide corner resize
 	overflow: auto; // for IE
-	word-wrap: break-word; // allow long words to break and wrap	
+	overflow-wrap: break-word; // allow long words to break and wrap
 	
 	// dull out the readonly fields
 	&:read-only { 

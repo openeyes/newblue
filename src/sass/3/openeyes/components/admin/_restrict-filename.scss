@@ -12,7 +12,7 @@
 		// filenames these need restricting and wrapping
 		// ...in DICOM logs there are very long 
 		.restrict-filename {
-			word-wrap:break-word;
+			overflow-wrap: break-word;
 			width:200px;
 		}
 	

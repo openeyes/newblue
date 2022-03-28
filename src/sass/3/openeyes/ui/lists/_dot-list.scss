@@ -15,12 +15,12 @@ ul {
 		flex-wrap: wrap;
 		
 		li {
-			@include inline-flex( flex-start, flex-start );
-			// if dot list wraps then it needs leading
-			margin:0 0 5px 0;
+			@include inline-flex( center, flex-start );
+			margin:0 0 5px 0; // if dot list wraps onto another line then it needs leading
 			padding:0 8px 0 12px;
 
-			background: 0 55% / 6px url( svg-all( 'ui/list-dot' ))  no-repeat;
+			// 55%?
+			background: 0 center / 5px url( svg-all( 'ui/list-dot' ))  no-repeat;
 			
 			.lightning-event & {
 				background-size:4px;
@@ -34,9 +34,8 @@ ul {
 			}
 		}
 
-		// if the dot is used inline and isn't going wrap
+		// if the dot-list is used inline, with other elements and isn't going wrap
 		&.inline {
-			background-position: 0 42%;
 			margin:0;
 			li {
 				margin: 0;

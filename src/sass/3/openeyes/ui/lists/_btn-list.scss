@@ -40,7 +40,7 @@ ul.btn-list {
 		li {
 			height:auto;			// reset
 			flex-wrap: wrap;
-			word-break: break-all;
+			overflow-wrap: break-word;
 			width: 180px;	 		// setup to handle PSD popup (180px is a best guess)			
 			padding:3px 8px;
 		}

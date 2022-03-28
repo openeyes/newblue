@@ -9,8 +9,7 @@
 fieldset.btn-list {			
 		
 	label {
-		// reset the cascade
-		display: flex;
+		display:flex;
 		margin:0 0 2px 0;
 		
 		.li {
@@ -19,7 +18,8 @@ fieldset.btn-list {
 			height:19px;
 			
 			padding:0 10px;
-			
+			@include flex(center, flex-start);
+
 			@include font-size(12);
 			font-weight:400; 
 			cursor: pointer;
