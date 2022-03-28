@@ -1,0 +1,25 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+.step-event-types {
+
+	// split events <ul> into 2 columns
+	.event-type-list {
+		column-count: 2;
+		column-gap: 10px;
+	}
+
+	// <li>
+	.oe-event-type {
+		// shift to left to place icon flush
+		padding-left:0;
+		.oe-i-e {
+			margin-right:10px;
+		}
+		&.add_event_disabled {
+			opacity:0.4;
+			pointer-events: none; // disabled!
+		}
+	}
+}

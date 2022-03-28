@@ -1,0 +1,66 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.oe-create-event-step-through {
+
+	// <td>
+	.step-subspecialties {
+		// <ul> list of all available subspecialites
+		.subspecialties-list {
+			// a bit of hack, really this popup needs
+			// changing from <table> to flex however,
+			// by following the oe-popup-content approach
+			// allow space for "Add new Subspeciality"
+			height: calc(100vh - 330px); // oe-popup-content is set at 200px
+			overflow-y: auto;
+			padding:0 0 10px 0;
+		}
+	}
+
+	// Extends the basic <li> styling
+	// coupling is required to create a greater
+	// specificity or CSS won't style
+	.oe-specialty-service {
+		position: relative;
+		flex-direction: column;
+		align-items: flex-start;
+		@include font-size(13);
+		padding: 10px;
+
+		.tag {
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+
+			// tag is a bit bigger
+			width: 21px;
+			height: 21px;
+			@include font-size(11);
+			font-weight: 400;
+
+			color: $oe-dark-text-light;
+			background: $oe-dark-blue-dark;
+
+		}
+
+		// <span> wrap 'service' 
+		.service {
+			display: block; // to push to new line
+			@include font-size(11);
+		}
+
+		// select dropdown (sometimes needed)
+		select {
+			margin: 5px 0 0 0;
+		}
+	}
+}
+
+
+
+
+

@@ -2,19 +2,14 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 
-// OE Add New Event Popup)
-// 
-// this is modified OEv2.0 CSS
-// 
+.step-subspecialties {
 
-.add-new-event {
-	
+	// <div>
+	// when added it's replaced with the option
 	.change-subspecialty {
 		position:relative;
-		background: shade( $oe-dark-popup-bg,15% ); // required something different here 
 		border:1px solid $oe-btn-green;
-		padding:8px;
-		margin:10px 0 0 0;
+		padding:10px 5px;
 	
 		h6 {
 			@include font-size(12);
@@ -44,8 +39,27 @@
 			bottom:5px;
 			right:0;
 		}
-	}	
-	
+	}
+
+	// User selects a new subspeciality, this replaces the select option
+	// and flags that it's new with a border
+	// <div> outside of the <ul>
+	.new-added-subspecialty-service {
+
+		// <div> needs all the <li> stuff...
+		@extend .oe-specialty-service;
+
+		margin: 10px 0 0 0;
+		border:2px solid $oe-btn-green;
+
+		// remove "x" button (JS will remove this element and show options again)
+		.change-new-specialty {
+			position: absolute;
+			bottom: 4px;
+			right: 4px;
+		}
+	}
+
 }
  
 
