@@ -9,59 +9,40 @@
 // Risks and Gradings (traffic lights)
 .status-box {
 	// default
-	color:$oe-text;
-	
-	.oe-popup & {
-		// popups are all PRO... make sure text shows up in classic
-		color:$oe-dark-text;
-	}
-	
+	color: $oe-text;
 	@include font-size(13);
-	
-	border:2px solid $oe-text-highlight;
-	border-radius:3px;
-	
-	margin:3px 2px;
-	padding:4px 10px 4px 25px; // allow for Triangle SVG
-	
-	background-position: 5px 6px;
-	background-repeat: no-repeat;
-	background-size: 13px;
-	background-image: url( svg-all('ui/triangle-blue') );
-	
+
+	border: 2px solid $oe-line;
+	border-radius: 20px;
+
+	margin: 3px 2px;
+	padding: 4px 10px 4px 25px; // allow for circle
+
+	background: 5px 7px / 11px url(svg-all("i/circle-blue")) no-repeat;
+
 	&.green {
-		background-image: url( svg-all('ui/triangle-green') );
+		background-image: url(svg-all("i/circle-green"));
 		border-color: $oe-status-green;
-		.status-text {
-			color: shade( $oe-status-green,10 );
-		}
 	}
-	
+
 	&.red {
-		background-image: url( svg-all('ui/triangle-red') );
+		background-image: url(svg-all("i/circle-red"));
 		border-color: $oe-status-red;
-		.status-text {
-			color: shade( $oe-status-red,10 );
-		}
 	}
-	
+
 	&.amber {
-		background-image: url( svg-all('ui/triangle-amber') );
+		background-image: url(svg-all("i/circle-orange"));
 		border-color: $oe-status-amber;
-		.status-text {
-			color: shade( $oe-status-amber,10 );
-		}
 	}
-	
-	
-	
+
+
 	// if there are list of issues or warnings:
 	ul {
-		list-style: disc;
-		list-style-position: inside;
-		margin:5px 0;
+		list-style: disc inside;
+		margin: 5px 0;
+
 		li {
-			margin-bottom: 3px; 
+			margin-bottom: 3px;
 			&:last-child {
 				margin-bottom: 0;
 			}
