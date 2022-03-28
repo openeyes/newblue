@@ -1,0 +1,39 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.oe-create-event-step-through {
+	// base style for sub-specialties, context and new event options
+	// <li> (and the special <div>)
+	li,
+	.new-added-subspecialty-service {
+		@include flex(center, flex-start);
+		margin: 0 0 2px 0;
+		padding-left: 10px;
+
+		&.context-list,
+		&.event-type-list {
+			height: 19px;
+			// for column-count in Events column
+			break-inside: avoid;
+		}
+
+		@include font-size(12);
+		font-weight: 400;
+		color: $oe-dark-text-light;
+		background: $oe-dark-popup-btn-hint;
+
+		cursor: pointer;
+
+		&:hover,
+		&:focus,
+		&.selected {
+			background-color: $oe-btn-blue;
+			color: #fff;
+
+			.tag {
+				background: shade($oe-btn-blue, 20%);
+				color: $oe-dark-text-highlight;
+			}
+		}
+	}
+}

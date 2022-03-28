@@ -1,0 +1,22 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.oe-specialty-service {
+	// 2 letter code for SubSpeciality
+	.tag {
+		position: absolute;
+		top: 0;
+		right: 0;
+		// tag is a bit bigger
+		width: 21px;
+		height: 21px;
+
+		@include flex(center, center);
+
+		@include font-size(11);
+		font-weight: 400;
+
+		color: $oe-dark-text-light;
+		background: $oe-dark-blue-dark;
+	}
+}

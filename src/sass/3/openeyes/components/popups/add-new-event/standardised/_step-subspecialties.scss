@@ -27,27 +27,7 @@
 		@include font-size(13);
 		padding: 10px;
 
-		.tag {
-			position: absolute;
-			top: 0;
-			right: 0;
-
-			display: inline-flex;
-			justify-content: center;
-			align-items: center;
-
-			// tag is a bit bigger
-			width: 21px;
-			height: 21px;
-			@include font-size(11);
-			font-weight: 400;
-
-			color: $oe-dark-text-light;
-			background: $oe-dark-blue-dark;
-
-		}
-
-		// <span> wrap 'service' 
+		// <span> wrap 'service'
 		.service {
 			display: block; // to push to new line
 			@include font-size(11);

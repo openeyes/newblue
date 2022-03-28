@@ -5,9 +5,9 @@
 // Layout for Adding new Event, is with a <table>
 // an historical approach, DOM really needs updating (pre-flex days)
 // until then use !important to tweak the <table> layout
-
 .oe-create-event-step-through {
 	margin: 0 !important; //
+
 	// <td> creates 3 columns
 	td {
 		padding: 0 8px !important;
@@ -23,41 +23,6 @@
 
 		&.step-event-types {
 			width: 50%;
-		}
-	}
-
-	// base style for sub-specialties, context and new event options 
-	// <li>
-	li,
-	.new-added-subspecialty-service {
-		@include flex(center, flex-start);
-		margin: 0 0 2px 0;
-		padding-left: 10px;
-
-		&.context-list,
-		&.event-type-list {
-			height: 19px;
-			// for column-count in Events column
-			break-inside: avoid;
-		}
-
-		@include font-size(12);
-		font-weight: 400;
-		color: $oe-dark-text-light;
-		background: $oe-dark-popup-btn-hint;
-
-		cursor: pointer;
-
-		&:hover,
-		&:focus,
-		&.selected {
-			background-color: $oe-btn-blue;
-			color: #fff;
-
-			.tag {
-				background: shade($oe-btn-blue, 20%);
-				color: $oe-dark-text-highlight;
-			}
 		}
 	}
 }
