@@ -13,77 +13,33 @@
 	// if I align all the <td> the icons don't line up.
 	// flex also didn't work. decided to go with a 
 	// fixed width approach... 
-	display:inline-block;
+	display:inline-flex;
 
-	// MUST! have a width.
 	// this ensures data widths are consistent for:
 	// for: dd Mth YYYY 
 	// and: Mth YYY 
 	// and: YYYY  		
-	width: 80px;  		
+	width: 11ch;
 	
 	.day {
-		display:inline-block;
 		text-align: right;
 		// because of being right aligned this needs to fit '00' as tightly as possible
 		// this is so that single digits "1" lines up with "11" correctly
-		width:17px; 			// will need increasing to allow for font-size		
-		margin:0 5px 0 0;		// this provides 'padding' between Mth (do NOT use padding tho ;)
+		width:2ch; 			// will need increasing to allow for font-size
+		margin:0 1ch 0 0;		// this provides 'padding' between Mth (do NOT use padding tho ;)
 	}
 	.mth{
-		display:inline-block;
 		text-align: left;		// if used in table in the last column it will be aligned to the right! 
-		width:25px;
+		width:4ch;
 	} 
 	.yr {
-		display:inline-block;
 		text-align: right;
-		width:31px;
-	}
-
-}
-
-// UI Variations
-// font is larger in standard table
-table.standard {
-	.oe-date { 
-		width:89px;  // 3px extra each! 
-		.day {
-			width:20px;
-		}
-		.mth {
-			width:28px;
-		} 
-		.yr {
-			width:34px;
-		}
-	}
-}
-
-// date layout in patient popups needs squeezing to maximise space.
-.quick-overview-content,
-.oe-patient-popup {
-	.oe-date {
-		width:68px;
-		margin:0 0 0 2px; 	// in popups it's used next to eye-lat
-		.day {
-			width:15px;
-			margin:0 3px 0 0;
-		}
-		.mth {
-			width:22px;
-			margin:0 2px 0 0;
-		} 
-		.yr {
-			width:26px;
-		}
+		width:4ch;
 	}
 	
-	.situational-awareness {
-		.oe-date {
-			@include font-size(11);
-			opacity:0.5;
-		}
-	}	
+	.situational-awareness & {
+		@include font-size(11);
+		opacity:0.5;
+	}
 }
 
