@@ -19,22 +19,24 @@ ul {
 			margin:0 0 5px 0; // if dot list wraps onto another line then it needs leading
 			padding:0 8px 0 12px;
 
-			// 55%?
 			background: 0 center / 5px url( svg-all( 'ui/list-dot' ))  no-repeat;
-			
-			.lightning-event & {
-				background-size:4px;
-				padding-left: 10px;
-			}
-			
+
 			&:first-child {
 				margin-left:0;
 				padding-left:0;
 				background-image: none;
 			}
+
+			// dot-list are also used for User comments, paragraph breaks need clearly showing
+			&.para-break {
+				background: -3px center / 1.6em url( svg-all( 'ui/list-para-break' )) no-repeat;
+				padding-left:1.5em;
+			}
+
+
 		}
 
-		// if the dot-list is used inline, with other elements and isn't going wrap
+		// if the dot-list is used inline with other elements need to remove the leading
 		&.inline {
 			margin:0;
 			li {
