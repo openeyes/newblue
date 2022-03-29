@@ -2,6 +2,7 @@
 // *
 
 // Toolbar button.
+// <a> (this shouldn't be an anchor)
 .ed-button {
 	position:relative;
 	display: block;
@@ -9,6 +10,7 @@
 	width: 32px;
 	margin: 0;
 	padding: 0;
+	line-height: 1;
 	
 	background: #ddd;
 	

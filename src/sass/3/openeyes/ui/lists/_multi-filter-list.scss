@@ -1,0 +1,80 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// Updated filter list
+// Cleaner DOM (no <i> needed)
+// whole <li> is button that be clicked on
+ul.multi-filter-list {
+	margin:4px 0;
+
+	&.inline {
+		li {
+			display:inline-flex;
+			margin:2px 2px 0 0;
+		}
+	}
+
+	li {
+		position: relative;
+		cursor: pointer; // used as a button
+
+		height:19px; // 19px matches Event icon max size
+		@include flex(center, flex-start);
+
+		padding:0 25px 0 5px;
+		margin:0 0 2px 0;
+
+		color:$oe-user-input-text;
+		background: rgba($oe-user-inputs,0.5);
+
+		// remove icon
+		&::after {
+			content: "";
+			pointer-events: none; // use <li>
+			position: absolute;
+			z-index: 1;
+			right: 2px;
+			top: 0;
+			width: 19px;
+			height: 19px;
+			background: center / 13px  url(svg-themed("i/remove-circle")) no-repeat;
+			opacity: 0.3;
+		}
+
+		&:hover,
+		&:focus {
+			background-color:$oe-btn-blue;
+			color:#fff;
+			&::after {
+				background-image: url(svg-dark-fixed("i/remove-circle"));
+				opacity: 1;
+			}
+		}
+	}
+}
+
+// Multi-select (old)
+// This used an <i> DOM element in <li>
+// User had to click on the icon
+// <ul>
+ul.oe-multi-select {
+	margin:4px 0;
+	@include font-size(12);
+
+	&.inline {
+		li {
+			display:inline-flex;
+			margin:2px 2px 0 0;
+		}
+	}
+
+	li {
+		display:flex;
+		align-items: center;
+		justify-content: space-between;
+		padding:2px 4px 2px 6px;
+		margin:0 0 2px 0;
+		color:$oe-user-input-text;
+		background: rgba($oe-user-inputs,0.5);
+	}
+}

@@ -1,46 +1,44 @@
 // * OpenEyes
 // *
 
-.ed2-widget {	
+.ed2-widget {
 	// Select Doodles
 	.ed2-toolbar {
-		padding:3px 0 0 3px;
+		padding: 3px 0 0 3px;
 		background: $oe-ed2-panel;
 
 		// <ul>
-		.ed2-toolbar-panel {
-			&.ed2-main-toolbar {
-				
-				li {
-					&.ed2-drawer-open, // this seems to be the approach, but keeping active incase! 				
-					&.active { 
-						position: relative;
-						// show the extra doodle panel		
-						.ed2-toolbar-panel-drawer {
-							display: block;
-						}
+		.ed2-toolbar-panel.ed2-main-toolbar {
+			@include flex(flex-start, flex-start);
+			li {
+				&.ed2-drawer-open, // this seems to be the approach, but keeping active incase!
+				&.active {
+					position: relative;
+					// show the extra doodle panel
+					.ed2-toolbar-panel-drawer {
+						display: block;
 					}
 				}
-				
-				// inside ul > ul (+)
-				// is another <ul>
-				.ed2-toolbar-panel-drawer {
-					display: none;  // JS opens this up
-					position: absolute;
-					top: 22px;
-					right: 27px;
-					z-index: $oe-z-ed-v2 + 8; // above everything!
-					
-					width: 285px; // fits 8 on a line (allow the border)
-						
-					box-shadow: 1px 3px 8px 1px rgba(0, 0, 0, 0.3);
-					background: $oe-ed2-panel;
-					border: 1px solid $oe-ed3-blue; // if changed, aadjust the width
+			}
 
-					margin: 0;
-					padding: 3px 0 0 3px;
-			
-				}
+			// inside ul > ul (+)
+			// is another <ul>
+			.ed2-toolbar-panel-drawer {
+				display: none; // JS opens this up
+				position: absolute;
+				top: 22px;
+				right: 27px;
+				z-index: $oe-z-ed-v2 + 8; // above everything!
+
+				width: 285px; // fits 8 on a line (allow the border)
+
+				box-shadow: 1px 3px 8px 1px rgba(0, 0, 0, 0.3);
+				background: $oe-ed2-panel;
+				border: 1px solid $oe-ed3-blue; // if changed, aadjust the width
+
+				margin: 0;
+				padding: 3px 0 0 3px;
+
 			}
 		}
 	}

@@ -1,11 +1,6 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
-
-// based on the Add New Event UI
-// PRO-themed by default because it's
-// nearly always used in popups
 ul.btn-list {			
 	li {
 		cursor: pointer; // used as a button
@@ -47,7 +42,7 @@ ul.btn-list {
 	}
 	
 	
-	// Although nicely standardised, the problem occured with it's use
+	// Although nicely standardised, the problem occurred with it's use
 	// in the new Event Type filter pop out & the old filter both of which 
 	// needs to be on a blue
 	.filter-options-popup &,

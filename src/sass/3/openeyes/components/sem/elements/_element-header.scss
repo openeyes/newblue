@@ -13,6 +13,7 @@
 		// <h3>
 		.element-title {
 			display: inline-block;
+			line-height: 1.2; // 1.4 is too much
 			@include font-size(15);
 			color:$oe-element-headers;
 			font-weight:$oe-font-light;

@@ -1,0 +1,15 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// dot-list single divider
+// Added to divide '#tags' from 'comments'
+// Needed a UI element like the dotlist but
+// without the <li> DOM wrappings
+span.dot-list-divider {
+	display: inline-block;
+	margin: 0 5px;
+	width: 12px;
+	height: 8px;
+	background: transparent url(svg-all("ui/list-dot")) center center no-repeat;
+	background-size: 6px;
+}

@@ -27,6 +27,8 @@
 	// icon only with popup labels, common doodles...
 	.quick {
 		flex: 1 1 0;
+		@include flex( flex-start, flex-start);
+		flex-wrap: wrap;
 	}
 
 	// show all available icons with text, with groups

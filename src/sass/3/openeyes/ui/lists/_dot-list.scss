@@ -1,61 +1,37 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+ul.dot-list {
+	margin: 2px 0 0 0;
+	display: flex;
+	flex-wrap: wrap;
 
-ul {
-	
-	// changed from a double slash icon to a dot
-	// old class "dslahs-list" removed from OE 3.0
-	// but keeping a not of it just in case ;) 
-	// &.dslash-list,
-	
-	&.dot-list {
-		margin:2px 0 0 0;
-		display: flex;
-		flex-wrap: wrap;
-		
-		li {
-			@include inline-flex( center, flex-start );
-			margin:0 0 5px 0; // if dot list wraps onto another line then it needs leading
-			padding:0 8px 0 12px;
+	li {
+		@include inline-flex(center, flex-start);
+		margin: 0 0 5px 0; // if dot list wraps onto another line then it needs leading
+		padding: 0 8px 0 12px;
 
-			background: 0 center / 5px url( svg-all( 'ui/list-dot' ))  no-repeat;
+		background: 0 center / 5px url(svg-all("ui/list-dot")) no-repeat;
 
-			&:first-child {
-				margin-left:0;
-				padding-left:0;
-				background-image: none;
-			}
-
-			// dot-list are also used for User comments, paragraph breaks need clearly showing
-			&.para-break {
-				background: -3px center / 1.6em url( svg-all( 'ui/list-para-break' )) no-repeat;
-				padding-left:1.5em;
-			}
-
-
+		&:first-child {
+			margin-left: 0;
+			padding-left: 0;
+			background-image: none;
 		}
 
-		// if the dot-list is used inline with other elements need to remove the leading
-		&.inline {
-			margin:0;
-			li {
-				margin: 0;
-			}
+		// dot-list are also used for User comments, paragraph breaks need clearly showing
+		&.para-break {
+			background: -3px center / 1.6em url(svg-all("ui/list-para-break")) no-repeat;
+			padding-left: 1.5em;
+		}
+	}
+
+	// if the dot-list is used inline with other elements need to remove the leading
+	&.inline {
+		margin: 0;
+
+		li {
+			margin: 0;
 		}
 	}
 }
-
-// dot-list single divider
-// Added to divide '#tags' from 'comments'
-// Needed a UI element like the dotlist but 
-// without the <li> DOM wrappings
-span.dot-list-divider {
-	display:inline-block;
-	margin:0 5px; 
-	width:12px;
-	height: 8px;
-	background: transparent url( svg-all( 'ui/list-dot' )) center center no-repeat;
-	background-size:6px;
-}
-

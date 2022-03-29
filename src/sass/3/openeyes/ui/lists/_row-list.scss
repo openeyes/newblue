@@ -1,32 +1,30 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+// Instead of using <table> structure with
+// with a single <td> in a row for layout
+// use this instead.
+ul.row-list {
+	li {
+		display: block;
 
-ul {
-	// Instead of using <table> structure with 
-	// with a single <td> in a row for layout 
-	// use this instead.
-	
-	&.row-list {
-		li {
-			display:block;
-			
-			// <table> <td> padding styling:
-			// standard
-			padding:5px 0; 
-			
-			// table <tr> in Element EDIT state
-			.element-fields & {
-				@include flex( center, flex-start );
-				min-height: 28px; // <td> has a min-height in Elements (can't remember why tho...)
-				padding: 2px 0 2px 1px;
-			}
-			
-			border-top:1px solid $oe-line;
-			&:first-child { 
-				border-top: none;
-			}
+		// <table> <td> padding styling:
+		// standard
+		padding: 5px 0;
+
+		// table <tr> in Element EDIT state
+		.element-fields & {
+			@include flex(center, flex-start);
+			min-height: 28px; // <td> has a min-height in Elements (can't remember why tho...)
+			padding: 2px 0 2px 1px;
+		}
+
+		border-top: 1px solid $oe-line;
+
+		&:first-child {
+			border-top: none;
 		}
 	}
 }
+
 
