@@ -16,14 +16,14 @@ label,
 	// wrap and visually group label with it's input
 	&.highlight {
 		@include flex(center, flex-start);
+		line-height: 1;
+		margin-bottom:1px; // give a visual line to help with input
 		height:24px; // add line height to match input and select heights
 		padding:0 5px; // this was 3px 6px
-		margin:1px 0; 
 		
 		&.inline {
-			display: inline-flex;
-			justify-content:space-between; 	// horizontal
-			margin:1px 3px 1px 0; 
+			@include inline-flex(center, space-between);
+			margin:0 3px 0 0;
 			&:last-child {
 				margin-right:0;
 			}

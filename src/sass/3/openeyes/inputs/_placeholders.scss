@@ -1,0 +1,37 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// <input>
+// important note: the default type, if not set is type="text"
+// In the UI, input (text) and textarea, should look the same
+// single "row" and the same height, but this is a bit tricky,
+// because textarea requires a line-height of 1.4
+input, textarea {
+	border-radius: 3px;
+
+	&::-webkit-input-placeholder { 
+		color:$oe-input-placeholder; // Chrome
+	}
+	&:-ms-input-placeholder { // IE 10+ 
+	  	color:$oe-input-placeholder;
+	}
+	&::placeholder {
+		color:$oe-input-placeholder; // Future?
+	}
+	
+	&:disabled {
+		opacity:0.4;
+	}
+}
+
+// within SEM Element highlight focus on inputs, text fields only.
+// (looks strange on checkboxes and radios)
+.element { 
+	input[type="text"], 
+	textarea {
+		&:focus {
+			box-shadow: $oe-input-focus-shadow;	
+		} 
+	}
+}

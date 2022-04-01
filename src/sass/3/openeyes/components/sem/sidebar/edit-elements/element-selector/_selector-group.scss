@@ -7,13 +7,19 @@
 	.all-elements {
 		
 		.selector-group {
-			margin:0 5px 10px 5px;
-			
+			margin:0 1px 10px 1px;
+			padding:0 3px;
+
+			&.outline {
+				padding-top:4px;
+				border: 1px solid rgba(200,200,200,0.2);
+			}
+
 			h3 {
 				@include font-size(12);
-				font-weight:400;
-				color: $oe-dark-text-highlight;
-				margin:0 0 8px 4px;
+				font-weight:500;
+				color: $oe-dark-text;
+				margin:0 0 4px 4px;
 			}	
 		}	
 	}		

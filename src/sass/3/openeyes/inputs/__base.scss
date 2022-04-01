@@ -1,30 +1,34 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
 // Default setup for ALL DOM inputs: 
 input, textarea, select {
 	border:0;	
 	outline:none;
 
 	@include font-size(12);
+	font-weight: 400;
 	color: $oe-user-input-text;
 	background-color: $oe-user-inputs;
+
+	// user-agent will set line-height to "normal"
+	// will also vertically center the text
+	line-height: normal;
+
+	// Override the User-agent:
+	font-family: inherit; // otherwise uses system-ui fonts
+	margin:0;
+	padding:0;
+
+	// all set at 24px
+	// JS textAreaResize uses inline style to adjust this
+	height:24px;
 
 	// popups are fixed in a dark theme
 	.oe-popup & {
 		color: $oe-dark-user-input-text;
 		background-color: $oe-dark-user-inputs;
-		margin:0;
 	}
-	
-	
-	// if used in a OE UI themed area use this class
-	// used in Allergies & Risk in the patient popup
-	&.pro-theme {
-		color: $oe-dark-user-input-text;
-		background-color: $oe-dark-user-inputs;
-	}	
 	
 	&.error {
 		color:rgb(255,255,255);
@@ -33,15 +37,14 @@ input, textarea, select {
 	
 	// widths can be controlled with the cols-n
 	// but sometimes a fixed width is needed...
-	
 	&.fixed-width-small {
 		text-align: center;
-		width:55px; 		// allows for +00.00
+		width:7ch; 	// allows for +00.00
 	}
 	
 	&.fixed-width-medium {
 		text-align: center;
-		width: $oe-date-width; 
+		width: 13ch;
 	}
 }
 

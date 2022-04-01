@@ -8,11 +8,8 @@ select {
 	// selects can not be padded but height 
 	// can be set. This feels a bit hacky but
 	// it achieves the visual goal of getting
-	// <input> and <selects> looking the same 
-	height:24px;
-	margin:1px 0;
+	// <input> and <selects> looking the same
 	padding:0 15px 0 4px; // allow for the backgroud
-	font-weight: 400;
 
 	// turn off browser UI defaults
 	// (basically because of Safari!)

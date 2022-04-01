@@ -3,87 +3,47 @@
 
 
 // <input>
-// default set up for all inputs
-input, textarea {
-	padding:5px;
-	margin:1px 0;
-	border-radius: 3px;
-	height: auto;
-	
-	&::-webkit-input-placeholder { 
-		color:$oe-input-placeholder; // Chrome
-	}
-	&:-ms-input-placeholder { // IE 10+ 
-	  	color:$oe-input-placeholder;
-	}
-	&::placeholder {
-		color:$oe-input-placeholder; // Future?
-	}
-	
-	&:disabled {
-		opacity:0.4;
-	}
-	// this fixes the issues where the browser
-	// will use the system-ui fonts:
-	font-family: inherit;
-}
-
-// within SEM Element highlight focus on inputs, text fields only, as it looks
-// strange on checkboxes and radios and textareas
-.element { 
-	input[type="text"], 
-	textarea {
-		&:focus {
-			box-shadow: $oe-input-focus-shadow;	
-		} 
-	}
-}
-
+// important: the default type, if not set is type="text"
+// In the UI, input (text) and textarea, should look the same
+// single "row" and the same height, but this is a bit tricky,
+// because textarea requires a line-height of 1.4
 input {
+	padding:3px 5px; // matches textarea
+
 	// add SEARCH icon to input	
 	&.search {
 		padding-left:30px;
-		background-position:left 5px center;
-		background-repeat: no-repeat;
-		background-size:19px;
-		// search icon
-		background-image:url( svg-all('ui/search') );
+		background: left 5px center / 19px url( svg-all('ui/search') ) no-repeat;
 	}
 	// add FILTER icon to input
 	&.filter {
 		padding-left:30px;
-		background-position:left 5px center;
-		background-repeat: no-repeat;
-		// search icon
-		background-image:url( svg-all('ui/filter') );
+		background: left 5px center / 19px url( svg-all('ui/filter') ) no-repeat;
 	}
-	
+
 	// date should match oe-date: dd Mth YYYY
 	&.date {
 		text-align: center;
-		width: $oe-date-width;
+		width: 13ch;
+	}
+
+	&[type="checkbox"],
+	&[type="radio"]{
+		height:auto;
+		margin:0; // override user-agent
+	}
+
+	// Normalize for range
+	&[type="range"] {
+		height:auto;
+		width: 100%;
+	}
+	// Normalize file input width
+	&[type="file"] {
+		height:auto;
+		width: 100%;
 	}
 }
 
-input[type="checkbox"],
-input[type="radio"]{
-	// middle looks great on Win Chrome, but is dropped slight on Mac Chrome, go figure!
-	// (trying to switch layouts over to Flex to sort this)
-	vertical-align: middle; 
-}
 
-input[type="time"]{
-	padding-top: 3.5px;
-	padding-bottom: 3.5px;
-}
-
-// Normalize for range
-input[type="range"] {
-	width: 100%;
-}
-
-// Normalize file input width
-input[type="file"] {
-	width: 100%;
-}
 

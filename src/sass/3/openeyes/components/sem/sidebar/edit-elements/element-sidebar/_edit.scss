@@ -61,22 +61,14 @@
 					background-color:$oe-dark-btn-red-hint;
 				}
 			}
-			
+
 			&.locked {
-				color: $oe-dark-text;
-				border:2px solid $oe-btn-green;
-				background:transparent url( svg-all( 'ui/no-permissions-white' ) ) center right 2px no-repeat;
-				background-size:9px;
+				background: center right 3px / 9px $oe-dark-blue url(svg-all("ui/no-permissions-white")) no-repeat;
 				pointer-events: none;
 			}
-			
-			
-			
+
 			&.mandatory {
-				color:  $oe-dark-text;
-				border:2px solid $oe-btn-green;
-				background:transparent url( svg-all( 'ui/asterisk-white' ) ) center right 2px no-repeat;
-				background-size:9px;
+				background: center right 3px / 9px $oe-dark-blue url(svg-all("ui/asterisk-white")) no-repeat;
 				pointer-events: none;
 			}
 			

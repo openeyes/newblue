@@ -3,64 +3,69 @@
 
 
 .oe-element-selector {
-	
-	.all-elements {
-		
-		.selector-group {
 
-			ul.element-list {	
-				li {
-					display:block;
-					margin:0 0 2px 0;
-					padding:5px 4px;
-					
-					cursor:pointer;
-											
-					@include font-size(12); 
-					font-weight:500;
-					color:$oe-dark-text-light;
-					background:shade( $oe-dark-popup-bg,11% ); 
-					
-					
-					&:hover, &:focus, &:active {
-						color: rgb(255,255,255);
-						background-color:$oe-btn-blue;
-					}
-					
-					&.added {
-						color: rgb(220,220,220);
-						background-color:$oe-element-selector-green;
-						
-						// if added it can be removed
-						&:hover, &:focus, &:active {
-							background-color:$oe-dark-btn-red-hint;
-						}	
-					}
-					 
-					// Some elements are mandatory, 
-					// others need to be locked once they have 
-					// been interacted with... use must delete via Element trash icon
-					
-					&.locked {
-						color: rgb(210,210,210);
-						border:2px solid $oe-btn-green;
-						background:transparent url( svg-all( 'ui/no-permissions-white' ) ) center right 3px no-repeat;
-						background-size:11px;
-						pointer-events: none;
-					}
-					
-					&.mandatory {
-						color: rgb(210,210,210);
-						border:2px solid $oe-btn-green;
-						background:transparent url( svg-all( 'ui/asterisk-white' ) ) center right 3px no-repeat;
-						background-size:11px;
-						pointer-events: none;
-					}
-				}		
+	ul.element-list {
+		li {
+			@include flex(center, flex-start);
+
+			height: 24px; // match button heights
+			margin: 0 0 2px 0;
+			padding: 0 4px;
+
+			cursor: pointer;
+
+			@include font-size(12);
+			font-weight: 400;
+			color: $oe-dark-text-light;
+			background: shade($oe-dark-popup-bg, 11%);
+
+
+			&:hover,
+			&:focus {
+				color: #fff;
+				background-color: $oe-btn-blue;
+			}
+
+			&:active {
+				color: #fff;
+				background-color: $oe-btn-blue-hint;
+			}
+
+			&.added {
+				color: rgb(210, 230, 210);
+				background: $oe-element-selector-green;
+
+				// if added it can be removed
+				&:hover,
+				&:focus {
+					background: center right 3px / 11px $oe-dark-btn-red-hint url(svg-dark-fixed("i/remove")) no-repeat;
+				}
+				&:active {
+					background-color: $oe-dark-btn-red;
+				}
+			}
+
+			// Some elements are mandatory,
+			// others need to be locked once they have
+			// been interacted with... use must delete via Element trash icon
+
+			&.locked {
+				font-style: italic;
+				color: #aaa;
+				background: center right 3px / 11px shade($oe-dark-popup-bg, 5%) url(svg-all("ui/no-permissions-white")) no-repeat;
+				pointer-events: none;
+			}
+
+			&.mandatory {
+				font-style: italic;
+				color: #aaa;
+				background: center right 3px / 11px shade($oe-dark-popup-bg, 5%) url(svg-all("ui/asterisk-white")) no-repeat;
+				pointer-events: none;
 			}
 		}
-	}		
+	}
 }
+
 
 
 

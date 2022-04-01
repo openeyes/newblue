@@ -5,12 +5,15 @@
 // <textarea>
 // default set up for all textareas
 textarea {
-	padding:5px;
-	margin:1px 0;
 	resize: none; // hide corner resize
 	overflow: auto; // for IE
 	overflow-wrap: break-word; // allow long words to break and wrap
-	
+
+	// needs line-height 1.4 otherwise
+	// user-agent will reset <textarea> to normal
+	line-height: 1.4;
+	padding:3px 5px; // do not change! setup for <textarea> autoresize
+
 	// dull out the readonly fields
 	&:read-only { 
     	background-color: rgba($oe-user-inputs,0.75);

@@ -30,27 +30,29 @@
 			margin-bottom: 20px;
 		}
 
-		// tables generally all require that the last cell
-		// is aligned right because it's an icon
+		// Tables generally require that the last cell
+		// is aligned right because it's an icon action
 		td:last-child,
 		th:last-child {
 			text-align: right;
 		}
 
-		// however, if there is only ONE td
-		// generally it should be aligned left...
-		td:first-child,
-		th:first-child {
-			text-align: left;
-		}
-
-		// make last left with class
+		// Override that, make last left aligned
 		&.last-left {
 			td:last-child,
 			th:last-child {
 				text-align: left;
 			}
 		}
+
+		// however, if there is only ONE td
+		// it generally should be aligned left...
+		td:first-child,
+		th:first-child {
+			text-align: left;
+		}
+
+
 
 		// in View mode for simple label > value lists
 		// **** note: the label-value approach was pre v3

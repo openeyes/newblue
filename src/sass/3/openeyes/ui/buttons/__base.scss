@@ -30,6 +30,12 @@
 
 	// sizes - standard:
 	height: 24px; // matches inputs heights
+
+	// browser will override the main line-height 1.4
+	// and reset <button> to normal, this won't affect
+	// <a> that are styled like buttons!
+	line-height: 1;
+
 	// increase hit area
 	padding: 0 8px;
 

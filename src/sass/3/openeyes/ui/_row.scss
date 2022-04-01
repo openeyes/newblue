@@ -5,44 +5,66 @@
 // need a generic div class to 
 // space out a 'rows' of data within 
 // a container
-.row { 
-	margin:15px 0;
+.row {
+	margin: 15px 0;
 
 	// because :first-child applies to the <DOM> not the use of ".row"
-	&:first-child { margin-top:0; }
-	&:last-child { margin-bottom:0; }
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 
 	&.divider {
-		border-bottom:2px solid $oe-line;
-		padding:0 0 15px 0;
-	}	
+		border-bottom: 2px solid $oe-line;
+		padding: 0 0 15px 0;
+	}
 }
 
 // match a standard list
-.small-row { 
-	margin:6px 0; 
-	&:first-child { margin-top:0; }
-	&:last-child { margin-bottom:0; }	
+.small-row {
+	margin: 6px 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
+// <hr> should always be used with .divider or .soft
+hr {
+	display: block;
+	border: 0;
+	margin: 5px 0;
+	border-bottom: 1px solid $oe-line;
 
-// provides exactly the same design
-// as a "row" with a 'divider' class
-// but without the wrapper 
-hr.divider {
-	display:block;
-	border : 0;
-	margin:15px 0;  // reduced was 20px 0 15px 0;
-	border-bottom:2px solid $oe-line;
-	
-	.oe-pathstep-popup &,
-	.oe-tooltip & {
+	// provides exactly the same design
+	// as a "row" with a 'divider' class
+	// but without the wrapper
+	&.divider {
+		margin: 15px 0;
+		border-bottom: 2px solid $oe-line;
+
+		.oe-pathstep-popup &,
+		.oe-tooltip & {
+			margin: 5px 0;
+		}
+
+		// when used in elements
+		.element & {
+			margin: 12px 0;
+			border-bottom-width: 3px;
+		}
+	}
+
+	&.soft {
 		margin:5px 0;
+		border-bottom:1px dotted $oe-line;
 	}
 
-	// when used in elements
-	.element & {
-		margin:12px 0;
-		border-bottom-width:3px;
-	}
 }

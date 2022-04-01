@@ -1,0 +1,66 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Auto alerts
+// system generated alerts
+//
+.auto-alert {
+	display: inline-block;
+	// default
+	color: $oe-text;
+	@include font-size(11);
+
+	border: 1.5px solid $oe-line;
+	border-radius: 20px;
+
+	padding: 2px 10px 2px 25px; // allow for
+
+	&.pad-v {
+		margin:5px 0;
+	}
+
+
+	background: 7px 4px / 11px $oe-text-inverted url(svg-all("i/triangle-grey")) no-repeat;
+
+	&.green {
+		background-image: url(svg-all("i/triangle-green"));
+		border-color: $oe-status-green;
+		&.flag {
+			background-image: url(svg-all("i/flag-green"));
+			background-size:12px;
+		}
+	}
+
+	&.red {
+		background-image: url(svg-all("i/triangle-red"));
+		border-color: $oe-status-red;
+		&.flag {
+			background-image: url(svg-all("i/flag-red"));
+			background-size:12px;
+		}
+	}
+
+	&.amber {
+		background-image: url(svg-all("i/triangle-orange"));
+		border-color: $oe-status-amber;
+		&.flag {
+			background-image: url(svg-all("i/flag-orange"));
+			background-size:12px;
+		}
+	}
+
+
+	// if there are list of issues or warnings:
+	ul {
+		list-style: disc inside;
+		margin: 5px 0;
+
+		li {
+			margin-bottom: 3px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
