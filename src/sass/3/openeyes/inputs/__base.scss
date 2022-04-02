@@ -7,7 +7,7 @@ input, textarea, select {
 	outline:none;
 
 	@include font-size(12);
-	font-weight: 400;
+	font-weight: $oe-font-medium;
 	color: $oe-user-input-text;
 	background-color: $oe-user-inputs;
 

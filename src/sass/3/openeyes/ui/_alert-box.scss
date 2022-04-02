@@ -6,16 +6,14 @@
 // 
 // Standardised from v2.0 UI
 // Hard to know how many of these will be required in OEv3
-
 .alert-box {
 	padding:4px 10px;
 	margin:3px 0;
 
-	// default
+	// default alert
+	@include font-size(13);
 	color:$oe-blue;
 	background:$oe-text-highlight;
-	
-	@include font-size(13);
 	
 	border-radius:3px;
 	
@@ -92,7 +90,8 @@
 		padding-right:30px; // allow for the background icon
 
 		&:focus,
-		&:hover {
+		&:hover,
+		&:active {
 			background-color:$oe-btn-blue-hint;
 		}
 	}

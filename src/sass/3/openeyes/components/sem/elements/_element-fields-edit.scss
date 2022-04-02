@@ -23,25 +23,9 @@
 			color: $oe-text-light;
 		}
 
-		// provides a hook
-		// extends the flex-item-bottom class
-		// creates a margin space for the + and commment buttons
-		// a squashed without it.
-		// 3px gives the remove-side cross space!
 		.add-data-actions {
-			margin: 0 3px 0 0;
+			margin: 10px 0 0 0;
 			text-align: right; // think it's OK to do this?
-
-			@include stretching() {
-				margin-right: 5px;
-			}
-		}
-
-		// if an adder button is flex-right under it's edit content
-		// add a top margin to provide breathing space:
-		.flex-r > .add-data-actions,
-		.flex-right > .add-data-actions {
-			margin-top: 8px;
 		}
 
 	}
