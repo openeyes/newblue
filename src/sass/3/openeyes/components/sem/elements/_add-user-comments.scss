@@ -1,0 +1,27 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// add user comments
+// this structure only occurs in SEM Elements,
+// -|- <textarea>
+//  |- <i> (remove)
+//
+// note: this replaces the rough "column-group" in data-grouping
+
+.element-fields {
+	.add-user-comments {
+		@include flex(flex-start, space-between);
+		textarea {
+			flex:1 1 0;
+		}
+
+		.oe-i.remove-circle {
+			height:24px; // to align correctly with <textarea>
+		}
+
+		// all column-group / column-row did is vertically pad
+		&.pad-t {
+			padding:10px 0 0 0; // must match add-data-actions padding
+		}
+	}
+}
