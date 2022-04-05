@@ -35,7 +35,6 @@
 		td:last-child,
 		th:last-child {
 			text-align: right;
-			line-height: 1; // fixes trash icon (or any icon) in last cell (if vertical-align center)
 		}
 
 		// Override that, make last left aligned
