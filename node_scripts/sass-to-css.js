@@ -27,7 +27,7 @@ log(sass.info);
 const config = {
 	src: './src/sass/3/',
 	dist: './dist/css/',
-	idg: '/Users/toby/sites/work/oe/idg/src/build/newblue/dist/css/'
+	idg: '../idg/src/build/newblue/dist/css/'
 };
 
 // build a dateStamp for the CSS, useful for debugging deployments

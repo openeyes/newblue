@@ -121,8 +121,8 @@ const processSVG = (svgPath) => {
 			 * iDG
 			 * now copy over to iDG for SSG build
 			 */
-			const thisDist = '/Users/toby/sites/work/oe/newblue';
-			const idgBuild = '/Users/toby/sites/work/oe/idg/src/build/newblue';
+			const thisDist = './';
+			const idgBuild = '../idg/src/build/newblue';
 			fs.copyFile(`${thisDist}/${output}`, `${idgBuild}/${output}`, (err) => {
 				if (err) throw err;
 				log(cyan(`iDG copy: `) + `${svgFile}`);
