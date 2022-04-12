@@ -35,8 +35,11 @@
 		position:absolute;
 		top:0; 			// allow for padding
 		left:25px;
-		padding:20px; 	// increase hit area
+		height: $oe-header-height;
+		padding:0 20px; 	// increase hit area
 		cursor: pointer;
+
+		@include flex(center, center );
 
 		
 		// SVG logo
