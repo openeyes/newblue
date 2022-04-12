@@ -17,6 +17,10 @@
 
 	@mixin bg( $left, $right ){
 		background-image: url(svg-themed("i/" + $left)), url(svg-themed("i/" + $right));
+
+		.oe-patient-popup & {
+			background-image: url(svg-dark-fixed("i/" + $left)), url(svg-dark-fixed("i/" + $right));
+		}
 	}
 
 	// default set up for all icons (small)

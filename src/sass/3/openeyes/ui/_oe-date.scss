@@ -43,3 +43,10 @@
 	}
 }
 
+// Occasionally, dates are fuzzy or text (e.g. "New", or "On-going")
+.oe-no-date-msg {
+	width: 11ch;
+	text-align: right;
+	font-style: italic;
+}
+

@@ -20,8 +20,13 @@
 		height: 19px;
 	}
 
+	// this will wrap the icons under the lat / date
+	// only need to do this in the popup and on the Exam tiles
 	@include stretching(){
-		flex-direction: column-reverse;
-		align-items: flex-end;
-	};
+		.oe-patient-popup & ,
+		.tile-data-overflow & {
+			flex-direction: column-reverse;
+			align-items: flex-end;
+		}
+	}
 }
