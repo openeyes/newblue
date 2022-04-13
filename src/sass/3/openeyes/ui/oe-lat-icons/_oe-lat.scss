@@ -18,7 +18,9 @@
 	@mixin bg( $left, $right ){
 		background-image: url(svg-themed("i/" + $left)), url(svg-themed("i/" + $right));
 
-		.oe-patient-popup & {
+		// require the generic wrapper to fix icons
+		// oe-i should be updated to match this too
+		.i-fixed & {
 			background-image: url(svg-dark-fixed("i/" + $left)), url(svg-dark-fixed("i/" + $right));
 		}
 	}
