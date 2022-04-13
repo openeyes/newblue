@@ -6,11 +6,17 @@
 .sidebar  { 
 	
 	.list-controls {
-		padding:0 3px 0 5px ;
-		margin:3px 0 5px 0;	
-		
-		.right {
-			float:right;
-		}	
+		@include flex(center, space-between);
+		margin:0 0 2px 0;
+		button {
+			flex: 1 1 0;
+			// be sure to overwrite any disabled pseudo class
+			background-color: $oe-dark-user-inputs !important;
+
+			.oe-i {
+				// invert to white if in light theme
+				filter: $oe-btn-icon-hover;
+			}
+		}
 	}
 }
