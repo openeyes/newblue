@@ -13,26 +13,31 @@
 		margin:5px 0 10px 0;
 
 		tbody {
-			
 			td {
 				vertical-align: top;
-				padding:6px 5px 4px 5px; 
+				padding:7px 5px;
 				@include font-size(12);
 				font-weight:400;
 				color:$oe-dark-text-light;
-				
-				
-				// icons 
-				&:last-child {
-					text-align: right;
-					white-space: nowrap;
-				}
-				
-				// Patient name
+
+				// DOM v1 (no <colgroup>), v2 should have <colgroup>
 				&:nth-child(2){
 					width:60%;
 				}
-				
+
+				&:last-child {
+					text-align: right;
+					white-space: nowrap;
+
+					// icons, with v2 these are using a flex wrap
+					.oe-i {
+						width:28px;
+						height:28px;
+					}
+				}
+
+				// Old style of comment "Comment blah bl..." was cut off
+				// and shown in a popup
 				// CSS added AFTER JS. so hooking into the JS class 
 				// but covered with normal CSS class as well. 
 				.js-hotlist-comment-readonly,
@@ -49,16 +54,23 @@
 					padding:0 0 0 4px;
 					
 				}
-				
+
+				// Update DOM approach, shown in iDG needs implementing
+				// JS needs to allow the <td> wrapper to pick up point
+				// events to allow <tr> to click through to Patient Overview
 				.patient-fullname {
+					pointer-events: none;
 					color:rgb(190,190,190);	
 				}
-				
-				// updated DOM to handle the patient comments better
-				// wraps <textarea> and <div class="user-comment
+
+				// wraps <textarea> and <div>.user-comment
 				.patient-comments {
+					pointer-events: none;
 					margin:3px 0 0 0;
-			
+
+					textarea {
+						pointer-events: auto;
+					}
 					.user-comment {
 						@include font-size(11);
 					}

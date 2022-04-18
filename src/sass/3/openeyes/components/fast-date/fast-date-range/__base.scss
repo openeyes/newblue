@@ -11,8 +11,11 @@
 	.oe-worklists-panel & {
 		margin:10px;
 	} 
-	
+
+	// from / to <inputs>
 	.date-inputs {
+		@include flex(center, space-between);
+		gap:5px;
 		margin: 0 0 5px 0;
 	}
 	
