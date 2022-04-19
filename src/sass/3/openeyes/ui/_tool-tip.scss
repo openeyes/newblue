@@ -103,15 +103,15 @@
 
 	// Popup tooltip "preview" (enhancement)
 	&.more {
-		padding-bottom: 25px;
+		padding-bottom: 21px;
 		&:before {
 			content: "";
 			position:absolute;
 			bottom:0;
 			left:0;
 			right:0;
-			height:21px;
-			background: center/17px $oe-btn-blue url(svg-dark-fixed("i/more-h")) no-repeat;
+			height:15px;
+			background: center/13px $oe-btn-blue url(svg-dark-fixed("i/more-h")) no-repeat;
 		}
 	}
 

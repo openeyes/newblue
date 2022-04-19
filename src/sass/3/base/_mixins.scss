@@ -31,7 +31,7 @@
 // some elements in this size need to be flexible 
 @mixin stretching(){
 	@media only screen 
-		and (min-width: $oe-minimum-viewport-width) 
+		and (min-width: $oe-minimum-viewport-width - 1px)
 		and (max-width: #{$oe-event-main-default-width + $oe-event-sidebar-width} ){
 		@content;
 	}

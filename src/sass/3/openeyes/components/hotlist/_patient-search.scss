@@ -5,49 +5,53 @@
 // OE Hotlist
 // Patient Search. Added to hotlist to save going back to the homepage
 
-.oe-hotlist-panel {
-	
-	.hotlist-search-patient {
-		background:tint( $oe-dark-bg,5 );
-		height: $oe-event-header-height;
-		@include flex( center, flex-start );
 
-		.search-patient {
-			flex:1;
-			// line up with Headers in hotlist
-			margin:0 14px; 
-			
-			@include flex( center, space-between );
-			
-			// increase the defaults for input
-			input {
-				flex: 2;
-				border-radius: 0;
-				height: 28px;
-				@include font-size(15);
-				font-weight:400;
-				margin:0 0;
-				background-color:transparent;
-				color:#fff;
-				border-bottom:1px solid rgba(255,255,255,0.2);
+.hotlist-search-patient {
+	background: tint($oe-dark-bg, 5);
+	height: $oe-event-header-height;
+	@include flex(center, flex-start);
+
+	.search-patient {
+		flex: 1;
+		// line up with Headers in hotlist
+		margin: 0 5px;
+
+		@include flex(center, space-between);
+
+		// increase the defaults for input
+		input {
+			flex: 2;
+			border-radius: 0;
+			height: 28px;
+			@include font-size(15);
+			font-weight: 400;
+			margin: 0 0;
+			background-color: transparent;
+			color: #fff;
+			border-bottom: 1px solid $oe-dark-grey;
+
+			&:focus {
+				border-bottom-color: $oe-dark-text-light;
 			}
-			
-			// increase defaults.
-			button {
-				flex: 1;
-				height: 28px;
-				@include font-size(13);
-				margin:0 0 0 2px;
-			}
-			
 		}
-		
-		
-		
+
+		// increase defaults.
+		button {
+			flex: 1;
+			height: 28px;
+			@include font-size(13);
+			margin: 0 0 0 2px;
+			color: $oe-dark-user-input-text; 		// Pro-theme
+			background: $oe-dark-user-inputs;
+
+			&:hover,
+			&:focus {
+				color:#fff;
+				background: $oe-btn-blue;
+			}
+		}
 	}
-	
-	
-	
 }
+
 
 

@@ -14,7 +14,7 @@
 	position: fixed;
 	top:$oe-header-height;
 	left:$oe-event-sidebar-width;
-	width:$oe-event-main-default-width;
+	right: 0;
 	// height: 435px;  // height is controlled by the overflow (i.e. its flexible)
 	
 	background:$oe-dark-bg;
@@ -22,14 +22,16 @@
 	border-bottom-width:2px;
 	padding:15px 15px 20px 15px;
 	
-	// stretch popup to match width of extended Event area
+	// lock width beyond this
 	@include extended(){
+		right:auto;
 		width:$oe-event-main-extended-width; 
 	}
-	
-	@include stretching(){
-		width:auto;
-		right:0; 
+
+	// maintain a minimum width layout
+	@include below-minimum(){
+		right:auto;
+		width:$oe-event-main-default-width;
 	}
 	
 	// overflow wrappers for all data in Patient Popups

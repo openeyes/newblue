@@ -14,15 +14,18 @@
 	
 	// v2 filter drop down
 	.sidebar-grouping {
-		padding:5px 0 3px 0;
-		// <select>
+		padding:2px 0;
+
+		// <select> ... Event by Date, etc
 		.grouping-picker {
-			@include font-size(12);
 			color: $oe-dark-user-input-text;
-			background-color: $oe-dark-user-inputs;
-			width:96%;
-			height:26px;
-			margin:0 2%;
+			height:28px;
+			// overwrite default <select>
+			// move the background arrow to the left and
+			// update the padding
+			padding:0 5px 0 25px;
+			background: left 5px center / 13px url( svg-dark-fixed('i/arrow-down-bold')) $oe-dark-user-inputs no-repeat;
+
 		}
 	}
 	

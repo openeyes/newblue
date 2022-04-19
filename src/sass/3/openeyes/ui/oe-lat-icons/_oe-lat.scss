@@ -9,7 +9,7 @@
 	display: block;
 	height: 13px;
 	width:30px; // allows a 4px center gap
-	margin: 0 4px; // space
+	margin: 0 4px; // space makes up to 38px
 
 	&.inline {
 		display: inline-block;
@@ -17,6 +17,12 @@
 
 	@mixin bg( $left, $right ){
 		background-image: url(svg-themed("i/" + $left)), url(svg-themed("i/" + $right));
+
+		// require the generic wrapper to fix icons
+		// oe-i should be updated to match this too
+		.i-fixed & {
+			background-image: url(svg-dark-fixed("i/" + $left)), url(svg-dark-fixed("i/" + $right));
+		}
 	}
 
 	// default set up for all icons (small)
