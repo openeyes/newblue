@@ -86,7 +86,7 @@ const config = {
  * SVGO reads in the src SVG file then write out the result
  * @param {String} svgPath - src file path
  */
-const processSVG = (svgPath) => {
+const processSVG = (svgPath, idgCopy = true) => {
     // split the file from the directory path
     const pathParts = svgPath.split('/');
     const svgFile = pathParts.pop();
@@ -118,15 +118,18 @@ const processSVG = (svgPath) => {
             log(cyan(`SVG: `) + output); // success!
 
 			/**
-			 * iDG
-			 * now copy over to iDG for SSG build
+			 * iDG Copy
+			 * if rebuilding the SVG structure then the whole SVG folder will need
+			 * to copied over manually, this is pretty rare.
 			 */
-			const thisDist = './';
-			const idgBuild = '../idg/src/build/newblue';
-			fs.copyFile(`${thisDist}/${output}`, `${idgBuild}/${output}`, (err) => {
-				if (err) throw err;
-				log(cyan(`iDG copy: `) + `${svgFile}`);
-			});
+			if( idgCopy ){
+				const idgBuild = '../idg/src/build/newblue';
+				fs.copyFile(`./${output}`, `${idgBuild}/${output}`, (err) => {
+					if (err) throw err;
+					log(cyan(`iDG copy: `) + `${svgFile}`);
+				});
+			}
+
         });
     });
 
@@ -146,14 +149,14 @@ if (mode == "specific") {
         persistent: true
     }).on('change', path => {
         log(cyan('modified file: ') + path);
-        processSVG(path);
+        processSVG(path, true);
     });
 } else {
     log(red(`Deleting all SVGs... ${paths.dist}`));
 
     // clean "dist" folder and rebuild all from src (runs once)
     rm(paths.dist, {
-        force: false,
+        force: true,
         recursive: true,
     }).then(() => {
         log(cyan(`Rebuild all SVGs from SRC... ${paths.src}`));
@@ -165,7 +168,11 @@ if (mode == "specific") {
 
         // now rebuild all the SVGs to match the SRC stucture
         const svgPaths = fg.sync(paths.src);
-        svgPaths.forEach(path => processSVG(path));
+        svgPaths.forEach(path => processSVG(path, false));
+
+		setTimeout(()=>{
+			log( red('iDG note: Manually copy over the svg folder to iDG'));
+		},1500);
 
     }).catch((e) => {
         log(red(`No SVG directory? : ${paths.dist}`));

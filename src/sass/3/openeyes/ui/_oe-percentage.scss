@@ -5,19 +5,16 @@
 // Provide a bar graphic to show a percentage
 // <div>
 .oe-percentage {
-	position: relative;
-	display:inline-block;
-	height:15px; // match button
-	width:200px; // arbitrary! 
+	@include flex( center, flex-start );
+	height:19px; // match icon
+	width:100px;
+	padding:1px;
 	border: 2px solid $oe-text-light;
 	
 	// span 
 	// width set as percentage in DOM.
 	.percent-bar {
-		position: absolute;
-		top:0; 
-		left:0;
-		display:inline-block;
+		display:block;
 		height:100%;
 		background-color: $oe-text-highlight;
 	}
