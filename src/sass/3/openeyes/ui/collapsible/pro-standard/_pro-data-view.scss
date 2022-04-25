@@ -8,17 +8,14 @@
 	@include flex(flex-start, space-between);
 
 	// wrapper for Pro / Standard DOMs
+	// contains both Pro and Standard view of data
 	.pro-standard-views {
 		flex: 1 1 0;
 	}
-
-	// this used to be "pro-view-btn" AND the .oe-i pointer-events was set to "none"
-	// in hindsight a bad idea, approach updated to make the icon fill the space,
-	// this allows the interaction on the icon to still work
+	// toggle the view
 	.pro-standard-btn {
 		// make the icon expand to fill the area
 		align-self: stretch;
-
 		.oe-i {
 			width: 25px;
 			height: 100%;

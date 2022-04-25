@@ -1,0 +1,23 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// These 2 versions share the same pattern,
+// but uses are slightly different. They
+// were combined into the new "compress" approach
+// (used in various, compressed standardises these, added for v6+)
+@import "collapse-data/header-icon";
+@import "_depreciated/collapse-group";
+
+// compress added for v6+ (simplifies data and group)
+// DOM will need updating, continue to support v1 CSS abover
+
+// data: expand / collapse icons
+// group: plus / arrow up icons (sidebar, CVI edit)
+// compress  / compress-hd-i / compress-content
+@import "collapse-data/_base";
+
+
+// Pro-data-view
+@import "pro-standard/pro-data-view";
+
+

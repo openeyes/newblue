@@ -2,12 +2,11 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 
-// Collapse GROUP (themed)
+// Collapse GROUP
 // Provides a DOM structure to show/hide
-// grouped content in UI. 
-// based on a DOM pattern of:
-// container - plus/minus icon - content
-
+// grouped content in UI.
+// Uses + and ^ icons. Used in the sidebar
+// it visually shows a UI area
 .collapse-group {
 	position:relative;
 	width:100%;
@@ -134,25 +133,3 @@
 		}
 	}	
 }
-
-
-.oe-admin,
-.oe-reports {
-	.collapse-group {
-		margin:10px 0 10px 0;
-		
-		.header-icon {}
-		
-		// **** Replaced by above class: header-icon
-		.collapse-group-icon {
-			top:-1px; // position by eye to align well with header
-		}
-	
-		// **** Replaced by above class: header-icon
-		h3.collapse-group-header {
-			padding:0 30px 0 0; margin:0; color:$oe-text; font-weight: $oe-font-light;
-		}
-	}
-}
-
-

@@ -2,33 +2,69 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 
-// OE Sidebar
-// 
-// 
-
 .sidebar {
-	// container for Element Groups
-	.groupings {
-		padding-bottom:30px;
-	}
-	
-	// v2 filter drop down
+	// dropdown filter options for sidebar events
 	.sidebar-grouping {
-		padding:2px 0;
-
+		padding: 2px 0;
 		// <select> ... Event by Date, etc
 		.grouping-picker {
 			color: $oe-dark-user-input-text;
-			height:28px;
+			height: 28px;
 			// overwrite default <select>
 			// move the background arrow to the left and
 			// update the padding
-			padding:0 5px 0 25px;
-			background: left 5px center / 13px url( svg-dark-fixed('i/arrow-down-bold')) $oe-dark-user-inputs no-repeat;
+			padding: 0 5px 0 25px;
+			background: left 5px center / 13px url(svg-dark-fixed("i/arrow-down-bold")) $oe-dark-user-inputs no-repeat;
 
 		}
 	}
-	
-	
+
+	// wrapper for Events by... groups
+	// and, in Edit, Element structure groups (Examination)
+	.groupings {
+		// allow space for the event quicklook info popup
+		padding-bottom: 30px;
+	}
+
+	// variation of "compress", not using the generic
+	// collapse-group class because the sidebar is uniquely
+	// styled, better to have it's own class IMO
+	.sidebar-group {
+		.header-icon {
+			position: relative;
+			@include font-size(12);
+			padding: 0 30px 0 5px;
+			margin: 12px 0 6px 0;
+			color: $oe-dark-text-light;
+			font-weight: $oe-font-light;
+			cursor: pointer;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: 1px;
+				bottom: 0; // fill vertical area
+				right: 2px; // visual alignment tweak
+				width: 19px; // allow for bigger icons (if needed)
+
+				// put the expand collapse icon into the background
+				background: right top / 15px url(svg-dark-fixed("i/plus")) no-repeat;
+
+				// set opacity to match oe-i
+				opacity: $oe-icon-opacity;
+			}
+
+			&.is-expanded {
+				&::after {
+					background-image: url(svg-dark-fixed("i/arrow-up"));
+				}
+			}
+
+			&:hover,
+			&:active {
+				color: $oe-dark-text;
+			}
+		}
+	}
 }
 
