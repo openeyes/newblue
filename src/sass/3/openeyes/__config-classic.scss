@@ -83,7 +83,7 @@ $oe-btn-red-hint: 		shade( $oe-btn-red,10% );
 $oe-btn-blue-dark: 		shade( $oe-btn-blue, 25% );
 
 // icons within button need inverting, in classic
-$oe-btn-icon-hover: invert(100);
+$oe-btn-icon-hover: invert(100%) grayscale(100%);
 
 $oe-dark-popup-bg:		rgb(77,75,75);
 $oe-popup-bg:			rgb(245,245,245); // tool-tip, add-select-search, element-search-popup
