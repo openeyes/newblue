@@ -24,6 +24,11 @@ select {
 	cursor: pointer;
 	width: 100%;
 
+	// if text input value is too long, cut and add "..."
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+
 	// UI to indicate it's a dropdown vanishes, looks like an input, add a custom arrow
 	background: right 2px center / 13px url( svg-themed('i/arrow-down-bold')) $oe-user-inputs no-repeat ;
 

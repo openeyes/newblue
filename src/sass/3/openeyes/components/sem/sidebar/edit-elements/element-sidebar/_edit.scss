@@ -8,22 +8,17 @@
 // DOM for Element:
 // <li class="element"><a href="#" class="[error selected]">Element</a></li>
 
-.sidebar { 
-	
-	.collapse-group {
-		.oe-element-list {
-			margin:0 1px 0 0;
-		}
-	}
+.sidebar {
 	
 	// <ul>
 	.oe-element-list {
-		margin:10px 1px 0 0; 
+		// vertical spacing required to maintain layout
+		// <ul> are used with single <li> without being grouped
+		padding:0 0 10px 0;
 		
 		// <li>
 		.element {
 			margin:0;
-
 		}
 		
 		// Elements <a>

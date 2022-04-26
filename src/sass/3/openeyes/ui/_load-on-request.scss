@@ -9,6 +9,9 @@
 	padding: 5px;
 	color: $oe-element-headers;
 
+	// as User regularly interact with this turn off selection
+	user-select: none;
+
 	border:1px solid $oe-line;
 	border-radius: 10px;
 

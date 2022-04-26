@@ -1,0 +1,81 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// nav-group (replaces "collapse-group")
+
+.nav-grp-hd-i {
+	position: relative;
+	@include font-size(12);
+	color: $oe-text-light;
+	font-weight: $oe-font-medium;
+	padding: 10px 25px 8px 0; // allow for icon background
+	cursor: pointer;
+
+	// Event & Element structure sidebar nav is dark fixed
+	.sidebar & {
+		color: $oe-dark-text-light;
+		font-weight: $oe-font-light;
+		padding-left:5px;
+	}
+
+	// as User regularly interact with this turn off selection
+	user-select: none;
+
+	// JS, only hook into events on the <div>
+	* {
+		pointer-events: none;
+	}
+
+	// no background-opacity in CSS ...
+	// using collapse-data approach
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0; // fill vertical area
+		right: 5px; // visual alignment tweak
+		width: 15px; // allow for bigger icons (if needed)
+
+		// put the expand collapse icon into the background
+		background: right center / 15px url(svg-themed("i/plus-bold")) no-repeat;
+
+		.sidebar & {
+			background-image: url(svg-dark-fixed("i/plus"));
+		}
+
+		opacity: $oe-icon-opacity; //  now i can use opacity
+	}
+
+	// '.expand' is the default icon state, as content should be hidden
+	// no need to explictly state the 'expand class', JS will add this.
+	&.collapse {
+		&::after {
+			background-image: url(svg-themed("i/arrow-up-bold"));
+
+			.sidebar & {
+				background-image: url(svg-dark-fixed("i/arrow-up"));
+			}
+		}
+	}
+
+	// show user interaction
+	&:hover,
+	&:active {
+		color: $oe-text-highlight;
+
+		// when used in hotlist with ".overview"
+		// need to trump the specificity set there
+		h3 {
+			color: $oe-text-highlight !important;
+		}
+
+		.sidebar & {
+			color: $oe-dark-text-highlight;
+		}
+
+		&::after {
+			// icon
+			opacity: 1;
+		}
+	}
+}
