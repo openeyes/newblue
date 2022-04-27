@@ -1,0 +1,28 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// List controls are used in Events and Admin
+// Events: Asc/Desc Expand/Collapse all
+// Add: input search Expand/Collapse all
+
+.sidebar-list-controls {
+	@include flex(center, space-between);
+	margin: 0 0 2px 0;
+
+	button {
+		flex: 1 1 0;
+		// be sure to overwrite any disabled pseudo class
+		background-color: $oe-dark-user-inputs !important;
+
+		.oe-i {
+			// invert to white  light theme
+			filter: $oe-btn-icon-hover;
+		}
+	}
+
+	// filter search in Admin
+	input {
+		margin:0 2px 0 0;
+	}
+}

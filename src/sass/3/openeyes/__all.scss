@@ -38,9 +38,7 @@
 @import "ui/lists/_all";					// ul and ol defaults.
 @import "ui/tables/_all"; 					// standard table class.
 @import "ui/typography/_all"; 				// defaults and general typographics.
-@import "ui/collapse-group";				// collapse and expand groups
-@import "ui/collapse-data";					// collapse and expand data
-@import "ui/pro-data-view";					// pro / standard views
+@import "ui/collapsible/_all";	                // collapse data and groups
 @import "ui/load-on-request";				// load on request
 @import "ui/buttons/_all"; 					// button and .button
 @import "ui/button-stack";					// button stack

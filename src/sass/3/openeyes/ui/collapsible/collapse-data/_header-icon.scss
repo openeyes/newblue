@@ -1,0 +1,83 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// Wrapped with .collapse-data
+// Provides the DOM controls to hide/show content
+// UI, uses expand/collapse icons
+
+.collapse-data-header-icon {
+	position: relative;
+	cursor: pointer;
+	padding: 5px 20px 5px 0; // allow space for icon
+	color: $oe-element-headers;
+
+	// used in patient popups (dark themed)
+	.oe-patient-popup & {
+		color: $oe-dark-text-light;
+		@include font-size(12);
+	}
+
+	// as User regularly interact with this turn off selection
+	user-select: none;
+
+	// JS, only hook into events on the <div>
+	* {
+		pointer-events: none;
+	}
+
+	// no background-opacity in CSS (... why not huh?!)
+	// Use Pseudo to match icon opacity behaviour
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: 13px;
+
+		// icons: expand / collapse
+		// assumed default state is that the content is collapsed
+		background: right center / 13px url(svg-themed("i/expand")) no-repeat;
+
+		.oe-patient-popup & {
+			background-image: url(svg-dark-fixed("i/expand"));
+		}
+
+		opacity: $oe-icon-opacity; //  now i can use opacity
+	}
+
+	// &.expand (default state)
+	// no explicit styles for 'expand' class.
+	// .collapse, does need updating:
+	&.collapse {
+		&::after {
+			background-image: url(svg-themed("i/collapse"));
+
+			.oe-patient-popup & {
+				background-image: url(svg-dark-fixed("i/collapse"));
+			}
+		}
+	}
+
+	// show user interaction
+	&:hover,
+	&:active {
+		color: $oe-text-highlight;
+
+		.oe-patient-popup & {
+			color: $oe-dark-text-highlight;
+		}
+
+		&::after {
+			// icon shows interaction
+			opacity: 1;
+		}
+
+		// If .highlighter is used, make it like behave like a blue button
+		// (see WHO checklist in the OpNote)
+		.highlighter {
+			color: #fff;
+			background: $oe-btn-blue;
+		}
+	}
+}

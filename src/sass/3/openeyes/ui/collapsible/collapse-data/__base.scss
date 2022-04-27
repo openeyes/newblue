@@ -1,0 +1,32 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// <div>
+// "data" uses expand/collapse icons
+// most common collapsible DOM, used in-page
+// and used in Patient popups
+
+.collapse-data {
+	// default vertical padding
+	margin: 5px 0 10px 0;
+
+	// show the collapse-data area, this includes
+	// some typographics tweaks
+	&.show-bg {
+		background-color: rgba($oe-user-inputs, 0.4);
+		padding:5px 8px;
+
+		.collapse-data-header-icon {
+			@include font-size(14); // match large-text size
+			&.collapse {
+				color:$oe-text;
+			}
+		}
+	}
+}
+
+// Assumed default state for content is hidden
+// JS/DOM can override this with style="display:block"
+.collapse-data-content {
+	display: none;
+}

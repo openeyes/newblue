@@ -78,7 +78,7 @@ const dartSass = ( style ) => {
 		distStream.end(result.css);
 
 		// iDG local is a separate repo, write CSS updates there too
-		log(cyan(`write CSS: `) + `${cssIDG}`);
+		log(cyan(`iDG copy: `) + `${cssIDG}`);
 		const idgStream = fs.createWriteStream(`${cssIDG}`);
 		idgStream.write(headerLegals);
 		idgStream.write(dateStamp);

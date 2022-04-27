@@ -1,0 +1,19 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// "group"
+// Used in sidebar Events/Element structure
+// Admin sidebar & occasionally in-page
+// still supported as of v6 but updated to "nav-group"
+@import "_depreciated/collapse-group";
+@import "nav-group/nav-grp-hd-i";
+
+// "data" (common collapsible)
+// Uses: expand/collapse icons
+@import "collapse-data/_base";
+@import "collapse-data/header-icon";
+
+// Pro-data-view
+@import "pro-standard/pro-data-view";
+
+
