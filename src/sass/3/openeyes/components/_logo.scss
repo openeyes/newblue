@@ -3,22 +3,30 @@
 
 
 // OE Logo & help
-// 
 
-// Login page only
-// a message to draw users awareness to the logo
-// popup functionality (HOME page ONLY) 
+// Login, help message to draw users awareness to the logo
 .oe-logo-flag-help {
 	z-index:$oe-z-logo - 1;
 	position:absolute;
-	top:22px; 			// positioned by eye
+	top:20px; 			// positioned by eye
 	left:200px;
 	
 	@include flex( center, flex-start );
-	
-	color:$oe-dark-text-light;
+
+	color:$oe-dark-text;
 	@include font-size(14);
-	font-weight:300;	
+	font-weight:300;
+
+	padding-left:20px; // allow for icon space
+	background: left center / 15px transparent url( svg-dark-fixed("i/direction-left") ) no-repeat;
+
+	opacity: 0.5;
+
+	// little hack, DOM has <i> but, it needs removing
+	// until that happens this will hide the element ;)
+	.oe-i {
+		display:none;
+	}
 }
 
 // Logo popup info panel
