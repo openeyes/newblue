@@ -12,12 +12,15 @@
 
 	button {
 		flex: 1 1 0;
-		// be sure to overwrite any disabled pseudo class
-		background-color: $oe-dark-user-inputs !important;
 
-		.oe-i {
-			// invert to white  light theme
-			filter: $oe-btn-icon-hover;
+		.sidebar-eventlist & {
+			// SEM Event-list is dark fixed, Admin isn't!
+			// for SEM overwrite any disabled pseudo class
+			background-color: $oe-dark-user-inputs !important;
+			.oe-i {
+				// invert to white  light theme
+				filter: $oe-btn-icon-hover;
+			}
 		}
 	}
 
