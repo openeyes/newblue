@@ -52,7 +52,6 @@ fieldset {
 }
 
 // Allow only vertical resizing of textareas.
-
 textarea {
     resize: vertical;
 }
@@ -64,6 +63,10 @@ textarea {
 
 .invisible {
 	visibility: hidden;
+}
+
+.inline {
+	display:inline-block;
 }
 
 // use visibilty to 'hide' a <tr>
