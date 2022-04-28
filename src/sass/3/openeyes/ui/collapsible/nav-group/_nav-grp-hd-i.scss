@@ -39,6 +39,7 @@
 		// put the expand collapse icon into the background
 		background: right center / 15px url(svg-themed("i/plus-bold")) no-repeat;
 
+		.oe-hotlist-panel &,
 		.sidebar & {
 			background-image: url(svg-dark-fixed("i/plus"));
 		}
@@ -52,6 +53,7 @@
 		&::after {
 			background-image: url(svg-themed("i/arrow-up-bold"));
 
+			.oe-hotlist-panel &,
 			.sidebar & {
 				background-image: url(svg-dark-fixed("i/arrow-up"));
 			}
@@ -66,9 +68,8 @@
 		// when used in hotlist with ".overview"
 		// need to trump the specificity set there
 		h3 {
-			color: $oe-text-highlight !important;
+			color: $oe-dark-text-highlight !important;
 		}
-
 		.sidebar & {
 			color: $oe-dark-text-highlight;
 		}
