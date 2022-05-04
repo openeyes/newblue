@@ -6,14 +6,29 @@
 // using checkboxes and radios instead of <li>
 // allows forms to use these instead
 
-fieldset.btn-list {			
+fieldset.btn-list {
+
+	// fixed-width  btn-list
+	&.fixed-width {
+		label {
+			white-space: normal;
+			width: 180px;
+			.li {
+				height: auto;
+				flex-wrap: wrap;
+				overflow-wrap: break-word;
+				// setup to handle PSD popup (180px is a best guess)
+				padding:3px 8px;
+			}
+		}
+	}
 		
 	label {
 		display:flex;
 		margin:0 0 2px 0;
 		
 		.li {
-			flex:1; 
+			flex:1;
 			// using the same technique as "btn-list"
 			height:19px;
 			
@@ -46,5 +61,7 @@ fieldset.btn-list {
 			}
 		}
 	}
+
+
 }
 

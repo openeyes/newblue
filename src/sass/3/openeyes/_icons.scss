@@ -117,12 +117,13 @@
 
 	// single line break for collapsed text (double slash icon is used for 2+ breaks)
 	&.line-break {
-		width: 5px;
+		width: $size-small;
 		height: $size-small;
-		margin: 0 3px;
-		background-size: $size-small;
+		margin:0 1px;
+		background-size: 10px;
+		background-position: left center;
 		background-image: url(svg-themed("i/line-break"));
-		vertical-align: middle;
+
 	}
 
 	// CSS class | SVG file name

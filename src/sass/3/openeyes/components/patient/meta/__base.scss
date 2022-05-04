@@ -12,6 +12,16 @@
 		@include font-size(14);
 		font-weight: $oe-font-medium; 
 		margin:0 0 2px 0;
+
+		.oe-patient-quick-overview & {
+			@include font-size(16);
+			// allow space for the remove icon btn
+			margin-right:20px;
+			// if text input value is too long, cut and add "..."
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
 		
 		// wrapper for newmeta icons
 		// duplicate name / safeguards (alerts/allergies / risks) / Flags, etc
@@ -34,13 +44,12 @@
 	.patient-gender, 
 	.patient-age, 
 	.patient-died {
-		
 		display:inline-block;
 		@include font-size(11);
 		font-weight: $oe-font-medium;
 		//margin:2px 0;
 		padding:2px 5px 2px 0;
-		// border-left:1px solid $oe-dark-line;	
+		// border-left:1px solid $oe-dark-line;
 		
 		span, em { 
 			opacity:0.5; 

@@ -20,8 +20,8 @@ ul.dot-list {
 		}
 
 		// dot-list are also used for User comments, paragraph breaks need clearly showing
-		&.para-break {
-			background: -3px center / 1.6em url(svg-all("ui/list-para-break")) no-repeat;
+		&.paragraph {
+			background: left center / 1em url(svg-all("ui/list-para-break")) no-repeat;
 			padding-left: 1.5em;
 		}
 	}

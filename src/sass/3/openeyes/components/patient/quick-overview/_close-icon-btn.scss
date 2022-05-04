@@ -4,11 +4,33 @@
 
 .oe-patient-quick-overview {
 
-	// close icon btn (for touch) 
+	// v1: div.close-icon-btn wraps i.oe-i
+	// wraps the remove icon
 	.close-icon-btn {
 		position:absolute;
 		top:10px;
 		right:10px;
+	}
+
+	// approach updated to control the icon within CSS
+	.remove-i-btn {
+		position:absolute;
+		top:5px;
+		right:5px;
+
+		// small remove icon (dark-theme locked)
+		// duplicate icon behaviour
+		width:23px;
+		height:23px;
+		background:center / 13px url( svg-dark-fixed("i/remove-circle") )  no-repeat;
+		opacity: $oe-icon-opacity;
+		&:hover,
+		&:focus {
+			opacity: 1;
+		}
+
+		cursor: pointer;
+
 	}
 	
 }

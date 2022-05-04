@@ -16,12 +16,33 @@
 		}
 		
 	}
-	
+
+	// v1: div.close-icon-btn wraps i.oe-i
 	// wraps the remove icon
 	.close-icon-btn {
 		position:absolute;
 		top:18px;
 		right:20px;
 	}
-	
+
+	// approach updated to control the icon within CSS
+	.remove-i-btn {
+		position:absolute;
+		top:15px;
+		right:15px;
+
+		// large remove icon (dark-theme locked)
+		// duplicate icon behaviour
+		width:29px;
+		height:29px;
+		background:center / 19px url( svg-dark-fixed("i/remove-circle") )  no-repeat;
+		opacity: $oe-icon-opacity;
+		&:hover,
+		&:focus {
+			opacity: 1;
+		}
+
+		cursor: pointer;
+
+	}
 }
