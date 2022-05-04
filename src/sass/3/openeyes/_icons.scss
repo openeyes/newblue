@@ -104,6 +104,7 @@
 	&.stop,
 	&.d-slash,
 	&.line-break,
+	&.paragraph,
 	&.no-click {
 		cursor: default;
 		pointer-events: none;
@@ -115,16 +116,27 @@
 		opacity: 0.25;
 	}
 
-	// single line break for collapsed text (double slash icon is used for 2+ breaks)
+	// special typographic icons, this are only for grammatical usage
+	// line-break = single diagonal line
+	// paragraph = +1 line breaks. a double diagonal line
 	&.line-break {
+		opacity: 1;
 		width: $size-small;
 		height: $size-small;
-		margin:0 1px;
-		background-size: 10px;
-		background-position: left center;
-		background-image: url(svg-themed("i/line-break"));
-
+		margin:0 0.4em;
+		background-size: 0.8em;
+		background-image: url(svg-all("ui/type-linebreak"));
 	}
+
+	&.paragraph {
+		opacity: 1;
+		width: $size-small;
+		height: $size-small;
+		margin:0 0.5em;
+		background-size: 1em;
+		background-image: url(svg-all("ui/type-paragraph"));
+	}
+
 
 	// CSS class | SVG file name
 	$themed_icons: (
