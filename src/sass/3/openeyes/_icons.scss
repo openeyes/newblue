@@ -19,9 +19,10 @@
 
 	width: $size-large;
 	height: $size-large;
-	background-size: $size-large;
-	background-repeat: no-repeat;
-	background-position: center center;
+
+	// default background error SVG, to handle URL errors
+	background:center / $size-large  no-repeat;
+
 
 	&.small {
 		width: $size-small;
