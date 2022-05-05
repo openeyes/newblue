@@ -1,11 +1,16 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
+// dot-list without the dot
 ul.inline-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 2px 0 0 0;
+
 	li {
-		display: inline-block;
-		margin: 0 15px 0 0;
+		@include inline-flex(center, flex-start);
+		margin: 0 0 5px 0;
+		padding: 0 8px 0 0;
 	}
 }
 	

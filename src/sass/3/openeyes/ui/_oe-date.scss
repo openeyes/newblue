@@ -19,13 +19,13 @@
 	// for: dd Mth YYYY 
 	// and: Mth YYY 
 	// and: YYYY  		
-	width: 11ch;
+	width: 10.5ch;
 	
 	.day {
 		text-align: right;
 		// right aligned so that single digits "1" lines up with "11" correctly
 		width:2ch;
-		margin:0 1ch 0 0;
+		margin:0 0.5ch 0 0;
 	}
 	.mth{
 		// if used in last <td> table it will be aligned to the right!
@@ -45,7 +45,7 @@
 
 // Occasionally, dates are fuzzy or text (e.g. "New", or "On-going")
 .oe-no-date-msg {
-	width: 11ch;
+	width: 10.5ch;
 	text-align: right;
 	font-style: italic;
 }
