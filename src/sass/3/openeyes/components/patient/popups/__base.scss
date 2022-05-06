@@ -16,7 +16,10 @@
 	left:$oe-event-sidebar-width;
 	right: 0;
 	// height: 435px;  // height is controlled by the overflow (i.e. its flexible)
-	
+
+	color:$oe-dark-text;
+	@include font-size(12);
+
 	background:$oe-dark-bg;
 	border:1px solid $oe-dark-text-highlight;
 	border-bottom-width:2px;
