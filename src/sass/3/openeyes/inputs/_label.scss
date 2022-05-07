@@ -45,6 +45,11 @@ label,
 				&:checked + .btn {
 					color:#fff;
 					background-color: $oe-btn-blue;
+					.oe-i {
+						// invert to white  light theme
+						filter: $oe-btn-icon-hover;
+						opacity: 1;
+					}
 				}
 			}
 			.btn {

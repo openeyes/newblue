@@ -1,7 +1,6 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
 .element {
 	// diagnosis element specific layout
 	// could be for ophthalmic or systemic
@@ -30,13 +29,9 @@
 	}
 
 	// wrapper for all the various diagnosis states
-	.diagnosis-mgmt {
-		&.sides,
-		&.systemic {
-			@include flex(center, space-between);
-			gap: 4px;
-		}
-
+	.diag-mgmt {
+		@include flex(center, space-between);
+		gap: 4px;
 
 		&.sides {
 			.right,
@@ -50,18 +45,7 @@
 			}
 		}
 
-		// use this for no-side specific
-		&.systemic {
-			.sys-check,
-			.no-side {
-				flex: 1 1 0;
-				@include flex(center, space-between);
-			}
 
-			.switch-to-sides {
-				padding: 0 8px 0 0;
-			}
-		}
 
 		.diag-state,
 		.state-change,
@@ -69,9 +53,24 @@
 			@include flex(center, space-between);
 		}
 
-
 		.diag-state {
-			flex: 1;
+			flex: 1 1 0;
+		}
+
+		.state-notes {
+			@include flex(center, space-between);
+			flex-wrap: wrap;
+			padding:0 0 0 10px;
+
+			// Suspected, Present, Not Present
+			.state {
+				margin:3px 8px 3px 1px;
+			}
+
+			button {
+				padding:0 2px;
+			}
+
 		}
 
 		.state-change {
