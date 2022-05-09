@@ -11,6 +11,13 @@ label,
 	// labels should be used next to an input:
 	margin:0 10px 0 0;
 	white-space: nowrap;
+
+	// as User regularly interact with this turn off selection
+	user-select: none;
+
+	.oe-i {
+		pointer-events: none; // otherwise JS picks up a click!
+	}
 	
 	// highlight is there standard usage
 	// wrap and visually group label with it's input
@@ -81,9 +88,14 @@ label,
 		color:$oe-user-input-text;
 		background:$oe-user-inputs-hint;
 		
-		&:hover, &:focus, &:active {
+		&:hover,
+		&:focus,
+		&:active {
 			background:$oe-user-inputs;
 			input {
+				opacity:1;
+			}
+			.oe-i {
 				opacity:1;
 			}
 		}

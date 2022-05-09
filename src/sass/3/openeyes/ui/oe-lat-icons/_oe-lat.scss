@@ -38,6 +38,9 @@
 	// this is "n-n"
 	@include bg("lat-NA","lat-NA");
 
+	// quite a few available combinations
+	// each side can be: n, R, Ri, Rq
+
 	&.R-L {
 		@include bg("lat-R-green","lat-L-red");
 	}
@@ -47,11 +50,18 @@
 	&.n-L {
 		@include bg("lat-NA","lat-L-red");
 	}
+
 	&.Ri-Li {
 		@include bg("lat-R-inactive","lat-L-inactive");
 	}
 	&.Ri-n {
 		@include bg("lat-R-inactive","lat-NA");
+	}
+	&.Ri-L {
+		@include bg("lat-R-inactive","lat-L-red");
+	}
+	&.Ri-Lq {
+		@include bg("lat-R-inactive","lat-L-query");
 	}
 	&.n-Li {
 		@include bg("lat-NA","lat-L-inactive");
@@ -59,8 +69,24 @@
 	&.R-Li {
 		@include bg("lat-R-green","lat-L-inactive");
 	}
-	&.Ri-L {
-		@include bg("lat-R-inactive","lat-L-red");
+	&.Rq-Li {
+		@include bg("lat-R-query","lat-L-inactive");
+	}
+
+	&.Rq-Lq {
+		@include bg("lat-R-query","lat-L-query");
+	}
+	&.Rq-n {
+		@include bg("lat-R-query","lat-NA");
+	}
+	&.Rq-L {
+		@include bg("lat-R-query","lat-L-red");
+	}
+	&.n-Lq {
+		@include bg("lat-NA","lat-L-query");
+	}
+	&.n-L {
+		@include bg("lat-NA","lat-L-red");
 	}
 
 	&.beo {
@@ -76,7 +102,8 @@
 		background-position:center center;
 		background-image: url(svg-themed("i/person-inactive"));
 	}
-
-
-
+	&.sys-n {
+		background-position:center center;
+		background-image: url(svg-themed("i/lat-NA"));
+	}
 }

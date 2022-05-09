@@ -18,14 +18,14 @@
 	}
 
 	.diag-user {
-		padding: 0 0 0 25px;
+		padding: 0 0 0 10px;
 	}
 
 	// trash, remove, view changes (at the end)
 	.diag-actions {
 		@include flex(center, flex-end);
-		gap: 3px;
 		flex-wrap: nowrap; // push <td>
+		width:100px;
 	}
 
 	// wrapper for all the various diagnosis states
@@ -39,6 +39,7 @@
 				flex: 1 1 0;
 				@include flex(center, space-between);
 			}
+
 			.right {
 				// match the line-l on the table
 				border-right: 2px solid $oe-line;
@@ -46,10 +47,9 @@
 		}
 
 
-
 		.diag-state,
 		.state-change,
-		.state-review {
+		.review {
 			@include flex(center, space-between);
 		}
 
@@ -60,15 +60,15 @@
 		.state-notes {
 			@include flex(center, space-between);
 			flex-wrap: wrap;
-			padding:0 0 0 10px;
+			padding: 0 0 0 10px;
 
 			// Suspected, Present, Not Present
 			.state {
-				margin:3px 8px 3px 1px;
+				margin: 3px 8px 3px 1px;
 			}
 
 			button {
-				padding:0 2px;
+				padding: 0 2px;
 			}
 
 		}
@@ -79,6 +79,17 @@
 
 		.state-review {
 			gap: 10px;
+		}
+
+		// Resolved or Removed
+		.diag-record {
+			.by-who {
+				display:inline-block;
+				margin:0 0 0 5px;
+				small {
+					opacity: 0.5;
+				}
+			}
 		}
 
 		.diag-date {
