@@ -34,6 +34,9 @@ label,
 			&:last-child {
 				margin-right:0;
 			}
+			.btn {
+				justify-content:center !important;
+			}
 		}
 
 		&.hide-input {
@@ -60,8 +63,9 @@ label,
 				}
 			}
 			.btn {
+				flex:1;
 				pointer-events: none; // otherwise JS picks up a click!
-				@include flex(center, center);
+				@include flex(center, flex-start);
 				height: 100%;
 				padding:0 5px; // this was 3px 6px
 			}

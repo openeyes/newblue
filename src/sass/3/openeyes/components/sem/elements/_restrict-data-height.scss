@@ -1,0 +1,17 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// wrap content
+.restrict-data-height {
+	max-height: 270px; // default to approx rows-10 max height
+	overflow-y: auto;
+	padding: 0 5px 0 0; // visual breathing space for scrollbar
+
+	&.rows-5 {
+		max-height: 160px; // matches .tile-data-overflow (this came first!)
+	}
+}
+
+
+

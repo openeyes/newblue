@@ -43,7 +43,7 @@
 
 	// tile elements have a restriction on the amount
 	// of data they can show to limit huge med lists
-	// this approach was generalised with "restrict-data-shown"
+	// this approach was generalised with "restrict-data-height"
 	// but "tile-data-overflow" is still used on the event tiles though
 	.tile-data-overflow {
 		position: relative;
