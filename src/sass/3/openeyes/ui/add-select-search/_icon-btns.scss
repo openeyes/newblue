@@ -18,6 +18,11 @@
 		@include flex(center, center);
 		
 		cursor: pointer;
+
+		.oe-i {
+			// invert to white  light theme
+			filter: $oe-btn-icon-hover;
+		}
 	}
 	
 	.close-icon-btn {
