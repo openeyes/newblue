@@ -50,7 +50,9 @@
 	&.n-L {
 		@include bg("lat-NA","lat-L-red");
 	}
-
+	&.R-Lq {
+		@include bg("lat-R-green","lat-L-query");
+	}
 	&.Ri-Li {
 		@include bg("lat-R-inactive","lat-L-inactive");
 	}
@@ -101,6 +103,10 @@
 	&.sys-i {
 		background-position:center center;
 		background-image: url(svg-themed("i/person-inactive"));
+	}
+	&.sys-q {
+		background-position:center center;
+		background-image: url(svg-themed("i/person-query"));
 	}
 	&.sys-n {
 		background-position:center center;
