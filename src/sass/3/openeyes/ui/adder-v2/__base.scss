@@ -1,10 +1,10 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
-// Adder v2 all JS
-.oe-adder {	
-	position:fixed;  // Fixed take it out of the Grid. 
+// Adder v2
+.oe-adder {
+	// Fixed take it out of the Grid.
+	position:fixed;
 	z-index:$oe-z-add-insert; 			
 	background:$oe-popup-bg;
 	padding:5px; 
@@ -14,7 +14,7 @@
 	// provide a minmum area 
 	min-width: 190px;	
 	
-	// heights, allow a greater flexibiltiy in heights from v1
+	// heights, allow a greater flexibility in heights from v1
 	// JS will have to test height space before positioning
 	min-height:210px;
 	max-height:330px; 	
