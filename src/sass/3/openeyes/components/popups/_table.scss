@@ -74,6 +74,13 @@
 					text-align: right;
 				}
 			}
+
+			td {
+				&.line-l {
+					border-left:2px solid $oe-line;
+					padding-left:8px;
+				}
+			}
 			
 			th {
 				opacity: 0.7; // match "fade"
