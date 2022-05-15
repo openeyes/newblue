@@ -61,6 +61,9 @@ $oe-dark-line: 			rgb(60,60,60);
 $oe-line:				rgb(162,160,160); // don't use alphas! - tables with td colspan 2 overlap
 
 
+// key focus outline
+$oe-key-focus-outline: rgb(7, 1, 224);
+
 // Buttons
 $oe-dark-btn-blue:			rgb(7,69,152);
 $oe-dark-btn-green:			rgb(14,144,25);

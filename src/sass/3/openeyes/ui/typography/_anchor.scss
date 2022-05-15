@@ -15,9 +15,17 @@ a {
 		}
 	}
 
-	&:hover, &:focus, &:active {
+	&:hover,
+	&:focus,
+	&:active {
 		color:$oe-text-active;
 		text-decoration: none;
+	}
+
+	// improve keyboard accessibility
+	&:focus-visible {
+		outline: 1px dotted $oe-key-focus-outline;
+		outline-offset: 1px;
 	}
 	
 	&.selected {

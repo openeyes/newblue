@@ -12,8 +12,15 @@
 	// as User regularly interact with this turn off selection
 	user-select: none;
 
-	border:1px solid $oe-line;
+	// use outline, rather than border to better balance visual
+	// vertical alignment with normal collapse-data layouts.
+	outline:1px solid $oe-line;
 	border-radius: 10px;
+
+	// in Exam tiles the outline is cropped
+	.tile-data-overflow & {
+		outline-offset: -1px;
+	}
 
 	position: relative;
 
@@ -49,7 +56,7 @@
 	}
 
 	&.loading {
-		border-color: $oe-btn-blue-hint;
+		outline-color: $oe-btn-blue-hint;
 	}
 
 	i.spinner {
@@ -63,7 +70,7 @@
 	.oe-patient-popup & {
 		margin-bottom: 15px;
 		color: $oe-dark-text-light;
-		border-color: $oe-dark-line;
+		outline-color: rgba(200,200,200, 0.2);
 		@include font-size(12);
 
 		&:after {

@@ -6,6 +6,12 @@ input, textarea, select {
 	border:0;	
 	outline:none;
 
+	// improve keyboard accessibility
+	&:focus-visible {
+		outline: 1px dotted $oe-key-focus-outline;
+		outline-offset: 1px;
+	}
+
 	@include font-size(12);
 	font-weight: $oe-font-medium;
 	color: $oe-user-input-text;

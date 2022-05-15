@@ -9,7 +9,7 @@ select {
 	// can be set. This feels a bit hacky but
 	// it achieves the visual goal of getting
 	// <input> and <selects> looking the same
-	padding:0 15px 0 4px; // allow for the background
+	padding: 0 15px 0 4px; // allow for the background
 
 	// turn off browser UI defaults
 	// (basically because of Safari!)
@@ -30,21 +30,21 @@ select {
 	text-overflow: ellipsis;
 
 	// UI to indicate it's a dropdown vanishes, looks like an input, add a custom arrow
-	background: right 2px center / 13px url( svg-themed('i/arrow-down-bold')) $oe-user-inputs no-repeat ;
+	background: right 2px center / 13px url(svg-themed("i/arrow-down-bold")) $oe-user-inputs no-repeat;
 
 	// popups are fixed in a dark theme
 	.oe-popup & {
-		background-image: url( svg-dark-fixed('i/arrow-down-bold'));
+		background-image: url(svg-dark-fixed("i/arrow-down-bold"));
 	}
 
 	&.inline {
 		width: auto;
 	}
-	
+
 	&:disabled {
-		opacity:0.4;
+		opacity: 0.4;
 	}
-	
+
 	@media print {
 		// Fixed Chrome print bug when selects have transparent background.
 		// See: https://code.google.com/p/chromium/issues/detail?id=282918

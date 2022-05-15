@@ -10,6 +10,7 @@
 	cursor: pointer;
 	padding: 5px 20px 5px 0; // allow space for icon
 	color: $oe-element-headers;
+	font-weight: $oe-font-medium;
 
 	// used in patient popups (dark themed)
 	.oe-patient-popup & {
