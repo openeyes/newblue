@@ -7,7 +7,12 @@
 // Used in Advanced Search and details
 
 .oe-patient-meta {
-	
+
+	// same structure is use in .oe-patient-quick-overview
+	.oe-patient-quick-overview & {
+		padding:0 0 5px 0;
+	}
+
 	.patient-name {
 		@include font-size(14);
 		font-weight: $oe-font-medium; 
