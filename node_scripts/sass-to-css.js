@@ -1,12 +1,18 @@
 'use strict';
 
 /**
- * -----------------------------
- * Build CSS
+ * Build CSS files for OpenEyes
+ * Production:
  * dist/css/style_oe_dark.3.css // Dark theme (compressed)
  * dist/css/style_oe_light.3.css // Light theme (compressed)
  * dist/css/style_oe_print.3.css // Print only, PDFs (compressed)
+ *
+ * iDG copies are prefixed with VERSION_TAG numbers, to allow testing
+ * of different TAGs within iDG
  */
+
+require('dotenv').config()
+const tag = process.env.VERSION_TAG;
 
 const chalk = require('chalk');
 const cyan = chalk.bold.cyan;
@@ -23,6 +29,7 @@ const mode = process.argv[2] == "eyedraw" ? "eyedraw" : "styles";
 
 log(cyan(`>>> newblue synchronous build: CSS ${mode}`));
 log(sass.info);
+log( chalk.bgYellow(`--- git tag version = ${tag} ---`));
 
 const config = {
 	src: './src/sass/3/',
@@ -58,12 +65,16 @@ const headerLegals = [
  * https://sass-lang.com/dart-sass
  */
 const dartSass = ( style ) => {
-	log(cyan(`build: ${style}`));
+	log(cyan(`Build: ${style}`));
 	const cssOutput = `${config.dist}${style}.css`;
-	const cssIDG = `${config.idg}${style}.css`;
+	const cssIDG = `${config.idg}${tag}_${style}.css`;
 
 	try {
-		// Dart-Sass recommends using RenderSync as it is faster, so ok let's use it:
+		/**
+		 * Dart-Sass recommends using RenderSync as it is faster.
+		 * Create compressed version for Production and a TAG prefixed
+		 * version for iDG to use
+		 */
 		const result = sass.renderSync({
 			file: `${config.src}${style}.scss`,
 			outputStyle: 'compressed', // "expanded" or "compressed"
@@ -71,14 +82,16 @@ const dartSass = ( style ) => {
 			precision: 5, // numeric precision	
 		});
 
-		log(cyan(`write CSS: `) + `${cssOutput}`);
+		log(cyan(`CSS: `) + `${cssOutput}`);
 		const distStream = fs.createWriteStream(`${cssOutput}`);
 		distStream.write(headerLegals);
 		distStream.write(dateStamp);
 		distStream.end(result.css);
 
-		// iDG local is a separate repo, write CSS updates there too
-		log(cyan(`iDG copy: `) + `${cssIDG}`);
+		/**
+		 * TAG prefixed file version for iDG
+		 */
+		log(cyan(`iDG copy: `) + `${tag}_${style}`);
 		const idgStream = fs.createWriteStream(`${cssIDG}`);
 		idgStream.write(headerLegals);
 		idgStream.write(dateStamp);

@@ -28,6 +28,7 @@
   "devDependencies": {
     "chalk": "4.1.1",
     "chokidar": "3.5.2",
+    "dotenv": "16.0.1",
     "fast-glob": "3.2.6",
     "jimp": "0.16.1",
     "sass": "1.35.1",
