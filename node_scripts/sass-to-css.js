@@ -38,7 +38,8 @@ const config = {
 };
 
 // build a dateStamp for the CSS, useful for debugging deployments
-const dateStamp = '/* ' + new Date(Date.now()) + ' */ \n';
+const nowDate = new Date(Date.now());
+const dateStamp = `/* ${tag} - ${nowDate} */ \n`;
 
 // Legals required on the CSS files.
 const headerLegals = [
