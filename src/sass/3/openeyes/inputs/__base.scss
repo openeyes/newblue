@@ -6,6 +6,11 @@ input, textarea, select {
 	border:0;	
 	outline:none;
 
+	// flag OE prefilled data to Users
+	&.prefilled {
+		outline:2px solid $oe-alert-orange;
+	}
+
 	// improve keyboard accessibility
 	&:focus-visible {
 		outline: 1px dotted $oe-key-focus-outline;
