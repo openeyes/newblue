@@ -23,6 +23,7 @@ select {
 
 	cursor: pointer;
 	width: 100%;
+	max-width: 350px; // nothing should longer than this, surely!
 
 	// if text input value is too long, cut and add "..."
 	overflow: hidden;

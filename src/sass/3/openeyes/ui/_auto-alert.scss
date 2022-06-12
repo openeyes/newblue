@@ -31,7 +31,7 @@
 		&.dismissible::after {
 			width: 11px;
 			height: 11px;
-			top:3px;
+			top: 3px;
 		}
 	}
 
@@ -62,6 +62,25 @@
 		}
 	}
 
+	&.prefill {
+		background-image: url(svg-themed("i/starline"));
+		background-size: 15px;
+		background-position: 8px 5px;
+		border-color: $oe-text-active;
+	}
+
+	&.has-actions {
+		position:relative;
+		padding-right:300px; 	// allow space for a long named button
+		min-height: 31px;  		// otherwise button overlaps button background
+
+		.alert-actions {
+			position: absolute;
+			right:15px;
+			top:2px;
+		}
+	}
+
 	// dismissible
 	&.dismissible {
 		cursor: pointer;
@@ -80,8 +99,7 @@
 		}
 
 		&:focus,
-		&:hover,
-		&:active {
+		&:hover {
 			background-color: $oe-btn-blue-hint;
 			border-color: $oe-text-light;
 
