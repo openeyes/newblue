@@ -305,7 +305,6 @@
 		"warning": "warning", // RED Risk/Alert triangle
 		"warning-none": "warning-none",
 		"cross-red": "cross-red",
-		"starline-orange": "starline-orange"
 	);
 
 	$eyedraw_icons: (
@@ -326,7 +325,7 @@
 
 	// these icons need to always be at full opacity by default
 	$no-opacity: "laterality.R", "laterality.L", "laterality.NA", "lat-R", "lat-L", "lat-n", "lat-Ri", "lat-Li", "beo", "doubt-active", "circle-green", "circle-yellow", "circle-amber", "circle-orange", "circle-red", "circle-grey", "flag-green", "flag-amber", "flag-orange", "flag-red", "flag-grey", "triangle-green", "triangle-amber", "triangle-orange", "triangle-red", "triangle-grey", "triangle-urgent", "mpr", "mpr-red", "mpr-amber", "mpr-green", "exclamation-green", "exclamation-amber", "exclamation-orange", "exclamation-red", "tick-green", "cross-red", "warning", "warning-none",
-	"person-green", "starline-orange";
+	"person-green";
 
 	// @mixin - build specific icon classes
 	// $map: see lists above
