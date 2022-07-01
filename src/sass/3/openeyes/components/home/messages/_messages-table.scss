@@ -13,12 +13,19 @@
 	// wrapper for <table> .messages
 	.messages-all {
 		padding:10px 10px 20px 0;
+
+		h3 {
+			@include font-size(18);
+			color: $oe-element-headers;
+			font-weight: $oe-font-light;
+		}
 	}
 	
 	// <table>
 	// extends 'standard' table and uses highlight-rows
 	table.messages {
-		width: 100%; 
+		width: 100%;
+		margin-top: 0; // override default
 		
 		// set last <td> to the right	
 		th, td {
@@ -41,21 +48,14 @@
 				&.unread {
 					td {
 						color:$oe-text;
-						
-						// at lowest resolution change style
-						// smaller font (to fit longer names) and bold
+						// at lowers resolutions
 						@include font-size(12);
-						font-weight:$oe-font-bold;
-						
-						// after extended browser 
-						// change back to original design style
+						font-weight:$oe-font-medium;
+
+						// above extended increase slightly
 						@include extended(){
-							@include font-size(14);
-							font-weight:$oe-font-medium;
+							@include font-size(13);
 						}
-						
-						
-						
 					}
 				}
 			}
@@ -79,7 +79,24 @@
 				
 			}
 		}
-			
+
+		.sent-to-mailbox {
+			position:relative;
+			padding:3px 0 0 15px;
+			@include font-size(11);
+			opacity:0.5;
+
+			&::before{
+				content:"";
+				position: absolute;
+				top:3px;
+				left:0;
+				bottom:0;
+				width:11px;
+				background: center center / 11px url(svg-themed("i/download")) no-repeat;
+				pointer-events: none;
+			}
+		}
 
 		// handle the actual messages within the <td>
 		// DOM: <div class="message">Message</div> 
@@ -87,46 +104,46 @@
 			// message has 2 states: collapsed (single line with ellipsis) and expanded (multi-line)
 			// in order to get the single line overflow working the container
 			// needs to be width restricted (could NOT get it to work on the <td>!)
-			 			
-			width:15vw; 		
-			
-			@include extended(){
-				width:22vw; 
-			}
-			@include fix-hotlist(){
-				width:37vw;
-			}
-			@include super-wide(){
-				width:45vw;
-			}
-			
-			
-			height:1.2rem;		// not sure what this does.
-			color: inherit;
-			
+
+			position: relative;
+			padding:0 25px 0 0;
+			margin:0 10px 0 0;
+
+			width: calc(100vw - 1100px);
+			min-width: 260px;
+			font-style: italic;
+
 			// truncate text
 			overflow: hidden;
 			white-space: nowrap;
 			text-overflow: ellipsis;
-			
-			// expand and read full message (if truncated)		
+
+			// set the height to increase the hit-area for the expand icon
+			height:30px;
+
+			// expand and read full message (if truncated)
+			// reset the height and allow the message text to wrap
 			&.expand {
-				width:90%;		// allow text to push out <td>
 				height: auto;
-				text-overflow: none;
 				white-space: normal;
-				color: $oe-text;
 			}
-		}
-		
-		// on the home hub unread messages contain the "sender"
-		.message-sender {
-			margin:5px 0 0 0;
-			color: $oe-text-light;
-			@include font-size(11);
-			font-style: italic;
-			font-weight: $oe-font-light;
-			
+
+			//
+			.msg-view {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				width: 20px;
+
+				.oe-i {
+					width:20px;
+					height:100%;
+					min-height:50px;
+					background-position: top right;
+				}
+
+			}
 		}
 	}
 }

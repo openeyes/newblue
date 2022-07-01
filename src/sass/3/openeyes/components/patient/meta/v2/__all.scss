@@ -1,13 +1,9 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
-// OE Patient Meta
-// used in Advanced Search, Trials and Theatre Diaries
-
-//@import "v1/oe-patient-meta";
-@import "v2/_all";
-@import "icons";
+@import "base";
+@import "patient-name";
+@import "patient-details";
 
 
 

@@ -1,0 +1,28 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.oe-patient-meta {
+
+	.patient-name {
+		@include font-size(14);
+		font-weight: $oe-font-medium;
+		margin: 0 0 2px 0;
+
+		.oe-patient-quick-overview & {
+			@include font-size(16);
+			// allow space for the remove icon btn
+			margin-right: 20px;
+			// if text input value is too long, cut and add "..."
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+		// wrapper for new meta icons
+		// duplicate name / safeguards (alerts/allergies / risks) / Flags, etc
+		.patient-icons {
+			@include inline-flex(center, flex-start);
+			padding: 0 0 0 5px;
+		}
+	}
+}
