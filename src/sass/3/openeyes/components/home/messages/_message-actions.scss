@@ -40,7 +40,7 @@
 		.mailbox {
 			// default vertical padding
 			margin: 5px 0;
-			padding: 5px 8px;
+			padding: 5px 5px 5px 8px;
 			background-color: rgba($oe-user-inputs, 0.4);
 
 			.mailbox-hd {
@@ -74,6 +74,7 @@
 		.all-unread-messages {
 			width:100%;
 			@include flex(center, space-between);
+			padding-right:5px;
 
 			.unread {
 				color:#fff;
