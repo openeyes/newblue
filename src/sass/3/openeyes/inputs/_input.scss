@@ -13,12 +13,16 @@ input {
 	// add SEARCH icon to input	
 	&.search {
 		padding-left:30px;
-		background: left 5px center / 19px $oe-user-inputs url( svg-all('ui/search') ) no-repeat;
+		background: left 5px center / 16px $oe-user-inputs url( svg-all('ui/search') ) no-repeat;
+
+		.search-patient & {
+			background-size: 18px;
+		}
 	}
 	// add FILTER icon to input
 	&.filter {
 		padding-left:30px;
-		background: left 5px center / 19px $oe-user-inputs url( svg-all('ui/filter') ) no-repeat;
+		background: left 5px center / 16px $oe-user-inputs url( svg-all('ui/filter') ) no-repeat;
 	}
 
 	// date should match oe-date: dd Mth YYYY
