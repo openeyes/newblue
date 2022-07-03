@@ -1,0 +1,95 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.element {
+	.msg-editor {
+		border: 1px solid $oe-line;
+		border-radius: 5px;
+		padding: 3px;
+		margin: 5px 0;
+		// <textarea>
+		.write-msg {
+			width: 100%;
+			@include font-size(15);
+			font-weight: 400;
+			padding: 5px 10px;
+		}
+
+		// Preview before sending
+		.msg-preview {
+			@include font-size(15);
+			font-style: italic;
+			font-weight: 400;
+			padding: 10px;
+			background: $oe-user-inputs;
+			border-radius: 3px;
+		}
+
+		// preview / edit (again) or send
+		.msg-actions {
+			margin: 3px 0 0 0;
+			@include flex(center, center);
+			gap: 3px;
+
+			button {
+				flex: 1 1 0;
+			}
+		}
+	}
+
+	.msg-reader {
+		.missive {
+			position: relative;
+			border: 1px solid $oe-line;
+			border-radius: 5px;
+			padding: 10px 10px 25px 10px;
+
+			@include font-size(15);
+			font-style: italic;
+			font-weight: $oe-font-medium;
+
+			.read-status {
+				position: absolute;
+				bottom: 3px;
+				right: 10px;
+
+				@include font-size(9);
+				color: $oe-text-light;
+				font-weight: $oe-font-bold;
+				font-style: normal;
+			}
+		}
+
+		// Mark as read
+		.change-msg-status {
+			@include flex(center, flex-start);
+			transform: translateX(10px);
+		}
+
+	}
+
+	.msg-reply {
+		position: relative;
+		color: $oe-text-light;
+		font-weight: $oe-font-medium;
+		font-style: italic;
+		@include font-size(13);
+		padding: 0 0 0 20px;
+		margin: 15px 0 5px 0;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 16px;
+			width: 16px;
+			background: center center / 16px url(svg-themed("i/child-arrow")) no-repeat;
+			pointer-events: none;
+			opacity: 0.5;
+
+		}
+
+	}
+}
+

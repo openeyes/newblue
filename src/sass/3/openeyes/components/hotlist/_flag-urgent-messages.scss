@@ -2,18 +2,20 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 
-// Message 
+.oe-hotlist-panel {
+	.flag-urgent-messages {
+		margin:10px 5px;
+		@include flex(center, space-between);
 
-
-.element {
-	p {
-		&.message-start {
-			font-style: italic;
+		a {
+			flex: 1 1 0;
 		}
 
-		// message reply is wrapped in <em>
-		&.message-reply {
+		.urgent {
+			background:$oe-alert-orange;
+			color: #fff;
 		}
 	}
 }
+
 

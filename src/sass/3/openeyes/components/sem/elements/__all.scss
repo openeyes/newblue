@@ -37,13 +37,13 @@
 @import "specific/search-in-event"; 		// only used in Examination (at the moment)
 @import "specific/upload-box"; 				// only used in Document Upload
 @import "specific/strabismus/_all"; 		// Strabismus custom elements
-@import "specific/message-states"; 		
 @import "specific/injection-mgmt/_all";  // injection management
 @import "specific/drug-admin";  // injection management 
 @import "specific/botox/_all";  // injection management
 @import "specific/attachments";
 @import "specific/question-answer";
 @import "specific/diagnosis-mgmt";
+@import "specific/message";
 
 // IDG concept work
 @import "idg/reduce-height";
