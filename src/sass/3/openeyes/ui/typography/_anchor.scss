@@ -6,6 +6,11 @@
 a {
 	color:inherit;
 	text-decoration: none;
+
+	.oe-full-side-panel & {
+		display: inline-block;
+		min-width: 75%;
+	}
 	
 	&.hint {
 		text-decoration: underline;
@@ -16,10 +21,14 @@ a {
 	}
 
 	&:hover,
-	&:focus,
-	&:active {
+	&:focus {
 		color:$oe-text-active;
 		text-decoration: none;
+	}
+
+	&:active {
+		color:$oe-text-active;
+		text-decoration: $oe-text-active underline dotted 1px;
 	}
 
 	// improve keyboard accessibility

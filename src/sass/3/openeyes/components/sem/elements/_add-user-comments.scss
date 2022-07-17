@@ -8,20 +8,19 @@
 //
 // note: this replaces the rough "column-group" in data-grouping
 
-.element-fields {
-	.add-user-comments {
-		@include flex(flex-start, space-between);
-		textarea {
-			flex:1 1 0;
-		}
+.add-user-comments {
+	@include flex(flex-start, space-between);
 
-		.oe-i.remove-circle {
-			height:24px; // to align correctly with <textarea>
-		}
+	textarea {
+		flex: 1 1 0;
+	}
 
-		// all column-group / column-row did is vertically pad
-		&.pad-t {
-			padding:10px 0 0 0; // must match add-data-actions padding
-		}
+	.oe-i.remove-circle {
+		height: 24px; // to align correctly with <textarea>
+	}
+
+	// all column-group / column-row did is vertically pad
+	&.pad-t {
+		padding: 10px 0 0 0; // must match add-data-actions padding
 	}
 }

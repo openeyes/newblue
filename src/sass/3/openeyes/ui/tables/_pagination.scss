@@ -11,11 +11,9 @@
 	// sort out vertical alignment with icons
 	// Flex: justify-content (h), align-items (v)
 	@include flex(center, flex-end);
-	
 	white-space: nowrap;
 	
 	// style consistently
-	
 	color:$oe-text-light;
 	@include font-size(14);
 	font-weight: $oe-font-medium;
@@ -31,6 +29,18 @@
 				background-color:$oe-text-light;
 				color:$oe-text-inverted; //$oe-pagination-blue;
 			}
+		}
+	}
+
+	// expose pages per page variable
+	.show-per-page {
+		padding:0 0 0 5px;
+		@include flex(center, space-between);
+		@include font-size(10);
+
+		// span "per page"
+		.per {
+			padding:0 3px 0 0;
 		}
 	}
 }

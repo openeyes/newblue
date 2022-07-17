@@ -3,7 +3,9 @@
 
 
 .oe-patient-popup {
-	
+
+	// check this in v7, implemented but should be reviewed
+	// plotly is too heavy, should be an image with a click through
 	.plotly-container {
 		// center the layout
 		margin: 0 auto;

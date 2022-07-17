@@ -3,6 +3,17 @@
 
 .oe-patient-meta {
 
+	// increase ID and NHS number in Quick Overview
+	.oe-patient-quick-overview & {
+		.patient-details {
+			@include font-size(12.5);
+		}
+	}
+
+	.patient-sex {
+		font-weight:$oe-font-bold;
+	}
+
 	.patient-details {
 		@include flex( center, flex-start);
 		@include font-size(11);

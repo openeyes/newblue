@@ -8,11 +8,10 @@
 // mostly for sidebar use really 
 
 .button-stack { 
-	
+
 	button {
-		display:block;
 		width:100%;				// assume that buttons should fill area width, kinda standard design
-		margin-bottom: 15px;
+		margin-bottom: 10px;
 		&:last-child { 
 			margin-bottom:0; 
 		}
@@ -20,13 +19,13 @@
 	
 	&.tight {
 		button {
-			margin-bottom:2px;
+			margin-bottom:4px;
 		}
 	}
 	
 	&.divider {
 		border-bottom:2px solid $oe-line;
-		padding:0 0 15px 0;
+		padding:0 0 10px 0;
 	}	
 	
 }

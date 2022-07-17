@@ -1,53 +1,8 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
-// OE Trials
-// extends the basic:
-// layout oe-full
-// table standard layout
-
 .oe-trials {
 	background:$oe-blue-dark2; // theme changable
-	
-	// extend 
-	.oe-full-side-panel {
-		padding:20px;
-	}
-	
-	// exact copy of Worklists class
-	// but kept seperate to allow future 
-	// development of Trails (if needed)
-		
-	.trial-group {
-		padding:0 20px 0 0;
-		
-		&:last-child {
-			padding-bottom: 40px;
-		}
-	}
-	
-	.trial-summary {
-		padding:20px 20px 0 0;
-		
-		h2 {
-			@include font-size(19);
-			font-weight:$oe-font-light; 
-			color:$oe-text-highlight;
-		}
-		// 1-8 of 8 
-		// actually not needed (all data is shown for lists)
-		.summary {
-			@include font-size(14);
-			font-weight:$oe-font-medium;
-			color:$oe-text-light;
-		}	
-	}	
-		
-	// extend standard default table
-	table.standard {
-		margin:10px 0 40px 0;
-	}
 }
 
 

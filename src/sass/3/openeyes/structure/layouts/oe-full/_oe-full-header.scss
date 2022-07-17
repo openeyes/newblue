@@ -40,7 +40,16 @@
 			font-weight:100;
 			@include font-size(24);
 			padding:0 8px 0 0;
-		}	
+		}
+
+		// add for trial names, they can be up to 200 characters
+		.truncate-title {
+			max-width: 60vw;
+			// truncate text
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
 	}
 	
 	// right hand options/actions/extras
