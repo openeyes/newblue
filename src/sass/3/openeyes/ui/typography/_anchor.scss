@@ -10,6 +10,9 @@ a {
 	.oe-full-side-panel & {
 		display: inline-block;
 		min-width: 75%;
+		&.button {
+			display:inline-flex; // button button display
+		}
 	}
 	
 	&.hint {
