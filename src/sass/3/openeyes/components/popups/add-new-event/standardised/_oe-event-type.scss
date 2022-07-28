@@ -14,6 +14,8 @@
 	.oe-event-type {
 		// shift to left to place icon flush
 		padding-left:0;
+		break-inside: avoid;
+		
 		.oe-i-e {
 			margin-right:10px;
 		}
