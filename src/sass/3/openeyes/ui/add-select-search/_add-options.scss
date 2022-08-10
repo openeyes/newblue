@@ -27,6 +27,11 @@
 			// border-radius:3px;
 			background-color: $oe-adder-option;
 			min-width:60px;		// provide a minimum for things like "No DR"
+
+			// this is to make sure 0-9 (10) options are shown before scroll
+			// needs updating to flex and a height setting to ensure perfect fit!
+			line-height: 1.2;
+
 			
 			// data has a span wrapper to control the width
 			// not possible through the li css
@@ -116,7 +121,7 @@
 		
 		&.input-templates {
 			li {
-				background-image:url( svg-all( 'ui/filter' ) );
+				background-image:url( svg-themed( 'i/pencil' ) );
 				background-position:right 2px center;
 				background-repeat: no-repeat;
 				background-size:13px;

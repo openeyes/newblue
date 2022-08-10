@@ -18,12 +18,16 @@
 		overflow-x: hidden; // otherwise breaks out of popup.
 		
 		@include font-size(12);
-		
+
 		// oe-popup min-width is set at min:600px max:1080px (same as ED3 popup)
 		&.wide {
 			width:800px;
 		}
-		
+
+		&.min {
+			width:600px;
+		}
+
 		&.max {
 			width: #{$oe-minimum-viewport-width - 40px}; // allow for padding 20px
 		}
