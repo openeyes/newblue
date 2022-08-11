@@ -1,0 +1,23 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+.select-subspeciality {
+	.add-new-subspeciality {
+		border:1px solid $oe-btn-green;
+		padding:5px 8px;
+		margin:10px 0 0 0;
+		// ... or there is a choice in the service 
+		// <select>
+		select {
+			margin:0 0 5px 0;
+		}
+	}
+}
+ 
+
+
+
+
+
+

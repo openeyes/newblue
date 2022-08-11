@@ -1,0 +1,48 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// <li>
+.oe-speciality-service {
+	position:relative;
+	padding: 10px;
+
+	flex-direction: column;
+	// hack: have to use important to override the <li> base style
+	align-items: flex-start !important;
+
+	// e.g. Glaucoma
+	.subspeciality {
+		@include font-size(13);
+	}
+
+	.service {
+		@include font-size(11);
+	}
+
+	// select dropdown
+	// sometimes needs to change service for existing speciality
+	select {
+		margin: 5px 0 0 0;
+	}
+
+	.tag {
+		position: absolute;
+		top: 0;
+		right: 0;
+		// tag is a bit bigger
+		width: 21px;
+		height: 21px;
+
+		@include flex(center, center);
+		@include font-size(11);
+		font-weight: 400;
+		color: $oe-dark-text-light;
+		background: $oe-dark-blue-dark;
+	}
+}
+
+
+
+
+
+

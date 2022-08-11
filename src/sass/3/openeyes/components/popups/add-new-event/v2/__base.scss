@@ -1,0 +1,29 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.oe-add-new-event {
+	@include flex(stretch, space-between);
+	gap: 8px;
+
+	.select-subspeciality,
+	.select-context,
+	.select-event-types,
+	.existing-drafts {
+		flex: 1 1 0;
+	}
+
+	.select-subspeciality,
+	.select-event-types,
+	.existing-drafts{
+		border-right: 1px solid $oe-dark-line;
+		padding-right:8px;
+	}
+
+}
+ 
+
+
+
+
+
+

@@ -34,7 +34,8 @@
 @import "events-user-trail/_all";
 
 // standardised (v5) version of Add new event
-@import "add-new-event/standardised/_all";
+@import "add-new-event/v1/_all";
+@import "add-new-event/v2/_all";
 
 // attachments
 @import "attachments/popup-attachment";
