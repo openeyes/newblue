@@ -9,13 +9,13 @@
 	// <li> 
 	.event {
 		position: relative;
-		display:block;
+		display: block;
 		margin: 0 0 1px 0;
 		
 		// nav link
 		a {
-			display:block;
 			position:relative;
+			@include flex( center, flex-start);
 			
 			height:$oe-sidebar-event-height;
 			line-height:$oe-sidebar-event-height;

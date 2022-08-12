@@ -13,10 +13,6 @@
 	  top: $oe-sidebar-event-height;	  
 	  z-index: 1;
 	  width: 100%;
-	  
-	  // there was a flickering issue,
-	  // unable to recreate locally
-	  // but this solves it (and should be here anyway)
 	  pointer-events: none; 
 	  
 	  @include font-size(12);
@@ -33,7 +29,6 @@
 	  
 	  &.fade-out {
 		  display:none;
-		  // animation: 0.1s ease-in forwards fadeout; // sexy but a bit too much.
 	  }
 	  
 	  .event-name {
