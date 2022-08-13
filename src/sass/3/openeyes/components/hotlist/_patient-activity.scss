@@ -4,6 +4,13 @@
 
 .oe-hotlist-panel {
 	.patient-activity {
+
+		// visually divider areas
+		.divider {
+			border-top: 1px dotted $oe-alert-grey;
+			margin-top: 10px;
+		}
+
 		h4 {
 			padding:5px 15px; // match overview style
  			@include font-size(13);
