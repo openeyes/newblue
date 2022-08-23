@@ -14,12 +14,7 @@ $oe-sidebar-event-height:19px;
 	padding:2px 0 0 0; // pad bottom to allow for quicklook popup 
 	background: $html-bg;
 	
-	&.subgrid {	
-		// for Edge < 16
-		display: -ms-grid;
-		-ms-grid-columns: 1fr;
-		-ms-grid-rows: auto 1fr;		
-		
+	&.subgrid {
 		// CSS3: Grid 
 		display: grid;
 		grid: auto 1fr / 1fr;

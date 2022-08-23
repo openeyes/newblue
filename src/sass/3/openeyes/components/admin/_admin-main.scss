@@ -5,22 +5,22 @@
 // OE Admin
 
 .oe-admin {
-
 	.admin-main {
-		padding:10px 10px 20px 0;
+		@include  font-size(12);
+		padding:10px 20px 40px 0;
 		
 		// title (if this can't moved out of page
 		// and into the header area)
 		h2 {
-			@include font-size(18);
+			@include font-size(17);
 			color:$oe-text-highlight;
-			font-weight: $oe-font-medium;
+			font-weight: $oe-font-light;
 			margin:0 0 10px 0;
 		}
 		
 		
 		h3 {
-			@include font-size(16);
+			@include font-size(15);
 			color:$oe-text-light;
 			font-weight: $oe-font-light;
 			margin:0 0 10px 0;
@@ -28,7 +28,7 @@
 		
 		
 		p {
-			@include font-size(14);	
+			@include font-size(13);
 			padding:0 0 10px 0;
 		}
 		

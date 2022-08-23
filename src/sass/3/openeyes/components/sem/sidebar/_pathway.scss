@@ -18,8 +18,8 @@
 	color: $oe-dark-text-light;
 
 	// use button background colours but add a watermark
-	background: $oe-dark-user-inputs url( svg-all("ui/watermark-clinic")) left 1px center no-repeat;
-	background-size: 32px;
+	background: $oe-dark-user-inputs url( svg-all("ui/watermark-clinic")) left 4px center no-repeat;
+	background-size: 24px;
 
 	cursor: pointer;
 
