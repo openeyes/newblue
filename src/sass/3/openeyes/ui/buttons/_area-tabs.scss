@@ -1,0 +1,16 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// Area tab btns
+// sidepanel uses buttons to switch the options shown
+// used to be just a "row flex" approach but this is visually more helpful
+
+.area-tabs {
+	@include flex(center, space-between);
+	border-bottom:2px solid $oe-btn-blue;;
+
+	button {
+		flex:1 1 0;
+	}
+}

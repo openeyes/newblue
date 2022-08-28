@@ -25,13 +25,13 @@
 		}
 	}
 	
-	// identical to serivce, but renamed because it's
+	// identical to service, but renamed because it's
 	// use may become more generic
 	.top-filter {
 		position:relative;
 		margin:10px 0 20px 0;
-		
-		// don't use just 'selected' (or it gets picked up by filter options!)
+
+		// this now redundant, approach changed, see /edge/analytics/MR-diagnoses/
 		.selected-filter {
 			@include font-size(16);
 			font-weight:$oe-font-light;
