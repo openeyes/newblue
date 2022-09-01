@@ -1,0 +1,70 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// container to display current layout state
+// and for options for side / layout
+.oes-ui-change-layout {
+	position: relative;
+	margin: 0 10px;
+
+	// shows the side and layout state
+	.layout-select-btn {
+		height: $oe-event-header-height;
+		@include flex(center, center);
+		padding: 0 10px;
+		cursor: pointer;
+		.oes-layout-icon {
+			margin: 0 0 0 6px;
+		}
+
+		// JS adds this
+		&.active {
+			background: linear-gradient( rgba(0,0,0,0) 95%, $oe-text-highlight 96% );
+		}
+		// no need for events on any children
+		* {
+			pointer-events: none;
+		}
+	}
+
+	.layout-options {
+		z-index: $oe-z-add-insert;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		// center it by eye
+		transform: translateX(-35%);
+		height: $oe-event-header-height;
+
+		@include flex(center, center);
+		gap:10px;
+
+		border-top: 1px solid $oe-text-highlight;
+		background: $oe-grey; // match header
+		padding: 0 10px;
+	}
+
+	.layout-option-btn {
+		height: $oe-event-header-height;
+		@include flex(center, center);
+		margin: 0 5px;
+		padding: 0 5px;
+		cursor: pointer;
+		border-bottom: 2px solid transparent;
+
+		&:hover,
+		&:focus {
+			border-bottom-color: $oe-text-highlight;
+		}
+
+		// no need for events on anything inside
+		* {
+			pointer-events: none;
+		}
+	}
+}
+
+
+
+

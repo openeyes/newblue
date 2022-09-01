@@ -9,16 +9,16 @@
 	// JS controls these widths
 	.oes-left-side,
 	.oes-right-side {
-		// default to fill the width
-		// if not JS width is set it will use this:
-		flex-grow: 1;  
-		padding:0 5px;	
-		
-		// <div> wrapper for plotly 
-		.oeplot-wrap {
-			min-height: 600px; // stop it squeezing to much 
-			height: 100%; // allow it expand on bigger monitors
+		flex: 1 1 0;
+
+		&.fill-2 {
+			flex:2 1 0;
 		}
+
+		&.fill-3 {
+			flex:3 1 0;
+		}
+
 	}
 }
 
