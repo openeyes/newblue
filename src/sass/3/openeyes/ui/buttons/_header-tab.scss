@@ -8,6 +8,7 @@
 	&.header-tab {
 		margin:0; // overrides an cascade issue
 		background: none; // to match the Header background
+
 		&:hover,
 		&:focus,
 		&:active {
