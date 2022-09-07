@@ -52,8 +52,13 @@
 			
 			&.added {				
 				// if added it can be removed
-				&:hover, &:focus, &:active {
-					background-color:$oe-dark-btn-red-hint;
+				&:hover,
+				&:focus{
+					background: center right 3px / 11px $oe-dark-btn-red-hint url(svg-dark-fixed("i/remove")) no-repeat;
+				}
+
+				&:active {
+					background:$oe-dark-btn-red-hint;
 				}
 			}
 
@@ -63,8 +68,10 @@
 			}
 
 			&.mandatory {
-				background: center right 3px / 9px $oe-dark-blue url(svg-all("ui/asterisk-white")) no-repeat;
-				pointer-events: none;
+				font-style: italic;
+				font-weight: 500;
+				color:#ccc;
+				background: center right 3px / 11px url(svg-all("ui/asterisk-white")) $oe-element-selector-green no-repeat;
 			}
 			
 			&.error {

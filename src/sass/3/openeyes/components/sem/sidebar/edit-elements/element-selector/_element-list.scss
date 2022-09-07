@@ -58,8 +58,9 @@
 
 			&.mandatory {
 				font-style: italic;
-				color: #aaa;
-				background: center right 3px / 11px shade($oe-dark-popup-bg, 5%) url(svg-all("ui/asterisk-white")) no-repeat;
+				font-weight: 500;
+				color:#ccc;
+				background: center right 3px / 11px url(svg-all("ui/asterisk-white")) $oe-element-selector-green no-repeat;
 				pointer-events: none;
 			}
 		}
