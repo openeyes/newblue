@@ -13,9 +13,6 @@
 	height:$oe-header-height;
 	width:545px;
 	
-	background:transparent url( svg-all('ui/watermark-clinic')) center right no-repeat;
-	background-size:52px;	
-	
 	@include flex( center, flex-start );
 	
 	color:$oe-dark-text-light;
