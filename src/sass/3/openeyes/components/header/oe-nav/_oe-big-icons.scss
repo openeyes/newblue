@@ -88,6 +88,7 @@
 					background:$oe-btn-blue;
 					.icon {
 						opacity:1;
+						fill:#fff;
 						// vc is orange
 						&.hotlist.vc {
 							fill:rgb(255,255,255);
@@ -97,6 +98,7 @@
 				
 				// Activity Panel requires 'click' to open
 				&.open {
+					background: linear-gradient( $oe-dark-blue-dark3 95%, $oe-btn-blue 96%);
 					.icon {
 						fill:#0ff;
 					}
