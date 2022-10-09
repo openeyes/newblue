@@ -25,49 +25,39 @@
 			}
 		}
 	}
-	
+
 	.patient-details {
 		position:absolute;
-		bottom:0; 
+		bottom:0;
 		left:0;
 		padding:0 20px 0 0;
-	}
-	
-	.patient-demo-icon {
-		position:absolute;
-		bottom:4px; 
-		right:0;
-	}
+		@include flex( center, flex-start);
 
+		div {
+			padding:0 5px 4px 5px;
+			border-left:1px solid $oe-dark-line;
 
-	// removed .warning it was causing a conflict
-	// with the highlighter class, if you need it back
-	// change to .patient-warning!!
-	.hospital-number, 
-	.nhs-number, 
-	.patient-gender, 
-	.patient-age, 
-	.patient-died {
-		display:inline-block;
-		padding:0 3px 5px 5px;
-		border-left:1px solid $oe-dark-line;	
-		span {
-			&:first-of-type{
+			&:first-child {
+				padding-left:0;
+				border-left:none;
+				@include font-size(13);
+			}
+
+			// ID, NHS
+			// <span> also used to wrap the numbers
+			span:first-of-type {
 				opacity:0.5;
-			} 
-			 
+			}
+
+			// Sex, Age, etc
+			em {
+				opacity:0.5;
+				@include font-size(10);
+			}
 		}
-		em {
-			opacity:0.5;
-			@include font-size(10);
-		}	
-	}
-	
-	// NHS Number Trace warning
-	// uses an orange exclamination mark
-	// small size (13px) is too big so tweak it
-	.hospital-number,
-	.nhs-number {
+
+		// NHS Number Trace warning
+		// ID multiple different ID's flag
 		.oe-i.small {
 			width:11px;
 			height:11px;
@@ -75,12 +65,6 @@
 			position: relative;
 			top:-1px;
 		}
-	}
-	
-	.hospital-number {
-		padding-left:0;
-		border-left:none;
-		@include font-size(13);
 	}
 	
 	// DECEASED
