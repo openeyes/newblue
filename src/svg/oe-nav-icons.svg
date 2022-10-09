@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
 	<defs>
-		<symbol id="home-icon" viewBox="0 0 80 40"><title>home</title><path d="M51,35H41.48V27h-3v8H29V21H22L40,3,58,21H51Zm-6.52-3H48V18h2.8L40,7.24,29.2,18H32l0,14h3.52V24h9Z"/>
+		<symbol id="home-icon" viewBox="0 0 80 40"><title>home</title><path d="M44.754 33.572h3.737V18.697h2.977L39.999 7.266 28.532 18.697h3.028l-.052 14.875h3.737v-8.5h9.509v8.5Zm6.922 3.187H41.569v-8.5H38.43v8.5H28.323V21.884h-7.478L39.999 2.759l19.156 19.125h-7.479v14.875Z"/>
 		</symbol>
-		<symbol id="shortcuts-icon" width="80" height="40" viewBox="0 0 80 40"><title>shortcuts2</title><rect x="42" y="8" width="26" height="2"/><rect x="42" y="16" width="26" height="2"/><rect x="42" y="24" width="26" height="2"/><polygon points="34.48 7.64 32.36 5.52 10 27.88 10 12 7 12 7 33 28 33 28 30 12.12 30 34.48 7.64"/><rect x="42" y="32" width="2" height="2"/><rect x="50" y="32" width="2" height="2"/><rect x="58" y="32" width="2" height="2"/><rect x="66" y="32" width="2" height="2"/>
+		<symbol id="shortcuts-icon" viewBox="0 0 80 40"><title>shortcut</title><path d="M54.986 7.316 52.673 5 28.286 29.409V12.072h-3.272V35H47.92v-3.275H30.601L54.986 7.316Z"/>
 		</symbol>
 		<symbol id="logout-icon" viewBox="0 0 80 40"><title>logout</title><polygon points="13.32 19 13.32 22 44.94 22 33.71 33.23 35.83 35.35 50.68 20.5 35.83 5.65 33.71 7.77 44.94 19 13.32 19"/><polygon points="64 34 49 34 49 32 62 32 62 10 49 10 49 8 64 8 64 34"/>
 		</symbol>

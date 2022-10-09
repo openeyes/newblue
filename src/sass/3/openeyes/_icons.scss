@@ -230,6 +230,7 @@
 		"no-permissions": "no-permissions",
 		"waiting": "waiting",
 		"more-h": "more-h",
+		"more-h-orange": "more-h-orange",
 		"status-urgent": "status-urgent",
 		"status-query": "status-query",
 		"status-query-reply": "status-query-reply",
@@ -279,9 +280,6 @@
 		"finish": "finish",
 		"mpr": "mpr",
 		"tick-green": "tick-green",
-	);
-
-	$universal_icons: (
 		"circle-green": "circle-green",
 		"circle-yellow": "circle-yellow",
 		"circle-amber": "circle-orange", // amber = orange
@@ -305,6 +303,9 @@
 		"exclamation-amber": "exclamation-orange", // amber = orange
 		"exclamation-orange": "exclamation-orange",
 		"exclamation-red": "exclamation-red",
+	);
+
+	$universal_icons: (
 		"warning": "warning", // RED Risk/Alert triangle
 		"warning-none": "warning-none",
 		"cross-red": "cross-red",

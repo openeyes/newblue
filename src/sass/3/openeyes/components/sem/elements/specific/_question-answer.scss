@@ -16,7 +16,7 @@
 			
 			.question {
 				position:relative;
-				width: 40%;
+				flex: 1 1 0;
 				padding:0 0 0 25px; // allow for the Number
 				@include font-size( 14 );
 				
@@ -31,12 +31,12 @@
 			}
 			// answer options
 			.answers {
-				width: 50%;
+				flex:2 1 0;
 			}
 			
-			// in View
+			// the selected answer - in View
 			.answer {
-				width: 50%;
+				flex:2 1 0;
 				@include font-size( 14 );
 			}
 		}

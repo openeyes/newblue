@@ -1,7 +1,7 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
+// for OE Meet
 .oe-capture {
 	position: relative; 
 	min-height: 350px; // otherwise the toolbox will overflow
@@ -56,6 +56,7 @@
 	}
 }
 
+// clips capture (OE Meet)
 .capture-clip {
 	@include inline-flex( flex-start, space-between );
 	margin:0 15px 10px 0;
@@ -71,8 +72,24 @@
 			}
 		}
 	}
-	
+
+	// stack the clips rather than inline
+	// added for DRV device import captures
+	&.stack {
+		@include flex( flex-start, space-between);
+		gap:10px;
+		.details {
+			flex: 1 1 0;
+			table,
+			button {
+				width:100%;
+			}
+
+		}
+	}
+
 }
+
 
 
 

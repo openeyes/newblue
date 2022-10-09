@@ -15,14 +15,13 @@
 	
 	display:flex; // Flex - used for centering popups
 	z-index:$oe-z-popup;
-	background:rgba($html-bg, 0.5); 
+	background:rgba($html-bg, 0.5);
 	
 	&.dark {
-		background:rgba($html-bg, 0.8); 
+		background:rgba($html-bg, 0.8);
 	}
 	
 	&.clear {
 		background: transparent;
 	}
-	
 }
