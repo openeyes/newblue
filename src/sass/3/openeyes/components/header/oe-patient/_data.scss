@@ -1,9 +1,6 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
-// OE Header - Patient
-
 .oe-patient {
 	
 	color:$oe-dark-text;
@@ -66,7 +63,7 @@
 			top:-1px;
 		}
 	}
-	
+
 	// DECEASED
 	&.deceased {
 		.patient-name {

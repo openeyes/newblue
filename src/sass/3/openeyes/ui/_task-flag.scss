@@ -1,0 +1,49 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE task flags
+// Between alerts and auto-alerts
+// For clearly grouping actions with tasks
+.task-flag {
+	padding: 4px 8px 4px 32px; // allow for icons
+	margin:3px 1px;
+
+	@include font-size(14);
+	font-weight: $oe-font-medium;
+	color: $oe-text;
+
+	border: 4px solid $oe-line;
+
+	&.pad-v {
+		margin: 5px 0;
+	}
+
+	background: 6px 6px / 15px url(svg-themed("i/info")) no-repeat;
+
+	// wrap the text describing the task
+	.task-info {}
+	.task-action {
+		@include flex(center, flex-start);
+		gap: 10px;
+		margin: 4px 0 0 0;
+		padding: 4px 0 0 0;
+		border-top: 1px dotted $oe-line;
+	}
+
+
+	&.green {
+		background-image: url(svg-all("i/flag-green"));
+		border-color: $oe-status-green;
+	}
+
+	&.red {
+		background-image: url(svg-all("i/flag-red"));
+		border-color: $oe-status-red;
+	}
+
+	&.orange {
+		background-image: url(svg-all("i/flag-orange"));
+		border-color: $oe-status-amber;
+	}
+}

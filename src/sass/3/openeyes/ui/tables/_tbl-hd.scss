@@ -1,0 +1,13 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// use in any td or th to emphasis a cell text.
+// see Management Summaries
+// <div> inside <td> or <th>
+.tbl-hd {
+	@include font-size(13);
+	font-weight: $oe-font-light;
+	// override specific padding of
+	padding-right: 16px;
+	padding-bottom: 8px;
+}
