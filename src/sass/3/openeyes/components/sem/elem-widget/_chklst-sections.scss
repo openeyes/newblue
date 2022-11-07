@@ -1,0 +1,22 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// wrap arount all the sections with Form elements
+.chklst-sections {
+
+	margin:20px 0;
+
+	// auto column layout
+	display: grid;
+	grid: auto-flow / repeat(auto-fit, minmax(300px, 1fr));
+	gap: 10px;
+
+	&.stack {
+
+	}
+
+	// override, grid gap will handle this
+	.collapse-data {
+		margin:0;
+	}
+}
