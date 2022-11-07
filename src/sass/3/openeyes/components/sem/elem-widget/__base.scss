@@ -1,0 +1,19 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+.elem-widget {
+	position: relative;
+	min-height: 60px; // ensure element actions and header can always be seen
+	margin: 0 0 3px 0;
+	padding: 32px 5px 10px 10px;
+	color: $oe-text;
+	font-weight: $oe-font-medium;
+
+	background: $oe-blue-dark2;
+
+	border: 2px solid $oe-alert-grey;
+}
+
+
+

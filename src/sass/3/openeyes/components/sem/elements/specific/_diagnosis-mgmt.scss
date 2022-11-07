@@ -95,6 +95,10 @@
 		.diag-date {
 			@include flex(center, center);
 			width: 100px;
+			margin:0 1px;
+			input[type=date] {
+				width:100%;
+			}
 		}
 	}
 }

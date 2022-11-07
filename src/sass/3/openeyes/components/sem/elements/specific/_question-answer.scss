@@ -13,6 +13,7 @@
 		// wrapper for Q & A group
 		.qa-g {
 			@include flex( flex-start, space-between );
+			gap: 50px;
 			
 			.question {
 				position:relative;
@@ -36,7 +37,7 @@
 			
 			// the selected answer - in View
 			.answer {
-				flex:2 1 0;
+				flex:1 1 0;
 				@include font-size( 14 );
 			}
 		}

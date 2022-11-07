@@ -1,0 +1,18 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.wdgt-title {
+	position:absolute;
+	top:5px;
+	left:10px;
+
+	@include font-size(13);
+	font-weight:$oe-font-medium;
+	color:$oe-text-light;
+
+	// flag error on title
+	&.error {
+		border-left: 5px solid $oe-alert-red;
+		padding:0 0 0 5px;
+	}
+}
