@@ -1,0 +1,17 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.oe-formio {
+	// Form.io pre-set classes
+	.form-group {
+		margin:0 0 10px 0;
+		padding:0 0 10px 0;
+		border-bottom:1px dotted $oe-line;
+
+		// there is also a wrapper with the same class
+		&:last-child,
+		&.formio-component-container {
+			border-bottom: none;
+		}
+	}
+}

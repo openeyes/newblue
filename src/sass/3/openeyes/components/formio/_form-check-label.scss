@@ -1,0 +1,31 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.form-check-label {
+	@include flex(center, flex-start);
+	line-height: 1;
+	margin-bottom:1px; // give a visual line to help with input
+	height:24px; // add line height to match input and select heights
+	padding:0 5px; // this was 3px 6px
+	border-radius:3px;
+	cursor:pointer;
+	background:$oe-user-inputs;
+
+	&:hover,
+	&:focus-within {
+		background:$oe-user-inputs;
+		input {
+			opacity:1;
+		}
+	}
+
+	// checkbox or radio within the <label>
+	input {
+		margin-right:5px; // pad between input - text
+		opacity:0.8; // tone down the inputs slightly unless checked
+		outline-offset: 2px; // if prefilled, outline needs this
+		&:checked {
+			opacity:1;
+		}
+	}
+}
