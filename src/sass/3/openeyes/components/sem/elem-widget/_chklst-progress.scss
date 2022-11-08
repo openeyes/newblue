@@ -1,0 +1,15 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.chklst-progress {
+	background: rgba($oe-user-inputs, 0.4); // match collapse-data background
+	border-radius:5px;
+
+	height: 24px; // matches inputs heights
+	@include flex(center, center);
+
+	.oe-i {
+		pointer-events: none;
+		background-size:10px;
+	}
+}
