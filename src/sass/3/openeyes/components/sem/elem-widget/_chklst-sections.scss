@@ -8,7 +8,7 @@
 
 	// auto column layout
 	display: grid;
-	grid: auto-flow / repeat(auto-fit, minmax(400px, 1fr));
+	grid: auto-flow / repeat(auto-fit, minmax(350px, 1fr));
 	gap: 10px;
 
 	&.v-stack {

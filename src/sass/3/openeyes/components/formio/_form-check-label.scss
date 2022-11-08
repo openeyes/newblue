@@ -3,13 +3,15 @@
 
 .form-check-label {
 	@include flex(center, flex-start);
-	line-height: 1;
+	flex-wrap: wrap;
+	gap:5px;
+	line-height: 1.2;
 	margin-bottom:1px; // give a visual line to help with input
-	height:24px; // add line height to match input and select heights
-	padding:0 5px; // this was 3px 6px
+	padding:5px; // this was 3px 6px
 	border-radius:3px;
 	cursor:pointer;
 	background:$oe-user-inputs;
+	white-space: normal;
 
 	&:hover,
 	&:focus-within {
@@ -21,9 +23,8 @@
 
 	// checkbox or radio within the <label>
 	input {
-		margin-right:5px; // pad between input - text
+		margin:0; // pad between input - text
 		opacity:0.8; // tone down the inputs slightly unless checked
-		outline-offset: 2px; // if prefilled, outline needs this
 		&:checked {
 			opacity:1;
 		}
