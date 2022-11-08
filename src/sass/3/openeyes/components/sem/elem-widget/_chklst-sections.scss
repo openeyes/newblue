@@ -11,8 +11,11 @@
 	grid: auto-flow / repeat(auto-fit, minmax(400px, 1fr));
 	gap: 10px;
 
-	&.stack {
-
+	&.v-stack {
+		display: block;
+		> section {
+			margin:0 0 5px 0;
+		}
 	}
 
 	// override, grid gap will handle this
