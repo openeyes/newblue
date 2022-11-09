@@ -1,34 +1,33 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-.oe-formio {
-	// Form.io pre-set classes
-	// the basic structure is
-	// .form-group -|- <label>
-	//              |- .element
 
-	.formio-component-select,
-	.formio-component-radio,
-	.formio-component-selectboxes,
-	.formio-component-textarea,
-	.formio-component-number,
-	.formio-component-textField {
-		@include flex( flex-start, flex-start );
+// Form.io pre-set classes
+// the basic structure is
+// .form-group -|- <label>
+//              |- .element
 
-		> label {
-			display:block;
-			width:30%;
-			white-space: normal;
-			@include font-size(12);
-		}
+.formio-component-select,
+.formio-component-radio,
+.formio-component-selectboxes,
+.formio-component-textarea,
+.formio-component-number,
+.formio-component-textField {
+	@include flex(flex-start, flex-start);
 
-		// <div ref="element">
-		div[ref="element"]{
-			flex:1 1 0;
-		}
+	> label {
+		display: block;
+		width: 30%;
+		white-space: normal;
+		@include font-size(12);
+	}
 
-		.form-radio {
-			flex: 1 1 0;
-		}
+	// <div ref="element">
+	div[ref="element"] {
+		flex: 1 1 0;
+	}
+
+	.form-radio {
+		flex: 1 1 0;
 	}
 }
