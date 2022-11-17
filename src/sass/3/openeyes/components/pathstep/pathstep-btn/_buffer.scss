@@ -22,7 +22,8 @@
 	}
 	
 	// pathway owner column
-	&[class*="comments"] {
+	&.comments,
+	&.comments-added {
 		margin-left:10px;
 		background-color: rgba($oe-text,0.1);
 		border-color: transparent;

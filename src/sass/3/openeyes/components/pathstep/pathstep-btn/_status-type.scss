@@ -16,17 +16,25 @@
 	
 	// all steps have a border for consistent layout	
 	border:2px solid transparent;
-	
-	
-	// --- Outlined steps
-	// Configure is possible first state
-	&.config {
-		border-color: $oe-step-outline;
-		background: $oe-step-grey url( svg-themed('i/cog')) left 4px top 5px no-repeat;
-		background-size: 11px;
-		padding-left: 20px;	
+
+	// icon: person
+	&.person {
+		.step {
+			padding-left:13px;
+			background: center left / 11px url( svg-themed('i/person'))  no-repeat;
+		}
 	}
-	
+	// icon: config
+	&.config {
+		background: left 3px top 3px / 11px url( svg-themed('i/cog'))  no-repeat;
+		padding-left: 16px;
+	}
+	// icon: flag comments
+	&.has-comments {
+		background: right 3px top 3px / 11px url( svg-themed('i/comments-added')) no-repeat;
+		padding-right: 16px;
+	}
+
 	// todo or todo-next
 	// conceptually the same but "next" is a different colour
 	&.todo {
@@ -64,6 +72,14 @@
 				background-image: url( svg-dark-fixed('i/person'));
 			}
 		}
+
+		&.config {
+			background-image: url( svg-dark-fixed('i/cog'));
+		}
+
+		&.has-comments {
+			background-image: url( svg-dark-fixed('i/comments-added'));
+		}
 	}
 	
 	&.active {
@@ -74,56 +90,6 @@
 		background-color: $oe-step-green;
 		.step {
 			// opacity:0.8; // reduce the contrast - use opacity because of the icons
-		}
-	}
-	
-	// person
-	&.person {
-		.step {
-			padding-left:13px;
-			background: url( svg-themed('i/person')) center left no-repeat;
-			background-size: 11px;
-		}
-	}
-	
-	// // hold patient for specific mins
-	&.hold {
-		border-radius:50%;
-		width:34px; // see base
-		background: none;
-		border:2px solid $oe-step-blue;
-
-		&.active {
-			border-width:0.5px;
-		}
-
-		&.done {
-			border-color:$oe-step-outline;
-			.step {
-				color:$oe-text;
-			}
-		}
-		
-		.step {
-			@include font-size(12);
-			font-weight: 700;
-			color:$oe-step-blue;
-		}
-		
-		// viewBox="0 0 34 34";
-		svg.progress-ring {
-			position: absolute;
-			width: 34px;
-			height: 34px;
-			// rotatate so that effect starts at 12 o'clock
-			transform: rotate(-90deg);
-			transform-origin: 50% 50%;
-			
-			circle {
-				stroke: $oe-step-blue;
-				stroke-width: 4;
-				// dont' use transition it messes it up!
-			}
 		}
 	}
 	

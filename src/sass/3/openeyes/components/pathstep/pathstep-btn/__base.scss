@@ -28,12 +28,7 @@
 	@include font-size(12);
 	font-style: italic;
 	font-weight: $oe-font-medium;
-	cursor: pointer;	
-	
-	.step {
-		// visual fix!
-		transform: translateY(-1px);
-	}
+	cursor: pointer;
 	
 	// turn off point events for all children
 	// JS needs this:

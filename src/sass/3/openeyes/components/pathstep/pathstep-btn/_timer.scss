@@ -1,0 +1,52 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.oe-pathstep-btn {
+
+	// // hold patient for specific mins
+	&.hold {
+		border-radius: 50%;
+		width: 34px; // see base
+		background: none;
+		border: 2px solid $oe-step-blue;
+
+		&.active {
+			border-width: 0.5px;
+			border-color: $oe-step-outline;
+			outline: 1px solid $oe-step-blue;
+			outline-offset: 1px;
+			background-color: $oe-step-grey;
+		}
+
+		&.done {
+			border-color: $oe-step-outline;
+			border-width:4px;
+
+			.step {
+				color: $oe-text;
+			}
+		}
+
+		.step {
+			@include font-size(13);
+			font-weight: 700;
+			color: $oe-step-blue;
+		}
+
+		// viewBox="0 0 34 34";
+		svg.progress-ring {
+			position: absolute;
+			width: 34px;
+			height: 34px;
+			// rotatate so that effect starts at 12 o'clock
+			transform: rotate(-90deg);
+			transform-origin: 50% 50%;
+
+			circle {
+				stroke: $oe-step-blue;
+				stroke-width: 4;
+				// dont' use transition it messes it up!
+			}
+		}
+	}
+}

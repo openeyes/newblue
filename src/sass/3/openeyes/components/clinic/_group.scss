@@ -37,17 +37,20 @@
 		}
 
 		&.no-patients {
+			margin:10px 0 10px 0;
 			header {
-				height:24px;
+				height:auto;
 				box-shadow: none;
 
 				h3 {
-					@include font-size(15);
+					color:$oe-text-light;
+					@include font-size(13);
+					font-weight: $oe-font-bold;
 				}
 			}
 
 			.result-msg {
-				@include font-size(12);
+				@include font-size(11);
 				font-weight:$oe-font-light;
 				padding:0 20px;
 				color:$oe-text-light;
