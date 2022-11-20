@@ -8,15 +8,7 @@
 	flex-direction: column;
 
 	.show-stack {
-		height: calc(100% - 38px);
-	}
-
-	// more reset to the bottom of the tools
-	.reset {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
+		flex:1 1 0;
 	}
 
 	// modify icon defaults for use in ED3
@@ -28,10 +20,18 @@
 			background-color: $oe-ed3-icon-area;
 		}
 
+		&.copy-over,
 		&.reset {
-			background-image: url(svg-light-fixed("i/reset"));
 			background-size: 17px;
 			height: 38px;
+		}
+
+		&.copy-over {
+			background-image: url(svg-light-fixed("i/copy-over"));
+		}
+
+		&.reset {
+			background-image: url(svg-light-fixed("i/reset"));
 		}
 
 		&.menu {
