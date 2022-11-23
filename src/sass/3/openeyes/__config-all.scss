@@ -66,7 +66,7 @@ $oe-z-ed-v2: 20; // ED v2 DOM. ED v2 still in first V3 implementation
 
 
 @function build-svg-path($theme, $svg) {
-	@return "../svg/in-css/" + $theme + "/" + $svg + ".svg";
+	@return "../svg/v5/" + $theme + "/" + $svg + ".svg";
 }
 
 @function svg-all($svg) {

@@ -20,21 +20,27 @@ const chokidar = require('chokidar');
 const Spritesmith = require("spritesmith");
 const fg = require("fast-glob");
 
-log(cyan(`>>> SVG optimise`));
+/**
+ * "svg5" for newblue 5+
+ * (was just "svg" before the refactoring was started on newblue v6)
+ */
 
+const svgForCSS = 5;
+log(cyan(`>>> SVG iconography for CSS v3-5 ${svgForCSS}`));
 
-// By default this will build the Dark and Light CSS.
-// However, if the eyedraw icons are updated their CSS needs building
+/**
+ * Either re-build ALL the SVG icons - will delete all current SVG icons in "dist"
+ * Or, work with specific SVG icons, copies will be sent over to iDG
+ */
 const mode = process.argv[2] == "rebuild-all" ? "rebuild-all" : "specific";
 
 if (mode == "specific") {
     log('Note: This will watch and update specific SVG files, to rebuild all SVG files from src run: "npm run svg:all"');
 }
 
-// don't use './src'
 const paths = {
-    src: 'src/svg/**/*.svg',
-    dist: 'dist/svg/',
+	src: `src/svg/**/*.svg`,
+	dist: `dist/svg/`,
 };
 
 /**
@@ -115,7 +121,7 @@ const processSVG = (svgPath, idgCopy = true) => {
         const output = `${dist}/${svgFile}`;
         fs.writeFile(output, result.data, err => {
             if (err) log(red('file write error: ') + err);
-            log(cyan(`SVG: `) + output); // success!
+            log(cyan(`SVG:`) + output); // success!
 
 			/**
 			 * iDG Copy
@@ -171,7 +177,7 @@ if (mode == "specific") {
         svgPaths.forEach(path => processSVG(path, false));
 
 		setTimeout(()=>{
-			log( red('iDG note: Manually copy over the svg folder to iDG'));
+			log( red(`iDG note: Only copy over v${svgForCSS} sub-folder to iDG`));
 		},1500);
 
     }).catch((e) => {

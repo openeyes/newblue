@@ -208,6 +208,7 @@
 		"audit-trail": "audit-trail",
 		"download": "download",
 		"asterisk": "asterisk",
+		"asterisk-red": "asterisk-red",
 		"asterisk-blue": "asterisk-blue",
 		"pencil": "pencil",
 		"draft": "draft",
@@ -298,19 +299,16 @@
 		"triangle-red": "triangle-red",
 		"triangle-grey": "triangle-grey",
 		"mpr-red": "mpr-red",
-		"mpr-amber": "mpr-amber",
+		"mpr-amber": "mpr-orange",
+		"mpr-orange": "mpr-orange", // amber = orange
 		"mpr-green": "mpr-green",
 		"exclamation-green": "exclamation-green",
 		"exclamation-amber": "exclamation-orange", // amber = orange
 		"exclamation-orange": "exclamation-orange",
 		"exclamation-red": "exclamation-red",
-	);
-
-	$universal_icons: (
+		"cross-red": "cross-red",
 		"warning": "warning", // RED Risk/Alert triangle
 		"warning-none": "warning-none",
-		"cross-red": "cross-red",
-		"asterisk-red": "asterisk-red",
 	);
 
 	$eyedraw_icons: (
@@ -330,7 +328,7 @@
 	$used-in-frame: "laterality.R", "laterality.L", "laterality.NA", "laterality.Ri", "laterality.Li", "lat-R", "lat-L", "lat-n", "lat-Ri", "lat-Li", "beo", "d-slash", "line-break", "direction-right", "direction-right-circle", "person", "comments", "comments-added", "comments-who", "info", "child-arrow", "parent-arrow", "top", "audit-trail", "drug-rx", "remove-circle", "plus-circle", "pencil", "save", "more-h", "menu", "change", "injection","doubt","range","expand","collapse","formulary";
 
 	// these icons need to always be at full opacity by default
-	$no-opacity: "laterality.R", "laterality.L", "laterality.NA", "lat-R", "lat-L", "lat-n", "lat-Ri", "lat-Li", "beo", "doubt-active", "circle-green", "circle-yellow", "circle-amber", "circle-orange", "circle-red", "circle-grey", "flag-green", "flag-amber", "flag-orange", "flag-red", "flag-grey", "triangle-green", "triangle-amber", "triangle-orange", "triangle-red", "triangle-grey", "triangle-urgent", "mpr", "mpr-red", "mpr-amber", "mpr-green", "exclamation-green", "exclamation-amber", "exclamation-orange", "exclamation-red", "tick-green", "cross-red", "warning", "warning-none",
+	$no-opacity: "laterality.R", "laterality.L", "laterality.NA", "lat-R", "lat-L", "lat-n", "lat-Ri", "lat-Li", "beo", "doubt-active", "circle-green", "circle-yellow", "circle-amber", "circle-orange", "circle-red", "circle-grey", "flag-green", "flag-amber", "flag-orange", "flag-red", "flag-grey", "triangle-green", "triangle-amber", "triangle-orange", "triangle-red", "triangle-grey", "triangle-urgent", "mpr", "mpr-red", "mpr-orange", "mpr-amber", "mpr-green", "exclamation-green", "exclamation-amber", "exclamation-orange", "exclamation-red", "tick-green", "cross-red", "warning", "warning-none",
 	"person-green", "status-urgent", "asterisk-red";
 
 	// @mixin - build specific icon classes
@@ -370,7 +368,6 @@
 	// Build icon classes using @mixin oe-i
 	// Map | Icon set to use | sub-directory (optional)
 	@include oe-i($themed_icons, "themed");
-	@include oe-i($universal_icons, "all");
 	@include oe-i($eyedraw_icons, "all", "eyedraw/");
 
 }

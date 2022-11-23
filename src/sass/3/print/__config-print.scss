@@ -36,7 +36,7 @@ $table-line-color: #bbb;
 $oe-icon-opacity: 	1;
 
 @function build-svg-path($theme, $svg){
-	@return "../svg/in-css/" + $theme + "/" + $svg + ".svg";
+	@return "../svg/v5/" + $theme + "/" + $svg + ".svg";
 }
 
 @function svg-all($svg){
