@@ -5,26 +5,27 @@
 // OE Auto alerts
 // System generated flags
 .auto-alert {
-	padding: 4px 10px 4px 28px; // allow for icons
-	margin: 3px 0;
+	padding: 5px 5px 5px 28px; // allow for icons
+	margin: 3px 1px;
 
 	@include font-size(13);
 	font-weight: $oe-font-medium;
 	color: $oe-text;
+	line-height: 1.2;
 
-	border: 1.5px solid $oe-line;
-	border-radius: 15px;
+	border: 2px solid $oe-line;
+	// border-radius: 15px;
 
 	&.pad-v {
 		margin: 5px 0;
 	}
 
-	background: 8px 6px / 12px $oe-text-inverted url(svg-all("i/flag-grey")) no-repeat;
+	background: 6px 7px / 12px $oe-text-inverted url(svg-themed("i/flag-grey")) no-repeat;
 
 	&.inline {
 		@include font-size(11);
 		display: inline-block;
-		padding: 1px 10px 1px 25px;
+		padding: 2px 10px 2px 25px;
 		background-position: 8px 3px;
 		background-size: 11px;
 
@@ -36,47 +37,49 @@
 	}
 
 	&.green {
-		background-image: url(svg-all("i/flag-green"));
+		background-image: url(svg-themed("i/flag-green"));
 		border-color: $oe-status-green;
 
 		&.risk {
-			background-image: url(svg-all("i/triangle-green"));
+			background-image: url(svg-themed("i/triangle-green"));
 		}
 	}
 
 	&.red {
-		background-image: url(svg-all("i/flag-red"));
+		background-image: url(svg-themed("i/flag-red"));
 		border-color: $oe-status-red;
 
 		&.risk {
-			background-image: url(svg-all("i/triangle-red"));
+			background-image: url(svg-themed("i/triangle-red"));
 		}
 	}
 
 	&.amber {
-		background-image: url(svg-all("i/flag-orange"));
+		background-image: url(svg-themed("i/flag-orange"));
 		border-color: $oe-status-amber;
 
 		&.risk {
-			background-image: url(svg-all("i/triangle-orange"));
+			background-image: url(svg-themed("i/triangle-orange"));
 		}
 	}
 
 	&.prefill {
+		padding-top:10px;
+		padding-bottom: 10px;
 		background-image: url(svg-themed("i/starline"));
-		background-size: 14px;
-		border-color: $oe-text-active;
 	}
 
 	&.has-actions {
 		position:relative;
-		padding-right:300px; 	// allow space for a long named button
-		min-height: 31px;  		// otherwise button overlaps button background
+		padding-right:50%; 	// allow space for a long named button
+		min-height: #{24px + 24px};  	// otherwise button overlaps button background
+		padding-top:10px;
+		padding-bottom: 10px;
 
 		.alert-actions {
 			position: absolute;
-			right:15px;
-			top:2px;
+			right:10px;
+			top:10px;
 		}
 	}
 
@@ -90,9 +93,9 @@
 			content: "";
 			position: absolute;
 			right: 5px;
-			top: 5.5px;
-			width: 15px;
-			height: 15px;
+			top: 7px;
+			width: 12px;
+			height: 12px;
 			background: center / contain url(svg-themed("i/remove-circle")) no-repeat;
 			opacity: 0.5;
 		}

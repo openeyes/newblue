@@ -33,17 +33,17 @@
 
 
 	&.green {
-		background-image: url(svg-all("i/flag-green"));
+		background-image: url(svg-themed("i/flag-green"));
 		border-color: $oe-status-green;
 	}
 
 	&.red {
-		background-image: url(svg-all("i/flag-red"));
+		background-image: url(svg-themed("i/flag-red"));
 		border-color: $oe-status-red;
 	}
 
 	&.orange {
-		background-image: url(svg-all("i/flag-orange"));
+		background-image: url(svg-themed("i/flag-orange"));
 		border-color: $oe-status-amber;
 	}
 }
