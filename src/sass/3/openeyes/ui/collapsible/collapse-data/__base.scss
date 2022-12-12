@@ -29,4 +29,9 @@
 // JS/DOM can override this with style="display:block"
 .collapse-data-content {
 	display: none;
+
+	&.expanded {
+		display:block;
+	}
+
 }
