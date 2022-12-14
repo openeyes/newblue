@@ -61,12 +61,15 @@ textarea {
     display: none;
 }
 
+// 'display-...' classes are a hack
+// designed to help out Vue which doesn't
+// like inline styles .e.g. style="display: block"
 .display-block {
-	display: block;
+	display: block !important;
 }
 
 .display-flex {
-	display: flex;
+	display: flex !important;
 }
 
 .invisible {

@@ -9,7 +9,7 @@
 label,
 .label {
 	// labels should be used next to an input:
-	margin:0 10px 0 0;
+	margin: 0 10px 0 0;
 	white-space: nowrap;
 
 	// as User regularly interact with this turn off selection
@@ -18,30 +18,26 @@ label,
 	.oe-i {
 		pointer-events: none; // otherwise JS picks up a click!
 	}
-	
+
 	// highlight is there standard usage
 	// wrap and visually group label with it's input
 	&.highlight {
 		@include flex(center, flex-start);
 		line-height: 1;
-		margin-bottom:1px; // give a visual line to help with input
-		height:24px; // add line height to match input and select heights
-		padding:0 5px; // this was 3px 6px
-		
+		margin-bottom: 1px; // give a visual line to help with input
+		height: 24px; // add line height to match input and select heights
+		padding: 0 5px; // this was 3px 6px
+
 		&.inline {
 			@include inline-flex(center, space-between);
-			margin:0 3px 0 0;
-			&:last-child {
-				margin-right:0;
-			}
-			.btn {
-				justify-content:center !important;
-			}
-		}
+			margin: 0 3px 0 0;
 
-		&.hide-input {
-			input {
-				display:none;
+			&:last-child {
+				margin-right: 0;
+			}
+
+			.btn {
+				justify-content: center !important;
 			}
 		}
 
@@ -49,12 +45,14 @@ label,
 		// <label> 	|- <input>
 		//			|- <div class="btn" ...
 		&.as-button {
-			padding:0; // turn off label padding
+			padding: 0; // turn off label padding
 			input {
 				display: none;
+
 				&:checked + .btn {
-					color:#fff;
+					color: #fff;
 					background-color: $oe-btn-blue;
+
 					.oe-i {
 						// invert to white  light theme
 						filter: $oe-btn-icon-hover;
@@ -62,57 +60,93 @@ label,
 					}
 				}
 			}
+
 			.btn {
-				flex:1;
+				flex: 1;
 				pointer-events: none; // otherwise JS picks up a click!
 				@include flex(center, flex-start);
 				height: 100%;
-				padding:0 5px; // this was 3px 6px
+				padding: 0 5px; // this was 3px 6px
 			}
 		}
-		
+
+		&.as-i-toggle-button {
+			input {
+				display: none;
+			}
+
+			.oe-i {
+				pointer-events: none;
+			}
+
+			// doubt - used in Diagnosis v2 to manage certitude state
+			&.is-doubt {
+				.oe-i {
+					background-image: url(svg-themed("i/doubt"));
+				}
+				input:checked + .oe-i {
+					background-image: url(svg-themed("i/doubt-active"));
+					opacity: 1;
+				}
+			}
+
+			// confirm - confirm a state (admin usage)
+			&.is-confirm {
+				.oe-i {
+					background-image: url(svg-themed("i/tick-circle"));
+				}
+				input:checked + .oe-i {
+					background-image: url(svg-themed("i/save"));
+					opacity: 1;
+				}
+			}
+		}
+
+
 		span.text {
 			.oe-i {
 				// sorts the layout if there icons wrapped in the <span>
 				vertical-align: text-bottom;
 			}
 		}
-		
+
 		// checkbox or radio within the <label>
 		input {
-			margin-right:5px; // pad between input - text
-			opacity:0.8; // tone down the inputs slightly unless checked
+			margin-right: 5px; // pad between input - text
+			opacity: 0.8; // tone down the inputs slightly unless checked
 			outline-offset: 2px; // if prefilled, outline needs this
 			&:checked {
-				opacity:1;
+				opacity: 1;
 			}
 		}
-		
-		border-radius:3px;
-		cursor:pointer;
-		color:$oe-user-input-text;
-		background:$oe-user-inputs-hint;
-		
+
+		border-radius: 3px;
+		cursor: pointer;
+		color: $oe-user-input-text;
+		background: $oe-user-inputs-hint;
+
 		&:hover,
 		&:active {
-			background:$oe-user-inputs;
+			background: $oe-user-inputs;
+
 			input {
-				opacity:1;
+				opacity: 1;
 			}
+
 			.oe-i {
-				opacity:1;
+				opacity: 1;
 			}
 		}
-		
+
 		&.error {
-			color:rgb(255,255,255);
+			color: rgb(255, 255, 255);
 			background-color: $oe-alert-red;
 		}
-			
+
 		&.pro-theme {
 			color: $oe-dark-user-input-text;
 			background-color: $oe-dark-user-inputs;
-		}	
+		}
 	}
 
 	.required {
