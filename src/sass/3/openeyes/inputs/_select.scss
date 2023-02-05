@@ -12,7 +12,6 @@ select {
 	padding: 0 15px 0 4px; // allow for the background
 
 	// turn off browser UI defaults
-	// (basically because of Safari!)
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
@@ -23,7 +22,7 @@ select {
 
 	cursor: pointer;
 	width: 100%;
-	max-width: 350px; // nothing should longer than this, surely!
+	max-width: 350px; // nothing should longer than this
 
 	// if text input value is too long, cut and add "..."
 	overflow: hidden;
@@ -32,6 +31,15 @@ select {
 
 	// UI to indicate it's a dropdown vanishes, looks like an input, add a custom arrow
 	background: right 2px center / 13px url(svg-themed("i/arrow-down-bold")) $oe-user-inputs no-repeat;
+
+	// make select look like basic text with an arrow button next to the text
+	// a "discreet" select dropdown, added to handle a dense UI of multiple
+	// dropdowns e.g. Diagnosis 2
+	&.discreet {
+		background-color: transparent;
+		background-image: url(svg-themed("i/arrow-down-bold-blue"));
+
+	}
 
 	// popups are fixed in a dark theme
 	.oe-popup & {

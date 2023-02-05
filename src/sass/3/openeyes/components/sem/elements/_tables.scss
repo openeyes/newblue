@@ -105,12 +105,31 @@
 			tbody {
 				tr {
 					&:hover,
-					&:focus {
+					&:focus-within {
 						background: $oe-bg-highlight;
 					}
 				}
 			}
 		}
+
+		&.rows-focus {
+			tbody {
+				tr {
+					&:hover {
+						background: $oe-tr-focus;
+						td:first-of-type{
+							padding-left:10px;
+							background: center left / 8px url(svg-themed("i/arrow-right-bold")) no-repeat;
+							transition: padding-left 0.3s ease-out;
+						}
+					}
+
+				}
+			}
+		}
+
+
+
 
 		// initially, when doing all the data layouts
 		// it seemed vertical-align middle was the best approach

@@ -143,6 +143,8 @@ $oe-wait-red:			rgb(255,0,0);
 $oe-dark-bg-highlight: 	shade($oe-dark-blue-dark3, 30); // used as hover highlight
 $oe-bg-highlight: 		rgba(230,230,230,0.8); // used as hover highlight 
 $oe-tr-highlight:		rgb(230,230,230);
+$oe-tr-focus:           rgb(240,240,240);
+
 // colors 
 $oe-bg-hint-green:		rgb(180,200,180);
 $oe-bg-hint-red:		rgb(230,180,180);

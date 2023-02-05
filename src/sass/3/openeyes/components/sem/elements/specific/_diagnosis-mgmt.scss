@@ -44,6 +44,36 @@
 				// match the line-l on the table
 				border-right: 2px solid $oe-line;
 			}
+
+			.left {
+				// right side has cleared indent because of "td.line-l"
+				// this balances that visual indent for the left side
+				padding:0 0 0 2px;
+			}
+		}
+
+
+		// minor DOM updates to adjust UIX:
+		// diag-state, state-change, state-notes (v1)
+		// in updated DOM these are: diag-status & status-notes
+		// keeping to show the old layout in iDG (only a few lines)
+
+		.diag-status {
+			flex: 1 1 0;
+			display: grid;
+			grid: 24px 1fr / 1fr 1fr 28px;
+			gap:2px;
+
+			margin:0 5px 0 0;
+
+			.status-notes {
+				grid-column: auto / span 3;
+				textarea {
+					width: 100%;
+				}
+			}
+
+
 		}
 
 
@@ -95,7 +125,7 @@
 		.diag-date {
 			@include flex(center, center);
 			width: 100px;
-			margin:0 1px;
+			margin:0 5px 0 0;
 			input[type=date] {
 				width:100%;
 			}
