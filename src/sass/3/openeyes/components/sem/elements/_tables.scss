@@ -115,21 +115,16 @@
 		&.rows-focus {
 			tbody {
 				tr {
-					&:hover {
-						background: $oe-tr-focus;
-						td:first-of-type{
-							padding-left:10px;
-							background: center left / 8px url(svg-themed("i/arrow-right-bold")) no-repeat;
-							transition: padding-left 0.3s ease-out;
-						}
-					}
+					border-bottom:1px solid $oe-line;
 
+					&:hover,
+					&:focus-within {
+						background-color: $oe-tr-focus;
+						border-bottom-color:$oe-line-hard;
+					}
 				}
 			}
 		}
-
-
-
 
 		// initially, when doing all the data layouts
 		// it seemed vertical-align middle was the best approach
@@ -200,7 +195,7 @@
 		}
 
 
-		th, td, {
+		th, td {
 
 			@include font-size(12);
 

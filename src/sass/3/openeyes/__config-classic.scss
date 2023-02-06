@@ -59,6 +59,7 @@ $oe-grey:				rgb(220,220,220); // 'grey' because PRO is default scheme
 
 $oe-dark-line: 			rgb(60,60,60);
 $oe-line:				rgb(162,160,160); // don't use alphas! - tables with td colspan 2 overlap
+$oe-hard-line:          $oe-dark-line;
 
 
 // key focus outline
