@@ -115,13 +115,18 @@
 		&.rows-focus {
 			tbody {
 				tr {
-					border-bottom:1px solid $oe-line;
+					&:last-child {
+						// without this, get a pixel jump
+						border-bottom:1px solid transparent;
+					}
 
 					&:hover,
 					&:focus-within {
 						background-color: $oe-tr-focus;
-						border-bottom-color:$oe-line-hard;
+						border-bottom:1px solid $oe-line-hard;
 					}
+
+
 				}
 			}
 		}

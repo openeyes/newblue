@@ -36,19 +36,25 @@
 	.diag-actions {
 		@include flex(center, flex-end);
 		flex-wrap: nowrap; // push <td>
-		width:100px;
+		width:80px;
 	}
 
 	// wrapper for all the various diagnosis states
 	.diag-mgmt {
-		@include flex(center, space-between);
+		@include flex(flex-start, space-between);
 		gap: 4px;
+
+		.oe-date,
+		.oe-i {
+			height: 24px; // icons to match all inputs
+			align-items: center;
+		}
 
 		&.sides {
 			.right,
 			.left {
 				flex: 1 1 0;
-				@include flex(center, space-between);
+				@include flex(flex-start, space-between);
 			}
 
 			.right {
@@ -68,7 +74,6 @@
 		// diag-state, state-change, state-notes (v1)
 		// in updated DOM these are: diag-status & status-notes
 		// keeping to show the old layout in iDG (only a few lines)
-
 		.diag-status {
 			flex: 1 1 0;
 			display: grid;
@@ -79,11 +84,18 @@
 			.status-notes {
 				grid-column: auto / span 3;
 				padding:5px 0;
-				textarea {
+				input {
 					width: 100%;
+					&:invalid {
+						border: 1px solid $oe-alert-red;
+					}
 				}
 			}
+		}
 
+		.diag-edit {
+			@include flex(center, space-between);
+			flex-wrap: nowrap;
 		}
 
 		.diag-state,
@@ -120,7 +132,25 @@
 			gap: 10px;
 		}
 
-		// Resolved or Removed
+		// new class for updates
+		.diag-review {
+			flex:1 1 0;
+			min-height: 24px; // match inputs
+			@include flex(center, flex-start);
+			font-weight: 500;
+			gap:10px;
+			padding: 0 0 0 8px;
+
+			select {
+				flex: 1 1 0;
+			}
+
+			.by-who {
+				flex: 2;
+			}
+		}
+
+		// Resolved or Removed (replaced by diag-review)
 		.diag-record {
 			.by-who {
 				display:inline-block;
