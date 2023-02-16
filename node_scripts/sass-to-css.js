@@ -65,10 +65,10 @@ const headerLegals = [
  * "Dart Sass is the primary implementation of Sass"
  * https://sass-lang.com/dart-sass
  */
-const dartSass = ( style ) => {
+const dartSass = ( style, versionTag = true ) => {
 	log(cyan(`Build: ${style}`));
 	const cssOutput = `${config.dist}${style}.css`;
-	const cssIDG = `${config.idg}${tag}_${style}.css`;
+	const idgCSSCopy = versionTag ? `${tag}_${style}.css` : `${style}.css`
 
 	try {
 		/**
@@ -92,8 +92,8 @@ const dartSass = ( style ) => {
 		/**
 		 * TAG prefixed file version for iDG
 		 */
-		log(cyan(`iDG copy: `) + `${tag}_${style}`);
-		const idgStream = fs.createWriteStream(`${cssIDG}`);
+		log(cyan(`iDG copy: `) + `${idgCSSCopy}`);
+		const idgStream = fs.createWriteStream(`${config.idg}${idgCSSCopy}`);
 		idgStream.write(headerLegals);
 		idgStream.write(dateStamp);
 		idgStream.end(result.css);
@@ -120,7 +120,7 @@ const buildCSS = () => {
  */
 if ( mode == "eyedraw" ){
 	// only need to run this once
-	dartSass('style_eyedraw_doodles');
+	dartSass('style_eyedraw_doodles', false );
 } else {
 	// run default build CSS 
 	buildCSS();

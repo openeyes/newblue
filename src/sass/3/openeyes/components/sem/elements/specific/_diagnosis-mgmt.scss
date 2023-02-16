@@ -37,6 +37,10 @@
 		@include flex(center, flex-end);
 		flex-wrap: nowrap; // push <td>
 		width:80px;
+
+		.oe-i {
+			flex: 1 1 0;
+		}
 	}
 
 	// wrapper for all the various diagnosis states
@@ -60,13 +64,13 @@
 			.right {
 				// match the line-l on the table
 				border-right: 2px solid $oe-line;
+				// balance out the R/L sides
+				padding:0 1px 0 0;
 			}
+		}
 
-			.left {
-				// right side has cleared indent because of "td.line-l"
-				// this balances that visual indent for the left side
-				padding:0 0 0 2px;
-			}
+		&.sys {
+			justify-content: center;
 		}
 
 
@@ -78,17 +82,18 @@
 			flex: 1 1 0;
 			display: grid;
 			grid: 24px 1fr / 1fr 1fr 28px;
-
 			margin:0 5px 0 0;
+			max-width: 280px; // systemic is center and needs restricting
+
+			select {
+				width:95%;
+			}
 
 			.status-notes {
 				grid-column: auto / span 3;
 				padding:5px 0;
 				input {
 					width: 100%;
-					&:invalid {
-						border: 1px solid $oe-alert-red;
-					}
 				}
 			}
 		}
@@ -96,6 +101,7 @@
 		.diag-edit {
 			@include flex(center, space-between);
 			flex-wrap: nowrap;
+			margin: 0 0 0 10px;
 		}
 
 		.diag-state,
@@ -141,6 +147,10 @@
 			gap:10px;
 			padding: 0 0 0 8px;
 
+			span {
+				@include flex(center, flex-start);
+			}
+
 			select {
 				flex: 1 1 0;
 			}
@@ -164,7 +174,6 @@
 		.diag-date {
 			@include flex(center, center);
 			width: 100px;
-			margin:0 5px 0 0;
 			input[type=date] {
 				width:100%;
 			}

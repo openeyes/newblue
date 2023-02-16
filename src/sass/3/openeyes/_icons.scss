@@ -206,6 +206,9 @@
 		"tick-circle": "tick-circle",
 		"triangle": "triangle",
 		"time": "time",
+		"time-green": "time-green",
+		"time-orange": "time-orange",
+		"time-red": "time-red",
 		"audit-trail": "audit-trail",
 		"download": "download",
 		"asterisk": "asterisk",
@@ -251,6 +254,7 @@
 		"cog": "cog",
 		"padlock": "padlock",
 		"fork": "fork",
+		"merge": "merge",
 		"path-break": "path-break",
 		"happy": "happy",
 		"crying": "crying",
@@ -334,7 +338,7 @@
 
 	// these icons need to always be at full opacity by default
 	$no-opacity: "laterality.R", "laterality.L", "laterality.NA", "lat-R", "lat-L", "lat-n", "lat-Ri", "lat-Li", "beo", "doubt-active", "circle-green", "circle-yellow", "circle-amber", "circle-orange", "circle-red", "circle-grey", "flag-green", "flag-amber", "flag-orange", "flag-red", "flag-grey", "triangle-green", "triangle-amber", "triangle-orange", "triangle-red", "triangle-grey", "triangle-urgent", "mpr", "mpr-red", "mpr-orange", "mpr-amber", "mpr-green", "exclamation-green", "exclamation-amber", "exclamation-orange", "exclamation-red", "tick-green", "cross-red", "warning", "warning-none",
-	"person-green", "status-urgent", "asterisk-red", "a11ty-green","a11ty-orange","a11ty-red";
+	"person-green", "status-urgent", "asterisk-red", "a11ty-green","a11ty-orange","a11ty-red", "time-green", "time-orange", "time-red";
 
 	// @mixin - build specific icon classes
 	// $map: see lists above
