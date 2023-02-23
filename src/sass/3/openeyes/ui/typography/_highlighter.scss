@@ -47,6 +47,18 @@
 		background: rgba($oe-text,0.5);
 		color: $oe-text-inverted;
 	}
+
+	// icons within buttons
+	.oe-i {
+		// if there is icon this make sure it shows the button hover effect
+		opacity:1;
+		// if in light mode the icon will need inverting
+		filter: $oe-btn-icon-hover;
+
+		// and turn off interaction
+		// if you want interaction use a button!
+		pointer-events: none;
+	}
 	
 }
 

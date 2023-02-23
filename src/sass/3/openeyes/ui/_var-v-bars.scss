@@ -1,0 +1,66 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// variation vertical bars (see v7 OCT assessments)
+.var-v-bars {
+	height: 40px;
+	width: 18px;
+	border: 2px solid $oe-line-hard;
+	display: grid;
+	grid: "up" 1fr "neutral" 2px "down" 1fr / auto;
+	border-radius: 2px;
+
+
+	&::after {
+		content: "";
+		background: $oe-line-hard;
+		grid-area: neutral;
+	}
+
+	&.no-change {
+		border-color: $oe-line;
+		grid: "up" 1fr "neutral" 4px "down" 1fr / auto;
+		&::after {
+			background:  $oe-alert-orange;
+		}
+	}
+}
+
+.v-bar {
+	background: $oe-alert-grey;
+
+	&.up {
+		grid-area: up;
+		align-self: end;
+	}
+
+	&.down {
+		grid-area: down;
+	}
+
+	&.red {
+		background: $oe-alert-red;
+	}
+
+	&.orange {
+		background: $oe-alert-orange;
+	}
+
+	&.green {
+		background: $oe-alert-green;
+	}
+}
+
+// interval spacer: e.g. 16wks, 11mths, 2.5yr
+.var-v-interval {
+	height: 40px;
+	width: 6ch;
+	@include font-size(10);
+	font-weight: 500;
+
+	background: center / 14px url( svg-themed( 'i/interval' )) no-repeat;
+	@include flex( flex-end, center );
+}
+
+

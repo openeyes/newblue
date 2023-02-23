@@ -7,6 +7,10 @@
 .pro-data-view {
 	@include flex(flex-start, space-between);
 
+	&.pad-v-b {
+		margin: 0 0 10px 0;
+	}
+
 	// wrapper for Pro / Standard DOMs
 	// contains both Pro and Standard view of data
 	.pro-standard-views {

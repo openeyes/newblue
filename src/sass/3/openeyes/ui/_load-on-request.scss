@@ -17,12 +17,16 @@
 	outline:1px solid $oe-line;
 	border-radius: 10px;
 
+
+
 	// in Exam tiles the outline is cropped
 	.tile-data-overflow & {
 		outline-offset: -1px;
 	}
 
 	position: relative;
+	@include flex( center, flex-start);
+	gap: 10px;
 
 	// no background-opacity in CSS (... why not huh?!)
 	// need to match icon opacity (when not

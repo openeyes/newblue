@@ -8,14 +8,14 @@
 .oe-lat {
 	display: block;
 	height: 13px;
-	width:30px; // allows a 4px center gap
+	width: 30px; // allows a 4px center gap
 	margin: 0 4px; // space makes up to 38px
 
 	&.inline {
 		display: inline-block;
 	}
 
-	@mixin bg( $left, $right ){
+	@mixin bg( $left, $right ) {
 		background-image: url(svg-themed("i/" + $left)), url(svg-themed("i/" + $right));
 
 		// require the generic wrapper to fix icons
@@ -26,90 +26,126 @@
 	}
 
 	// default set up for all icons (small)
-	background-size:13px;
+	background-size: 13px;
 	background-position: center left, center right;
 	background-repeat: no-repeat;
 
 	&.mini {
-		background-size:11px;
-		width:25px; // 2px gap
+		background-size: 11px;
+		width: 25px; // 2px gap
 	}
 
 	// this is "n-n"
-	@include bg("lat-NA","lat-NA");
+	@include bg("lat-NA", "lat-NA");
 
 	// quite a few available combinations
 	// each side can be: n, R, Ri, Rq
 
 	&.R-L {
-		@include bg("lat-R-green","lat-L-red");
+		@include bg("lat-R-green", "lat-L-red");
 	}
+
 	&.R-n {
-		@include bg("lat-R-green","lat-NA");
+		@include bg("lat-R-green", "lat-NA");
 	}
+
 	&.n-L {
-		@include bg("lat-NA","lat-L-red");
+		@include bg("lat-NA", "lat-L-red");
 	}
+
 	&.R-Lq {
-		@include bg("lat-R-green","lat-L-query");
+		@include bg("lat-R-green", "lat-L-query");
 	}
+
 	&.Ri-Li {
-		@include bg("lat-R-inactive","lat-L-inactive");
+		@include bg("lat-R-inactive", "lat-L-inactive");
 	}
+
 	&.Ri-n {
-		@include bg("lat-R-inactive","lat-NA");
+		@include bg("lat-R-inactive", "lat-NA");
 	}
+
 	&.Ri-L {
-		@include bg("lat-R-inactive","lat-L-red");
+		@include bg("lat-R-inactive", "lat-L-red");
 	}
+
 	&.Ri-Lq {
-		@include bg("lat-R-inactive","lat-L-query");
+		@include bg("lat-R-inactive", "lat-L-query");
 	}
+
 	&.n-Li {
-		@include bg("lat-NA","lat-L-inactive");
+		@include bg("lat-NA", "lat-L-inactive");
 	}
+
 	&.R-Li {
-		@include bg("lat-R-green","lat-L-inactive");
+		@include bg("lat-R-green", "lat-L-inactive");
 	}
+
 	&.Rq-Li {
-		@include bg("lat-R-query","lat-L-inactive");
+		@include bg("lat-R-query", "lat-L-inactive");
 	}
 
 	&.Rq-Lq {
-		@include bg("lat-R-query","lat-L-query");
+		@include bg("lat-R-query", "lat-L-query");
 	}
+
 	&.Rq-n {
-		@include bg("lat-R-query","lat-NA");
+		@include bg("lat-R-query", "lat-NA");
 	}
+
 	&.Rq-L {
-		@include bg("lat-R-query","lat-L-red");
+		@include bg("lat-R-query", "lat-L-red");
 	}
+
 	&.n-Lq {
-		@include bg("lat-NA","lat-L-query");
+		@include bg("lat-NA", "lat-L-query");
 	}
+
 	&.n-L {
-		@include bg("lat-NA","lat-L-red");
+		@include bg("lat-NA", "lat-L-red");
 	}
 
 	&.beo {
-		background-position:center center;
+		background-position: center center;
 		background-image: url(svg-themed("i/beo"));
 	}
 
 	&.sys {
-		background-position:center center;
+		background-position: center center;
 		background-image: url(svg-themed("i/person-green"));
 	}
+
 	&.sys-i {
-		background-position:center center;
+		background-position: center center;
 		background-image: url(svg-themed("i/person-inactive"));
 	}
+
 	&.sys-q {
-		background-position:center center;
+		background-position: center center;
 		background-image: url(svg-themed("i/person-query"));
 	}
+
 	&.sys-n {
-		background-position:center center;
+		background-position: center center;
 		background-image: url(svg-themed("i/lat-NA"));
 	}
+
+	// qualifier flags!
+	position: relative;
+	
+	&.qL {
+		&::after {
+			content: "";
+			position: absolute;
+			top: -2px;
+			right: -1px;
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			border:1px solid $oe-alert-orange;
+			background: $oe-highlighter;
+		}
+	}
+
+	// .qR and qSys
 }
