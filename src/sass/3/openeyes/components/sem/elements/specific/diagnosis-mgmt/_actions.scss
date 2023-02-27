@@ -1,0 +1,15 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.diag-mgmt {
+	// trash, remove, view changes (last table column)
+	.diag-actions {
+		@include flex(center, flex-end);
+		flex-wrap: nowrap; // push <td>
+		width:80px;
+
+		.oe-i {
+			flex: 1 1 0;
+		}
+	}
+}

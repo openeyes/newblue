@@ -126,6 +126,11 @@
 						border-bottom:1px solid $oe-line-hard;
 					}
 				}
+
+				td {
+					padding-top: 5px;
+					padding-bottom: 5px;
+				}
 			}
 		}
 
@@ -158,6 +163,7 @@
 			&.valign-top {
 				td {
 					vertical-align: top;
+					padding-top: 4px;
 				}
 			}
 
@@ -260,7 +266,7 @@
 		// <td>
 		td {
 			vertical-align: middle;
-			height: 28px;
+			min-height: 28px; // buttons and inputs are 24px height
 
 			&.line-r {
 				border-right:2px solid $oe-line;

@@ -1,0 +1,26 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.diag-mgmt {
+
+	.diag-review {
+		flex:1 1 0;
+		min-height: 24px; // match inputs
+		@include flex(center, flex-start);
+		font-weight: 500;
+		gap:10px;
+		padding: 0 0 0 8px;
+
+		span {
+			@include flex(center, flex-start);
+		}
+
+		select {
+			flex: 1 1 0;
+		}
+
+		.by-who {
+			flex: 2;
+		}
+	}
+}

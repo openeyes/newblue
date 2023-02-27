@@ -49,18 +49,16 @@
 	}
 }
 
+.f-w,
+.f-wrap {
+	flex-wrap: wrap;
+}
+
 // Update 
 // Using Flex all over the place, simplifying class usage
 // for common usages
 .flex {
 	@include flex( center, space-between );
-	&.f-w {
-		flex-wrap: wrap;
-	}
-
-	&.gap-5 {
-		gap:5px;
-	}
 }
 
 .flex-l {

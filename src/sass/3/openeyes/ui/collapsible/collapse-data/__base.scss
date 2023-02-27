@@ -16,7 +16,7 @@
 		background-color: rgba($oe-user-inputs, 0.4);
 		padding:5px 8px;
 
-		.collapse-data-header-icon {
+		> .collapse-data-header-icon {
 			@include font-size(14); // match large-text size
 			&.collapse {
 				color:$oe-text;

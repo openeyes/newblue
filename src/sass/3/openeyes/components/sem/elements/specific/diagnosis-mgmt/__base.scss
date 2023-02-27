@@ -1,0 +1,33 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.diag-mgmt {
+	@include flex(flex-start, space-between);
+	gap: 4px;
+
+	// over-write defaults for standard UI elements
+	.oe-date,
+	.oe-i {
+		height: 24px; // icons to match all inputs
+		align-items: center;
+	}
+
+	&.sides {
+		.right,
+		.left {
+			flex: 1 1 0;
+			@include flex(flex-start, space-between);
+		}
+
+		.right {
+			// match the line-l on the table
+			border-right: 2px dotted $oe-line;
+			// balance out the R/L sides
+			padding:0 1px 0 0;
+		}
+	}
+
+	&.sys {
+		justify-content: center;
+	}
+}

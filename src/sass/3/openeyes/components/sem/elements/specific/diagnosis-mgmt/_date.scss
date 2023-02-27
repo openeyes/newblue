@@ -1,0 +1,13 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.diag-mgmt {
+	// set diagnosis date (in edit)
+	.diag-date {
+		@include flex(center, center);
+		width: 100px;
+		input[type=date] {
+			width:100%;
+		}
+	}
+}
