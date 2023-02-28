@@ -163,5 +163,20 @@
 		}
 	}
 
+	&.qS {
+		&::after {
+			content: "";
+			z-index: 1;
+			position: absolute;
+			top: -2px;
+			left: calc( 50% + 3px);
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			border:1px solid $oe-alert-orange;
+			background: $oe-highlighter;
+		}
+	}
+
 	// .qR and qSys
 }
