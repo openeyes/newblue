@@ -157,7 +157,7 @@
 			// no-line for when you need to group 2 rows visually together
 			&.no-line,
 			&:first-child {
-				border-top: none;
+				border-top-color: transparent;
 			}
 
 			&.valign-top {

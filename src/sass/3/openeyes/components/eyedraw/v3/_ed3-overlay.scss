@@ -1,0 +1,19 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+.ed3-overlay {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	background: rgba(100,100,110,0.7);
+
+	padding:20px;
+
+	@include flex( center, center);
+
+	.ed3-front {
+		background: $oe-ed3-blue;
+	}
+
+}		
+

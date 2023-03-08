@@ -27,6 +27,16 @@
 				}
 			}
 		}
+
+		&.all-eq {
+			tbody {
+				td, th {
+					&:last-child {
+						padding:8px 8px 8px 4px;
+					}
+				}
+			}
+		}
 		
 		thead {
 			th {
