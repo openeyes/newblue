@@ -29,5 +29,11 @@
 
 	&.sys {
 		justify-content: center;
+
+		.unsided {
+			flex: 1 1 0;
+			@include flex(flex-start, space-between);
+			max-width: 400px;
+		}
 	}
 }
