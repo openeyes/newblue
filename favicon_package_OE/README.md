@@ -7,6 +7,7 @@
 favicon.svg
 favicon.ico
 apple-touch-icon.png
+site.webmanifest
 android-chrome-192x192.png
 android-chrome-256x256.png
 ```
