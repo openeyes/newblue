@@ -5,6 +5,15 @@
 // Layout for Adding new Event, is with a <table>
 // an historical approach, DOM really needs updating (pre-flex days)
 // until then use !important to tweak the <table> layout
+
+
+// <div> popup
+oe-popup.oe-create-event-popup {
+	max-height: 900px;
+}
+
+
+// <table>
 .oe-create-event-step-through {
 	margin: 0 !important; //
 
@@ -22,7 +31,11 @@
 		}
 
 		&.step-event-types {
-			width: 50%;
+			width: 25%;
+		}
+
+		&.existing-drafts {
+			width: 20%;
 		}
 	}
 }
