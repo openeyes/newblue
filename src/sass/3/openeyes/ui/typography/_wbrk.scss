@@ -1,6 +1,8 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-.oe-trials {
-	background:$oe-blue-dark2; // theme changable
+// helper class for managing long clinical terms
+// e.g. "pneumonoultramicroscopicsilicovolcanoconiosis"
+.wbrk {
+	overflow-wrap: break-word;
 }
