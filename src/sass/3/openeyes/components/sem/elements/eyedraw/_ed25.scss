@@ -46,7 +46,7 @@
 			// is consistent for both themes
 			.data-value {
 				font-weight:500; 
-				word-break: break-all; // to handle: "pneumonoultramicroscopicsilicovolcanoconiosis"
+				overflow-wrap: break-word; // to handle: "pneumonoultramicroscopicsilicovolcanoconiosis"
 				
 				.priority-text {
 					font-weight:700;

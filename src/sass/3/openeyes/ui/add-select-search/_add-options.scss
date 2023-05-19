@@ -44,7 +44,7 @@
 			.restrict-width {
 				display:inline-block;
 				width:$oe-ass-restricted-width; 
-				word-break: break-all;
+				overflow-wrap: break-word;
 			
 				&.extended {
 					width:$oe-ass-restricted-width-extended;

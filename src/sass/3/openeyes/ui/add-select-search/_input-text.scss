@@ -11,7 +11,7 @@
 	// <div> with <input> and or <textarea> with 
 	.input-text {
 		margin:0 3px 0 0;
-		word-break: break-all;
+		overflow-wrap: break-word;
 		font-style: italic;
 		
 		// standard width settings for columns

@@ -10,7 +10,7 @@
 	.optional-placeholder {
 		// match the <li> padding! 
 		margin:3px 10px 3px 8px;
-		word-break: break-all;
+		overflow-wrap: break-word;
 		font-style: italic;
 		
 		width:$oe-ass-restricted-width;

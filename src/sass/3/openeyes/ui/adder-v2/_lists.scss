@@ -34,7 +34,7 @@
 				cursor: pointer;
 				padding:3px 8px; // do not change this!
 				margin:0 0 2px 0;
-				word-break: break-all;	// ensure that long clincial words are broken up
+				overflow-wrap: break-word;	// ensure that long clincial words are broken up
 				color:$oe-text;
 				// border-radius:3px;
 				background-color: $oe-adder-option;
@@ -94,7 +94,7 @@
 				cursor: pointer;
 				padding:3px 8px; // do not change this!
 				margin:0 0 2px 0;
-				word-break: break-all;	// ensure that long clinical words are broken up
+				overflow-wrap: break-word;	// ensure that long clinical words are broken up
 				color:$oe-text;
 				// border-radius:3px;
 				background-color: $oe-adder-option;

@@ -28,7 +28,7 @@
 	// added a wrapper to sort this
 	.comments-block {
 		text-align: left;
-		word-break: break-all;
+		overflow-wrap: break-word;
 	}
 
 }
