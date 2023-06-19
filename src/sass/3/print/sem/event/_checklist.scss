@@ -3,15 +3,15 @@
 
 // Form.io for Checklist
 
-.oe-formio {
+.oe-custom-forms {
 	button {
-		display:none;
+		display: none;
 	}
 
 	.collapse-data {
 		margin: 1em 0;
 		padding: 0.5em;
-		border:2px solid $table-border-color;
+		border: 2px solid $table-border-color;
 
 		table {
 			border: none;
@@ -19,72 +19,71 @@
 	}
 
 	.collapse-data-header-icon {
-		font-size:$fontsize-h3;
-		font-weight:700;
+		font-size: $fontsize-h3;
+		font-weight: 700;
 	}
 
 	.collapse-data-content {
 		padding: 0.5em;
 	}
+}
 
-	.oe-formio {
-		// Form.io pre-set classes
-		.form-group {
-			margin: 0 0 10px 0;
-			padding: 0 0 10px 0;
-			border-bottom: 1px dotted #bbb;
+// wrap all Form.io output with "oe-formio"
+.oe-formio {
+	.formio-component-select,
+	.formio-component-radio,
+	.formio-component-selectboxes,
+	.formio-component-textarea,
+	.formio-component-number,
+	.formio-component-textField {
+		@include flex(flex-start, flex-start);
 
-			// there is also a wrapper with the same class
-			&:last-child,
-			&.formio-component-container {
-				border-bottom: none;
-			}
-		}
-
-		.form-check-label {
-			@include flex(center, flex-start);
-			gap: 5px;
-
-			span {
-				white-space: nowrap;
-			}
-		}
-
-		.formio-component-select,
-		.formio-component-radio,
-		.formio-component-selectboxes,
-		.formio-component-textarea,
-		.formio-component-number,
-		.formio-component-textField {
-			@include flex(flex-start, flex-start);
-
-			> label {
-				display: block;
-				width: 30%;
-				white-space: normal;
-			}
-
-			// <div ref="element">
-			div[ref="element"] {
-				flex: 1 1 0;
-			}
-
-			.form-radio {
-				flex: 1 1 0;
-			}
-		}
-
-		select:disabled {
-			color: #000 !important;
-			opacity: 1 !important;
-		}
-
-		.checkbox {
+		> label {
 			display: block;
+			width: 30%;
+			white-space: normal;
 		}
 
+		// <div ref="element">
+		div[ref="element"] {
+			flex: 1 1 0;
+		}
+
+		.form-radio {
+			flex: 1 1 0;
+		}
 	}
 
+	// Form.io pre-set classes
+	.form-group {
+		margin: 0 0 10px 0;
+		padding: 0 0 10px 0;
+		border-bottom: 1px dotted #bbb;
+
+		// there is also a wrapper with the same class
+		&:last-child,
+		&.formio-component-container {
+			border-bottom: none;
+		}
+	}
+
+	.form-check-label {
+		@include flex(center, flex-start);
+		gap: 5px;
+
+		span {
+			white-space: nowrap;
+		}
+	}
+
+	select:disabled {
+		color: #000 !important;
+		opacity: 1 !important;
+	}
+
+	.checkbox {
+		display: block;
+	}
 
 
 }
