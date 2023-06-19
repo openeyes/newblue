@@ -52,8 +52,8 @@
 @import "print/sem/elements";
 
 // Print specific styling
-// Quick fixes required for v3.0 for existing DOMs
 @import "print/sem/event/prescription";
+@import "print/sem/event/checklist"; // form.io
 
 
 
