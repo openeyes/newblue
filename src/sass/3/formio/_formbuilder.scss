@@ -1,0 +1,16 @@
+// Form.io builder in OE Admin
+// bootstrap / font awesome
+// cancel the cascade issues from OE CSS
+// requested Form.io builder is moved into iFrame!
+
+.formio,
+.formio-dialog {
+	button {
+		height: auto;
+	}
+	input[type=checkbox],
+	input[type=radio] {
+		height: auto;
+		margin: 0.3rem 0 0 -1.25rem;
+	}
+}
