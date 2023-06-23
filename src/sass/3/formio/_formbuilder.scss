@@ -13,4 +13,10 @@
 		height: auto;
 		margin: 0.3rem 0 0 -1.25rem;
 	}
+
+	.formio-component-select {
+		.formio-choices {
+			flex:1;
+		}
+	}
 }
