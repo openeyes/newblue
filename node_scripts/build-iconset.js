@@ -160,7 +160,7 @@ const buildSCSS = ( coordinates, properties ) => {
 		  log('Run: npm run css');
 	  } else {
 		  log('Eyedraw CSS will now need rebuilding ... (then a quick check on iDG that they look OK!)');
-		  log('Run: npm run css:eyedraw');
+		  log( cyan('>>> Now run: npm run css:eyedraw'));
 	  }
 	  
 	})
