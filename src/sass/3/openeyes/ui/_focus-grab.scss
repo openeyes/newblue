@@ -1,0 +1,83 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+// provide animation to flag DOM change focus
+// JS will add as required
+
+$_grey_zero: rgba( 150, 150, 150, 0);
+
+@keyframes focuson {
+	0% {
+		outline-color: $_grey_zero;
+		outline-offset: 12px;
+	}
+
+	45% {
+		outline-offset: 0;
+	}
+
+	85% {
+		outline-color: $oe-key-focus-outline;
+		outline-offset: 2px;
+	}
+
+	100% {
+		outline-color: $_grey_zero;
+	}
+}
+
+@keyframes focusgreen {
+	0% {
+		outline-color: $_grey_zero;
+		outline-offset: 12px;
+	}
+
+	45% {
+		outline-offset: 0;
+	}
+
+	85% {
+		outline-color: $oe-alert-green;
+		outline-offset: 2px;
+	}
+
+	100% {
+		outline-color: $_grey_zero;
+	}
+}
+
+@keyframes focusred {
+	0% {
+		outline-color: $_grey_zero;
+		outline-offset: 12px;
+	}
+
+	45% {
+		outline-offset: 0;
+	}
+
+	85% {
+		outline-color: $oe-alert-red;
+		outline-offset: 2px;
+	}
+
+	100% {
+		outline-color: $_grey_zero;
+	}
+}
+
+.focus-grab {
+	outline: 2px dotted $oe-key-focus-outline;
+	outline-offset: 2px;
+	animation: 1s ease-out 1s forwards focuson;
+
+	&.green {
+		outline-color: $oe-alert-green;
+		animation-name: focusgreen;
+	}
+
+	&.red {
+		outline-color:  $oe-alert-red;
+		animation-name: focusred;
+	}
+}
