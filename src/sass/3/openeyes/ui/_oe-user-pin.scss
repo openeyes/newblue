@@ -18,7 +18,8 @@
 		background-color: $oe-step-green;
 	}
 
-	&.wrong-pin {
+	&.wrong-pin,
+	&.declined-pin {
 		background-color:$oe-step-red;
 	}
 	

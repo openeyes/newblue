@@ -53,6 +53,13 @@
 		}
 
 
+		td.required {
+			background: transparent url(svg-themed("i/asterisk")) center right 8px no-repeat;
+			background-size: 13px;
+			padding-right: 30px;
+
+		}
+
 
 		// in View mode for simple label > value lists
 		// **** note: the label-value approach was pre v3
@@ -117,13 +124,13 @@
 				tr {
 					&:last-child {
 						// without this, get a pixel jump
-						border-bottom:1px solid transparent;
+						border-bottom: 1px solid transparent;
 					}
 
 					&:hover,
 					&:focus-within {
 						background-color: $oe-tr-focus;
-						border-bottom:1px solid $oe-line-hard;
+						border-bottom: 1px solid $oe-line-hard;
 					}
 				}
 
@@ -269,13 +276,13 @@
 			min-height: 28px; // buttons and inputs are 24px height
 
 			&.line-r {
-				border-right:2px solid $oe-line;
-				padding-right:8px;
+				border-right: 2px solid $oe-line;
+				padding-right: 8px;
 			}
 
 			&.line-l {
-				border-left:2px solid $oe-line;
-				padding-left:8px;
+				border-left: 2px solid $oe-line;
+				padding-left: 8px;
 			}
 
 			textarea {
