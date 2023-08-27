@@ -41,6 +41,14 @@ label,
 			}
 		}
 
+		// 'error-all' use on a group of inputs wrapper; e.g. <fieldset>
+		// 'error' is for single input
+		.error-all &,
+		&.error {
+			color:#fff;
+			background-color: $oe-alert-red !important;
+		}
+
 		// if using "as-button" it requires the text has a DOM wrap
 		// <label> 	|- <input>
 		//			|- <div class="btn" ...

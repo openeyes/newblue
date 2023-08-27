@@ -2,8 +2,10 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 
-// ERRORs 
-// error on save
+// highlighted-error, usually used on a wrapper
+// e.g. on <fieldset>
+// the updated approach is 'error-all'
 .highlighted-error {
-	border:1px solid $oe-alert-red;
+	// border replace with outline
+	outline: 2px solid $oe-alert-red;
 }

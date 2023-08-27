@@ -46,12 +46,15 @@ input, textarea, select {
 		color: $oe-dark-user-input-text;
 		background-color: $oe-dark-user-inputs;
 	}
-	
+
+	// 'error-all' use on a group of inputs wrapper; e.g. <fieldset>
+	// 'error' is for single input
+	.error-all &,
 	&.error {
-		color:rgb(255,255,255);
-		background-color: $oe-alert-red;
+		color:#fff;
+		background-color: $oe-alert-red !important;
 	}
-	
+
 	// widths can be controlled with the cols-n
 	// but sometimes a fixed width is needed...
 	&.fixed-width-small {
