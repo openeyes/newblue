@@ -58,7 +58,7 @@ textarea {
 
 // helpers 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 // 'display-...' classes are a hack
